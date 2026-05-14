@@ -1,0 +1,11 @@
+# robots.txt for Chinese Zodiac Couples
+# Generated on 2026-05-14
+
+# Allow all search engines
+User-agent: *
+
+# Allow all pages
+Allow: /
+
+# Sitemap location
+Sitemap: https://chinesezodiaccouples.com/sitemap.xml
