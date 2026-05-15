@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Zodiac Horoscope for May 2025 - Monthly Calendar & Predictions</title>
+    <meta name="description" content="Chinese zodiac horoscope for May 2025. Check your daily predictions, lucky numbers, colors, and directions for the Year of the Rat.">
+    <meta name="keywords" content="chinese zodiac horoscope for may 2025, may 2025 zodiac, 2025 chinese horoscope, zodiac predictions may 2025">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="/2025/may.html">
+    <meta property="og:title" content="Chinese Zodiac Horoscope for May 2025">
+    <meta property="og:description" content="Your complete Chinese zodiac horoscope guide for May 2025.">
+    <meta property="og:url" content="/2025/may.html">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #3B82F6;
+            --accent: #F59E0B;
+            --dark: #1F2937;
+            --text: #374151;
+            --text-light: #6B7280;
+            --bg: #FFFFFF;
+            --bg-secondary: #F9FAFB;
+            --border: #E5E7EB;
+            --radius: 12px;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: var(--bg);
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #2563EB 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            flex-wrap: wrap;
+        }
+        .nav-links a { color: white; text-decoration: none; }
+        .nav-links a:hover { text-decoration: underline; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        .intro {
+            background: var(--bg-secondary);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .intro h2 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+        .intro p {
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+        .calendar-section {
+            background: white;
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        .calendar-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .calendar-table th {
+            text-align: center;
+            padding: 12px 8px;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .calendar-table td {
+            text-align: center;
+            padding: 12px 4px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            min-width: 40px;
+        }
+        .calendar-table td:hover {
+            background: var(--primary);
+            color: white;
+        }
+        .calendar-table td:hover .zodiac-badge {
+            font-size: 0.7rem;
+            color: var(--text-light);
+        }
+        .lunar-date {
+            font-size: 0.65rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+        .day-cell {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        .day-number {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .zodiac-badge {
+            font-size: 0.7rem;
+            color: var(--text-light);
+        }
+        .lunar-date {
+            font-size: 0.65rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+        .empty-cell {
+            background: var(--bg-secondary);
+        }
+        .today-cell {
+            background: #FEF3C7;
+            border-color: var(--accent);
+        }
+        .month-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+        .summary-item {
+            background: var(--bg-secondary);
+            padding: 14px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .summary-item strong {
+            display: block;
+            color: var(--dark);
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+        .summary-item span {
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+        .horoscope-section {
+            background: var(--bg-secondary);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .horoscope-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+        .zodiac-card {
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        .zodiac-card:last-child {
+            margin-bottom: 0;
+        }
+        .zodiac-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .zodiac-emoji {
+            font-size: 1.2rem;
+        }
+        .zodiac-name {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        .zodiac-luck {
+            margin-left: auto;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+        .luck-high { background: #D1FAE5; color: #059669; }
+        .luck-medium { background: #FEF3C7; color: #D97706; }
+        .luck-low { background: #FEE2E2; color: #DC2626; }
+        .zodiac-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        .month-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 24px;
+            padding: 16px;
+            background: white;
+            border-radius: var(--radius);
+        }
+        .nav-btn {
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .nav-btn:hover {
+            background: #2563EB;
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        footer p { opacity: 0.7; font-size: 0.85rem; }
+        footer a { color: white; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chinese Zodiac Horoscope for May 2025</h1>
+        <p class="subtitle">Your complete Chinese zodiac horoscope for May 2025 with daily predictions and lucky elements.</p>
+        <div class="nav-links">
+             <a href="/" class="back-link">&#8592; Back to Home</a> 
+             </div>
+    </header>
+
+    <main class="container">
+        <div class="intro">
+            <h2>Chinese Zodiac Horoscope for May 2025</h2>
+            <p>Yo! Check out your May 2025 Chinese zodiac horoscope. This month is all about Dragon energy - power, strength, and some serious good fortune coming your way. May's got the vibes you need to make things happen.</p>
+            <p>Think of May as your month to level up. Big energy, big potential. If you've been waiting for the right time to make a move, this might just be it.</p>
+        </div>
+
+        <div class="calendar-section">
+            <h3 class="calendar-title">📅 May 2025 Calendar - Chinese Zodiac Horoscope</h3>
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="empty-cell"></td>
+                        <td class="empty-cell"></td>
+                        <td class="empty-cell"></td>
+                        <td class="empty-cell"></td>
+                        <td><div class="day-cell"><span class="day-number">1</span><span class="zodiac-badge">Rat</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">2</span><span class="zodiac-badge">Ox</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">3</span><span class="zodiac-badge">Tiger</span></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="day-cell"><span class="day-number">4</span><span class="zodiac-badge">Rabbit</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">5</span><span class="zodiac-badge">Dragon</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">6</span><span class="zodiac-badge">Snake</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">7</span><span class="zodiac-badge">Horse</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">8</span><span class="zodiac-badge">🐐 Goat</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">9</span><span class="zodiac-badge">Monkey</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">10</span><span class="zodiac-badge">Rooster</span></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="day-cell"><span class="day-number">11</span><span class="zodiac-badge">Dog</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">12</span><span class="zodiac-badge">Pig</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">13</span><span class="zodiac-badge">Rat</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">14</span><span class="zodiac-badge">Ox</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">15</span><span class="zodiac-badge">Tiger</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">16</span><span class="zodiac-badge">Rabbit</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">17</span><span class="zodiac-badge">Dragon</span></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="day-cell"><span class="day-number">18</span><span class="zodiac-badge">Snake</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">19</span><span class="zodiac-badge">Horse</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">20</span><span class="zodiac-badge">🐐 Goat</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">21</span><span class="zodiac-badge">Monkey</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">22</span><span class="zodiac-badge">Rooster</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">23</span><span class="zodiac-badge">Dog</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">24</span><span class="zodiac-badge">Pig</span></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="day-cell"><span class="day-number">25</span><span class="zodiac-badge">Rat</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">26</span><span class="zodiac-badge">Ox</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">27</span><span class="zodiac-badge">Tiger</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">28</span><span class="zodiac-badge">Rabbit</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">29</span><span class="zodiac-badge">Dragon</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">30</span><span class="zodiac-badge">Snake</span></div></td>
+                        <td><div class="day-cell"><span class="day-number">31</span><span class="zodiac-badge">Horse</span></div></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="month-summary">
+                <div class="summary-item"><strong>🌟 Lucky Numbers</strong><span>1, 6, 7</span></div>
+                <div class="summary-item"><strong>🎨 Lucky Colors</strong><span>Gold, Silver, White</span></div>
+                <div class="summary-item"><strong>🧭 Lucky Directions</strong><span>West, Northwest</span></div>
+                <div class="summary-item"><strong>💐 Lucky Flowers</strong><span>Dragon Orchid</span></div>
+            </div>
+        </div>
+
+        <div class="horoscope-section">
+            <h3 class="horoscope-title">Chinese Zodiac Horoscope for May 2025 - Monthly Predictions</h3>
+            
+            <div class="zodiac-card">
+                <div class="zodiac-header">
+                    <span class="zodiac-emoji"><img src="../Images/rat.png" alt="Rat" class="zodiac-emoji" /></span><span class="zodiac-name">Rat</span>
+                    <span class="zodiac-luck luck-medium">Good</span>
+                </div>
+                <p class="zodiac-desc">Rat, good vibes are coming your way in May! Fresh starts and cool opportunities are heading your way. Trust that gut feeling of yours - it's spot on.</p>
+            </div>
+
+            <div class="zodiac-card">
+                <div class="zodiac-header">
+                    <span class="zodiac-emoji"><img src="../Images/ox.png" alt="Ox" class="zodiac-emoji" /></span><span class="zodiac-name">Ox</span>
+                    <span class="zodiac-luck luck-high">Excellent</span>
+                </div>
+                <p class="zodiac-desc">Ox, you're gonna absolutely crush it this month! All that hard work you've been doing? It's finally gonna get recognized big time.</p>
+            </div>
+
+            <div class="zodiac-card">
+                <div class="zodiac-header">
+                    <span class="zodiac-emoji"><img src="../Images/tiger.png" alt="Tiger" class="zodiac-emoji" /></span><span class="zodiac-name">Tiger</span>
+                    <span class="zodiac-luck luck-medium">Good</span>
+                </div>
+                <p class="zodiac-desc">Tiger, May's giving you some solid chances to step up and lead. Time to take charge! Your natural leadership skills are gonna shine.</p>
+            </div>
+
+            <div class="zodiac-card">
+                <div class="zodiac-header">
+                    <span class="zodiac-emoji"><img src="../Images/rabbit.png" alt="Rabbit" class="zodiac-emoji" /></span><span class="zodiac-name">Rabbit</span>
+                    <span class="zodiac-luck luck-low">Challenging</span>
+                </div>
+                <p class="zodiac-desc">Rabbit, maybe hold your horses a bit in May. This isn't the month for big risks. Play it safe and don't push your luck too hard.</p>
+            </div>
+
+            <div class="zodiac-card">
+                <div class="zodiac-header">
+                    <span class="zodiac-emoji"><img src="../Images/dragon.png" alt="Dragon" class="zodiac-emoji" /></span><span class="zodiac-name">Dragon</span>
+                    <span class="zodiac-luck luck-high">Excellent</span>
+                </div>
+                <p class="zodiac-desc">Dragon, HELLO! It's totally your month! May is shining so bright for you. Time to go out there and make things happen!</p>
+            </div>
+
+            <div class="zodiac-card">
+                <div class="zodiac-header">
+                    <span class="zodiac-emoji"><img src="../Images/snake.png" alt="Snake" class="zodiac-emoji" /></span><span class="zodiac-name">Snake</span>
+                    <span class="zodiac-luck luck-high">Excellent</span>
+                </div>
+                <p class="zodiac-desc">Snake, May's all about gaining wisdom and having those "aha!" moments. You're in a great space for learning and growing as a person.</p>
+            </div>
+
+            <div class="zodiac-card">
+                <div class="zodiac-header">
+                    <span class="zodiac-emoji"><img src="../Images/horse.png" alt="Horse" class="zodiac-emoji" /></span><span class="zodiac-name">Horse</span>
+                    <span class="zodiac-luck luck-low">Challenging</span>
+                </div>
+                <p class="zodiac-desc">Horse, maybe slow down and think stuff through before you act. May's not really supporting冲动 decisions. Take a breath first.</p>
+            </div>
+
+            <div class="zodiac-card">
+                <div class="zodiac-header">
+                    <span class="zodiac-emoji">🐐</span>
+                    <span class="zodiac-name">Goat</span>
+                    <span class="zodiac-luck luck-medium">Good</span>
+                </div>
+                <p class="zodiac-desc">Goat, May's got some really peaceful and creative vibes for you. If you've got any artistic projects, this is the time to work on 'em.</p>
+            </div>
+
+            <div class="zodiac-card">
+                <div class="zodiac-header">
+                    <span class="zodiac-emoji"><img src="../Images/monkey.png" alt="Monkey" class="zodiac-emoji" /></span><span class="zodiac-name">Monkey</span>
+                    <span class="zodiac-luck luck-high">Excellent</span>
+                </div>
+                <p class="zodiac-desc">Monkey, May is gonna be a blast! New experiences are calling your name. Your quick wit is gonna help you handle whatever comes up.</p>
+            </div>
+
+            <div class="zodiac-card">
+                <div class="zodiac-header">
+                    <span class="zodiac-emoji"><img src="../Images/rooster.png" alt="Rooster" class="zodiac-emoji" /></span><span class="zodiac-name">Rooster</span>
+                    <span class="zodiac-luck luck-medium">Good</span>
+                </div>
+                <p class="zodiac-desc">Rooster, time to get stuff done! May's got productivity written all over it. Getting organized and hitting your goals? Easy peasy for you.</p>
+            </div>
+
+            <div class="zodiac-card">
+                <div class="zodiac-header">
+                    <span class="zodiac-emoji"><img src="../Images/dog.png" alt="Dog" class="zodiac-emoji" /></span><span class="zodiac-name">Dog</span>
+                    <span class="zodiac-luck luck-low">Challenging</span>
+                </div>
+                <p class="zodiac-desc">Dog, just trust the process in May, okay? Things might feel a bit slow, but have faith. Good things come to those who wait, right?</p>
+            </div>
+
+            <div class="zodiac-card">
+                <div class="zodiac-header">
+                    <span class="zodiac-emoji"><img src="../Images/pig.png" alt="Pig" class="zodiac-emoji" /></span><span class="zodiac-name">Pig</span>
+                    <span class="zodiac-luck luck-medium">Good</span>
+                </div>
+                <p class="zodiac-desc">Pig, May's gonna make you smile! Good luck and happy vibes are coming your way. Time to kick back and enjoy life a little.</p>
+            </div>
+        </div>
+
+        <div class="month-nav">
+            <button class="nav-btn" onclick="location.href='/2025/april.html'">&#8592; April 2025</button>
+            <button class="nav-btn" onclick="location.href='/2025/june.html'">June 2025 &#8594;</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ChineseZodiacCouples.com</p>
+        <p><a href="/">Home</a> | <a href="chinese-zodiac-fortune-2025.html">2025 Chinese Zodiac Fortune</a></p>
+    </footer>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MGYZTZ28KF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MGYZTZ28KF');
+</script>
+    <script src="../JS/lunar-calendar.js"></script>
+</body>
+</html>
