@@ -730,4 +730,8 @@
             .method-grid {
                 grid-template-columns: 1fr;
             }
+
+            .dimensions-grid {
+                grid-template-columns: 1fr;
+            }
         }
