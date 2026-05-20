@@ -240,3 +240,38 @@ var zodiacEmojis = {
             return pairDescriptions[key1] || pairDescriptions[key2] || 'This ' + z1 + ' and ' + z2 + ' pairing has unique dynamics. With understanding and effort, you can build a meaningful relationship.';
         }
 
+        function calculateZodiacFromDate(dateInputId, signSelectId) {
+            var dateInput = document.getElementById(dateInputId);
+            var signSelect = document.getElementById(signSelectId);
+            var labelId = signSelectId + 'Label';
+            var label = document.getElementById(labelId);
+
+            var dateValue = dateInput.value;
+
+            if (!dateValue) {
+                label.textContent = '';
+                return;
+            }
+
+            var date = new Date(dateValue);
+            var year = date.getFullYear();
+
+            // Chinese zodiac calculation: base year is 1900 (Rat)
+            // Years cycle every 12: Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, Pig
+            var zodiacSigns = ['Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake', 'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'];
+            var zodiacEmojis = {
+                'Rat': '🐀', 'Ox': '🐂', 'Tiger': '🐅', 'Rabbit': '🐇',
+                'Dragon': '🐉', 'Snake': '🐍', 'Horse': '🐴', 'Goat': '🐐',
+                'Monkey': '🐒', 'Rooster': '🐓', 'Dog': '🐕', 'Pig': '🐷'
+            };
+            var zodiacIndex = (year - 1900) % 12;
+            if (zodiacIndex < 0) zodiacIndex += 12;
+            var sign = zodiacSigns[zodiacIndex];
+
+            // Auto-select the sign in the dropdown
+            signSelect.value = sign;
+
+            // Show result in label
+            label.textContent = zodiacEmojis[sign] + ' ' + sign;
+        }
+

@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年5月{DAY}日生肖运势</title>
+    <meta name="description" content="2026年5月{DAY}日十二生肖运势查询，每日运程解析">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#374151;line-height:1.7;background:#FFFFFF;}
+        header{background:linear-gradient(135deg,#3B82F6 0%,#2563EB 100%);color:white;padding:40px 20px;text-align:center;}
+        h1{font-size:2rem;margin-bottom:12px;font-weight:700;}
+        .subtitle{opacity:0.9;font-size:1.1rem;max-width:800px;margin:0 auto;}
+        .nav-links{display:flex;justify-content:center;gap:15px;margin-top:16px;font-size:0.9rem;opacity:0.8;flex-wrap:wrap;}
+        .nav-links a{color:white;text-decoration:none;}
+        .nav-links a:hover{text-decoration:underline;}
+        .container{max-width:1200px;margin:0 auto;padding:30px 20px;}
+        .intro{background:white;border-radius:12px;padding:28px;margin-bottom:24px;border:1px solid #E5E7EB;box-shadow:0 2px 10px rgba(0,0,0,0.05);}
+        .intro h2{font-size:1.4rem;color:#1F2937;margin-bottom:16px;}
+        .intro p{color:#374151;margin-bottom:12px;line-height:1.8;font-size:1rem;}
+        .calendar-info{background:white;border-radius:12px;padding:30px;margin-bottom:24px;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:1px solid #E5E7EB;}
+        .calendar-info h2{font-size:1.5rem;color:#1F2937;margin-bottom:24px;text-align:center;}
+        .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;}
+        .info-item{display:flex;flex-direction:column;padding:16px 20px;background:linear-gradient(145deg,#f8fafc 0%,#f1f5f9 100%);border-radius:10px;border:1px solid #E5E7EB;transition:all 0.3s ease;}
+        .info-item:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.08);border-color:#3B82F6;}
+        .info-item strong{color:#3B82F6;font-size:0.9rem;font-weight:600;margin-bottom:6px;}
+        .info-item span{color:#374151;font-weight:500;font-size:0.95rem;}
+        .lucky-report{background:white;border-radius:12px;padding:24px;margin-bottom:24px;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:1px solid #E5E7EB;}
+        .lucky-report h2{font-size:1.4rem;color:#1F2937;margin-bottom:20px;}
+        .report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;}
+        .report-card{padding:20px;border-radius:12px;text-align:center;transition:all 0.3s ease;border:1px solid #f0f0f0;}
+        .report-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.05);}
+        .report-card.good{background:rgba(34,197,94,0.08);}
+        .report-card.normal{background:rgba(251,191,36,0.08);}
+        .report-card.bad{background:rgba(239,68,68,0.08);}
+        .report-icon{font-size:1.8rem;margin-bottom:8px;}
+        .report-label{font-size:0.85rem;color:#6B7280;margin-bottom:8px;font-weight:500;}
+        .report-value{font-size:1rem;font-weight:700;color:#1F2937;}
+        .zodiac-section{background:white;border-radius:12px;padding:24px;margin-bottom:24px;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:1px solid #E5E7EB;}
+        .zodiac-section h2{font-size:1.4rem;color:#1F2937;margin-bottom:20px;}
+        .zodiac-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+        .zodiac-card{background:linear-gradient(145deg,#ffffff 0%,#f8fafc 100%);border-radius:12px;padding:20px;border:1px solid #E5E7EB;transition:all 0.3s ease;}
+        .zodiac-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.08);border-color:#3B82F6;}
+        .zodiac-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px dashed #E5E7EB;}
+        .zodiac-emoji img{width:36px;height:36px;border-radius:50%;background:#F9FAFB;padding:4px;}
+        .zodiac-name{font-weight:700;color:#1F2937;font-size:1.15rem;}
+        .zodiac-desc{color:#6B7280;line-height:1.8;font-size:0.95rem;}
+        footer{background:#1F2937;color:white;padding:30px 20px;text-align:center;margin-top:30px;}
+        footer p{margin-bottom:8px;opacity:0.9;}
+        footer a{color:#F59E0B;text-decoration:none;}
+        footer a:hover{text-decoration:underline;}
+        .month-links{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);}
+        .month-links a{margin:0 10px;color:#F59E0B;}
+        @media(max-width:768px){h1{font-size:1.5rem;}.info-grid{grid-template-columns:1fr;}.report-grid{grid-template-columns:repeat(2,1fr);}}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>2026年5月{DAY}日生肖运势</h1>
+        <p class="subtitle">每日运势查询与运程解析</p>
+        <div class="nav-links">
+            <a href="/">首页</a>
+            <a href="../may.html">2026年5月运势总览</a>
+        </div>
+    </header>
+    <main class="container">
+        <div class="intro">
+            <h2>Twelve Zodiac Signs Fortune</h2>
+            <p>{DIYI}</p>
+        </div>
+        <div class="calendar-info">
+            <h2>Today's Calendar Information</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>公历日期:</strong><span>{DIER}</span></div>
+                <div class="info-item"><strong>农历日期:</strong><span>{DISAN}</span></div>
+                <div class="info-item"><strong>喜神方位:</strong><span>{DISI}</span></div>
+                <div class="info-item"><strong>财神方位:</strong><span>{DIWU}</span></div>
+                <div class="info-item"><strong>幸运色:</strong><span>{DILIU}</span></div>
+                <div class="info-item"><strong>禁忌色:</strong><span>{DIQI}</span></div>
+                <div class="info-item"><strong>今日冲煞:</strong><span>{DIBA}</span></div>
+                <div class="info-item"><strong>黄历宜:</strong><span>{DIJIU}</span></div>
+                <div class="info-item"><strong>黄历忌:</strong><span>{DISHI}</span></div>
+            </div>
+        </div>
+        <div class="lucky-report">
+            <h2>Fortune Report</h2>
+            <div class="report-grid">
+                <div class="report-card good"><div class="report-icon">🏆</div><div class="report-label">特吉生肖</div><div class="report-value">{TEJI}</div></div>
+                <div class="report-card normal"><div class="report-icon">⭐</div><div class="report-label">次吉生肖</div><div class="report-value">{CIJI}</div></div>
+                <div class="report-card bad"><div class="report-icon">⚠️</div><div class="report-label">带衰生肖</div><div class="report-value">{DAISHUAI}</div></div>
+                <div class="report-card bad"><div class="report-icon">💥</div><div class="report-label">今日被冲</div><div class="report-value">{BEICHONG}</div></div>
+            </div>
+        </div>
+        <div class="zodiac-section">
+            <h2>Daily Fortune Interpretation</h2>
+            <div class="zodiac-grid">
+                {ZODIAC_CARDS}
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 ChineseZodiacCouples.com</p>
+        <p><a href="/">首页</a> | <a href="../chinese-zodiac-fortune-2026.html">2026年生肖运势</a></p>
+        <div class="month-links">
+            <a href="../may.html">📅 2026年5月日历</a>
+        </div>
+    </footer>
+</body>
+</html>

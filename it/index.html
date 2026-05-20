@@ -78,6 +78,22 @@
     <section class="checker-section">
         <div class="checker-card">
             <h2 class="checker-title">Trova il Tuo Match Perfetto dello Zodiaco</h2>
+            <div class="birth-date-box">
+                <h3 class="birth-date-title">Inserisci le date di nascita</h3>
+                <div class="birth-date-selectors">
+                    <div class="date-selector">
+                        <label for="birthDate1">Data di nascita Ragazzo</label>
+                        <input type="date" id="birthDate1" onchange="calculateZodiacFromDate('birthDate1', 'sign1')" />
+                        <p class="calculated-sign" id="sign1Label"></p>
+                    </div>
+                    <div class="date-selector">
+                        <label for="birthDate2">Data di nascita Ragazza</label>
+                        <input type="date" id="birthDate2" onchange="calculateZodiacFromDate('birthDate2', 'sign2')" />
+                        <p class="calculated-sign" id="sign2Label"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="or-divider">o seleziona i segni manualmente</div>
             <div class="sign-selector">
                 <select id="sign1" aria-label="Your zodiac sign">
                     <option value="">Il Tuo Segno</option>
