@@ -1,4 +1,4 @@
-﻿const compatibilityMatches = {
+﻿﻿const compatibilityMatches = {
     'Rat': { best: 'Snake', worst: 'Ox', bestDesc: 'Scorpio-Rat and Snake create an intense, passionate partnership. Both are deep and mysterious.', worstDesc: 'Scorpio-Rat and Ox may struggle. Rat is intense while Ox is steady, causing friction.' },
     'Ox': { best: 'Tiger', worst: 'Horse', bestDesc: 'Scorpio-Ox and Tiger make a powerful, determined pair. Both are strong-willed and loyal.', worstDesc: 'Scorpio-Ox and Horse may clash. Ox values commitment while Horse craves freedom.' },
     'Tiger': { best: 'Horse', worst: 'Monkey', bestDesc: 'Scorpio-Tiger and Horse create a passionate, adventurous partnership. Both are intense and love excitement.', worstDesc: 'Scorpio-Tiger and Monkey may compete. Both strong personalities need to compromise.' },

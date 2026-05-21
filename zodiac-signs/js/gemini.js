@@ -1,4 +1,4 @@
-﻿const compatibilityMatches = {
+﻿﻿const compatibilityMatches = {
     'Rat': { best: 'Monkey', worst: 'Ox', bestDesc: 'Gemini-Rat and Monkey create a lively, intellectual partnership. Both love learning and new experiences together.', worstDesc: 'Gemini-Rat and Ox may struggle. Rat is quick while Ox is deliberate, causing frustration.' },
     'Ox': { best: 'Snake', worst: 'Horse', bestDesc: 'Gemini-Ox and Snake make a balanced pair. Snake provides depth while Ox offers stability to Gemini\'s curious nature.', worstDesc: 'Gemini-Ox and Horse may clash. Ox values routine while Horse craves freedom.' },
     'Tiger': { best: 'Dragon', worst: 'Dog', bestDesc: 'Gemini-Tiger and Dragon create an exciting, dynamic partnership. Both are energetic and love adventure.', worstDesc: 'Gemini-Tiger and Dog may struggle. Tiger loves excitement while Dog seeks stability.' },

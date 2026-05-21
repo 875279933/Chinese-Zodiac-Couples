@@ -1,4 +1,4 @@
-﻿const compatibilityMatches = {
+﻿﻿const compatibilityMatches = {
     'Rat': { best: 'Monkey', worst: 'Ox', bestDesc: 'Libra-Rat and Monkey create a charming, social partnership. Both love beauty and harmony.', worstDesc: 'Libra-Rat and Ox may struggle. Rat is social while Ox prefers quiet stability.' },
     'Ox': { best: 'Snake', worst: 'Horse', bestDesc: 'Libra-Ox and Snake make a balanced, graceful pair. Both appreciate beauty and peace.', worstDesc: 'Libra-Ox and Horse may clash. Ox values routine while Horse craves freedom.' },
     'Tiger': { best: 'Dragon', worst: 'Dog', bestDesc: 'Libra-Tiger and Dragon create an exciting, charismatic partnership. Both are charming and love attention.', worstDesc: 'Libra-Tiger and Dog may struggle. Tiger loves excitement while Dog seeks loyalty.' },

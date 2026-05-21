@@ -1,4 +1,4 @@
-﻿const compatibilityMatches = {
+﻿﻿const compatibilityMatches = {
     'Rat': { best: 'Ox', worst: 'Horse', bestDesc: 'Cancer-Rat and Ox create a secure, nurturing partnership. Both value home and family above all.', worstDesc: 'Cancer-Rat and Horse may struggle. Rat loves home life while Horse craves adventure.' },
     'Ox': { best: 'Snake', worst: 'Goat', bestDesc: 'Cancer-Ox and Snake make a deeply emotional pair. Both are loyal and committed to their relationship.', worstDesc: 'Cancer-Ox and Goat may clash. Ox is steadfast while Goat is changeable.' },
     'Tiger': { best: 'Dog', worst: 'Monkey', bestDesc: 'Cancer-Tiger and Dog create a protective, loving bond. Dog\'s loyalty complements Tiger\'s strength.', worstDesc: 'Cancer-Tiger and Monkey may conflict. Tiger values security while Monkey loves novelty.' },

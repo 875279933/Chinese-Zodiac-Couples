@@ -1,4 +1,4 @@
-﻿const compatibilityMatches = {
+﻿﻿const compatibilityMatches = {
     'Rat': { best: 'Ox', worst: 'Horse', bestDesc: 'Pisces-Rat and Ox create a compassionate, caring partnership. Both are sensitive and supportive.', worstDesc: 'Pisces-Rat and Horse may struggle. Rat is intuitive while Horse craves action.' },
     'Ox': { best: 'Snake', worst: 'Goat', bestDesc: 'Pisces-Ox and Snake make a deeply emotional pair. Both are intuitive and supportive.', worstDesc: 'Pisces-Ox and Goat may clash. Ox is grounded while Goat is dreamy.' },
     'Tiger': { best: 'Dog', worst: 'Monkey', bestDesc: 'Pisces-Tiger and Dog create a loving, protective bond. Dog\'s loyalty complements Tiger\'s strength.', worstDesc: 'Pisces-Tiger and Monkey may conflict. Tiger values commitment while Monkey loves change.' },

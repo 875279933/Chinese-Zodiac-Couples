@@ -1,4 +1,4 @@
-﻿const compatibilityMatches = {
+﻿﻿const compatibilityMatches = {
     'Rat': { best: 'Ox', worst: 'Horse', bestDesc: 'Virgo-Rat and Ox create a practical, hardworking partnership. Both are organized and detail-oriented.', worstDesc: 'Virgo-Rat and Horse may struggle. Rat values efficiency while Horse craves freedom.' },
     'Ox': { best: 'Snake', worst: 'Goat', bestDesc: 'Virgo-Ox and Snake make a thoughtful, reliable pair. Both are analytical and value stability.', worstDesc: 'Virgo-Ox and Goat may clash. Ox is structured while Goat is more flexible.' },
     'Tiger': { best: 'Dog', worst: 'Monkey', bestDesc: 'Virgo-Tiger and Dog create a loyal, responsible bond. Dog\'s dedication complements Tiger\'s strength.', worstDesc: 'Virgo-Tiger and Monkey may conflict. Tiger values commitment while Monkey loves change.' },

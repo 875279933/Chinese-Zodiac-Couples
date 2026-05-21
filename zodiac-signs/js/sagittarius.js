@@ -1,4 +1,4 @@
-﻿const compatibilityMatches = {
+﻿﻿const compatibilityMatches = {
     'Rat': { best: 'Dragon', worst: 'Ox', bestDesc: 'Sagittarius-Rat and Dragon create an adventurous, optimistic partnership. Both love freedom and exploration.', worstDesc: 'Sagittarius-Rat and Ox may struggle. Rat is restless while Ox is steady, causing frustration.' },
     'Ox': { best: 'Tiger', worst: 'Horse', bestDesc: 'Sagittarius-Ox and Tiger make an exciting, bold pair. Both love adventure and new experiences.', worstDesc: 'Sagittarius-Ox and Horse may clash. Ox values stability while Horse craves constant change.' },
     'Tiger': { best: 'Horse', worst: 'Monkey', bestDesc: 'Sagittarius-Tiger and Horse create a free-spirited, adventurous partnership. Both love travel and excitement.', worstDesc: 'Sagittarius-Tiger and Monkey may compete. Both independent spirits need space.' },

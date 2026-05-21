@@ -1,4 +1,4 @@
-﻿const compatibilityMatches = {
+﻿﻿const compatibilityMatches = {
     'Rat': { best: 'Monkey', worst: 'Ox', bestDesc: 'Aquarius-Rat and Monkey create an innovative, intellectual partnership. Both love ideas and progress.', worstDesc: 'Aquarius-Rat and Ox may struggle. Rat is forward-thinking while Ox is traditional.' },
     'Ox': { best: 'Snake', worst: 'Horse', bestDesc: 'Aquarius-Ox and Snake make a thoughtful, independent pair. Both value their own space.', worstDesc: 'Aquarius-Ox and Horse may clash. Ox values routine while Horse craves freedom.' },
     'Tiger': { best: 'Dragon', worst: 'Dog', bestDesc: 'Aquarius-Tiger and Dragon create an exciting, visionary partnership. Both are innovative and independent.', worstDesc: 'Aquarius-Tiger and Dog may struggle. Tiger loves freedom while Dog seeks loyalty.' },

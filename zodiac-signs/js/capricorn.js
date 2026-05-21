@@ -1,4 +1,4 @@
-﻿const compatibilityMatches = {
+﻿﻿const compatibilityMatches = {
     'Rat': { best: 'Ox', worst: 'Horse', bestDesc: 'Capricorn-Rat and Ox create a responsible, ambitious partnership. Both value hard work and success.', worstDesc: 'Capricorn-Rat and Horse may struggle. Rat is ambitious while Horse craves freedom.' },
     'Ox': { best: 'Snake', worst: 'Goat', bestDesc: 'Capricorn-Ox and Snake make a steady, reliable pair. Both are patient and goal-oriented.', worstDesc: 'Capricorn-Ox and Goat may clash. Ox is structured while Goat is more flexible.' },
     'Tiger': { best: 'Dog', worst: 'Monkey', bestDesc: 'Capricorn-Tiger and Dog create a loyal, hardworking bond. Dog\'s dedication complements Tiger\'s strength.', worstDesc: 'Capricorn-Tiger and Monkey may conflict. Tiger values commitment while Monkey loves change.' },

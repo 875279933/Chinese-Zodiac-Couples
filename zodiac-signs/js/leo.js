@@ -1,4 +1,4 @@
-﻿const compatibilityMatches = {
+﻿﻿const compatibilityMatches = {
     'Rat': { best: 'Dragon', worst: 'Ox', bestDesc: 'Leo-Rat and Dragon create a powerful, charismatic partnership. Both are natural leaders who inspire others.', worstDesc: 'Leo-Rat and Ox may struggle. Rat is ambitious while Ox is steady, causing power struggles.' },
     'Ox': { best: 'Tiger', worst: 'Horse', bestDesc: 'Leo-Ox and Tiger make a strong, confident pair. Both have big personalities and support each other\'s dreams.', worstDesc: 'Leo-Ox and Horse may clash. Ox values loyalty while Horse craves freedom.' },
     'Tiger': { best: 'Horse', worst: 'Monkey', bestDesc: 'Leo-Tiger and Horse create an exciting, adventurous partnership. Both love the spotlight and new experiences.', worstDesc: 'Leo-Tiger and Monkey may compete. Both strong personalities need to share the stage.' },
