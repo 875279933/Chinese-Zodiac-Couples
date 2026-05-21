@@ -1,0 +1,324 @@
+:root {
+    --primary: #3B82F6;
+    --secondary: #10B981;
+    --accent: #F59E0B;
+    --dark: #1F2937;
+    --light: #F3F4F6;
+    --border: #E5E7EB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #3B82F6;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo h1 {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.nav-links {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--dark);
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: var(--dark);
+    margin: 1.5rem 0 0.8rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: var(--dark);
+    margin: 1.2rem 0 0.6rem;
+}
+
+/* Year Selector Styles */
+#yearSelectorSection {
+    background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.year-selector-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+.year-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.year-selector select {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.year-selector select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Zodiac Result Styles */
+.zodiac-result {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.zodiac-result.show {
+    display: block;
+}
+
+#zodiacEmoji {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+#zodiacTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+#zodiacDesc {
+    color: #6B7280;
+    line-height: 1.6;
+}
+
+/* Two-column grid */
+.zodiac-grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .zodiac-grid-2col {
+        grid-template-columns: 1fr;
+    }
+}
+
+.zodiac-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--primary);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.zodiac-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.zodiac-emoji {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Compatibility result section */
+.compatibility-result {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+    border-radius: 12px;
+    display: none;
+}
+
+.compatibility-result.show {
+    display: block;
+}
+
+.compatibility-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.compatibility-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.compatibility-card.best {
+    border-top: 4px solid #10B981;
+}
+
+.compatibility-card.worst {
+    border-top: 4px solid #EF4444;
+}
+
+.compatibility-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.compatibility-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+/* How to Determine Section */
+.how-to-card {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.how-to-card h3 {
+    color: #92400E;
+    margin-top: 0;
+}
+
+.how-to-card ol {
+    margin-left: 1.5rem;
+    color: #78350F;
+}
+
+.how-to-card li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+/* Scroll Button */
+.scroll-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.scroll-btn:hover {
+    background: #2563EB;
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #9CA3AF;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    #yearSelectorSection {
+        padding: 1.5rem;
+    }
+    
+    .year-selector {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .compatibility-grid {
+        grid-template-columns: 1fr;
+    }
+}
