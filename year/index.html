@@ -30,7 +30,7 @@
 :root{--primary:#3B82F6;--primary-dark:#2563EB;--dark:#1F2937;--text:#374151;--text-light:#6B7280;--bg:#FFF;--bg-alt:#F9FAFB;--border:#E5E7EB;--shadow:0 4px 20px rgba(0,0,0,.08);--shadow-h:0 10px 40px rgba(0,0,0,.12);--r:12px}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text);line-height:1.7;background:var(--bg)}
 .ctn{max-width:1100px;margin:0 auto;padding:0 20px}
-header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:50px 20px 60px;text-align:center}
+header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:30px 20px 40px;text-align:center}
 .back{display:inline-block;margin-bottom:18px;padding:8px 20px;background:rgba(255,255,255,.15);border-radius:50px;color:#fff;text-decoration:none;font-size:.9rem;transition:background .3s}
 .back:hover{background:rgba(255,255,255,.25)}
 h1{font-family:'Noto Serif SC',serif;font-size:2.2rem;font-weight:700;margin-bottom:10px;letter-spacing:-.02em}
@@ -56,8 +56,11 @@ footer{background:var(--dark);color:#fff;padding:36px 20px;text-align:center}
 footer p{opacity:.7;font-size:.85rem;margin-bottom:8px}
 footer a{color:#fff;text-decoration:none}
 footer a:hover{text-decoration:underline}
-@media(max-width:768px){h1{font-size:1.8rem}.grid3{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.grid3{grid-template-columns:1fr}}
+.yr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:10px;margin-top:20px}
+.yr-link{display:block;text-align:center;padding:8px;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--primary);text-decoration:none;font-size:.9rem;font-weight:600;transition:all .3s}
+.yr-link:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+@media(max-width:768px){.grid3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.grid3{grid-template-columns:1fr}h1{font-size:1.8rem}.sec{padding:36px 0}.sec-alt{padding:36px 0}}
 </style>
 </head>
 <body>
@@ -72,13 +75,12 @@ footer a:hover{text-decoration:underline}
 <section class="sec">
 <div class="ctn">
 <div class="sec-t">
-<h2>How the Year of the Chinese Zodiac Works</h2>
-<p>A quick primer on the system before you look up your year.</p>
+<h2>Complete Year-by-Year Guide</h2>
+<p>Find your birth year below to discover your Chinese zodiac animal, element, and what it means for your personality and destiny.</p>
 </div>
 <div class="intro">
-<p>The Chinese zodiac follows a 12-year cycle, with each year tied to a specific animal: Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, and Pig. On top of that, every year also carries one of five elements — Wood, Fire, Earth, Metal, or Water — which adds another layer of meaning to the sign.</p>
-<p>That means the full cycle (12 animals × 5 elements) takes 60 years to complete. So the Fire Rat year of 1936 won't come around again until 1996, and then not until 2056. This 60-year loop is why two people born in different Rat years can have noticeably different personalities — the element shifts the flavor of the animal.</p>
-<p>One thing to keep in mind: the Chinese zodiac year starts on Chinese New Year, not January 1st. If your birthday falls in January or early February, double-check the exact date of Chinese New Year for your birth year. You might actually belong to the previous year's sign.</p>
+<p>The Chinese zodiac follows a 12-year cycle, with each year represented by an animal sign. But it goes deeper than that — each year also carries one of five elements (Wood, Fire, Earth, Metal, Water), creating a 60-year cycle that shapes personality and fortune.</p>
+<p>This guide covers every year from 1936 to 2042. Click any year to read the full breakdown of its zodiac sign, element, personality traits, and compatibility insights.</p>
 </div>
 </div>
 </section>
@@ -86,94 +88,107 @@ footer a:hover{text-decoration:underline}
 <section class="sec-alt">
 <div class="ctn">
 <div class="sec-t">
-<h2>1936 - 1947: Year of the Chinese Zodiac</h2>
-<p>The first full 12-year cycle in our range.</p>
+<h2>Zodiac Animals by Year</h2>
+<p>Click any card to explore the full guide for that year.</p>
 </div>
 <div class="grid3">
-<a href="1936-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rat.png" alt="Fire Rat zodiac animal for 1936" class="crd-img" />
-<h3>1936 - Fire Rat</h3>
-<div class="elem">Yang Fire</div>
-<p>Sharp-minded and driven. Fire Rats think fast and act faster, with a magnetic charm that draws people in.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1937-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/ox.png" alt="Fire Ox zodiac animal for 1937" class="crd-img" />
-<h3>1937 - Fire Ox</h3>
-<div class="elem">Yin Fire</div>
-<p>Stubborn but dependable. Fire Oxen pour their energy into steady, determined effort and rarely back down.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1938-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/tiger.png" alt="Earth Tiger zodiac animal for 1938" class="crd-img" />
-<h3>1938 - Earth Tiger</h3>
-<div class="elem">Yang Earth</div>
-<p>Grounded courage. Earth Tigers have the Tiger's boldness tempered by a practical, level-headed streak.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1939-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rabbit.png" alt="Earth Rabbit zodiac animal for 1939" class="crd-img" />
-<h3>1939 - Earth Rabbit</h3>
-<div class="elem">Yin Earth</div>
-<p>Calm and steady. Earth Rabbits are the most grounded of all Rabbits, with a quiet resilience that runs deep.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1940-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dragon.png" alt="Metal Dragon zodiac animal for 1940" class="crd-img" />
-<h3>1940 - Metal Dragon</h3>
-<div class="elem">Yang Metal</div>
-<p>Fierce and unyielding. Metal Dragons are the most determined of the breed, with a presence that's hard to ignore.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1941-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/snake.png" alt="Metal Snake zodiac animal for 1941" class="crd-img" />
-<h3>1941 - Metal Snake</h3>
-<div class="elem">Yin Metal</div>
-<p>Sharp and calculating. Metal Snakes have an especially keen eye for detail and a talent for strategy.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1942-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/horse.png" alt="Water Horse zodiac animal for 1942" class="crd-img" />
-<h3>1942 - Water Horse</h3>
-<div class="elem">Yang Water</div>
-<p>Adaptable and persuasive. Water Horses go with the flow better than most, making them natural communicators.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1943-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/goat.png" alt="Water Goat zodiac animal for 1943" class="crd-img" />
-<h3>1943 - Water Goat</h3>
-<div class="elem">Yin Water</div>
-<p>Gentle and intuitive. Water Goats are the most emotionally attuned of the Goats, with real artistic flair.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1944-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/monkey.png" alt="Wood Monkey zodiac animal for 1944" class="crd-img" />
-<h3>1944 - Wood Monkey</h3>
-<div class="elem">Yang Wood</div>
-<p>Clever and progressive. Wood Monkeys channel their quick wits into creative, forward-thinking ideas.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1945-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rooster.png" alt="Wood Rooster zodiac animal for 1945" class="crd-img" />
-<h3>1945 - Wood Rooster</h3>
-<div class="elem">Yin Wood</div>
-<p>Observant and principled. Wood Rooster are detail-oriented with a strong sense of right and wrong.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1946-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dog.png" alt="Fire Dog zodiac animal for 1946" class="crd-img" />
-<h3>1946 - Fire Dog</h3>
-<div class="elem">Yang Fire</div>
-<p>Passionate and loyal. Fire Dogs defend their people with a warmth and intensity that's hard to match.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1947-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/pig.png" alt="Fire Pig zodiac animal for 1947" class="crd-img" />
-<h3>1947 - Fire Pig</h3>
-<div class="elem">Yin Fire</div>
-<p>Warm-hearted and generous. Fire Pigs live large and love deeply, with an infectious enthusiasm for life.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
+
+<div class="crd" href="1936-year-of-the-chinese-zodiac.html">
+<img src="../Images/rat.png" alt="Rat Chinese Zodiac" class="crd-img">
+<h3>Rat</h3>
+<div class="elem">Fire Rat</div>
+<p>Quick-witted, resourceful, and adaptable. Fire Rats are energetic and charming, with a natural talent for getting things done.</p>
+<a href="1936-year-of-the-chinese-zodiac.html" class="yr-link">1936 →</a>
+</div>
+
+<div class="crd" href="1937-year-of-the-chinese-zodiac.html">
+<img src="../Images/ox.png" alt="Ox Chinese Zodiac" class="crd-img">
+<h3>Ox</h3>
+<div class="elem">Fire Ox</div>
+<p>Diligent, dependable, and determined. Fire Oxen combine the Ox's steady nature with extra drive and ambition.</p>
+<a href="1937-year-of-the-chinese-zodiac.html" class="yr-link">1937 →</a>
+</div>
+
+<div class="crd" href="1938-year-of-the-chinese-zodiac.html">
+<img src="../Images/tiger.png" alt="Tiger Chinese Zodiac" class="crd-img">
+<h3>Tiger</h3>
+<div class="elem">Earth Tiger</div>
+<p>Brave, confident, and unpredictable. Earth Tigers are more grounded than other Tigers, with a practical streak that balances their boldness.</p>
+<a href="1938-year-of-the-chinese-zodiac.html" class="yr-link">1938 →</a>
+</div>
+
+<div class="crd" href="1939-year-of-the-chinese-zodiac.html">
+<img src="../Images/rabbit.png" alt="Rabbit Chinese Zodiac" class="crd-img">
+<h3>Rabbit</h3>
+<div class="elem">Earth Rabbit</div>
+<p>Gentle, elegant, and alert. Earth Rabbits are especially steady and reliable, with a quiet strength that earns trust.</p>
+<a href="1939-year-of-the-chinese-zodiac.html" class="yr-link">1939 →</a>
+</div>
+
+<div class="crd" href="1940-year-of-the-chinese-zodiac.html">
+<img src="../Images/dragon.png" alt="Dragon Chinese Zodiac" class="crd-img">
+<h3>Dragon</h3>
+<div class="elem">Metal Dragon</div>
+<p>Powerful, passionate, and ambitious. Metal Dragons are among the most driven of all zodiac signs, with unstoppable energy.</p>
+<a href="1940-year-of-the-chinese-zodiac.html" class="yr-link">1940 →</a>
+</div>
+
+<div class="crd" href="1941-year-of-the-chinese-zodiac.html">
+<img src="../Images/snake.png" alt="Snake Chinese Zodiac" class="crd-img">
+<h3>Snake</h3>
+<div class="elem">Metal Snake</div>
+<p>Wise, intuitive, and sophisticated. Metal Snakes are sharp-minded and strategic, with a natural flair for finance and analysis.</p>
+<a href="1941-year-of-the-chinese-zodiac.html" class="yr-link">1941 →</a>
+</div>
+
+<div class="crd" href="1942-year-of-the-chinese-zodiac.html">
+<img src="../Images/horse.png" alt="Horse Chinese Zodiac" class="crd-img">
+<h3>Horse</h3>
+<div class="elem">Water Horse</div>
+<p>Animated, active, and energetic. Water Horses are more adaptable and emotionally aware than other Horses, making them great team players.</p>
+<a href="1942-year-of-the-chinese-zodiac.html" class="yr-link">1942 →</a>
+</div>
+
+<div class="crd" href="1943-year-of-the-chinese-zodiac.html">
+<img src="../Images/goat.png" alt="Goat Chinese Zodiac" class="crd-img">
+<h3>Goat</h3>
+<div class="elem">Water Goat</div>
+<p>Creative, compassionate, and calm. Water Goats are deeply empathetic and artistic, with a gentle spirit that draws people in.</p>
+<a href="1943-year-of-the-chinese-zodiac.html" class="yr-link">1943 →</a>
+</div>
+
+<div class="crd" href="1944-year-of-the-chinese-zodiac.html">
+<img src="../Images/monkey.png" alt="Monkey Chinese Zodiac" class="crd-img">
+<h3>Monkey</h3>
+<div class="elem">Wood Monkey</div>
+<p>Sharp, smart, and curious. Wood Monkeys are especially creative and cooperative, with a talent for innovation and problem-solving.</p>
+<a href="1944-year-of-the-chinese-zodiac.html" class="yr-link">1944 →</a>
+</div>
+
+<div class="crd" href="1945-year-of-the-chinese-zodiac.html">
+<img src="../Images/rooster.png" alt="Rooster Chinese Zodiac" class="crd-img">
+<h3>Rooster</h3>
+<div class="elem">Wood Rooster</div>
+<p>Observant, hardworking, and courageous. Wood Roosters are more flexible and team-oriented than other Roosters.</p>
+<a href="1945-year-of-the-chinese-zodiac.html" class="yr-link">1945 →</a>
+</div>
+
+<div class="crd" href="1946-year-of-the-chinese-zodiac.html">
+<img src="../Images/dog.png" alt="Dog Chinese Zodiac" class="crd-img">
+<h3>Dog</h3>
+<div class="elem">Fire Dog</div>
+<p>Loyal, honest, and responsible. Fire Dogs are passionate defenders of justice, with a warm heart and strong moral compass.</p>
+<a href="1946-year-of-the-chinese-zodiac.html" class="yr-link">1946 →</a>
+</div>
+
+<div class="crd" href="1947-year-of-the-chinese-zodiac.html">
+<img src="../Images/pig.png" alt="Pig Chinese Zodiac" class="crd-img">
+<h3>Pig</h3>
+<div class="elem">Fire Pig</div>
+<p>Compassionate, generous, and diligent. Fire Pigs are outgoing and sociable, with a love for life that inspires everyone around them.</p>
+<a href="1947-year-of-the-chinese-zodiac.html" class="yr-link">1947 →</a>
+</div>
+
 </div>
 </div>
 </section>
@@ -181,762 +196,162 @@ footer a:hover{text-decoration:underline}
 <section class="sec">
 <div class="ctn">
 <div class="sec-t">
-<h2>1948 - 1959: Year of the Chinese Zodiac</h2>
-<p>The second cycle — new elements, same twelve animals.</p>
+<h2>All Years at a Glance</h2>
+<p>Quick reference for every year from 1936 to 2042.</p>
 </div>
-<div class="grid3">
-<a href="1948-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rat.png" alt="Earth Rat zodiac animal for 1948" class="crd-img" />
-<h3>1948 - Earth Rat</h3>
-<div class="elem">Yang Earth</div>
-<p>Practical and grounded. Earth Rats are more settled than most Rats, with a talent for building lasting security.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1949-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/ox.png" alt="Earth Ox zodiac animal for 1949" class="crd-img" />
-<h3>1949 - Earth Ox</h3>
-<div class="elem">Yin Earth</div>
-<p>Rock-solid and reliable. Earth Oxen are the most dependable of the breed — patient, thorough, and unshakable.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1950-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/tiger.png" alt="Metal Tiger zodiac animal for 1950" class="crd-img" />
-<h3>1950 - Metal Tiger</h3>
-<div class="elem">Yang Metal</div>
-<p>Intense and authoritative. Metal Tigers have a commanding presence and the willpower to back it up.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1951-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rabbit.png" alt="Metal Rabbit zodiac animal for 1951" class="crd-img" />
-<h3>1951 - Metal Rabbit</h3>
-<div class="elem">Yin Metal</div>
-<p>Poised and resilient. Metal Rabbits carry themselves with grace and handle pressure better than most.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1952-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dragon.png" alt="Water Dragon zodiac animal for 1952" class="crd-img" />
-<h3>1952 - Water Dragon</h3>
-<div class="elem">Yang Water</div>
-<p>Flexible and visionary. Water Dragons combine the Dragon's ambition with a rare ability to adapt and persuade.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1953-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/snake.png" alt="Water Snake zodiac animal for 1953" class="crd-img" />
-<h3>1953 - Water Snake</h3>
-<div class="elem">Yin Water</div>
-<p>Insightful and diplomatic. Water Snakes have a gift for reading people and navigating complex social dynamics.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1954-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/horse.png" alt="Wood Horse zodiac animal for 1954" class="crd-img" />
-<h3>1954 - Wood Horse</h3>
-<div class="elem">Yang Wood</div>
-<p>Energetic and growth-oriented. Wood Horses are always expanding their horizons and bringing others along for the ride.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1955-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/goat.png" alt="Wood Goat zodiac animal for 1955" class="crd-img" />
-<h3>1955 - Wood Goat</h3>
-<div class="elem">Yin Wood</div>
-<p>Compassionate and creative. Wood Goats are the nurturers of the zodiac, with a genuine love for beauty and harmony.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1956-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/monkey.png" alt="Fire Monkey zodiac animal for 1956" class="crd-img" />
-<h3>1956 - Fire Monkey</h3>
-<div class="elem">Yang Fire</div>
-<p>Dynamic and daring. Fire Monkeys are the liveliest of the bunch, always cooking up something bold and unexpected.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1957-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rooster.png" alt="Fire Rooster zodiac animal for 1957" class="crd-img" />
-<h3>1957 - Fire Rooster</h3>
-<div class="elem">Yin Fire</div>
-<p>Bold and meticulous. Fire Roosters are perfectionists who aren't afraid to stand out and speak their mind.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1958-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dog.png" alt="Earth Dog zodiac animal for 1958" class="crd-img" />
-<h3>1958 - Earth Dog</h3>
-<div class="elem">Yang Earth</div>
-<p>Steadfast and fair. Earth Dogs are the most balanced of the Dogs, with a strong moral compass and real staying power.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1959-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/pig.png" alt="Earth Pig zodiac animal for 1959" class="crd-img" />
-<h3>1959 - Earth Pig</h3>
-<div class="elem">Yin Earth</div>
-<p>Down-to-earth and kind. Earth Pigs are practical and warm, with a no-nonsense approach to helping others.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-</div>
-</div>
-</section>
 
-<section class="sec-alt">
-<div class="ctn">
-<div class="sec-t">
-<h2>1960 - 1971: Year of the Chinese Zodiac</h2>
-<p>The Baby Boom generation and beyond.</p>
+<div class="intro">
+<h3 style="font-size:1.1rem;color:var(--dark);margin-bottom:12px">1936-1947</h3>
+<div class="yr-grid">
+<a href="1936-year-of-the-chinese-zodiac.html" class="yr-link">1936</a>
+<a href="1937-year-of-the-chinese-zodiac.html" class="yr-link">1937</a>
+<a href="1938-year-of-the-chinese-zodiac.html" class="yr-link">1938</a>
+<a href="1939-year-of-the-chinese-zodiac.html" class="yr-link">1939</a>
+<a href="1940-year-of-the-chinese-zodiac.html" class="yr-link">1940</a>
+<a href="1941-year-of-the-chinese-zodiac.html" class="yr-link">1941</a>
+<a href="1942-year-of-the-chinese-zodiac.html" class="yr-link">1942</a>
+<a href="1943-year-of-the-chinese-zodiac.html" class="yr-link">1943</a>
+<a href="1944-year-of-the-chinese-zodiac.html" class="yr-link">1944</a>
+<a href="1945-year-of-the-chinese-zodiac.html" class="yr-link">1945</a>
+<a href="1946-year-of-the-chinese-zodiac.html" class="yr-link">1946</a>
+<a href="1947-year-of-the-chinese-zodiac.html" class="yr-link">1947</a>
 </div>
-<div class="grid3">
-<a href="1960-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rat.png" alt="Metal Rat zodiac animal for 1960" class="crd-img" />
-<h3>1960 - Metal Rat</h3>
-<div class="elem">Yang Metal</div>
-<p>Sharp and ambitious. Metal Rats are determined and focused, with a knack for turning ideas into results.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1961-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/ox.png" alt="Metal Ox zodiac animal for 1961" class="crd-img" />
-<h3>1961 - Metal Ox</h3>
-<div class="elem">Yin Metal</div>
-<p>Strong-willed and resolute. Metal Oxen are the toughest of the Ox family — unyielding when they've made up their mind.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1962-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/tiger.png" alt="Water Tiger zodiac animal for 1962" class="crd-img" />
-<h3>1962 - Water Tiger</h3>
-<div class="elem">Yang Water</div>
-<p>Open-minded and persuasive. Water Tigers blend courage with empathy, making them natural mediators and leaders.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1963-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rabbit.png" alt="Water Rabbit zodiac animal for 1963" class="crd-img" />
-<h3>1963 - Water Rabbit</h3>
-<div class="elem">Yin Water</div>
-<p>Empathetic and flexible. Water Rabbits go with the flow and have a gift for making others feel at ease.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1964-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dragon.png" alt="Wood Dragon zodiac animal for 1964" class="crd-img" />
-<h3>1964 - Wood Dragon</h3>
-<div class="elem">Yang Wood</div>
-<p>Progressive and imaginative. Wood Dragons are creative visionaries who aren't afraid to chase big dreams.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1965-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/snake.png" alt="Wood Snake zodiac animal for 1965" class="crd-img" />
-<h3>1965 - Wood Snake</h3>
-<div class="elem">Yin Wood</div>
-<p>Thoughtful and growth-oriented. Wood Snakes are the most open-minded Snakes, always learning and evolving.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1966-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/horse.png" alt="Fire Horse zodiac animal for 1966" class="crd-img" />
-<h3>1966 - Fire Horse</h3>
-<div class="elem">Yang Fire</div>
-<p>Blazing and restless. Fire Horses are the most intense of all Horses — passionate, independent, and always on the move.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1967-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/goat.png" alt="Fire Goat zodiac animal for 1967" class="crd-img" />
-<h3>1967 - Fire Goat</h3>
-<div class="elem">Yin Fire</div>
-<p>Expressive and warm. Fire Goats pour their hearts into creative pursuits and care deeply about the people around them.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1968-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/monkey.png" alt="Earth Monkey zodiac animal for 1968" class="crd-img" />
-<h3>1968 - Earth Monkey</h3>
-<div class="elem">Yang Earth</div>
-<p>Practical and clever. Earth Monkeys are more grounded than most, combining smarts with a realistic game plan.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1969-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rooster.png" alt="Earth Rooster zodiac animal for 1969" class="crd-img" />
-<h3>1969 - Earth Rooster</h3>
-<div class="elem">Yin Earth</div>
-<p>Organized and hardworking. Earth Roosters are the most diligent of the bunch, with a no-shortcuts mindset.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1970-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dog.png" alt="Metal Dog zodiac animal for 1970" class="crd-img" />
-<h3>1970 - Metal Dog</h3>
-<div class="elem">Yang Metal</div>
-<p>Fierce and principled. Metal Dogs hold their ground on what matters and protect their people without hesitation.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1971-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/pig.png" alt="Metal Pig zodiac animal for 1971" class="crd-img" />
-<h3>1971 - Metal Pig</h3>
-<div class="elem">Yin Metal</div>
-<p>Resilient and generous. Metal Pigs are strong-willed but kind, with a stubborn streak that works in their favor.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-</div>
-</div>
-</section>
 
-<section class="sec">
-<div class="ctn">
-<div class="sec-t">
-<h2>1972 - 1983: Year of the Chinese Zodiac</h2>
-<p>Gen X comes into the picture.</p>
+<h3 style="font-size:1.1rem;color:var(--dark);margin:24px 0 12px">1948-1959</h3>
+<div class="yr-grid">
+<a href="1948-year-of-the-chinese-zodiac.html" class="yr-link">1948</a>
+<a href="1949-year-of-the-chinese-zodiac.html" class="yr-link">1949</a>
+<a href="1950-year-of-the-chinese-zodiac.html" class="yr-link">1950</a>
+<a href="1951-year-of-the-chinese-zodiac.html" class="yr-link">1951</a>
+<a href="1952-year-of-the-chinese-zodiac.html" class="yr-link">1952</a>
+<a href="1953-year-of-the-chinese-zodiac.html" class="yr-link">1953</a>
+<a href="1954-year-of-the-chinese-zodiac.html" class="yr-link">1954</a>
+<a href="1955-year-of-the-chinese-zodiac.html" class="yr-link">1955</a>
+<a href="1956-year-of-the-chinese-zodiac.html" class="yr-link">1956</a>
+<a href="1957-year-of-the-chinese-zodiac.html" class="yr-link">1957</a>
+<a href="1958-year-of-the-chinese-zodiac.html" class="yr-link">1958</a>
+<a href="1959-year-of-the-chinese-zodiac.html" class="yr-link">1959</a>
 </div>
-<div class="grid3">
-<a href="1972-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rat.png" alt="Water Rat zodiac animal for 1972" class="crd-img" />
-<h3>1972 - Water Rat</h3>
-<div class="elem">Yang Water</div>
-<p>Adaptable and persuasive. Water Rats are smooth communicators who can read a room and adjust on the fly.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1973-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/ox.png" alt="Water Ox zodiac animal for 1973" class="crd-img" />
-<h3>1973 - Water Ox</h3>
-<div class="elem">Yin Water</div>
-<p>Flexible yet steadfast. Water Oxen are more adaptable than other Oxen while keeping their core reliability intact.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1974-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/tiger.png" alt="Wood Tiger zodiac animal for 1974" class="crd-img" />
-<h3>1974 - Wood Tiger</h3>
-<div class="elem">Yang Wood</div>
-<p>Cooperative and charismatic. Wood Tigers channel their boldness into teamwork and bring out the best in others.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1975-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rabbit.png" alt="Wood Rabbit zodiac animal for 1975" class="crd-img" />
-<h3>1975 - Wood Rabbit</h3>
-<div class="elem">Yin Wood</div>
-<p>Warm and sociable. Wood Rabbits are the most outgoing of the Rabbits, with a real talent for building community.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1976-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dragon.png" alt="Fire Dragon zodiac animal for 1976" class="crd-img" />
-<h3>1976 - Fire Dragon</h3>
-<div class="elem">Yang Fire</div>
-<p>Charismatic and intense. Fire Dragons light up every room they walk into, with energy that's impossible to ignore.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1977-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/snake.png" alt="Fire Snake zodiac animal for 1977" class="crd-img" />
-<h3>1977 - Fire Snake</h3>
-<div class="elem">Yin Fire</div>
-<p>Passionate and magnetic. Fire Snakes have an intense personal magnetism that makes them unforgettable.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1978-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/horse.png" alt="Earth Horse zodiac animal for 1978" class="crd-img" />
-<h3>1978 - Earth Horse</h3>
-<div class="elem">Yang Earth</div>
-<p>Stable and responsible. Earth Horses are more grounded than most, balancing their love of freedom with real follow-through.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1979-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/goat.png" alt="Earth Goat zodiac animal for 1979" class="crd-img" />
-<h3>1979 - Earth Goat</h3>
-<div class="elem">Yin Earth</div>
-<p>Practical and caring. Earth Goats are the most reliable of the Goats, with a steady hand and a warm heart.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1980-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/monkey.png" alt="Metal Monkey zodiac animal for 1980" class="crd-img" />
-<h3>1980 - Metal Monkey</h3>
-<div class="elem">Yang Metal</div>
-<p>Sharp and competitive. Metal Monkeys are driven achievers who play to win and rarely settle for second best.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1981-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rooster.png" alt="Metal Rooster zodiac animal for 1981" class="crd-img" />
-<h3>1981 - Metal Rooster</h3>
-<div class="elem">Yin Metal</div>
-<p>Precise and driven. Metal Roosters set high standards for themselves and everyone around them.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1982-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dog.png" alt="Water Dog zodiac animal for 1982" class="crd-img" />
-<h3>1982 - Water Dog</h3>
-<div class="elem">Yang Water</div>
-<p>Intuitive and adaptable. Water Dogs are more flexible than most Dogs, with a natural feel for what others need.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1983-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/pig.png" alt="Water Pig zodiac animal for 1983" class="crd-img" />
-<h3>1983 - Water Pig</h3>
-<div class="elem">Yin Water</div>
-<p>Easygoing and generous. Water Pigs go with the flow and have a knack for making life look effortless.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-</div>
-</div>
-</section>
 
-<section class="sec-alt">
-<div class="ctn">
-<div class="sec-t">
-<h2>1984 - 1995: Year of the Chinese Zodiac</h2>
-<p>Millennials and the start of the digital era.</p>
+<h3 style="font-size:1.1rem;color:var(--dark);margin:24px 0 12px">1960-1971</h3>
+<div class="yr-grid">
+<a href="1960-year-of-the-chinese-zodiac.html" class="yr-link">1960</a>
+<a href="1961-year-of-the-chinese-zodiac.html" class="yr-link">1961</a>
+<a href="1962-year-of-the-chinese-zodiac.html" class="yr-link">1962</a>
+<a href="1963-year-of-the-chinese-zodiac.html" class="yr-link">1963</a>
+<a href="1964-year-of-the-chinese-zodiac.html" class="yr-link">1964</a>
+<a href="1965-year-of-the-chinese-zodiac.html" class="yr-link">1965</a>
+<a href="1966-year-of-the-chinese-zodiac.html" class="yr-link">1966</a>
+<a href="1967-year-of-the-chinese-zodiac.html" class="yr-link">1967</a>
+<a href="1968-year-of-the-chinese-zodiac.html" class="yr-link">1968</a>
+<a href="1969-year-of-the-chinese-zodiac.html" class="yr-link">1969</a>
+<a href="1970-year-of-the-chinese-zodiac.html" class="yr-link">1970</a>
+<a href="1971-year-of-the-chinese-zodiac.html" class="yr-link">1971</a>
 </div>
-<div class="grid3">
-<a href="1984-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rat.png" alt="Wood Rat zodiac animal for 1984" class="crd-img" />
-<h3>1984 - Wood Rat</h3>
-<div class="elem">Yang Wood</div>
-<p>Progressive and creative. Wood Rats are the most growth-oriented Rats, always looking for the next opportunity to improve.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1985-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/ox.png" alt="Wood Ox zodiac animal for 1985" class="crd-img" />
-<h3>1985 - Wood Ox</h3>
-<div class="elem">Yin Wood</div>
-<p>Steady and fair-minded. Wood Oxen combine reliability with a more open, flexible approach than most Oxen.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1986-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/tiger.png" alt="Fire Tiger zodiac animal for 1986" class="crd-img" />
-<h3>1986 - Fire Tiger</h3>
-<div class="elem">Yang Fire</div>
-<p>Fierce and electrifying. Fire Tigers burn bright — they're bold, expressive, and impossible to overlook.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1987-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rabbit.png" alt="Fire Rabbit zodiac animal for 1987" class="crd-img" />
-<h3>1987 - Fire Rabbit</h3>
-<div class="elem">Yin Fire</div>
-<p>Vibrant and charming. Fire Rabbits have a warmth that draws people in, with more social energy than most Rabbits.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1988-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dragon.png" alt="Earth Dragon zodiac animal for 1988" class="crd-img" />
-<h3>1988 - Earth Dragon</h3>
-<div class="elem">Yang Earth</div>
-<p>Grounded and strategic. Earth Dragons are the most level-headed Dragons, with big plans they actually follow through on.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1989-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/snake.png" alt="Earth Snake zodiac animal for 1989" class="crd-img" />
-<h3>1989 - Earth Snake</h3>
-<div class="elem">Yin Earth</div>
-<p>Practical and composed. Earth Snakes keep their cool under pressure and make decisions based on facts, not impulse.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1990-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/horse.png" alt="Metal Horse zodiac animal for 1990" class="crd-img" />
-<h3>1990 - Metal Horse</h3>
-<div class="elem">Yang Metal</div>
-<p>Determined and straight-shooting. Metal Horses are focused and honest, with a no-nonsense approach to getting things done.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1991-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/goat.png" alt="Metal Goat zodiac animal for 1991" class="crd-img" />
-<h3>1991 - Metal Goat</h3>
-<div class="elem">Yin Metal</div>
-<p>Resilient and artistic. Metal Goats are tougher than they look, with a strong sense of personal style and conviction.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1992-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/monkey.png" alt="Water Monkey zodiac animal for 1992" class="crd-img" />
-<h3>1992 - Water Monkey</h3>
-<div class="elem">Yang Water</div>
-<p>Quick and adaptable. Water Monkeys are smooth operators who think on their feet and adjust to any situation.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1993-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rooster.png" alt="Water Rooster zodiac animal for 1993" class="crd-img" />
-<h3>1993 - Water Rooster</h3>
-<div class="elem">Yin Water</div>
-<p>Insightful and open. Water Roosters are more easygoing than most, with a curious mind and a cooperative spirit.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1994-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dog.png" alt="Wood Dog zodiac animal for 1994" class="crd-img" />
-<h3>1994 - Wood Dog</h3>
-<div class="elem">Yang Wood</div>
-<p>Warm and idealistic. Wood Dogs are the most community-minded Dogs, always looking out for the greater good.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1995-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/pig.png" alt="Wood Pig zodiac animal for 1995" class="crd-img" />
-<h3>1995 - Wood Pig</h3>
-<div class="elem">Yin Wood</div>
-<p>Generous and growth-oriented. Wood Pigs are the most open-minded of the Pigs, always willing to lend a hand.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-</div>
-</div>
-</section>
 
-<section class="sec">
-<div class="ctn">
-<div class="sec-t">
-<h2>1996 - 2007: Year of the Chinese Zodiac</h2>
-<p>The late Millennials and early Gen Z.</p>
+<h3 style="font-size:1.1rem;color:var(--dark);margin:24px 0 12px">1972-1983</h3>
+<div class="yr-grid">
+<a href="1972-year-of-the-chinese-zodiac.html" class="yr-link">1972</a>
+<a href="1973-year-of-the-chinese-zodiac.html" class="yr-link">1973</a>
+<a href="1974-year-of-the-chinese-zodiac.html" class="yr-link">1974</a>
+<a href="1975-year-of-the-chinese-zodiac.html" class="yr-link">1975</a>
+<a href="1976-year-of-the-chinese-zodiac.html" class="yr-link">1976</a>
+<a href="1977-year-of-the-chinese-zodiac.html" class="yr-link">1977</a>
+<a href="1978-year-of-the-chinese-zodiac.html" class="yr-link">1978</a>
+<a href="1979-year-of-the-chinese-zodiac.html" class="yr-link">1979</a>
+<a href="1980-year-of-the-chinese-zodiac.html" class="yr-link">1980</a>
+<a href="1981-year-of-the-chinese-zodiac.html" class="yr-link">1981</a>
+<a href="1982-year-of-the-chinese-zodiac.html" class="yr-link">1982</a>
+<a href="1983-year-of-the-chinese-zodiac.html" class="yr-link">1983</a>
 </div>
-<div class="grid3">
-<a href="1996-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rat.png" alt="Fire Rat zodiac animal for 1996" class="crd-img" />
-<h3>1996 - Fire Rat</h3>
-<div class="elem">Yang Fire</div>
-<p>Dynamic and driven. Fire Rats are ambitious go-getters who think fast and aren't afraid to take charge.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1997-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/ox.png" alt="Fire Ox zodiac animal for 1997" class="crd-img" />
-<h3>1997 - Fire Ox</h3>
-<div class="elem">Yin Fire</div>
-<p>Passionate and persistent. Fire Oxen bring extra energy to their already legendary work ethic.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1998-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/tiger.png" alt="Earth Tiger zodiac animal for 1998" class="crd-img" />
-<h3>1998 - Earth Tiger</h3>
-<div class="elem">Yang Earth</div>
-<p>Grounded and realistic. Earth Tigers are brave but practical, with a level head that balances their wild side.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="1999-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rabbit.png" alt="Earth Rabbit zodiac animal for 1999" class="crd-img" />
-<h3>1999 - Earth Rabbit</h3>
-<div class="elem">Yin Earth</div>
-<p>Sensible and serene. Earth Rabbits are the most down-to-earth Rabbits, with a quiet strength that endures.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2000-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dragon.png" alt="Metal Dragon zodiac animal for 2000" class="crd-img" />
-<h3>2000 - Metal Dragon</h3>
-<div class="elem">Yang Metal</div>
-<p>Powerful and determined. Metal Dragons are the most strong-willed of all Dragons, with an iron resolve to match.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2001-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/snake.png" alt="Metal Snake zodiac animal for 2001" class="crd-img" />
-<h3>2001 - Metal Snake</h3>
-<div class="elem">Yin Metal</div>
-<p>Determined and self-possessed. Metal Snakes have an inner strength and a clear sense of who they are.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2002-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/horse.png" alt="Water Horse zodiac animal for 2002" class="crd-img" />
-<h3>2002 - Water Horse</h3>
-<div class="elem">Yang Water</div>
-<p>Charming and adaptable. Water Horses are the most socially gifted Horses, with a talent for connecting with anyone.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2003-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/goat.png" alt="Water Goat zodiac animal for 2003" class="crd-img" />
-<h3>2003 - Water Goat</h3>
-<div class="elem">Yin Water</div>
-<p>Sensitive and imaginative. Water Goats are the most artistic of the Goats, with deep emotional intelligence.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2004-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/monkey.png" alt="Wood Monkey zodiac animal for 2004" class="crd-img" />
-<h3>2004 - Wood Monkey</h3>
-<div class="elem">Yang Wood</div>
-<p>Inventive and cooperative. Wood Monkeys are team players who use their smarts to build something lasting.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2005-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rooster.png" alt="Wood Rooster zodiac animal for 2005" class="crd-img" />
-<h3>2005 - Wood Rooster</h3>
-<div class="elem">Yin Wood</div>
-<p>Conscientious and helpful. Wood Roosters are the most considerate of the bunch, with a genuine desire to improve things.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2006-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dog.png" alt="Fire Dog zodiac animal for 2006" class="crd-img" />
-<h3>2006 - Fire Dog</h3>
-<div class="elem">Yang Fire</div>
-<p>Enthusiastic and loyal. Fire Dogs throw themselves into everything they care about with real passion.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2007-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/pig.png" alt="Fire Pig zodiac animal for 2007" class="crd-img" />
-<h3>2007 - Fire Pig</h3>
-<div class="elem">Yin Fire</div>
-<p>Joyful and big-hearted. Fire Pigs live life to the fullest and bring warmth to everyone around them.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-</div>
-</div>
-</section>
 
-<section class="sec-alt">
-<div class="ctn">
-<div class="sec-t">
-<h2>2008 - 2019: Year of the Chinese Zodiac</h2>
-<p>Gen Z and the rising generation.</p>
+<h3 style="font-size:1.1rem;color:var(--dark);margin:24px 0 12px">1984-1995</h3>
+<div class="yr-grid">
+<a href="1984-year-of-the-chinese-zodiac.html" class="yr-link">1984</a>
+<a href="1985-year-of-the-chinese-zodiac.html" class="yr-link">1985</a>
+<a href="1986-year-of-the-chinese-zodiac.html" class="yr-link">1986</a>
+<a href="1987-year-of-the-chinese-zodiac.html" class="yr-link">1987</a>
+<a href="1988-year-of-the-chinese-zodiac.html" class="yr-link">1988</a>
+<a href="1989-year-of-the-chinese-zodiac.html" class="yr-link">1989</a>
+<a href="1990-year-of-the-chinese-zodiac.html" class="yr-link">1990</a>
+<a href="1991-year-of-the-chinese-zodiac.html" class="yr-link">1991</a>
+<a href="1992-year-of-the-chinese-zodiac.html" class="yr-link">1992</a>
+<a href="1993-year-of-the-chinese-zodiac.html" class="yr-link">1993</a>
+<a href="1994-year-of-the-chinese-zodiac.html" class="yr-link">1994</a>
+<a href="1995-year-of-the-chinese-zodiac.html" class="yr-link">1995</a>
 </div>
-<div class="grid3">
-<a href="2008-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rat.png" alt="Earth Rat zodiac animal for 2008" class="crd-img" />
-<h3>2008 - Earth Rat</h3>
-<div class="elem">Yang Earth</div>
-<p>Stable and resourceful. Earth Rats are the most practical Rats, with a real talent for building security from the ground up.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2009-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/ox.png" alt="Earth Ox zodiac animal for 2009" class="crd-img" />
-<h3>2009 - Earth Ox</h3>
-<div class="elem">Yin Earth</div>
-<p>Dependable and thorough. Earth Oxen are the most patient of the Oxen, with a steady approach that rarely fails.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2010-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/tiger.png" alt="Metal Tiger zodiac animal for 2010" class="crd-img" />
-<h3>2010 - Metal Tiger</h3>
-<div class="elem">Yang Metal</div>
-<p>Forceful and decisive. Metal Tigers are the most commanding Tigers, with a presence that demands attention.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2011-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rabbit.png" alt="Metal Rabbit zodiac animal for 2011" class="crd-img" />
-<h3>2011 - Metal Rabbit</h3>
-<div class="elem">Yin Metal</div>
-<p>Elegant and determined. Metal Rabbits have a quiet strength and a refined sense of purpose.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2012-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dragon.png" alt="Water Dragon zodiac animal for 2012" class="crd-img" />
-<h3>2012 - Water Dragon</h3>
-<div class="elem">Yang Water</div>
-<p>Persuasive and forward-thinking. Water Dragons are the most adaptable Dragons, with big ideas and the charm to sell them.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2013-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/snake.png" alt="Water Snake zodiac animal for 2013" class="crd-img" />
-<h3>2013 - Water Snake</h3>
-<div class="elem">Yin Water</div>
-<p>Intuitive and insightful. Water Snakes have a deep understanding of human nature and a talent for reading between the lines.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2014-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/horse.png" alt="Wood Horse zodiac animal for 2014" class="crd-img" />
-<h3>2014 - Wood Horse</h3>
-<div class="elem">Yang Wood</div>
-<p>Energetic and collaborative. Wood Horses love working with others and have a gift for rallying people around a cause.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2015-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/goat.png" alt="Wood Goat zodiac animal for 2015" class="crd-img" />
-<h3>2015 - Wood Goat</h3>
-<div class="elem">Yin Wood</div>
-<p>Caring and imaginative. Wood Goats are the most nurturing of the Goats, with a deep love for family and tradition.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2016-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/monkey.png" alt="Fire Monkey zodiac animal for 2016" class="crd-img" />
-<h3>2016 - Fire Monkey</h3>
-<div class="elem">Yang Fire</div>
-<p>Brilliant and bold. Fire Monkeys are the most dynamic of all, with quick wits and even quicker reflexes.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2017-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rooster.png" alt="Fire Rooster zodiac animal for 2017" class="crd-img" />
-<h3>2017 - Fire Rooster</h3>
-<div class="elem">Yin Fire</div>
-<p>Vivid and hardworking. Fire Roosters are the most driven of the bunch, with high standards and the energy to match.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2018-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dog.png" alt="Earth Dog zodiac animal for 2018" class="crd-img" />
-<h3>2018 - Earth Dog</h3>
-<div class="elem">Yang Earth</div>
-<p>Reliable and principled. Earth Dogs are the most grounded Dogs, with a strong sense of duty and real integrity.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2019-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/pig.png" alt="Earth Pig zodiac animal for 2019" class="crd-img" />
-<h3>2019 - Earth Pig</h3>
-<div class="elem">Yin Earth</div>
-<p>Practical and kind-hearted. Earth Pigs are the most sensible of the Pigs, with a warm, no-drama approach to life.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-</div>
-</div>
-</section>
 
-<section class="sec">
-<div class="ctn">
-<div class="sec-t">
-<h2>2020 - 2031: Year of the Chinese Zodiac</h2>
-<p>The current cycle and what's coming next.</p>
+<h3 style="font-size:1.1rem;color:var(--dark);margin:24px 0 12px">1996-2007</h3>
+<div class="yr-grid">
+<a href="1996-year-of-the-chinese-zodiac.html" class="yr-link">1996</a>
+<a href="1997-year-of-the-chinese-zodiac.html" class="yr-link">1997</a>
+<a href="1998-year-of-the-chinese-zodiac.html" class="yr-link">1998</a>
+<a href="1999-year-of-the-chinese-zodiac.html" class="yr-link">1999</a>
+<a href="2000-year-of-the-chinese-zodiac.html" class="yr-link">2000</a>
+<a href="2001-year-of-the-chinese-zodiac.html" class="yr-link">2001</a>
+<a href="2002-year-of-the-chinese-zodiac.html" class="yr-link">2002</a>
+<a href="2003-year-of-the-chinese-zodiac.html" class="yr-link">2003</a>
+<a href="2004-year-of-the-chinese-zodiac.html" class="yr-link">2004</a>
+<a href="2005-year-of-the-chinese-zodiac.html" class="yr-link">2005</a>
+<a href="2006-year-of-the-chinese-zodiac.html" class="yr-link">2006</a>
+<a href="2007-year-of-the-chinese-zodiac.html" class="yr-link">2007</a>
 </div>
-<div class="grid3">
-<a href="2020-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rat.png" alt="Metal Rat zodiac animal for 2020" class="crd-img" />
-<h3>2020 - Metal Rat</h3>
-<div class="elem">Yang Metal</div>
-<p>Resourceful and determined. Metal Rats are focused and strategic, with a sharp eye for opportunity and risk.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2021-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/ox.png" alt="Metal Ox zodiac animal for 2021" class="crd-img" />
-<h3>2021 - Metal Ox</h3>
-<div class="elem">Yin Metal</div>
-<p>Tough and disciplined. Metal Oxen are the most resilient of the Oxen, with an iron will and steady persistence.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2022-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/tiger.png" alt="Water Tiger zodiac animal for 2022" class="crd-img" />
-<h3>2022 - Water Tiger</h3>
-<div class="elem">Yang Water</div>
-<p>Flexible and courageous. Water Tigers are brave but adaptable, with a talent for finding creative solutions under pressure.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2023-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rabbit.png" alt="Water Rabbit zodiac animal for 2023" class="crd-img" />
-<h3>2023 - Water Rabbit</h3>
-<div class="elem">Yin Water</div>
-<p>Gentle and perceptive. Water Rabbits are the most empathetic of the Rabbits, with a real gift for understanding others.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2024-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dragon.png" alt="Wood Dragon zodiac animal for 2024" class="crd-img" />
-<h3>2024 - Wood Dragon</h3>
-<div class="elem">Yang Wood</div>
-<p>Visionary and growth-minded. Wood Dragons are creative thinkers with big plans and the flexibility to adjust course.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2025-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/snake.png" alt="Wood Snake zodiac animal for 2025" class="crd-img" />
-<h3>2025 - Wood Snake</h3>
-<div class="elem">Yin Wood</div>
-<p>Thoughtful and evolving. Wood Snakes are the most open to change, always learning and refining their approach.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2026-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/horse.png" alt="Fire Horse zodiac animal for 2026" class="crd-img" />
-<h3>2026 - Fire Horse</h3>
-<div class="elem">Yang Fire</div>
-<p>Passionate and unstoppable. Fire Horses are the most intense of all, with boundless energy and fierce independence.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2027-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/goat.png" alt="Fire Goat zodiac animal for 2027" class="crd-img" />
-<h3>2027 - Fire Goat</h3>
-<div class="elem">Yin Fire</div>
-<p>Warm and creative. Fire Goats pour their hearts into everything, with a passion for art, music, and self-expression.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2028-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/monkey.png" alt="Earth Monkey zodiac animal for 2028" class="crd-img" />
-<h3>2028 - Earth Monkey</h3>
-<div class="elem">Yang Earth</div>
-<p>Practical and clever. Earth Monkeys are smart and grounded, with a talent for turning clever ideas into real results.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2029-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rooster.png" alt="Earth Rooster zodiac animal for 2029" class="crd-img" />
-<h3>2029 - Earth Rooster</h3>
-<div class="elem">Yin Earth</div>
-<p>Organized and dependable. Earth Roosters are the most reliable of the Roosters, with a methodical approach to everything.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2030-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dog.png" alt="Metal Dog zodiac animal for 2030" class="crd-img" />
-<h3>2030 - Metal Dog</h3>
-<div class="elem">Yang Metal</div>
-<p>Resolute and protective. Metal Dogs are the most determined of the Dogs, with an unshakable sense of loyalty.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2031-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/pig.png" alt="Metal Pig zodiac animal for 2031" class="crd-img" />
-<h3>2031 - Metal Pig</h3>
-<div class="elem">Yin Metal</div>
-<p>Strong-willed and generous. Metal Pigs are tougher than they appear, with a firm sense of what they stand for.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-</div>
-</div>
-</section>
 
-<section class="sec-alt">
-<div class="ctn">
-<div class="sec-t">
-<h2>2032 - 2042: Year of the Chinese Zodiac</h2>
-<p>Looking ahead to the next decade.</p>
+<h3 style="font-size:1.1rem;color:var(--dark);margin:24px 0 12px">2008-2019</h3>
+<div class="yr-grid">
+<a href="2008-year-of-the-chinese-zodiac.html" class="yr-link">2008</a>
+<a href="2009-year-of-the-chinese-zodiac.html" class="yr-link">2009</a>
+<a href="2010-year-of-the-chinese-zodiac.html" class="yr-link">2010</a>
+<a href="2011-year-of-the-chinese-zodiac.html" class="yr-link">2011</a>
+<a href="2012-year-of-the-chinese-zodiac.html" class="yr-link">2012</a>
+<a href="2013-year-of-the-chinese-zodiac.html" class="yr-link">2013</a>
+<a href="2014-year-of-the-chinese-zodiac.html" class="yr-link">2014</a>
+<a href="2015-year-of-the-chinese-zodiac.html" class="yr-link">2015</a>
+<a href="2016-year-of-the-chinese-zodiac.html" class="yr-link">2016</a>
+<a href="2017-year-of-the-chinese-zodiac.html" class="yr-link">2017</a>
+<a href="2018-year-of-the-chinese-zodiac.html" class="yr-link">2018</a>
+<a href="2019-year-of-the-chinese-zodiac.html" class="yr-link">2019</a>
 </div>
-<div class="grid3">
-<a href="2032-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rat.png" alt="Water Rat zodiac animal for 2032" class="crd-img" />
-<h3>2032 - Water Rat</h3>
-<div class="elem">Yang Water</div>
-<p>Smooth and intuitive. Water Rats are the most socially gifted Rats, with a natural feel for timing and persuasion.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2033-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/ox.png" alt="Water Ox zodiac animal for 2033" class="crd-img" />
-<h3>2033 - Water Ox</h3>
-<div class="elem">Yin Water</div>
-<p>Adaptable and steady. Water Oxen are more flexible than most Oxen while keeping their core dependability intact.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2034-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/tiger.png" alt="Wood Tiger zodiac animal for 2034" class="crd-img" />
-<h3>2034 - Wood Tiger</h3>
-<div class="elem">Yang Wood</div>
-<p>Cooperative and bold. Wood Tigers are team-oriented leaders who bring people together instead of going it alone.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2035-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rabbit.png" alt="Wood Rabbit zodiac animal for 2035" class="crd-img" />
-<h3>2035 - Wood Rabbit</h3>
-<div class="elem">Yin Wood</div>
-<p>Sociable and nurturing. Wood Rabbits are the most community-focused Rabbits, with a gift for bringing harmony.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2036-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dragon.png" alt="Fire Dragon zodiac animal for 2036" class="crd-img" />
-<h3>2036 - Fire Dragon</h3>
-<div class="elem">Yang Fire</div>
-<p>Electrifying and ambitious. Fire Dragons are the most magnetic of all Dragons, with energy that lights up any room.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2037-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/snake.png" alt="Fire Snake zodiac animal for 2037" class="crd-img" />
-<h3>2037 - Fire Snake</h3>
-<div class="elem">Yin Fire</div>
-<p>Intense and captivating. Fire Snakes have a powerful presence and a depth of passion that's hard to match.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2038-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/horse.png" alt="Earth Horse zodiac animal for 2038" class="crd-img" />
-<h3>2038 - Earth Horse</h3>
-<div class="elem">Yang Earth</div>
-<p>Responsible and grounded. Earth Horses balance their need for freedom with a real sense of duty and follow-through.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2039-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/goat.png" alt="Earth Goat zodiac animal for 2039" class="crd-img" />
-<h3>2039 - Earth Goat</h3>
-<div class="elem">Yin Earth</div>
-<p>Steady and supportive. Earth Goats are the most reliable of the Goats, with a calm presence that steadies others.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2040-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/monkey.png" alt="Metal Monkey zodiac animal for 2040" class="crd-img" />
-<h3>2040 - Metal Monkey</h3>
-<div class="elem">Yang Metal</div>
-<p>Driven and sharp. Metal Monkeys are competitive and focused, with the discipline to back up their ambitions.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2041-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/rooster.png" alt="Metal Rooster zodiac animal for 2041" class="crd-img" />
-<h3>2041 - Metal Rooster</h3>
-<div class="elem">Yin Metal</div>
-<p>Precise and ambitious. Metal Roosters are the most exacting of the Roosters, with standards that push everyone higher.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
-<a href="2042-year-of-the-chinese-zodiac.html" class="crd">
-<img src="../Images/dog.png" alt="Water Dog zodiac animal for 2042" class="crd-img" />
-<h3>2042 - Water Dog</h3>
-<div class="elem">Yang Water</div>
-<p>Perceptive and loyal. Water Dogs are the most intuitive of the Dogs, with a natural gift for understanding people.</p>
-<span class="yr-link">Learn more &#8594;</span>
-</a>
+
+<h3 style="font-size:1.1rem;color:var(--dark);margin:24px 0 12px">2020-2031</h3>
+<div class="yr-grid">
+<a href="2020-year-of-the-chinese-zodiac.html" class="yr-link">2020</a>
+<a href="2021-year-of-the-chinese-zodiac.html" class="yr-link">2021</a>
+<a href="2022-year-of-the-chinese-zodiac.html" class="yr-link">2022</a>
+<a href="2023-year-of-the-chinese-zodiac.html" class="yr-link">2023</a>
+<a href="2024-year-of-the-chinese-zodiac.html" class="yr-link">2024</a>
+<a href="2025-year-of-the-chinese-zodiac.html" class="yr-link">2025</a>
+<a href="2026-year-of-the-chinese-zodiac.html" class="yr-link">2026</a>
+<a href="2027-year-of-the-chinese-zodiac.html" class="yr-link">2027</a>
+<a href="2028-year-of-the-chinese-zodiac.html" class="yr-link">2028</a>
+<a href="2029-year-of-the-chinese-zodiac.html" class="yr-link">2029</a>
+<a href="2030-year-of-the-chinese-zodiac.html" class="yr-link">2030</a>
+<a href="2031-year-of-the-chinese-zodiac.html" class="yr-link">2031</a>
+</div>
+
+<h3 style="font-size:1.1rem;color:var(--dark);margin:24px 0 12px">2032-2042</h3>
+<div class="yr-grid">
+<a href="2032-year-of-the-chinese-zodiac.html" class="yr-link">2032</a>
+<a href="2033-year-of-the-chinese-zodiac.html" class="yr-link">2033</a>
+<a href="2034-year-of-the-chinese-zodiac.html" class="yr-link">2034</a>
+<a href="2035-year-of-the-chinese-zodiac.html" class="yr-link">2035</a>
+<a href="2036-year-of-the-chinese-zodiac.html" class="yr-link">2036</a>
+<a href="2037-year-of-the-chinese-zodiac.html" class="yr-link">2037</a>
+<a href="2038-year-of-the-chinese-zodiac.html" class="yr-link">2038</a>
+<a href="2039-year-of-the-chinese-zodiac.html" class="yr-link">2039</a>
+<a href="2040-year-of-the-chinese-zodiac.html" class="yr-link">2040</a>
+<a href="2041-year-of-the-chinese-zodiac.html" class="yr-link">2041</a>
+<a href="2042-year-of-the-chinese-zodiac.html" class="yr-link">2042</a>
+</div>
 </div>
 </div>
 </section>
 
 <footer>
+<div class="ctn">
 <p>&copy; 2026 ChineseZodiacCouples.com. All rights reserved.</p>
-<p>Complete guide to the year of the Chinese zodiac from 1936 to 2042. Find your zodiac animal, element, and personality traits.</p>
-<p><a href="/">Home</a> | <a href="../chinese-zodiac-personality.html">Chinese Zodiac Personality</a> | <a href="../index.html#zodiac-signs">All Zodiac Signs</a></p>
+<p><a href="/">Home</a> | <a href="../about-us.html">About Us</a> | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../terms-of-use.html">Terms of Use</a> | <a href="../cookie-policy.html">Cookie Policy</a></p>
+</div>
 </footer>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MGYZTZ28KF"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MGYZTZ28KF');</script>
 </body>
 </html>
