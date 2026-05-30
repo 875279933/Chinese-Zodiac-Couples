@@ -148,7 +148,7 @@
 
         .heart-icon {
             font-size: 1.75rem;
-            color: var(--accent);
+            color: var(--primary);
             animation: pulse 1.5s ease infinite;
         }
 
@@ -746,6 +746,110 @@
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        .social-section {
+            background: var(--bg);
+            padding: 3px 0 40px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .social-card {
+            text-align: center;
+            padding: 32px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+        }
+
+        .social-card h3 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .social-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: white;
+        }
+
+        .social-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .social-btn.facebook {
+            background: #1877f2;
+        }
+
+        .social-btn.facebook:hover {
+            background: #166fe5;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(24, 119, 242, 0.3);
+        }
+
+        .social-btn.x {
+            background: #14171a;
+        }
+
+        .social-btn.x:hover {
+            background: #1a1e22;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(20, 23, 26, 0.4);
+        }
+
+        .social-btn.pinterest {
+            background: #bd081c;
+        }
+
+        .social-btn.pinterest:hover {
+            background: #a30617;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(189, 8, 28, 0.3);
+        }
+
+        .social-btn.reddit {
+            background: #ff4500;
+        }
+
+        .social-btn.reddit:hover {
+            background: #e03d00;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 69, 0, 0.3);
+        }
+
+        .social-btn.copy-link {
+            background: #6c757d;
+            border: none;
+            cursor: pointer;
+        }
+
+        .social-btn.copy-link:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(108, 117, 141, 0.3);
         }
 
         .info-section {
