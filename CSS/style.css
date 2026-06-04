@@ -794,6 +794,77 @@ footer a:hover { text-decoration: underline; }
     box-shadow: 0 8px 24px rgba(108, 117, 141, 0.3);
 }
 
+.related-resources {
+    margin-top: 40px;
+    padding: 28px;
+    background: var(--bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.related-resources h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.25rem;
+    color: var(--dark);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.resource-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: var(--bg);
+    border-radius: var(--radius);
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.resource-card svg {
+    width: 28px;
+    height: 28px;
+    color: var(--primary);
+    margin-bottom: 12px;
+    flex-shrink: 0;
+}
+
+.resource-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.resource-card p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.resource-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
+}
+
+.resource-card:hover svg {
+    color: var(--primary);
+}
+
 @media (max-width: 768px) {
     h1 { font-size: 2rem; }
     
@@ -820,4 +891,8 @@ footer a:hover { text-decoration: underline; }
     
     .traits-grid { grid-template-columns: 1fr; }
     .dimensions-grid { grid-template-columns: 1fr; }
+    
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
 }
