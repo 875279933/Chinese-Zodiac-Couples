@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "/chinese-zodiac-personality.html",
+      "destination": "/personality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:animal(rat|ox|tiger|rabbit|dragon|snake|horse|goat|monkey|rooster|dog|pig)-chinese-zodiac-personality.html",
+      "destination": "/personality/:animal-chinese-zodiac-personality.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/:year(19[3-9][0-9]|20[0-3][0-9]|204[0-3])-chinese-zodiac.html",
+      "destination": "/zodiac/:year-chinese-zodiac.html",
+      "statusCode": 301
+    }
+  ]
+}
