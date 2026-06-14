@@ -42,7 +42,7 @@
             <div class="year-selector">
                 <label>Select your birth year:</label>
                 <select id="birthYear" onchange="onYearChange()">
-                    <option value="1980" selected>1980</option>
+                    <option value="1995" selected>1995</option>
                     <option value="1981">1981</option>
                     <option value="1982">1982</option>
                     <option value="1983">1983</option>
@@ -90,9 +90,9 @@
                 </select>
             </div>
             <div id="zodiacResult" class="zodiac-result show">
-                <div id="zodiacEmoji">🐀</div>
-                <div id="zodiacTitle">You are a Rat!</div>
-                <div id="zodiacDesc">The Rat is clever, ambitious, and resourceful. People born in the Year of the Rat are quick-witted problem solvers with strong survival instincts.</div>
+                <div id="zodiacEmoji">🐷</div>
+                <div id="zodiacTitle">You are a Pig!</div>
+                <div id="zodiacDesc">The Pig is kind, generous, and peaceful. People born in the Year of the Pig are warm-hearted individuals who enjoy life.</div>
             </div>
         </div>
         
@@ -122,45 +122,44 @@
         </div>
         
         <!-- Chinese Zodiac Personality Section -->
-        <h2>Your Chinese Zodiac Personality <span id="currentZodiacIcon" style="font-size: 2rem; vertical-align: middle; margin-left: 10px;">🐀</span></h2>
+        <h2>Your Chinese Zodiac Personality <span id="currentZodiacIcon" style="font-size: 2rem; vertical-align: middle; margin-left: 10px;">🐷</span></h2>
         <div id="chineseZodiacTraits">
             <div class="zodiac-grid-2col">
                 <div class="zodiac-card">
-                    <div class="zodiac-emoji">💡</div>
-                    <h4>Intelligent & Resourceful</h4>
-                    <p>Rats are clever, quick-witted problem solvers who always find innovative solutions. They have sharp minds and can adapt to any situation with ease.</p>
+                    <div class="zodiac-emoji">💖</div>
+                    <h4>Kind & Generous</h4>
+                    <p>Pigs are gentle, kind-hearted individuals who love to share. They are generous with their time, resources, and affection.</p>
                 </div>
                 <div class="zodiac-card">
-                    <div class="zodiac-emoji">🏆</div>
-                    <h4>Ambitious & Driven</h4>
-                    <p>With strong motivation and determination, Rats pursue their goals relentlessly. They are highly competitive and thrive when working toward success.</p>
+                    <div class="zodiac-emoji">😌</div>
+                    <h4>Peaceful & Harmonious</h4>
+                    <p>Pigs avoid conflict and seek harmony in all aspects of life. They create peaceful environments wherever they go.</p>
                 </div>
                 <div class="zodiac-card">
-                    <div class="zodiac-emoji">💰</div>
-                    <h4>Thrifty & Practical</h4>
-                    <p>Rats have excellent financial sense and know how to manage resources wisely. They are practical by nature and avoid unnecessary risks.</p>
+                    <div class="zodiac-emoji">🤝</div>
+                    <h4>Trusting & Sincere</h4>
+                    <p>Pigs believe the best in people and are sincere in their relationships. They form deep, meaningful connections.</p>
                 </div>
                 <div class="zodiac-card">
-                    <div class="zodiac-emoji">❤️</div>
-                    <h4>Social & Charming</h4>
-                    <p>Despite their busy schedules, Rats enjoy socializing and make friends easily. They have a charming personality that draws people to them.</p>
+                    <div class="zodiac-emoji">🍽</div>
+                    <h4>Enjoy Life</h4>
+                    <p>Pigs appreciate the good things in life. They enjoy good food, comfortable surroundings, and quality time with loved ones.</p>
                 </div>
             </div>
         </div>
-        
-        <!-- Capricorn + Chinese Zodiac Compatibility Section -->
+        <!-- Capricorn + Your Chinese Zodiac Compatibility Section -->
         <div id="compatibilitySection" class="compatibility-result show">
             <h2>Capricorn + Your Chinese Zodiac Compatibility</h2>
             <div class="compatibility-grid">
                 <div class="compatibility-card best">
-                    <div class="compatibility-emoji" id="bestMatchEmoji">🐂</div>
-                    <div class="compatibility-title">Best Match: Ox</div>
-                    <p id="bestMatchDesc">Capricorn-Rat and Ox make an ambitious, disciplined team. They work well together toward long-term goals.</p>
+                    <div class="compatibility-emoji" id="bestMatchEmoji">🐇</div>
+                    <div class="compatibility-title">Best Match: Rabbit</div>
+                    <p id="bestMatchDesc">Capricorn-Pig and Rabbit create a warm, loving home. Both are kind and responsible.</p>
                 </div>
                 <div class="compatibility-card worst">
-                    <div class="compatibility-emoji" id="worstMatchEmoji">🐅</div>
-                    <div class="compatibility-title">Worst Match: Tiger</div>
-                    <p id="worstMatchDesc">Capricorn-Rat and Monkey may struggle. Rat's focus on goals clashes with Monkey's playful nature.</p>
+                    <div class="compatibility-emoji" id="worstMatchEmoji">🐓</div>
+                    <div class="compatibility-title">Worst Match: Rooster</div>
+                    <p id="worstMatchDesc">Capricorn-Pig and Rooster may clash. Pig avoids conflict while Rooster is vocal.</p>
                 </div>
             </div>
         </div>
@@ -172,28 +171,15 @@
                 <li>The Chinese zodiac follows a 12-year cycle</li>
                 <li>Each year is associated with one of 12 animals: Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, or Pig</li>
                 <li>Your zodiac sign is determined by your birth year, not month</li>
-                <li>Combine your Western zodiac sign (Capricorn) with your Chinese zodiac sign for deeper insights!</li>
             </ol>
         </div>
-        
-        <p style="text-align: center; margin-top: 2rem;">
-            <span class="scroll-btn" onclick="scrollToTop()">Discover Your Chinese Zodiac</span>
-        </p>
+        <!-- Interactive Scripts -->
+        <script src="js/shared.js"></script>
+        <script src="js/capricorn.js"></script>
     </div>
-    
+    </div>
     <footer>
-        <p><a href="../">Home</a> | <a href="../chinese-zodiac-personality.html">Chinese Zodiac Personality</a> | <a href="/zodiac-signs/">Zodiac Signs and Chinese Zodiac</a></p>
-        <p style="margin-top: 10px; font-size: 0.85rem; color: #9CA3AF;">© 2026 Chinese Zodiac Couples. All rights reserved.</p>
+        <p>&copy; 2024 Chinese Zodiac Couples. All rights reserved.</p>
     </footer>
-    
-    <script src="js/shared.js"></script>
-<script src="js/capricorn.js"></script><!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MGYZTZ28KF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MGYZTZ28KF');
-</script>
 </body>
 </html>
