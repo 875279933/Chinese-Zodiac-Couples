@@ -504,6 +504,33 @@
         const meaningType = document.querySelector('#meaningCategoryGroup .style-radio.selected')?.dataset.meaning || 'moral';
         const meaningStyle = document.querySelector('#meaningStyleGroup .style-radio.selected')?.dataset.meaningstyle || 'single';
         renderMeaningDefault(meaningSurname, meaningType, meaningStyle);
+
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function() {
+                const isOpen = navMenu.classList.toggle('active');
+                navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isOpen = this.classList.toggle('active');
+                if (answer && answer.classList.contains('faq-answer')) {
+                    answer.classList.toggle('open', isOpen);
+                }
+            });
+        });
     });
 
     function shareTo(platform) {
