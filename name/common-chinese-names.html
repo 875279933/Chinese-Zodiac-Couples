@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Chinese Male Names - Most Popular Chinese Names</title>
+    <meta name="description" content="Common Chinese Male Names - Discover the most popular common Chinese male names with Pinyin, pronunciation, and meanings. Find traditional and modern common Chinese male names.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://chinesezodiaccouples.com/name/common-chinese-names.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Common Chinese Male Names">
+    <meta property="og:description" content="Common Chinese Male Names - Discover popular Chinese male names with Pinyin, pronunciation, and meanings.">
+    <meta property="og:url" content="https://chinesezodiaccouples.com/name/common-chinese-names.html">
+
+    <link rel="icon" type="image/png" href="../Images/dragon.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Common Chinese Male Names",
+        "url": "https://chinesezodiaccouples.com/name/common-chinese-names.html",
+        "description": "Common Chinese Male Names - Explore the most common Chinese male names with Pinyin, pronunciation, and meanings. Find traditional and modern common Chinese male names."
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .refresh-btn {
+            background: linear-gradient(135deg, #c28142 0%, #8b5a2b 100%);
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .refresh-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(194, 129, 66, 0.4);
+        }
+        .refresh-btn:active {
+            transform: translateY(0);
+        }
+        .home-btn {
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .home-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(74, 85, 104, 0.4);
+        }
+        .home-btn:active {
+            transform: translateY(0);
+        }
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            background: #faf1e4;
+            padding: 15px 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #c28142;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #5a4a3a;
+            margin-top: 4px;
+        }
+        .name-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .name-cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <h1>Common Chinese Male Names</h1>
+        <div class="btn-group">
+            <a href="./" class="home-btn">
+                <span>🏠</span> Back to Home
+            </a>
+            <button class="refresh-btn" id="refreshBtn">
+                <span>🔄</span> Refresh Names
+            </button>
+        </div>
+        <p>Discover common Chinese male names. Click refresh to see different names with Pinyin, pronunciation, and meanings. Explore our collection of popular names.</p>
+    </div>
+
+    <div class="card-panel">
+        <div class="stats-row">
+            <div class="stat-item">
+                <div class="stat-value" id="displayCount">10</div>
+                <div class="stat-label">Names Displayed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="totalNames">100+</div>
+                <div class="stat-label">Total Names</div>
+            </div>
+        </div>
+
+        <div id="commonNameResults" class="results-area">
+            <div class="result-title">Common Chinese Male Names</div>
+            <div id="commonNameCards" class="name-cards-grid">
+                <div class="name-card">
+                    <div class="loading-text"><div class="loading-spinner"></div> Loading names...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="method-section">
+        <h2>About Common Chinese Male Names</h2>
+        <p>Common Chinese male names are widely used across China and Chinese communities worldwide. These names have stood the test of time and remain popular choices for parents looking for traditional or modern options.</p>
+        <h3>Popular Surnames</h3>
+        <p>Chinese surnames like Li, Wang, Zhang, Liu, and Chen are among the most common, often paired with popular given names to create these names.</p>
+        <h3>Popular Given Names</h3>
+        <p>These names often carry positive meanings related to wisdom, strength, prosperity, and virtue. Whether you're looking for traditional or more modern options, these names remain popular choices for families.</p>
+        <h3>Why Choose These Names?</h3>
+        <p>Common Chinese male names offer familiarity and cultural significance. They are easy to pronounce and remember, making them ideal for both personal and professional use. Many have deep cultural roots and positive connotations that resonate with families.</p>
+    </div>
+
+    <footer>
+        <p>© 2026 Chinese Name Generator Male. All rights reserved.</p>
+        <p>
+            <a href="./" style="color:#c28142;">Home</a>
+            <a href="blog.html" style="color:#c28142;">Blog</a>
+            <a href="../privacy-policy.html" style="color:#c28142;">Privacy Policy</a>
+            <a href="../terms-of-use.html" style="color:#c28142;">Terms of Use</a>
+            <a href="../cookie-policy.html" style="color:#c28142;">Cookie Policy</a>
+            <a href="../disclaimer.html">Disclaimer</a>
+            <a href="../contact-us.html">Contact Us</a>
+        </p>
+    </footer>
+</div>
+
+<script src="assets/js/common-chinese-names.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TM99ZRRCRX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TM99ZRRCRX');
+</script>
+</body>
+</html>
