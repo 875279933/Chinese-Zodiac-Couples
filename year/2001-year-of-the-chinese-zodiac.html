@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -25,47 +25,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--primary:#3B82F6;--primary-dark:#2563EB;--dark:#1F2937;--text:#374151;--text-light:#6B7280;--bg:#FFF;--bg-alt:#F9FAFB;--border:#E5E7EB;--shadow:0 4px 20px rgba(0,0,0,.08);--shadow-h:0 10px 40px rgba(0,0,0,.12);--r:12px}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text);line-height:1.7;background:var(--bg)}
-.ctn{max-width:1200px;margin:0 auto;padding:0 20px}
-header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:60px 0 80px;text-align:center}
-.back{display:inline-block;margin-bottom:20px;padding:8px 20px;background:rgba(255,255,255,.15);border-radius:50px;color:#fff;text-decoration:none;font-size:.9rem;transition:background .3s}
-.back:hover{background:rgba(255,255,255,.25)}
-h1{font-family:'Noto Serif SC',serif;font-size:2.5rem;font-weight:700;margin-bottom:12px;letter-spacing:-.02em}
-.sub{font-size:1.125rem;opacity:.95;max-width:650px;margin:0 auto;line-height:1.6}
-.yrs{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:20px}
-.yr{padding:8px 20px;background:rgba(255,255,255,.15);border-radius:20px;font-size:.95rem;color:#fff;text-decoration:none;transition:background .3s}
-.yr:hover{background:rgba(255,255,255,.3)}
-.sec{padding:60px 0}
-.sec-alt{background:var(--bg-alt);padding:60px 0}
-.sec-t{text-align:center;margin-bottom:40px}
-.sec-t h2{font-family:'Noto Serif SC',serif;font-size:2rem;color:var(--dark);margin-bottom:12px}
-.sec-t p{font-size:1rem;color:var(--text-light);max-width:700px;margin:0 auto;line-height:1.7}
-.card-wrap{max-width:900px;margin:0 auto;background:var(--bg);border-radius:var(--r);padding:32px;box-shadow:var(--shadow);border:1px solid var(--border)}
-.card-wrap p{margin-bottom:16px;font-size:.95rem;color:var(--text-light);line-height:1.8}
-.card-wrap p:last-child{margin-bottom:0}
-.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:24px}
-.info{background:var(--bg-alt);border-radius:8px;padding:14px;text-align:center}
-.info-icon{width:1.8rem;height:1.8rem;object-fit:contain;display:block;margin:0 auto 8px}
-.info .lbl{font-size:.85rem;color:var(--text-light);margin-bottom:4px}
-.info .val{font-size:1.05rem;font-weight:600;color:var(--dark)}
-.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;margin:0 auto}
-.crd{background:var(--bg);border-radius:var(--r);padding:28px;box-shadow:var(--shadow);border:1px solid var(--border);transition:transform .3s,box-shadow .3s}
-.crd:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
-.crd-icon{width:2.5rem;height:2.5rem;object-fit:contain;display:block;margin-bottom:14px}
-.crd h3{font-family:'Noto Serif SC',serif;font-size:1.15rem;color:var(--dark);margin-bottom:10px}
-.crd p{font-size:.93rem;color:var(--text-light);line-height:1.7}
-.trait-icon{width:2rem;height:2rem;object-fit:contain;display:inline-block;vertical-align:middle;margin-bottom:12px}
-footer{background:var(--dark);color:#fff;padding:40px 20px;text-align:center}
-footer p{opacity:.7;font-size:.85rem;margin-bottom:8px}
-footer a{color:#fff;text-decoration:none}
-footer a:hover{text-decoration:underline}
-@media(max-width:768px){h1{font-size:2rem}.grid2{grid-template-columns:1fr}}
-</style>
+
+
+<link rel="stylesheet" href="zodiac-emerald-style.css">
 </head>
-<body>
+<body class="snake">
 <header>
 <div class="ctn">
 <a href="/" class="back">&#8592; Back to Home</a>
@@ -168,10 +132,6 @@ footer a:hover{text-decoration:underline}
 </div>
 <div class="grid2">
 <div class="crd">
-<img src="../Images/brain.png" alt="Wise icon for Metal Snake personality" class="trait-icon" />
-<h3>Wise</h3>
-<p>Snakes see things other people don't. They have a depth of understanding that comes from careful observation and quiet reflection. When a Snake speaks, it's worth listening.</p>
-</div><div class="crd">
 <img src="../Images/star.png" alt="Elegant icon for Metal Snake personality" class="trait-icon" />
 <h3>Elegant</h3>
 <p>There's a refined quality to Snakes that sets them apart. They move through life with a deliberate grace that commands respect without demanding it.</p>
@@ -180,10 +140,6 @@ footer a:hover{text-decoration:underline}
 <h3>Mysterious</h3>
 <p>Snakes keep their cards close. They don't reveal everything they're thinking, which can make them hard to read -- but that mystery is part of what makes them so intriguing.</p>
 </div><div class="crd">
-<img src="../Images/bulb.png" alt="Intuitive icon for Metal Snake personality" class="trait-icon" />
-<h3>Intuitive</h3>
-<p>Snakes have a sixth sense about people and situations. They can walk into a room and just know something's off, or meet someone and immediately sense whether to trust them.</p>
-</div><div class="crd">
 <img src="../Images/chart.png" alt="Strategic icon for Metal Snake personality" class="trait-icon" />
 <h3>Strategic</h3>
 <p>Every move a Snake makes is calculated. They think several steps ahead and rarely act on impulse. That strategic mindset serves them well in business and in life.</p>
@@ -191,6 +147,42 @@ footer a:hover{text-decoration:underline}
 <img src="../Images/heart.png" alt="Discerning icon for Metal Snake personality" class="trait-icon" />
 <h3>Discerning</h3>
 <p>Snakes have high standards and they're not afraid to enforce them. They'd rather have a few quality relationships than a crowd of shallow ones.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="sec sec-fp">
+<div class="ctn">
+<div class="sec-t">
+<h2>Famous People Born in 2001</h2>
+<p>Plenty of well-known people were born in 2001. Here are six of the most recognizable.</p>
+</div>
+<div class="grid4">
+<div class="crd">
+<h3>Billie Eilish</h3>
+<p>Born December 18 in Los Angeles. Bad Guy was the first song by a woman born in the 2000s to hit #1 on the Hot 100. Nine Grammys, two Academy Awards, and Hit Me Hard and Soft debuted at #2 on the Billboard 200 in 2024.</p>
+</div>
+<div class="crd">
+<h3>Emma Chamberlain</h3>
+<p>Born July 1 in San Bruno, California. Became YouTube's biggest breakout creator in 2018 with the high-school-vlog format. Won the Streamy Creator of the Year in 2019, then launched Chamberlain Coffee and signed a deal with Louis Vuitton.</p>
+</div>
+<div class="crd">
+<h3>Dixie D'Amelio</h3>
+<p>Born August 12 in Norwalk, Connecticut. TikTok's most-followed creator in 2020, then Be Happy debuted at #1 on the Billboard Emerging Artists chart. A Chance with You came out in 2022 and she has been a steady face on Hulu's The D'Amelio Show.</p>
+</div>
+<div class="crd">
+<h3>LaMelo Ball</h3>
+<p>Born August 22 in Anaheim, California. Lithuania at 16, then the NBL in Australia, then the #3 pick in 2020. Rookie of the Year in 2021, then an All-Star nod in 2022, and a Hornets franchise cornerstone on a five-year max extension.</p>
+</div>
+<div class="crd">
+<h3>Caleb McLaughlin</h3>
+<p>Born October 13 in Carmel, New York. Lucas Sinclair across all four Stranger Things seasons, then the voice of the young Simba in the 2019 Lion King remake, then the BET+ series East New York. Has a steady stream of film and stage work.</p>
+</div>
+<div class="crd">
+<h3>Chloe East</h3>
+<p>Born February 15 in San Clemente, California. Generation, then Kevin Can Wait, then the 2021 Sundance hit The Fallout. Has been a steady face in the new generation of teen-driven indie film, with multiple upcoming 2026 projects.</p>
 </div>
 </div>
 </div>
