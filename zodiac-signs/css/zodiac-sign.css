@@ -1,10 +1,18 @@
+/* === Sign Detail Pages — Soft Sage Green Theme === */
 :root {
-    --primary: #3B82F6;
-    --secondary: #10B981;
-    --accent: #F59E0B;
-    --dark: #1F2937;
-    --light: #F3F4F6;
-    --border: #E5E7EB;
+    --primary: #7A9E7E;
+    --primary-dark: #5C7E60;
+    --primary-darker: #44604A;
+    --primary-light: #E8F0E8;
+    --primary-lighter: #F4F8F4;
+    --accent: #D4B996;
+    --dark: #2D3A2D;
+    --text: #3D4D3D;
+    --muted: #7A8A7A;
+    --border: #D8E0D8;
+    --white: #ffffff;
+    --shadow: 0 6px 20px -8px rgba(122, 158, 126, 0.35);
+    --shadow-hover: 0 18px 40px -12px rgba(122, 158, 126, 0.45);
 }
 
 * {
@@ -14,23 +22,38 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--dark);
-    background-color: #ffffff;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background-color: var(--primary-lighter);
     scroll-behavior: smooth;
 }
 
+/* === Header === */
 header {
-    background: #3B82F6;
-    color: white;
-    padding: 1rem;
+    background: linear-gradient(135deg, #7A9E7E 0%, #5C7E60 100%);
+    color: var(--white);
+    padding: 2rem 1.5rem 1.5rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 185, 150, 0.15) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .logo {
-    font-size: 1.8rem;
+    position: relative;
+    z-index: 1;
+    font-size: 2rem;
     font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .logo h1 {
@@ -42,73 +65,96 @@ header {
 }
 
 .nav-links {
-    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+    margin-top: 0.75rem;
     font-size: 0.9rem;
+    opacity: 0.95;
 }
 
 .nav-links a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     margin: 0 10px;
     transition: opacity 0.3s;
+    border-bottom: 1px dotted transparent;
 }
 
 .nav-links a:hover {
-    opacity: 0.8;
+    opacity: 0.85;
+    border-bottom-color: rgba(255, 255, 255, 0.6);
 }
 
+/* === Container === */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2.5rem 1.5rem;
 }
 
 h1 {
     font-size: 2.5rem;
-    color: white;
+    color: var(--white);
     margin-bottom: 1rem;
     text-align: center;
 }
 
 header h1 {
-    color: white;
+    color: var(--white);
 }
 
 h2 {
-    font-size: 1.8rem;
-    color: var(--dark);
-    margin: 2rem 0 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--border);
+    font-size: 1.7rem;
+    color: var(--primary-darker);
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--primary-light);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 2px;
 }
 
 h3 {
-    font-size: 1.4rem;
-    color: var(--dark);
+    font-size: 1.35rem;
+    color: var(--primary-darker);
     margin: 1.5rem 0 0.8rem;
+    font-weight: 600;
 }
 
 h4 {
-    font-size: 1.2rem;
-    color: var(--dark);
+    font-size: 1.15rem;
+    color: var(--primary-darker);
     margin: 1.2rem 0 0.6rem;
+    font-weight: 600;
 }
 
-/* Year Selector Styles */
+/* === Year Selector === */
 #yearSelectorSection {
-    background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--primary-light) 0%, #F0F4ED 100%);
+    border-radius: 18px;
+    padding: 2.5rem 2rem;
+    margin-bottom: 2.5rem;
     text-align: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
 
 .year-selector-title {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--dark);
+    color: var(--primary-darker);
 }
 
 .year-selector {
@@ -119,29 +165,43 @@ h4 {
     flex-wrap: wrap;
 }
 
+.year-selector label {
+    font-weight: 500;
+    color: var(--text);
+}
+
 .year-selector select {
     padding: 12px 24px;
     font-size: 1rem;
     border: 2px solid var(--border);
-    border-radius: 8px;
-    background: white;
+    border-radius: 30px;
+    background: var(--white);
     cursor: pointer;
-    transition: border-color 0.3s;
+    transition: all 0.3s;
+    color: var(--text);
+    font-weight: 500;
+    min-width: 160px;
+}
+
+.year-selector select:hover {
+    border-color: var(--primary);
 }
 
 .year-selector select:focus {
     outline: none;
     border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(122, 158, 126, 0.15);
 }
 
-/* Zodiac Result Styles */
+/* === Zodiac Result === */
 .zodiac-result {
     margin-top: 1.5rem;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
     display: none;
+    border: 1px solid var(--border);
 }
 
 .zodiac-result.show {
@@ -149,23 +209,26 @@ h4 {
 }
 
 #zodiacEmoji {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 0.5rem;
+    line-height: 1;
 }
 
 #zodiacTitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--dark);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-darker);
     margin-bottom: 0.5rem;
 }
 
 #zodiacDesc {
-    color: #6B7280;
-    line-height: 1.6;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Two-column grid */
+/* === Two-column grid === */
 .zodiac-grid-2col {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -179,32 +242,57 @@ h4 {
     }
 }
 
+/* === Zodiac Card === */
 .zodiac-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
     border-top: 4px solid var(--primary);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s;
+    position: relative;
+    overflow: hidden;
+}
+
+.zodiac-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
 }
 
 .zodiac-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
 }
 
 .zodiac-emoji {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    background: var(--primary-light);
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    line-height: 1;
 }
 
-/* Compatibility result section */
+/* === Compatibility Result === */
 .compatibility-result {
-    margin-top: 2rem;
-    padding: 2rem;
-    background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
-    border-radius: 12px;
+    margin-top: 2.5rem;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, var(--primary-light) 0%, #F0F4ED 100%);
+    border-radius: 18px;
     display: none;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
 }
 
 .compatibility-result.show {
@@ -219,106 +307,164 @@ h4 {
 }
 
 .compatibility-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: transform 0.35s;
+    position: relative;
+    overflow: hidden;
+}
+
+.compatibility-card:hover {
+    transform: translateY(-4px);
 }
 
 .compatibility-card.best {
-    border-top: 4px solid #10B981;
+    border-top: 4px solid var(--primary);
+}
+
+.compatibility-card.best::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
 }
 
 .compatibility-card.worst {
-    border-top: 4px solid #EF4444;
+    border-top: 4px solid #B89A8A;
 }
 
 .compatibility-emoji {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+    background: var(--primary-light);
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    line-height: 1;
+}
+
+.compatibility-card.worst .compatibility-emoji {
+    background: #F5EAE3;
+    border-color: #B89A8A;
 }
 
 .compatibility-title {
     font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--dark);
+    font-weight: 700;
+    color: var(--primary-darker);
     margin-bottom: 0.5rem;
 }
 
-/* How to Determine Section */
+/* === How to Determine Section === */
 .how-to-card {
-    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-    border-radius: 12px;
-    padding: 2rem;
-    margin-top: 2rem;
+    background: linear-gradient(135deg, #F5EFE3 0%, #EDE3D0 100%);
+    border-radius: 18px;
+    padding: 2rem 2rem 2rem 2.5rem;
+    margin-top: 2.5rem;
+    border: 1px solid #E0D5BD;
+    box-shadow: var(--shadow);
 }
 
 .how-to-card h3 {
-    color: #92400E;
+    color: #6B5836;
     margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .how-to-card ol {
-    margin-left: 1.5rem;
-    color: #78350F;
+    margin-left: 1.25rem;
+    color: #5A4A2E;
 }
 
 .how-to-card li {
     margin-bottom: 0.8rem;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* Scroll Button */
+/* === Scroll Button === */
 .scroll-btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 0.6rem 1.5rem;
     background: var(--primary);
-    color: white;
+    color: var(--white);
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 30px;
     font-weight: 500;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
     cursor: pointer;
+    font-size: 0.95rem;
 }
 
 .scroll-btn:hover {
-    background: #2563EB;
+    background: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
-/* Footer */
+/* === Footer === */
 footer {
-    background: var(--dark);
-    color: white;
+    background: linear-gradient(135deg, var(--dark) 0%, #1A241A 100%);
+    color: var(--white);
     text-align: center;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     margin-top: 2rem;
 }
 
 footer a {
-    color: #9CA3AF;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     margin: 0 10px;
+    transition: color 0.3s;
 }
 
 footer a:hover {
-    color: white;
+    color: var(--primary-light);
 }
 
+/* === Responsive === */
 @media (max-width: 768px) {
     .container {
-        padding: 1rem;
+        padding: 1.5rem 1rem;
     }
-    
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
     #yearSelectorSection {
-        padding: 1.5rem;
+        padding: 1.75rem 1.25rem;
     }
-    
+
     .year-selector {
         flex-direction: column;
         align-items: stretch;
     }
-    
+
+    .year-selector select {
+        width: 100%;
+    }
+
     .compatibility-grid {
         grid-template-columns: 1fr;
+    }
+
+    .compatibility-result,
+    .how-to-card {
+        padding: 1.5rem 1.25rem;
     }
 }

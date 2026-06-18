@@ -1,10 +1,18 @@
+/* === Zodiac Signs — Soft Sage Green Theme === */
 :root {
-    --primary: #3B82F6;
-    --secondary: #10B981;
-    --accent: #F59E0B;
-    --dark: #1F2937;
-    --light: #F9FAFB;
-    --border: #E5E7EB;
+    --primary: #7A9E7E;
+    --primary-dark: #5C7E60;
+    --primary-darker: #44604A;
+    --primary-light: #E8F0E8;
+    --primary-lighter: #F4F8F4;
+    --accent: #D4B996;
+    --dark: #2D3A2D;
+    --text: #3D4D3D;
+    --muted: #7A8A7A;
+    --border: #D8E0D8;
+    --white: #ffffff;
+    --shadow: 0 6px 20px -8px rgba(122, 158, 126, 0.35);
+    --shadow-hover: 0 18px 40px -12px rgba(122, 158, 126, 0.45);
 }
 
 * {
@@ -14,204 +22,410 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--dark);
-    background-color: white;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background-color: var(--primary-lighter);
 }
 
+/* === Header === */
 header {
-    background: #3B82F6;
-    color: white;
-    padding: 1rem;
+    background: linear-gradient(135deg, #7A9E7E 0%, #5C7E60 100%);
+    color: var(--white);
+    padding: 2rem 1.5rem 1.5rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 185, 150, 0.15) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .logo h1 {
+    position: relative;
+    z-index: 1;
     margin: 0;
     padding: 0;
     color: inherit;
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .nav-links {
-    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+    margin-top: 0.75rem;
     font-size: 0.9rem;
+    opacity: 0.95;
 }
 
 .nav-links a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     margin: 0 10px;
     transition: opacity 0.3s;
+    border-bottom: 1px dotted transparent;
 }
 
 .nav-links a:hover {
-    opacity: 0.8;
+    opacity: 0.85;
+    border-bottom-color: rgba(255, 255, 255, 0.6);
 }
 
+/* === Container === */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2.5rem 1.5rem;
 }
 
+/* === Intro Section === */
 .intro-section {
     text-align: center;
+    margin-top: 2.5rem;
     margin-bottom: 3rem;
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
 
 .intro-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     margin-bottom: 1rem;
-    color: var(--dark);
+    color: var(--primary-darker);
+    font-weight: 700;
+    letter-spacing: -0.01em;
 }
 
 .intro-section p {
-    max-width: 800px;
+    max-width: 760px;
     margin: 0 auto;
-    color: #6B7280;
-    font-size: 1.1rem;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
 }
 
+/* === Zodiac Grid === */
 .zodiac-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-bottom: 3rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 980px) {
+    .zodiac-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
     .zodiac-grid {
         grid-template-columns: 1fr;
     }
 }
 
+/* === Zodiac Card === */
 .zodiac-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
     border-top: 4px solid var(--primary);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s;
+    position: relative;
+    overflow: hidden;
+}
+
+.zodiac-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
 }
 
 .zodiac-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-light);
 }
 
 .zodiac-emoji {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    background: var(--primary-light);
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    line-height: 1;
 }
 
 .zodiac-name {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--dark);
-    margin-bottom: 0.3rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-darker);
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.01em;
 }
 
 .zodiac-dates {
-    font-size: 0.9rem;
-    color: #6B7280;
+    display: inline-block;
+    font-size: 0.82rem;
+    color: var(--primary-dark);
     margin-bottom: 1rem;
+    padding: 4px 12px;
+    background: var(--primary-light);
+    border-radius: 20px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
 .zodiac-desc {
-    color: #4B5563;
+    color: var(--text);
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
 }
 
 .learn-more {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.25rem;
     background: var(--primary);
-    color: white;
+    color: var(--white);
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 30px;
     font-size: 0.9rem;
-    transition: background 0.3s;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .learn-more:hover {
-    background: #2563EB;
+    background: var(--primary-dark);
+    transform: translateX(2px);
 }
 
+/* === Compatibility Section === */
 .compatibility-section {
-    background: var(--light);
-    padding: 2rem;
-    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary-light) 0%, #F0F4ED 100%);
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
     margin-bottom: 3rem;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
 }
 
 .compatibility-section h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
-    color: var(--dark);
+    color: var(--primary-darker);
+    font-weight: 700;
+    text-align: center;
 }
 
 .compatibility-section p {
-    color: #6B7280;
-    margin-bottom: 1rem;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
 }
 
 .chinese-zodiac-preview {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    justify-content: center;
 }
 
 .zodiac-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.3rem;
-    padding: 0.5rem 1rem;
-    background: white;
-    border-radius: 20px;
+    gap: 0.4rem;
+    padding: 0.55rem 1.1rem;
+    background: var(--white);
+    border-radius: 30px;
     font-size: 0.9rem;
     border: 1px solid var(--border);
     text-decoration: none;
-    color: inherit;
+    color: var(--text);
+    transition: all 0.3s;
+    font-weight: 500;
 }
 
 .zodiac-badge:hover {
-    background: var(--light);
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px -4px rgba(122, 158, 126, 0.4);
 }
 
+/* === Footer === */
 footer {
-    background: var(--dark);
-    color: white;
+    background: linear-gradient(135deg, var(--dark) 0%, #1A241A 100%);
+    color: var(--white);
     text-align: center;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     margin-top: 1rem;
 }
 
 footer a {
-    color: #9CA3AF;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     margin: 0 10px;
+    transition: color 0.3s;
 }
 
 footer a:hover {
-    color: white;
+    color: var(--primary-light);
 }
 
+/* === Responsive === */
+
+/* === Minimal Nav (sage themed) === */
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-bottom: 1px solid var(--primary-light);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.main-nav .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 56px;
+}
+.main-nav .nav-brand {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.main-nav .nav-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+}
+.main-nav li { position: relative; }
+.main-nav a.nav-link {
+    display: inline-block;
+    padding: 10px 14px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+.main-nav a.nav-link:hover {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+}
+.main-nav .has-sub > a.nav-link::after {
+    content: " \25BE";
+    font-size: 0.75em;
+    opacity: 0.8;
+}
+.main-nav .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 6px;
+    z-index: 110;
+}
+.main-nav .has-sub:hover .sub-menu { display: block; }
+.main-nav .sub-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.88rem;
+    border-radius: 6px;
+}
+.main-nav .sub-menu a:hover {
+    background: var(--primary-light);
+    color: var(--primary-darker);
+}
+.main-nav .nav-toggle {
+    display: none;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #ffffff;
+}
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
+    .main-nav .nav-toggle { display: inline-block; }
+    .main-nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 4px;
+        padding: 8px 0;
     }
-    
-    .container {
-        padding: 1rem;
+    .main-nav ul.open { display: flex; }
+    .main-nav .nav-inner { flex-wrap: wrap; }
+    .main-nav .sub-menu {
+        position: static;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
     }
-    
-    nav ul {
-        gap: 0.5rem;
+    .main-nav .sub-menu a { color: #ffffff; }
+    .main-nav .sub-menu a:hover {
+        background: rgba(255, 255, 255, 0.18);
+        color: #ffffff;
     }
+    .main-nav .has-sub:hover .sub-menu { display: block; }
 }
