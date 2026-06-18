@@ -1,0 +1,526 @@
+/* 2025 Monthly Pages - Unique Color Themes */
+/* Each file uses a specific color scheme for a fresh, modern look */
+
+/* Base styles - shared across all files */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background: var(--bg);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+header {
+    padding: 60px 20px 50px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 30%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+header h1, h1 { font-family: 'Noto Serif SC', serif; font-size: 2.2rem; margin-bottom: 12px; color: white; font-weight: 600; letter-spacing: -0.5px; position: relative; }
+header .subtitle, .subtitle { opacity: 0.95; font-size: 1.05rem; color: white; position: relative; }
+.container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+main { position: relative; }
+.nav-links { display: flex; justify-content: center; gap: 15px; margin-top: 18px; font-size: 0.9rem; opacity: 0.95; flex-wrap: wrap; position: relative; }
+.nav-links a { color: white; text-decoration: none; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.4); border-radius: 20px; transition: all 0.2s; }
+.nav-links a:hover { background: rgba(255,255,255,0.2); text-decoration: none; border-color: white; }
+.intro { background: var(--bg-secondary); border-radius: var(--radius); padding: 28px; margin-top: 40px; margin-bottom: 24px; border-left: 4px solid var(--primary); }
+.intro h2 { font-family: 'Noto Serif SC', serif; font-size: 1.4rem; color: var(--dark); margin-bottom: 14px; }
+.intro p { color: var(--text-light); margin-bottom: 10px; }
+.intro p:last-child { margin-bottom: 0; }
+.calendar-section { background: white; border-radius: var(--radius); padding: 28px; margin-bottom: 24px; box-shadow: var(--shadow); }
+.calendar-title { font-family: 'Noto Serif SC', serif; font-size: 1.3rem; color: var(--dark); margin-bottom: 20px; }
+.calendar-table { width: 100%; border-collapse: separate; border-spacing: 4px; }
+.calendar-table th { text-align: center; padding: 12px 8px; color: var(--text-light); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.calendar-table td { text-align: center; padding: 12px 4px; border: 1px solid var(--border); border-radius: 8px; min-width: 44px; transition: all 0.2s; cursor: pointer; }
+.calendar-table td:hover { background: var(--primary); color: white; transform: scale(1.05); box-shadow: var(--card-shadow); }
+.calendar-table td:hover .zodiac-badge { color: white; opacity: 0.9; }
+.lunar-date { font-size: 0.65rem; color: var(--accent); font-weight: 500; }
+.day-cell { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.day-cell a { text-decoration: none; color: inherit; }
+.day-number { font-weight: 600; font-size: 0.95rem; }
+.zodiac-badge { font-size: 0.7rem; color: var(--text-light); font-weight: 500; }
+.empty-cell { background: transparent; border-color: transparent !important; cursor: default; }
+.empty-cell:hover { background: transparent !important; transform: none !important; }
+.today-cell { background: var(--today-bg); border-color: var(--accent); }
+.month-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+.summary-item { background: var(--bg-secondary); padding: 16px; border-radius: 12px; text-align: center; border: 1px solid var(--border); }
+.summary-item strong { display: block; color: var(--dark); font-size: 0.85rem; margin-bottom: 6px; font-weight: 600; }
+.summary-item span { color: var(--text-light); font-size: 0.85rem; }
+.horoscope-section { background: var(--bg-secondary); border-radius: var(--radius); padding: 28px; margin-bottom: 24px; }
+.horoscope-title { font-family: 'Noto Serif SC', serif; font-size: 1.25rem; color: var(--dark); margin-bottom: 18px; }
+.zodiac-card { background: white; padding: 18px; border-radius: 12px; margin-bottom: 14px; box-shadow: var(--card-shadow); transition: transform 0.2s, box-shadow 0.2s; }
+.zodiac-card:hover { transform: translateX(4px); box-shadow: var(--shadow); }
+.zodiac-card:last-child { margin-bottom: 0; }
+.zodiac-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.zodiac-emoji { font-size: 1.4rem; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; }
+.zodiac-emoji img { width: 28px; height: 28px; object-fit: contain; }
+.zodiac-name { font-weight: 600; color: var(--dark); font-size: 1.05rem; }
+.zodiac-luck { margin-left: auto; font-size: 0.75rem; padding: 5px 12px; border-radius: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; }
+.luck-high { background: #D1FAE5; color: #059669; }
+.luck-medium { background: #FEF3C7; color: #D97706; }
+.luck-low { background: #FEE2E2; color: #DC2626; }
+.zodiac-desc { font-size: 0.92rem; color: var(--text-light); line-height: 1.65; }
+.month-nav { display: flex; justify-content: space-between; margin-top: 24px; padding: 16px; background: white; border-radius: var(--radius); }
+.nav-btn { padding: 10px 20px; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.9rem; transition: background 0.2s; }
+.nav-btn:hover { background: var(--primary-dark); }
+.nav-btn:disabled { background: #D1D5DB; cursor: not-allowed; }
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    header { padding: 40px 16px 36px; }
+    header h1 { font-size: 1.6rem; }
+    header .subtitle { font-size: 0.95rem; }
+    .container { padding: 20px 14px; }
+    .calendar-section, .horoscope-section, .intro { padding: 18px; }
+    .calendar-table th, .calendar-table td { padding: 8px 2px; font-size: 0.85rem; min-width: 36px; }
+    .calendar-table td { font-size: 0.85rem; }
+    .zodiac-card { padding: 14px; }
+    .zodiac-desc { font-size: 0.88rem; }
+    .month-nav { flex-direction: column; gap: 10px; }
+    .nav-btn { width: 100%; }
+    .month-summary { grid-template-columns: repeat(2, 1fr); }
+}
+footer { background: var(--dark); color: white; padding: 25px 20px; text-align: center; margin-top: 30px; }
+footer p { opacity: 0.7; font-size: 0.85rem; }
+footer a { color: white; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* January - Soft Coral Pink */
+.january {
+    --primary: #E88A9E;
+    --primary-dark: #D4788A;
+    --accent: #F5C6A5;
+    --dark: #5D4E5C;
+    --text: #5A5A5A;
+    --text-light: #8A8A8A;
+    --bg: #FDF9F9;
+    --bg-secondary: #FFF5F5;
+    --border: #F0E0E0;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(232, 138, 158, 0.15);
+    --card-shadow: 0 2px 12px rgba(232, 138, 158, 0.1);
+    --today-bg: #FFE4E8;
+}
+.january header { background: linear-gradient(135deg, #E88A9E 0%, #D4788A 100%); }
+.january .zodiac-card { border-left: 4px solid #E88A9E; }
+
+/* February - Soft Lavender Purple */
+.february {
+    --primary: #9B8DC4;
+    --primary-dark: #8A7CB5;
+    --accent: #C4A8D4;
+    --dark: #4A4560;
+    --text: #5A5A6A;
+    --text-light: #8A8A9A;
+    --bg: #FAFAFE;
+    --bg-secondary: #F5F3FC;
+    --border: #E0DCF0;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(155, 141, 196, 0.15);
+    --card-shadow: 0 2px 12px rgba(155, 141, 196, 0.1);
+    --today-bg: #EDE8F8;
+}
+.february header { background: linear-gradient(135deg, #9B8DC4 0%, #8A7CB5 100%); }
+.february .zodiac-card { border-left: 4px solid #9B8DC4; }
+
+/* March - Fresh Mint Green */
+.march {
+    --primary: #7CB89D;
+    --primary-dark: #6AA68C;
+    --accent: #A8D4B8;
+    --dark: #3D5A4A;
+    --text: #4A5A4A;
+    --text-light: #7A8A7A;
+    --bg: #F9FCFA;
+    --bg-secondary: #F0F7F3;
+    --border: #D8E8DC;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(124, 184, 157, 0.15);
+    --card-shadow: 0 2px 12px rgba(124, 184, 157, 0.1);
+    --today-bg: #E0F0E8;
+}
+.march header { background: linear-gradient(135deg, #7CB89D 0%, #6AA68C 100%); }
+.march .zodiac-card { border-left: 4px solid #7CB89D; }
+
+/* April - Sky Blue */
+.april {
+    --primary: #7BA3D6;
+    --primary-dark: #6A92C5;
+    --accent: #A8C8E8;
+    --dark: #3D4D60;
+    --text: #4A5A6A;
+    --text-light: #7A8A9A;
+    --bg: #F8FAFD;
+    --bg-secondary: #F0F5FA;
+    --border: #D0DCE8;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(123, 163, 214, 0.15);
+    --card-shadow: 0 2px 12px rgba(123, 163, 214, 0.1);
+    --today-bg: #E0EAF5;
+}
+.april header { background: linear-gradient(135deg, #7BA3D6 0%, #6A92C5 100%); }
+.april .zodiac-card { border-left: 4px solid #7BA3D6; }
+
+/* May - Warm Peach */
+.may {
+    --primary: #E8B896;
+    --primary-dark: #D5A585;
+    --accent: #F0D4B8;
+    --dark: #5D5045;
+    --text: #5A554A;
+    --text-light: #8A8578;
+    --bg: #FDFBF8;
+    --bg-secondary: #FAF5EF;
+    --border: #E8DED0;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(232, 184, 150, 0.15);
+    --card-shadow: 0 2px 12px rgba(232, 184, 150, 0.1);
+    --today-bg: #F5EDE0;
+}
+.may header { background: linear-gradient(135deg, #E8B896 0%, #D5A585 100%); }
+.may .zodiac-card { border-left: 4px solid #E8B896; }
+
+/* June - Cool Slate Blue */
+.june {
+    --primary: #8FA5B5;
+    --primary-dark: #7E949F;
+    --accent: #B8C8D4;
+    --dark: #455060;
+    --text: #4A5560;
+    --text-light: #7A8590;
+    --bg: #F8FAFC;
+    --bg-secondary: #F0F4F7;
+    --border: #D8E0E8;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(143, 165, 181, 0.15);
+    --card-shadow: 0 2px 12px rgba(143, 165, 181, 0.1);
+    --today-bg: #E5EDF3;
+}
+.june header { background: linear-gradient(135deg, #8FA5B5 0%, #7E949F 100%); }
+.june .zodiac-card { border-left: 4px solid #8FA5B5; }
+
+/* July - Dusty Rose */
+.july {
+    --primary: #C8A0A8;
+    --primary-dark: #B78F98;
+    --accent: #E0C0C8;
+    --dark: #5A4A50;
+    --text: #5A5560;
+    --text-light: #8A8590;
+    --bg: #FCFAFB;
+    --bg-secondary: #F8F3F5;
+    --border: #E8DDE0;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(200, 160, 168, 0.15);
+    --card-shadow: 0 2px 12px rgba(200, 160, 168, 0.1);
+    --today-bg: #F5E8EC;
+}
+.july header { background: linear-gradient(135deg, #C8A0A8 0%, #B78F98 100%); }
+.july .zodiac-card { border-left: 4px solid #C8A0A8; }
+
+/* August - Teal Cyan */
+.august {
+    --primary: #7EC4C4;
+    --primary-dark: #6DB3B3;
+    --accent: #A8D8D8;
+    --dark: #3D5A5A;
+    --text: #4A5A5A;
+    --text-light: #7A8A8A;
+    --bg: #F6FAFA;
+    --bg-secondary: #EEF5F5;
+    --border: #D0E4E4;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(126, 196, 196, 0.15);
+    --card-shadow: 0 2px 12px rgba(126, 196, 196, 0.1);
+    --today-bg: #E0EDED;
+}
+.august header { background: linear-gradient(135deg, #7EC4C4 0%, #6DB3B3 100%); }
+.august .zodiac-card { border-left: 4px solid #7EC4C4; }
+
+/* September - Warm Amber */
+.september {
+    --primary: #D4A868;
+    --primary-dark: #C39758;
+    --accent: #E8C898;
+    --dark: #5A4D35;
+    --text: #5A5545;
+    --text-light: #8A8568;
+    --bg: #FDFBF7;
+    --bg-secondary: #FAF5ED;
+    --border: #E8DCC8;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(212, 168, 104, 0.15);
+    --card-shadow: 0 2px 12px rgba(212, 168, 104, 0.1);
+    --today-bg: #F5EDE0;
+}
+.september header { background: linear-gradient(135deg, #D4A868 0%, #C39758 100%); }
+.september .zodiac-card { border-left: 4px solid #D4A868; }
+
+/* October - Soft Burgundy */
+.october {
+    --primary: #B87878;
+    --primary-dark: #A76767;
+    --accent: #D09898;
+    --dark: #5A4045;
+    --text: #5A4A4A;
+    --text-light: #8A7A7A;
+    --bg: #FCFAFA;
+    --bg-secondary: #F8F3F3;
+    --border: #E8D8D8;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(184, 120, 120, 0.15);
+    --card-shadow: 0 2px 12px rgba(184, 120, 120, 0.1);
+    --today-bg: #F5E8E8;
+}
+.october header { background: linear-gradient(135deg, #B87878 0%, #A76767 100%); }
+.october .zodiac-card { border-left: 4px solid #B87878; }
+
+/* November - Deep Violet */
+.november {
+    --primary: #9585B8;
+    --primary-dark: #8474A8;
+    --accent: #B8A8D0;
+    --dark: #4A4560;
+    --text: #5A5565;
+    --text-light: #8A858F;
+    --bg: #FAFAFC;
+    --bg-secondary: #F5F3F8;
+    --border: #DED8E5;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(149, 133, 184, 0.15);
+    --card-shadow: 0 2px 12px rgba(149, 133, 184, 0.1);
+    --today-bg: #EDE8F3;
+}
+.november header { background: linear-gradient(135deg, #9585B8 0%, #8474A8 100%); }
+.november .zodiac-card { border-left: 4px solid #9585B8; }
+
+/* December - Festive Gold */
+.december {
+    --primary: #C4A050;
+    --primary-dark: #B38F40;
+    --accent: #D8BC78;
+    --dark: #5A4D30;
+    --text: #5A5540;
+    --text-light: #8A8568;
+    --bg: #FDFBF5;
+    --bg-secondary: #FAF5E8;
+    --border: #E8DCC0;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(196, 160, 80, 0.15);
+    --card-shadow: 0 2px 12px rgba(196, 160, 80, 0.1);
+    --today-bg: #F5EDD8;
+}
+.december header { background: linear-gradient(135deg, #C4A050 0%, #B38F40 100%); }
+.december .zodiac-card { border-left: 4px solid #C4A050; }
+
+/* Main Zodiac Page */
+.chinese-zodiac-fortune {
+    --primary: #6B8FD4;
+    --primary-dark: #5A7EC3;
+    --accent: #90B0E8;
+    --dark: #3D4D60;
+    --text: #4A5A6A;
+    --text-light: #7A8A9A;
+    --bg: #F8FAFD;
+    --bg-secondary: #F0F5FA;
+    --border: #D0DCE8;
+    --radius: 16px;
+    --shadow: 0 4px 20px rgba(107, 143, 212, 0.15);
+    --card-shadow: 0 2px 12px rgba(107, 143, 212, 0.1);
+    --today-bg: #E0EAF5;
+}
+.chinese-zodiac-fortune header { background: linear-gradient(135deg, #6B8FD4 0%, #5A7EC3 100%); }
+.chinese-zodiac-fortune .zodiac-card { border-left: 4px solid #6B8FD4; }
+.chinese-zodiac-fortune header .subtitle { color: white; }
+.chinese-zodiac-fortune .nav-links a { color: white; border-color: rgba(255,255,255,0.4); }
+.chinese-zodiac-fortune .nav-links a:hover { background: rgba(255,255,255,0.2); border-color: white; }
+.chinese-zodiac-fortune footer { background: var(--dark); }
+
+/* Fortune overview - months grid cards */
+.months-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+.month-card {
+    display: block;
+    background: white;
+    padding: 22px;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    border-top: 4px solid var(--primary);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.month-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+.month-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.month-icon {
+    font-size: 1.6rem;
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+.month-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.15rem;
+    color: var(--dark);
+    font-weight: 600;
+    margin: 0;
+}
+.month-desc {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+.month-meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+.meta-item {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    background: var(--bg-secondary);
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* Fortune info section */
+.fortune-section {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--primary);
+}
+.fortune-section h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.4rem;
+    color: var(--dark);
+    margin-bottom: 14px;
+}
+.fortune-section p { color: var(--text-light); margin-bottom: 10px; }
+.fortune-section ul { padding-left: 22px; color: var(--text-light); }
+.fortune-section ul li { margin-bottom: 6px; line-height: 1.65; }
+.fortune-section ul li::marker { color: var(--primary); }
+
+/* Highlight keyword */
+.highlight { color: var(--primary-dark); font-weight: 600; }
+
+/* Back link button */
+.back-link {
+    color: white;
+    text-decoration: none;
+    padding: 6px 14px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 20px;
+    transition: all 0.2s;
+    display: inline-block;
+}
+.back-link:hover { background: rgba(255,255,255,0.2); text-decoration: none; border-color: white; }
+
+/* Subtitle (in case parent style doesn't cover it under .chinese-zodiac-fortune) */
+.chinese-zodiac-fortune .subtitle { color: white; opacity: 0.95; }
+
+/* Year overview grid cards */
+.year-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+.year-overview-card {
+    background: white;
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    border-top: 4px solid var(--primary);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.year-overview-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+.year-overview-card h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+.year-overview-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+.year-overview-card .month-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+.year-overview-card .month-link:hover {
+    background: var(--primary-dark);
+}
+
+/* Table styling enhancements */
+.calendar-table td.has-event {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg) 100%);
+    font-weight: 500;
+}
+.calendar-table td.has-event::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+.calendar-table td { position: relative; }
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    header { padding: 30px 15px; }
+    h1 { font-size: 1.4rem; }
+    .container { padding: 20px 15px; }
+    .intro, .calendar-section, .horoscope-section, .fortune-section { padding: 16px; }
+    .zodiac-header { flex-wrap: wrap; }
+    .zodiac-luck { margin-left: 0; margin-top: 8px; }
+    .year-overview-grid { grid-template-columns: 1fr; }
+    .months-grid { grid-template-columns: 1fr; }
+    .month-card { padding: 18px; }
+}

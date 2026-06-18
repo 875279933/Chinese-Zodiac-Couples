@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,247 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary: #3B82F6;
-            --accent: #F59E0B;
-            --dark: #1F2937;
-            --text: #374151;
-            --text-light: #6B7280;
-            --bg: #FFFFFF;
-            --bg-secondary: #F9FAFB;
-            --border: #E5E7EB;
-            --radius: 12px;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text);
-            line-height: 1.7;
-            background: var(--bg);
-        }
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, #2563EB 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        h1 {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 1.8rem;
-            margin-bottom: 12px;
-        }
-        .subtitle {
-            opacity: 0.9;
-            font-size: 1rem;
-        }
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 16px;
-            font-size: 0.9rem;
-            opacity: 0.8;
-            flex-wrap: wrap;
-        }
-        .nav-links a { color: white; text-decoration: none; }
-        .nav-links a:hover { text-decoration: underline; }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-        .intro {
-            background: var(--bg-secondary);
-            border-radius: var(--radius);
-            padding: 24px;
-            margin-bottom: 24px;
-        }
-        .intro h2 {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 1.3rem;
-            color: var(--dark);
-            margin-bottom: 12px;
-        }
-        .intro p {
-            color: var(--text-light);
-            margin-bottom: 8px;
-        }
-        .calendar-section {
-            background: white;
-            border-radius: var(--radius);
-            padding: 24px;
-            margin-bottom: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-        }
-        .calendar-title {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 1.3rem;
-            color: var(--dark);
-            margin-bottom: 20px;
-        }
-        .calendar-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .calendar-table th {
-            text-align: center;
-            padding: 12px 8px;
-            color: var(--text-light);
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        .calendar-table td {
-            text-align: center;
-            padding: 12px 4px;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            min-width: 40px;
-        }
-        .calendar-table td:hover {
-            background: var(--primary);
-            color: white;
-        }
-        .calendar-table td:hover .zodiac-badge {
-            font-size: 0.7rem;
-            color: var(--text-light);
-        }
-        .lunar-date {
-            font-size: 0.65rem;
-            color: var(--accent);
-            font-weight: 500;
-        }
-        .day-cell {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-        }
-        .day-number {
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-        .zodiac-badge {
-            font-size: 0.7rem;
-            color: var(--text-light);
-        }
-        .lunar-date {
-            font-size: 0.65rem;
-            color: var(--accent);
-            font-weight: 500;
-        }
-        .empty-cell {
-            background: var(--bg-secondary);
-        }
-        .today-cell {
-            background: #FEF3C7;
-            border-color: var(--accent);
-        }
-        .month-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 12px;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-        }
-        .summary-item {
-            background: var(--bg-secondary);
-            padding: 14px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .summary-item strong {
-            display: block;
-            color: var(--dark);
-            font-size: 0.85rem;
-            margin-bottom: 4px;
-        }
-        .summary-item span {
-            color: var(--text-light);
-            font-size: 0.8rem;
-        }
-        .horoscope-section {
-            background: var(--bg-secondary);
-            border-radius: var(--radius);
-            padding: 24px;
-            margin-bottom: 24px;
-        }
-        .horoscope-title {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 1.2rem;
-            color: var(--dark);
-            margin-bottom: 16px;
-        }
-        .zodiac-card {
-            background: white;
-            padding: 16px;
-            border-radius: 8px;
-            margin-bottom: 12px;
-        }
-        .zodiac-card:last-child {
-            margin-bottom: 0;
-        }
-        .zodiac-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-        .zodiac-emoji {
-            font-size: 1.2rem;
-        }
-        .zodiac-name {
-            font-weight: 600;
-            color: var(--dark);
-        }
-        .zodiac-luck {
-            margin-left: auto;
-            font-size: 0.8rem;
-            padding: 4px 10px;
-            border-radius: 12px;
-        }
-        .luck-high { background: #D1FAE5; color: #059669; }
-        .luck-medium { background: #FEF3C7; color: #D97706; }
-        .luck-low { background: #FEE2E2; color: #DC2626; }
-        .zodiac-desc {
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-        .month-nav {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 24px;
-            padding: 16px;
-            background: white;
-            border-radius: var(--radius);
-        }
-        .nav-btn {
-            padding: 10px 20px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: background 0.2s;
-        }
-        .nav-btn:hover {
-            background: #2563EB;
-        }
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 25px 20px;
-            text-align: center;
-            margin-top: 30px;
-        }
-        footer p { opacity: 0.7; font-size: 0.85rem; }
-        footer a { color: white; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-    </style>
+    <link rel="stylesheet" href="2025-style.css">
 </head>
-<body>
+<body class="august">
     <header>
         <h1>Chinese Zodiac Horoscope for August 2025</h1>
         <p class="subtitle">Your complete Chinese zodiac horoscope for August 2025 with daily predictions and lucky elements.</p>
@@ -272,7 +34,7 @@
         </div>
 
         <div class="calendar-section">
-            <h3 class="calendar-title">📅 August 2025 Calendar - Chinese Zodiac Horoscope</h3>
+            <h3 class="calendar-title">&#128197; August 2025 Calendar - Chinese Zodiac Horoscope</h3>
             <table class="calendar-table">
                 <thead>
                     <tr>
@@ -335,10 +97,10 @@
             </table>
 
             <div class="month-summary">
-                <div class="summary-item"><strong>🌟 Lucky Numbers</strong><span>2, 6, 8</span></div>
-                <div class="summary-item"><strong>🎨 Lucky Colors</strong><span>Green, Red, Purple</span></div>
-                <div class="summary-item"><strong>🧭 Lucky Directions</strong><span>East, South</span></div>
-                <div class="summary-item"><strong>💐 Lucky Flowers</strong><span>Carnation, Primrose</span></div>
+                <div class="summary-item"><strong>&#127919; Lucky Numbers</strong><span>2, 6, 8</span></div>
+                <div class="summary-item"><strong>&#127912; Lucky Colors</strong><span>Green, Red, Purple</span></div>
+                <div class="summary-item"><strong>&#129517; Lucky Directions</strong><span>East, South</span></div>
+                <div class="summary-item"><strong>&#127800; Lucky Flowers</strong><span>Carnation, Primrose</span></div>
             </div>
         </div>
 
