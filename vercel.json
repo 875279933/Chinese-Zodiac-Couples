@@ -19,6 +19,11 @@
       "source": "/chinese-new-year-:year(19[3-9][0-9]|20[0-3][0-9]|204[0-3]).html",
       "destination": "/newyear/chinese-new-year-:year.html",
       "statusCode": 301
+    },
+    {
+      "source": "/:year(19[3-9][0-9]|20[0-3][0-9]|204[0-2])-year-of-the-chinese-zodiac.html",
+      "destination": "/year/:year-year-of-the-chinese-zodiac.html",
+      "statusCode": 301
     }
   ]
 }
