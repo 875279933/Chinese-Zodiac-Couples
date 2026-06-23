@@ -37,7 +37,7 @@
     },
     {
       "source": "/:sign(aries|taurus|gemini|cancer|leo|virgo|libra|scorpio|sagittarius|capricorn|aquarius|pisces)-chinese-zodiac.html",
-      "destination": "/soulmate/:sign-chinese-zodiac.html",
+      "destination": "/zodiac-signs/:sign-chinese-zodiac.html",
       "statusCode": 301
     }
   ]
