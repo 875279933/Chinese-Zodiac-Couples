@@ -24,6 +24,11 @@
       "source": "/:year(19[3-9][0-9]|20[0-3][0-9]|204[0-2])-year-of-the-chinese-zodiac.html",
       "destination": "/year/:year-year-of-the-chinese-zodiac.html",
       "statusCode": 301
+    },
+    {
+      "source": "/12/zodiac-sign-for-june-:num([0-9]+).html",
+      "destination": "/sign/12/zodiac-sign-for-june-:num.html",
+      "statusCode": 301
     }
   ]
 }
