@@ -29,6 +29,16 @@
       "source": "/:month(1[0-2]|[1-9])/zodiac-sign-for-:monthName(january|february|march|april|may|june|july|august|september|october|november|december)-:day([0-9]+).html",
       "destination": "/sign/:month/zodiac-sign-for-:monthName-:day.html",
       "statusCode": 301
+    },
+    {
+      "source": "/what-is-the-chinese-zodiac-for-:year(19[3-9][0-9]|20[0-3][0-9]|204[0-3]).html",
+      "destination": "/what/what-is-the-chinese-zodiac-for-:year.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/:sign(aries|taurus|gemini|cancer|leo|virgo|libra|scorpio|sagittarius|capricorn|aquarius|pisces)-chinese-zodiac.html",
+      "destination": "/soulmate/:sign-chinese-zodiac.html",
+      "statusCode": 301
     }
   ]
 }
