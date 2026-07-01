@@ -1,44 +1,46 @@
-﻿/* ==========================================================================
-   Zodiac Year Pages - Shared Stylesheet (Sage Theme)
-   Color palette: soft sage green with warm sand accent
+/* ==========================================================================
+   Zodiac Year Pages - Group 7 (Field Atlas Theme)
+   Color palette: deep teal + forest green + clay + paper cream
+   Structural distinction from Group 6 (Editorial Brief):
+     - Centered title header with double rules (not asymmetric)
+     - 4 small stat cards in lead band (not 3 wide slabs)
+     - 2-col with image placeholder + body text (not sticky year sidebar)
+     - 3-column grid for profile frames (not newspaper column)
+     - Tiered compatibility cards with badges (not bar chart)
+     - Stacked definition list for associations (not dense table)
+     - Magazine pull-out with side notes for story (not pull quote)
+     - Accordion FAQ (not 2-column grid)
+     - Horizontal card strip for related years (not vertical timeline)
    ========================================================================== */
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --primary: #9B8AA8;
-  --primary-dark: #7A6A85;
-  --primary-light: #B8AAC2;
-  --primary-soft: #E5DEE9;
-  --accent: #D4A574;
-  --accent-light: #E8C39E;
-  --accent-soft: #F2E1CC;
-  --dark: #2D263D;
-  --text: #3A324A;
-  --text-light: #6B627B;
-  --text-lighter: #9AA89C;
-  --bg: #FDFAFB;
-  --bg-secondary: #F0E8F2;
-  --bg-card: #FFFFFF;
-  --border: #D5C8E0;
-  --border-soft: #E5D8EB;
-  --best: #5C8A6B;
-  --best-soft: #E3EDE5;
-  --challenge: #B86A4D;
-  --challenge-soft: #F2E2D9;
-  --shadow-sm: 0 2px 8px rgba(122, 106, 133, 0.06);
-  --shadow: 0 6px 24px rgba(122, 106, 133, 0.08);
-  --shadow-hover: 0 14px 40px rgba(122, 106, 133, 0.12);
-  --shadow-primary: 0 12px 32px rgba(122, 106, 133, 0.22);
+  --primary: #1A4A4A;
+  --primary-dark: #0E2D2D;
+  --primary-mid: #2D5F4E;
+  --primary-soft: #DCE7E2;
+  --accent: #B85C38;
+  --accent-dark: #8E3F22;
+  --accent-soft: #F0D9CD;
+  --paper: #F5F0E5;
+  --paper-warm: #FAF6EC;
+  --paper-deep: #EAE3D0;
+  --ink: #1F2421;
+  --text: #2A2F2C;
+  --text-light: #5A605C;
+  --rule: #C8BFA8;
+  --shadow: 0 4px 16px rgba(26, 74, 74, 0.08);
+  --shadow-hover: 0 8px 24px rgba(26, 74, 74, 0.14);
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
   color: var(--text);
   line-height: 1.75;
-  background: var(--bg);
+  background: var(--paper);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -50,462 +52,757 @@ body {
 }
 
 /* ==========================================================================
-   Header
+   Header - centered with double rules
    ========================================================================== */
-header {
-  background:
-    radial-gradient(ellipse at top right, rgba(212, 165, 116, 0.35), transparent 55%),
-    radial-gradient(ellipse at bottom left, rgba(168, 197, 181, 0.45), transparent 60%),
-    linear-gradient(135deg, #9B8AA8 0%, #7A6A85 100%);
-  color: #fff;
-  padding: 64px 0 88px;
+header.atlas7 {
+  background: var(--paper-warm);
+  color: var(--ink);
+  padding: 56px 0 48px;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  border-top: 6px double var(--primary);
+  border-bottom: 6px double var(--primary);
 }
 
-header::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 -1px 0;
-  height: 32px;
-  background: var(--bg);
-  clip-path: ellipse(55% 100% at 50% 100%);
-}
-
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 22px;
-  padding: 8px 20px;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 50px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: var(--transition);
-  backdrop-filter: blur(6px);
-}
-
-.back-link:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateX(-2px);
-}
-
-.zodiac-emoji {
-  font-size: 5rem;
+.atlas7-kicker {
   display: inline-block;
-  margin-bottom: 18px;
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.18));
-  animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-h1 {
-  font-family: 'Noto Serif SC', Georgia, serif;
-  font-size: 2.75rem;
-  font-weight: 700;
-  margin-bottom: 14px;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-.subtitle {
-  font-size: 1.125rem;
-  opacity: 0.95;
-  max-width: 680px;
-  margin: 0 auto;
-  line-height: 1.65;
-  font-weight: 400;
-}
-
-/* ==========================================================================
-   Section
-   ========================================================================== */
-.section {
-  padding: 72px 0;
-}
-
-.section-alt {
-  background: var(--bg-secondary);
-  position: relative;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-.section-title h2 {
-  font-family: 'Noto Serif SC', Georgia, serif;
-  font-size: 2.125rem;
-  color: var(--dark);
-  margin-bottom: 10px;
-  letter-spacing: -0.01em;
-  position: relative;
-  display: inline-block;
-}
-
-.section-title h2::after {
-  content: "";
-  display: block;
-  width: 56px;
-  height: 3px;
-  margin: 14px auto 0;
-  border-radius: 2px;
-  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
-}
-
-.section-title p {
-  font-size: 1.0125rem;
-  color: var(--text-light);
-  max-width: 820px;
-  margin: 18px auto 0;
-  line-height: 1.85;
-  text-align: left;
-}
-
-.section-title p + p { margin-top: 14px; }
-
-/* ==========================================================================
-   Trait cards
-   ========================================================================== */
-.traits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 26px;
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-.trait-card {
-  background: var(--bg-card);
-  border-radius: var(--radius-lg);
-  padding: 32px 28px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border-soft);
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.trait-card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.trait-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--primary-light);
-}
-
-.trait-card:hover::before { opacity: 1; }
-
-.trait-icon {
-  width: 56px;
-  height: 56px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.85rem;
-  background: var(--primary-soft);
-  color: var(--primary-dark);
-  border-radius: 16px;
-  margin-bottom: 18px;
-}
-
-.trait-card h3 {
-  font-family: 'Noto Serif SC', Georgia, serif;
-  font-size: 1.25rem;
-  color: var(--dark);
-  margin-bottom: 10px;
-  letter-spacing: -0.01em;
-}
-
-.trait-card p {
-  font-size: 0.95rem;
-  color: var(--text-light);
-  line-height: 1.75;
-}
-
-/* ==========================================================================
-   Compatibility
-   ========================================================================== */
-.compatibility-section {
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-.compat-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-top: 48px;
-}
-
-.compat-card {
-  background: var(--bg-card);
-  border-radius: var(--radius-lg);
-  padding: 32px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border-soft);
-  position: relative;
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.compat-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-hover);
-}
-
-.compat-card.best {
-  border-top: 4px solid var(--best);
-}
-
-.compat-card.challenge {
-  border-top: 4px solid var(--challenge);
-}
-
-.compat-card h3 {
-  font-family: 'Noto Serif SC', Georgia, serif;
-  font-size: 1.3rem;
-  color: var(--dark);
-  margin-bottom: 18px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.compat-card.best h3 { color: var(--best); }
-.compat-card.challenge h3 { color: var(--challenge); }
-
-.match-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 18px;
-}
-
-.match-item {
-  padding: 8px 16px;
-  background: var(--bg-secondary);
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: transform var(--transition);
-}
-
-.match-item:hover { transform: scale(1.04); }
-
-.match-item.best {
-  background: var(--best-soft);
-  color: var(--best);
-}
-
-.match-item.challenge {
-  background: var(--challenge-soft);
-  color: var(--challenge);
-}
-
-.compat-desc {
-  margin-top: 4px;
-  font-size: 0.95rem;
-  color: var(--text-light);
-  line-height: 1.75;
-}
-
-.compat-dims {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px dashed var(--border);
-}
-
-.compat-dims h4 {
-  font-size: 0.85rem;
-  margin-bottom: 14px;
-  color: var(--text);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
   font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+  padding: 0 20px;
 }
 
-.dim-row {
+.atlas7-emoji {
+  font-size: 3.5rem;
+  display: block;
+  margin: 0 auto 14px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
+}
+
+.atlas7-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.atlas7-subtitle {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-light);
+  max-width: 720px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+.atlas7-divider {
+  width: 80px;
+  height: 1px;
+  background: var(--accent);
+  margin: 0 auto 18px;
+}
+
+.atlas7-meta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+}
+
+.atlas7-meta-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.atlas7-meta-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+  font-size: 0.7rem;
+}
+
+.atlas7-meta-value {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.atlas7-back {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--primary);
+  text-decoration: none;
+  margin-bottom: 18px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.atlas7-back:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* ==========================================================================
+   Section base
+   ========================================================================== */
+.section7 {
+  padding: 64px 0;
+}
+
+.section7.alt {
+  background: var(--paper-deep);
+}
+
+.section7-head {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.section7-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--accent);
+}
+
+.section7-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.section7-lede {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.0rem;
+  font-style: italic;
+  color: var(--text-light);
+  max-width: 740px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Lead band - 4 small stat cards
+   ========================================================================== */
+.lead7-band {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.lead7-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--primary);
+  padding: 22px 18px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.lead7-card-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.lead7-card-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
+.lead7-card-sub {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Year at a glance - 2-col with image placeholder + body
+   ========================================================================== */
+.glance7-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: start;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.glance7-art {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  padding: 32px 28px;
+  text-align: center;
+  position: relative;
+}
+
+.glance7-art::before,
+.glance7-art::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background: var(--rule);
+}
+
+.glance7-art::before { top: 14px; }
+.glance7-art::after { bottom: 14px; }
+
+.glance7-art-emoji {
+  font-size: 5.5rem;
+  line-height: 1;
+  margin: 14px 0 18px;
+}
+
+.glance7-art-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.glance7-art-el {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.glance7-art-dl {
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 18px;
+  margin-top: 12px;
+}
+
+.glance7-art-dl > div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-  font-size: 0.875rem;
+  padding: 6px 0;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.glance7-art-dl > div:last-child { border-bottom: 0; }
+
+.glance7-art-dl dt {
+  font-weight: 500;
   color: var(--text-light);
+  letter-spacing: 0.05em;
 }
 
-.dim-row:last-child { margin-bottom: 0; }
-
-.dimension-stars {
-  font-size: 0.95rem;
-  color: var(--accent);
-  letter-spacing: 3px;
+.glance7-art-dl dd {
+  font-weight: 600;
+  color: var(--ink);
 }
+
+.glance7-text p {
+  margin-bottom: 18px;
+  font-size: 1.02rem;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.glance7-text p:last-child { margin-bottom: 0; }
 
 /* ==========================================================================
-   Fortune cards
+   Profile - 3-column grid
    ========================================================================== */
-.fortune-section {
-  max-width: 980px;
+.profile7-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
-.fortune-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 18px;
-  margin-top: 48px;
+.profile7-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--primary);
+  padding: 28px 24px;
 }
 
-.fortune-card {
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  padding: 24px 18px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-soft);
-  text-align: center;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+.profile7-card-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
 }
 
-.fortune-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
-  border-color: var(--primary-light);
-}
-
-.fortune-icon {
-  width: 48px;
-  height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  background: linear-gradient(135deg, var(--primary-soft) 0%, var(--accent-soft) 100%);
-  border-radius: 14px;
+.profile7-card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.3;
   margin-bottom: 14px;
 }
 
-.fortune-card h3 {
-  font-family: 'Noto Serif SC', Georgia, serif;
-  font-size: 1rem;
-  color: var(--dark);
-  margin-bottom: 6px;
-  font-weight: 600;
+.profile7-card-body {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.7;
 }
 
-.fortune-card p {
-  font-size: 0.925rem;
-  color: var(--text-light);
-  line-height: 1.55;
-  font-weight: 500;
+.profile7-intro {
+  max-width: 820px;
+  margin: 0 auto 36px;
+  font-size: 1.0rem;
+  color: var(--text);
+  line-height: 1.8;
+  text-align: center;
+  font-style: italic;
 }
 
 /* ==========================================================================
-   Story card
+   Compatibility - tiered cards with badges
    ========================================================================== */
-.card-wrap {
+.compat7-tier {
+  margin-bottom: 28px;
+}
+
+.compat7-tier-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.compat7-tier-badge {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--paper-warm);
+  background: var(--primary);
+  padding: 6px 14px;
+}
+
+.compat7-tier.tier-best .compat7-tier-badge { background: var(--accent); }
+.compat7-tier.tier-strong .compat7-tier-badge { background: var(--primary-mid); }
+.compat7-tier.tier-think .compat7-tier-badge { background: var(--text-light); }
+
+.compat7-tier-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.compat7-tier-desc {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 18px;
+  max-width: 820px;
+  line-height: 1.6;
+}
+
+.compat7-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.compat7-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  padding: 18px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.compat7-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.compat7-card-emoji {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.compat7-card-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.compat7-card-pct {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-left: auto;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   Associations - stacked definition list
+   ========================================================================== */
+.lucky7-list {
   max-width: 820px;
   margin: 0 auto;
-  background: var(--bg-card);
-  padding: 44px 48px;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border-soft);
-  position: relative;
 }
 
-.card-wrap::before {
-  content: "\201C";
-  position: absolute;
-  top: 8px;
-  left: 22px;
-  font-family: Georgia, serif;
-  font-size: 5rem;
-  line-height: 1;
-  color: var(--primary-light);
-  opacity: 0.6;
+.lucky7-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
 }
 
-.card-wrap p {
-  position: relative;
-  font-size: 1.0625rem;
-  line-height: 1.85;
+.lucky7-item:last-child { border-bottom: 0; }
+
+.lucky7-item-key {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary);
+  padding-top: 4px;
+}
+
+.lucky7-item-val {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.lucky7-item-note {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   Story - magazine pull-out with side notes
+   ========================================================================== */
+.story7-wrap {
+  display: grid;
+  grid-template-columns: 200px 1fr 220px;
+  gap: 36px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.story7-byline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--text-light);
+  border-top: 1px solid var(--accent);
+  padding-top: 14px;
+  text-align: right;
+}
+
+.story7-byline-name {
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  margin-bottom: 8px;
+}
+
+.story7-byline-meta {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.55;
+}
+
+.story7-body {
+  font-size: 1.02rem;
   color: var(--text);
+  line-height: 1.8;
+}
+
+.story7-body p {
+  margin-bottom: 18px;
+}
+
+.story7-body p:last-child { margin-bottom: 0; }
+
+.story7-lede {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.story7-sidenote {
+  font-family: 'Inter', sans-serif;
+  background: var(--primary-soft);
+  border-left: 3px solid var(--primary);
+  padding: 16px 18px;
+  font-size: 0.85rem;
+  color: var(--primary-dark);
+  line-height: 1.6;
+}
+
+.story7-sidenote-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   FAQ - accordion style
+   ========================================================================== */
+.faq7-list {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.faq7-item {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  margin-bottom: 12px;
+  transition: box-shadow 0.2s ease;
+}
+
+.faq7-item:hover { box-shadow: var(--shadow); }
+
+.faq7-item-q {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 18px 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.faq7-item.open .faq7-item-q {
+  border-bottom-color: var(--rule);
+}
+
+.faq7-item-q::after {
+  content: "+";
+  font-size: 1.4rem;
+  color: var(--accent);
+  font-weight: 400;
+  margin-left: 14px;
+  line-height: 1;
+}
+
+.faq7-item.open .faq7-item-q::after {
+  content: "\2212";
+}
+
+.faq7-item-a {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.75;
+  padding: 0 22px 18px;
+  display: none;
+}
+
+.faq7-item.open .faq7-item-a {
+  display: block;
+}
+
+.faq7-item-num {
+  display: inline-block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-right: 10px;
+  min-width: 30px;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   Related years - horizontal cards strip
+   ========================================================================== */
+.related7-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.related7-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-bottom: 3px solid var(--primary);
+  padding: 22px 18px;
+  text-decoration: none;
+  color: var(--ink);
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+
+.related7-card:hover {
+  transform: translateY(-3px);
+  border-bottom-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.related7-card-year {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.related7-card-el {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.related7-card-note {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.85rem;
+  color: var(--text-light);
   font-style: italic;
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
-footer {
-  background: var(--dark);
-  color: #fff;
-  padding: 44px 20px;
-  text-align: center;
+footer.atlas7 {
+  background: var(--primary);
+  color: var(--paper-warm);
+  padding: 44px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
 }
 
-footer p {
-  opacity: 0.78;
-  font-size: 0.875rem;
-  margin-bottom: 8px;
+footer.atlas7 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
 }
 
-footer p:last-child { margin-bottom: 0; }
+footer.atlas7 p {
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
 
-footer a {
-  color: #fff;
+footer.atlas7 p:last-child { margin-bottom: 0; }
+
+footer.atlas7 a {
+  color: var(--paper-warm);
   text-decoration: none;
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
-  transition: var(--transition);
+  border-bottom: 1px dotted rgba(245, 240, 229, 0.4);
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-footer a:hover {
-  border-bottom-color: var(--accent-light);
-  color: var(--accent-light);
+footer.atlas7 a:hover {
+  color: var(--accent-soft);
+  border-bottom-color: var(--accent-soft);
+}
+
+footer.atlas7 .atlas7-links {
+  text-align: right;
 }
 
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media (max-width: 768px) {
-  header { padding: 52px 0 76px; }
-  h1 { font-size: 2.05rem; }
-  .subtitle { font-size: 1rem; }
-  .zodiac-emoji { font-size: 4rem; }
-  .section { padding: 56px 0; }
-  .section-title h2 { font-size: 1.75rem; }
-  .section-title p { font-size: 0.975rem; }
-  .compat-grid { grid-template-columns: 1fr; gap: 20px; }
-  .traits-grid { grid-template-columns: 1fr; gap: 18px; }
-  .fortune-grid { grid-template-columns: repeat(2, 1fr); }
-  .trait-card, .compat-card { padding: 24px 22px; }
-  .card-wrap { padding: 32px 26px; }
-  .card-wrap p { font-size: 1rem; }
+@media (max-width: 920px) {
+  .lead7-band { grid-template-columns: repeat(2, 1fr); }
+  .profile7-grid { grid-template-columns: 1fr; gap: 18px; }
+  .compat7-grid { grid-template-columns: 1fr; }
+  .related7-strip { grid-template-columns: repeat(2, 1fr); }
+  .glance7-wrap { grid-template-columns: 1fr; gap: 32px; }
+  .story7-wrap { grid-template-columns: 1fr; gap: 24px; }
+  .story7-byline { text-align: left; }
+  .lucky7-item { grid-template-columns: 1fr; gap: 6px; }
 }
 
-@media (max-width: 420px) {
-  .fortune-grid { grid-template-columns: 1fr; }
-  h1 { font-size: 1.75rem; }
+@media (max-width: 560px) {
+  .atlas7-title { font-size: 2.4rem; }
+  .atlas7-subtitle { font-size: 1rem; }
+  .section7 { padding: 48px 0; }
+  .section7-title { font-size: 1.7rem; }
+  .lead7-band { grid-template-columns: 1fr 1fr; }
+  .related7-strip { grid-template-columns: 1fr; }
+  footer.atlas7 .container { flex-direction: column; text-align: center; }
+  footer.atlas7 .atlas7-links { text-align: center; }
 }
