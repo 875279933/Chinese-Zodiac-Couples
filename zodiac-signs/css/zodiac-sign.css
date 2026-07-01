@@ -392,6 +392,76 @@ h4 {
     line-height: 1.7;
 }
 
+.how-to-card p {
+    margin-top: 1.2rem;
+    color: #5A4A2E;
+    line-height: 1.7;
+}
+
+.how-to-card a {
+    color: #8B6F3D;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(139, 111, 61, 0.4);
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.how-to-card a:hover {
+    color: #5A4A2E;
+    border-bottom-color: #5A4A2E;
+}
+
+/* === Related Reads Section === */
+.related-reads {
+    background: #FFFFFF;
+    border: 1px solid #E0D5BD;
+    border-left: 4px solid #C9A961;
+    border-radius: 14px;
+    padding: 1.6rem 1.8rem;
+    margin-top: 1.8rem;
+    box-shadow: 0 2px 14px rgba(15, 44, 73, 0.05);
+}
+
+.intro-section a,
+.related-reads a {
+    color: #0F2C49;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(15, 44, 73, 0.25);
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.intro-section a:hover,
+.related-reads a:hover {
+    color: #C9A961;
+    border-bottom-color: #C9A961;
+}
+
+.related-reads h3 {
+    color: #0F2C49;
+    margin-top: 0;
+    margin-bottom: 0.9rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.related-reads ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.related-reads li {
+    padding: 0.55rem 0;
+    line-height: 1.65;
+    color: #3D3D3D;
+    border-bottom: 1px dashed #E6DFD1;
+}
+
+.related-reads li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
 /* === Scroll Button === */
 .scroll-btn {
     display: inline-block;
@@ -464,7 +534,8 @@ footer a:hover {
     }
 
     .compatibility-result,
-    .how-to-card {
+    .how-to-card,
+    .related-reads {
         padding: 1.5rem 1.25rem;
     }
 }
