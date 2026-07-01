@@ -66,6 +66,85 @@ h1 {
     z-index: 10;
 }
 
+.zodiac-section.faq-section {
+    margin-top: 60px;
+}
+
+.related-resources-section {
+    max-width: 1000px;
+    margin: 40px auto 60px;
+    padding: 0 20px;
+}
+
+.related-resources-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+}
+
+.related-resources-card h2 {
+    font-size: 1.4rem;
+    color: var(--dark);
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.related-resources-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.related-resources-list li {
+    list-style: none;
+}
+
+.related-resources-list a {
+    display: block;
+    padding: 18px 20px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--dark);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    font-weight: 600;
+    font-size: 0.98rem;
+    line-height: 1.45;
+}
+
+.related-resources-list a:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    border-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.related-resources-list a .rr-tag {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .related-resources-list {
+        grid-template-columns: 1fr;
+    }
+
+    .zodiac-section.faq-section {
+        margin-top: 40px;
+    }
+}
+
 .zodiac-card {
     background: var(--bg);
     border-radius: var(--radius-lg);
