@@ -1,0 +1,291 @@
+/* Shared base for all 12 zodiac personality pages */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text);line-height:1.7;background:var(--bg)}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.zodiac-emoji{width:115px;height:115px;object-fit:contain;display:block;margin:0 auto 20px;position:relative;z-index:1}
+h1{font-family:'Noto Serif SC',serif;font-size:2.5rem;font-weight:700;margin-bottom:12px;letter-spacing:-.02em;position:relative;z-index:1}
+h2{font-family:'Noto Serif SC',serif;font-size:2rem;color:var(--dark);margin-bottom:12px}
+h3{font-family:'Noto Serif SC',serif;font-size:1.25rem;color:var(--dark);margin-bottom:12px}
+.subtitle{font-size:1.125rem;opacity:.95;max-width:650px;margin:0 auto;line-height:1.6;position:relative;z-index:1}
+.section{padding:60px 0}
+.section-title{text-align:center;margin-bottom:40px}
+.section-title p{font-size:1rem;color:var(--text-light);max-width:700px;margin:0 auto;line-height:1.7;text-align:center}
+.trait-icon,.compat-icon,.zodiac-icon,.fortune-icon{width:2rem;height:2rem;object-fit:contain;display:inline-block;vertical-align:middle}
+.years-list{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:20px}
+.year-item{padding:8px 20px;background:var(--bg);border-radius:20px;font-size:.95rem;color:var(--text);border:1px solid var(--border);text-decoration:none;transition:all .2s}
+footer{background:var(--dark);color:white;padding:40px 20px;text-align:center}
+footer p{opacity:.7;font-size:.85rem;margin-bottom:8px}
+footer a{color:white;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.dimension-stars{font-size:1rem;color:#F59E0B;letter-spacing:1px}
+.dimension-label{font-size:.85rem;color:var(--text)}
+.dimensions-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.dimension-item{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--bg-secondary);border-radius:6px;transition:background .2s}
+.dimension-item:hover{background:var(--primary-soft)}
+.dimensions-section{margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
+.dimensions-title{font-size:.95rem;font-weight:600;color:var(--dark);margin-bottom:12px}
+.match-item{padding:8px 16px;background:var(--bg-secondary);border-radius:20px;font-size:.9rem;color:var(--text);display:flex;align-items:center;gap:6px;transition:all .2s ease;border:1px solid transparent}
+.match-item:hover{background:var(--primary-soft);border-color:var(--primary-light);transform:translateY(-1px)}
+.match-list{display:flex;flex-wrap:wrap;gap:8px}
+.fortune-card h3{font-family:'Noto Serif SC',serif;font-size:1.1rem;color:var(--dark);margin-bottom:8px}
+.fortune-card p{font-size:.9rem;color:var(--text-light);line-height:1.6}
+.trait-card h3{font-family:'Noto Serif SC',serif;font-size:1.25rem;color:var(--dark);margin-bottom:12px}
+.trait-card p{font-size:.95rem;color:var(--text-light);line-height:1.7}
+.compat-card h3{font-family:'Noto Serif SC',serif;font-size:1.25rem;color:var(--dark);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:900px;margin:40px auto 0}
+.related-card{background:var(--bg);padding:24px 20px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);text-align:center;text-decoration:none;color:inherit;transition:all .3s}
+.related-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--primary-light)}
+.related-card h3{font-family:'Noto Serif SC',serif;font-size:1.1rem;color:var(--dark);margin-bottom:6px}
+.related-card p{font-size:.85rem;color:var(--text-light);margin:0}
+.faq-item{background:var(--bg);padding:24px;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);max-width:900px;margin:0 auto 16px}
+.faq-item h3{font-family:'Noto Serif SC',serif;font-size:1.1rem;color:var(--dark);margin-bottom:8px}
+.faq-item p{font-size:.95rem;color:var(--text-light);line-height:1.7}
+.faq-list{max-width:900px;margin:0 auto}
+.closing-note{text-align:center;max-width:800px;margin:32px auto 0;font-size:1rem;color:var(--text-light);line-height:1.7}
+@media(max-width:768px){h1{font-size:2rem}h2{font-size:1.6rem}.dimensions-grid{grid-template-columns:1fr}}
+
+/* === Layout 1: Rat - Staggered Asymmetric === */
+.z-layout-rat header{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);padding:60px 0 70px}
+.z-layout-rat .traits-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;max-width:1100px;margin:0 auto}
+.z-layout-rat .trait-card{padding:24px 22px;background:var(--bg);border-radius:10px;border:1px solid var(--border);box-shadow:var(--shadow);position:relative;transition:transform .35s,box-shadow .35s}
+.z-layout-rat .trait-icon{width:52px;height:52px;background:var(--primary-soft);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;flex-shrink:0;padding:10px}
+.z-layout-rat .trait-icon img{width:28px;height:28px;display:block}
+.z-layout-rat .trait-card:nth-child(1){grid-column:span 3;background:linear-gradient(135deg,var(--primary-soft),#fff)}
+.z-layout-rat .trait-card:nth-child(2){grid-column:span 3;margin-top:30px}
+.z-layout-rat .trait-card:nth-child(3){grid-column:span 2;margin-top:-10px}
+.z-layout-rat .trait-card:nth-child(4){grid-column:span 2;margin-top:20px}
+.z-layout-rat .trait-card:nth-child(5){grid-column:span 2;margin-top:-20px}
+.z-layout-rat .trait-card:nth-child(6){grid-column:span 6;background:var(--primary-soft);display:grid;grid-template-columns:auto 1fr;gap:8px 24px;align-items:start}
+.z-layout-rat .trait-card:nth-child(6) .trait-icon{grid-row:1/3;margin-bottom:0;align-self:center}
+.z-layout-rat .trait-card:nth-child(6) h3{margin-bottom:0}
+.z-layout-rat .trait-card:nth-child(6) p{grid-column:2}
+.z-layout-rat .trait-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.z-layout-rat .compat-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;max-width:1000px;margin:0 auto}
+.z-layout-rat .compat-card{background:var(--bg);border-radius:14px;padding:28px;box-shadow:var(--shadow);border:1px solid var(--border);position:relative}
+.z-layout-rat .compat-card.best{border-top:3px solid #16A34A}
+.z-layout-rat .compat-card.challenge{border-top:3px solid #DC2626}
+.z-layout-rat .fortune-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
+.z-layout-rat .fortune-card{background:var(--bg);padding:22px 20px;border-radius:10px;border:1px solid var(--border);box-shadow:var(--shadow)}
+.z-layout-rat .fortune-icon{width:48px;height:48px;background:var(--primary-soft);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;padding:9px;flex-shrink:0}
+.z-layout-rat .fortune-icon img{width:30px;height:30px;display:block;object-fit:contain}
+@media(max-width:768px){.z-layout-rat .traits-grid,.z-layout-rat .compat-grid,.z-layout-rat .fortune-grid{grid-template-columns:1fr}.z-layout-rat .trait-card{grid-column:span 1!important;margin-top:0!important}.z-layout-rat .trait-card:nth-child(6){grid-template-columns:1fr}}
+
+/* === Layout 2: Ox - Vertical Path === */
+.z-layout-ox header{background:linear-gradient(180deg,var(--primary) 0%,var(--primary-dark) 100%);padding:60px 0 70px}
+.z-layout-ox .traits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1000px;margin:0 auto;padding:0}
+.z-layout-ox .trait-card{position:relative;background:#fff;padding:28px 26px 26px;border-radius:16px;border:1px solid var(--border);box-shadow:0 4px 16px rgba(0,0,0,.05);display:flex;flex-direction:column;align-items:flex-start;text-align:left;transition:all .3s;overflow:hidden}
+.z-layout-ox .trait-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--primary),var(--primary-light));opacity:.85}
+.z-layout-ox .trait-card::after{content:counter(ox-step);counter-increment:ox-step;position:absolute;top:18px;right:22px;width:30px;height:30px;background:var(--primary-soft);color:var(--primary-dark);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:700;line-height:1;z-index:1}
+.z-layout-ox .traits-grid{counter-reset:ox-step}
+.z-layout-ox .trait-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,.10);border-color:var(--primary-light)}
+.z-layout-ox .trait-icon{width:64px;height:64px;background:var(--primary-soft);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 0 18px;padding:14px;flex-shrink:0;position:relative}
+.z-layout-ox .trait-icon img{width:36px;height:36px;display:block;object-fit:contain;position:relative;z-index:1}
+.z-layout-ox .trait-card h3{font-size:1.18rem;color:var(--dark);margin:0 0 10px;font-weight:700;padding-right:40px;line-height:1.3}
+.z-layout-ox .trait-card p{margin:0;line-height:1.75;font-size:.95rem;color:var(--text-light)}
+.z-layout-ox .compat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;margin:0 auto}
+.z-layout-ox .compat-card{background:var(--bg);padding:28px;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow)}
+.z-layout-ox .compat-card.best{background:linear-gradient(180deg,#fff,rgba(34,197,94,.05))}
+.z-layout-ox .compat-card.challenge{background:linear-gradient(180deg,#fff,rgba(239,68,68,.05))}
+.z-layout-ox .fortune-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:780px;margin:0 auto}
+.z-layout-ox .fortune-card{background:var(--bg);padding:24px;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start}
+.z-layout-ox .fortune-icon{width:48px;height:48px;background:var(--primary-soft);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:8px}
+.z-layout-ox .fortune-icon img{width:32px;height:32px}
+.z-layout-ox .fortune-card h3{margin-bottom:4px}
+@media(max-width:768px){.z-layout-ox .compat-grid,.z-layout-ox .fortune-grid{grid-template-columns:1fr}.z-layout-ox .traits-grid{grid-template-columns:1fr;gap:16px}.z-layout-ox .trait-card{padding:24px 22px 22px}.z-layout-ox .trait-card::after{top:14px;right:18px;width:26px;height:26px;font-size:.78rem}.z-layout-ox .trait-icon{width:56px;height:56px;padding:12px;margin-bottom:14px}.z-layout-ox .trait-icon img{width:30px;height:30px}.z-layout-ox .trait-card h3{font-size:1.08rem}}
+
+/* === Layout 3: Tiger - Bold Hero === */
+.z-layout-tiger header{background:linear-gradient(135deg,#1F2937 0%,var(--primary-dark) 100%);padding:70px 0 90px}
+.z-layout-tiger .traits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto}
+.z-layout-tiger .trait-card{background:var(--bg);padding:32px 28px;border-radius:18px;border:2px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,.08);position:relative;overflow:hidden;transition:transform .3s}
+.z-layout-tiger .trait-card::after{content:"";position:absolute;top:0;right:0;width:60px;height:60px;background:linear-gradient(135deg,transparent 50%,var(--primary-soft) 50%);border-radius:0 0 0 60px}
+.z-layout-tiger .trait-card:hover{transform:translateY(-6px) scale(1.02);border-color:var(--primary)}
+.z-layout-tiger .trait-icon{width:60px;height:60px;background:var(--primary-soft);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;padding:10px}
+.z-layout-tiger .trait-icon img{width:38px;height:38px}
+.z-layout-tiger .compat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1000px;margin:0 auto}
+.z-layout-tiger .compat-card{background:var(--bg);padding:32px;border-radius:18px;border:2px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.z-layout-tiger .compat-card.best{border-color:rgba(34,197,94,.3)}
+.z-layout-tiger .compat-card.challenge{border-color:rgba(239,68,68,.3)}
+.z-layout-tiger .match-item.best{background:rgba(34,197,94,.12);color:#16A34A;font-weight:600}
+.z-layout-tiger .match-item.challenge{background:rgba(239,68,68,.12);color:#DC2626;font-weight:600}
+.z-layout-tiger .fortune-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
+.z-layout-tiger .fortune-card{background:var(--bg);padding:24px;border-radius:14px;border:2px solid var(--border);text-align:center}
+.z-layout-tiger .fortune-icon{width:54px;height:54px;background:var(--primary-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;padding:10px}
+.z-layout-tiger .fortune-icon img{width:32px;height:32px}
+@media(max-width:768px){.z-layout-tiger .traits-grid,.z-layout-tiger .compat-grid,.z-layout-tiger .fortune-grid{grid-template-columns:1fr}}
+
+/* === Layout 4: Rabbit - Soft Layered === */
+.z-layout-rabbit header{background:linear-gradient(135deg,var(--primary-soft) 0%,var(--primary) 100%);color:var(--dark);padding:60px 0 70px}
+.z-layout-rabbit header h1,.z-layout-rabbit header .subtitle{color:var(--dark)}
+.z-layout-rabbit .back-link{background:rgba(255,255,255,.5);color:var(--dark);border-color:rgba(31,41,55,.1)}
+.z-layout-rabbit .back-link:hover{background:rgba(255,255,255,.8)}
+.z-layout-rabbit .section-alt{background:var(--primary-soft)}
+.z-layout-rabbit .traits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1000px;margin:0 auto}
+.z-layout-rabbit .trait-card{background:#fff;padding:26px 24px;border-radius:20px;border:1px solid var(--primary-light);box-shadow:0 6px 24px rgba(0,0,0,.05);position:relative;transition:all .3s}
+.z-layout-rabbit .trait-card:hover{box-shadow:0 12px 32px rgba(var(--primary-rgb),.15);transform:translateY(-3px)}
+.z-layout-rabbit .trait-icon{width:54px;height:54px;background:var(--primary-soft);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;padding:10px}
+.z-layout-rabbit .trait-icon img{width:32px;height:32px}
+.z-layout-rabbit .compat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:1000px;margin:0 auto}
+.z-layout-rabbit .compat-card{background:#fff;padding:28px;border-radius:20px;border:1px solid var(--primary-light);box-shadow:0 6px 24px rgba(0,0,0,.05)}
+.z-layout-rabbit .compat-card.best{box-shadow:0 6px 24px rgba(34,197,94,.1)}
+.z-layout-rabbit .compat-card.challenge{box-shadow:0 6px 24px rgba(239,68,68,.1)}
+.z-layout-rabbit .fortune-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
+.z-layout-rabbit .fortune-card{background:#fff;padding:22px;border-radius:18px;border:1px solid var(--primary-light);box-shadow:0 4px 18px rgba(0,0,0,.04);text-align:center}
+.z-layout-rabbit .fortune-icon{width:48px;height:48px;background:var(--primary-soft);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;padding:8px}
+.z-layout-rabbit .fortune-icon img{width:30px;height:30px}
+@media(max-width:768px){.z-layout-rabbit .traits-grid,.z-layout-rabbit .compat-grid,.z-layout-rabbit .fortune-grid{grid-template-columns:1fr}}
+
+/* === Layout 5: Dragon - Vertical Timeline === */
+.z-layout-dragon header{background:linear-gradient(135deg,var(--primary) 0%,#7C2D12 100%);padding:60px 0 80px}
+.z-layout-dragon .traits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 40px;max-width:1000px;margin:0 auto;position:relative}
+.z-layout-dragon .traits-grid::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--primary-light),var(--primary),var(--primary-dark));transform:translateX(-50%)}
+.z-layout-dragon .trait-card{background:var(--bg);padding:26px;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow);position:relative}
+.z-layout-dragon .trait-card::after{content:"";position:absolute;top:28px;width:18px;height:18px;background:var(--primary);border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 3px var(--primary-light)}
+.z-layout-dragon .trait-card:nth-child(odd){margin-right:20px}
+.z-layout-dragon .trait-card:nth-child(odd)::after{right:-32px}
+.z-layout-dragon .trait-card:nth-child(even){margin-left:20px}
+.z-layout-dragon .trait-card:nth-child(even)::after{left:-32px}
+.z-layout-dragon .trait-icon{width:50px;height:50px;background:var(--primary-soft);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;padding:8px}
+.z-layout-dragon .trait-icon img{width:32px;height:32px}
+.z-layout-dragon .compat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1000px;margin:0 auto}
+.z-layout-dragon .compat-card{background:var(--bg);padding:30px;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow)}
+.z-layout-dragon .compat-card.best{background:linear-gradient(135deg,#fff,rgba(34,197,94,.04))}
+.z-layout-dragon .compat-card.challenge{background:linear-gradient(135deg,#fff,rgba(239,68,68,.04))}
+.z-layout-dragon .fortune-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
+.z-layout-dragon .fortune-card{background:var(--bg);padding:22px;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow)}
+.z-layout-dragon .fortune-icon{width:46px;height:46px;background:var(--primary-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:10px;padding:8px}
+.z-layout-dragon .fortune-icon img{width:30px;height:30px}
+@media(max-width:768px){.z-layout-dragon .traits-grid,.z-layout-dragon .compat-grid,.z-layout-dragon .fortune-grid{grid-template-columns:1fr}.z-layout-dragon .traits-grid::before{display:none}.z-layout-dragon .trait-card{margin:0!important}.z-layout-dragon .trait-card::after{display:none}}
+
+/* === Layout 6: Snake - Flowing Curves === */
+.z-layout-snake header{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 70%,#1F2937 100%);padding:60px 0 70px}
+.z-layout-snake .traits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1000px;margin:0 auto}
+.z-layout-snake .trait-card{background:linear-gradient(135deg,#fff,var(--primary-soft));padding:28px;border-radius:24px 6px 24px 6px;border:1px solid var(--primary-light);box-shadow:var(--shadow);transition:transform .35s}
+.z-layout-snake .trait-card:hover{transform:translateY(-3px) rotate(-.5deg)}
+.z-layout-snake .trait-card:nth-child(even){border-radius:6px 24px 6px 24px;background:linear-gradient(225deg,#fff,var(--primary-soft))}
+.z-layout-snake .trait-card:nth-child(even):hover{transform:translateY(-3px) rotate(.5deg)}
+.z-layout-snake .trait-icon{width:54px;height:54px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px;padding:10px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.z-layout-snake .trait-icon img{width:32px;height:32px}
+.z-layout-snake .compat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1000px;margin:0 auto}
+.z-layout-snake .compat-card{background:#fff;padding:28px;border-radius:24px 6px 24px 6px;border:1px solid var(--primary-light);box-shadow:var(--shadow)}
+.z-layout-snake .compat-card.challenge{border-radius:6px 24px 6px 24px}
+.z-layout-snake .fortune-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:900px;margin:0 auto}
+.z-layout-snake .fortune-card{background:#fff;padding:22px;border-radius:20px 4px 20px 4px;border:1px solid var(--primary-light);box-shadow:var(--shadow);display:flex;gap:14px;align-items:flex-start}
+.z-layout-snake .fortune-card:nth-child(even){border-radius:4px 20px 4px 20px}
+.z-layout-snake .fortune-icon{width:46px;height:46px;background:var(--primary-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:8px}
+.z-layout-snake .fortune-icon img{width:30px;height:30px}
+@media(max-width:768px){.z-layout-snake .traits-grid,.z-layout-snake .compat-grid,.z-layout-snake .fortune-grid{grid-template-columns:1fr}}
+
+/* === Layout 7: Horse - Diagonal Motion === */
+.z-layout-horse header{background:linear-gradient(120deg,var(--primary) 0%,var(--primary-dark) 100%);padding:60px 0 70px;position:relative}
+.z-layout-horse header::before{content:"";position:absolute;bottom:-30px;left:0;right:0;height:60px;background:var(--bg);transform:skewY(-1.5deg);transform-origin:bottom left}
+.z-layout-horse .traits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1100px;margin:20px auto 0}
+.z-layout-horse .trait-card{background:var(--bg);padding:26px 24px;border-radius:6px 16px 6px 16px;border:1px solid var(--border);box-shadow:0 8px 22px rgba(0,0,0,.06);transform:translateY(0);transition:all .3s}
+.z-layout-horse .trait-card:hover{transform:translateY(-5px) translateX(2px)}
+.z-layout-horse .trait-card:nth-child(1){transform:rotate(-.6deg)}
+.z-layout-horse .trait-card:nth-child(2){transform:rotate(.4deg)}
+.z-layout-horse .trait-card:nth-child(3){transform:rotate(-.4deg)}
+.z-layout-horse .trait-card:nth-child(4){transform:rotate(.6deg)}
+.z-layout-horse .trait-card:nth-child(5){transform:rotate(-.4deg)}
+.z-layout-horse .trait-card:nth-child(6){transform:rotate(.4deg)}
+.z-layout-horse .trait-card:hover{transform:translateY(-5px) translateX(2px) rotate(0)}
+.z-layout-horse .trait-icon{width:52px;height:52px;background:var(--primary-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px;padding:10px}
+.z-layout-horse .trait-icon img{width:32px;height:32px}
+.z-layout-horse .compat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1000px;margin:0 auto}
+.z-layout-horse .compat-card{background:var(--bg);padding:28px;border-radius:6px 16px 6px 16px;border:1px solid var(--border);box-shadow:0 6px 22px rgba(0,0,0,.05)}
+.z-layout-horse .fortune-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
+.z-layout-horse .fortune-card{background:var(--bg);padding:22px;border-radius:4px 12px 4px 12px;border:1px solid var(--border);box-shadow:0 4px 16px rgba(0,0,0,.05);text-align:center}
+.z-layout-horse .fortune-icon{width:48px;height:48px;background:var(--primary-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;padding:8px}
+.z-layout-horse .fortune-icon img{width:30px;height:30px}
+@media(max-width:768px){.z-layout-horse .traits-grid,.z-layout-horse .compat-grid,.z-layout-horse .fortune-grid{grid-template-columns:1fr}.z-layout-horse .trait-card{transform:none!important}.z-layout-horse header::before{display:none}}
+
+/* === Layout 8: Goat - Floating Cloud === */
+.z-layout-goat header{background:linear-gradient(180deg,var(--primary-soft) 0%,var(--primary) 100%);color:var(--dark);padding:60px 0 70px}
+.z-layout-goat header h1,.z-layout-goat header .subtitle{color:var(--dark)}
+.z-layout-goat .back-link{background:rgba(255,255,255,.5);color:var(--dark);border-color:rgba(31,41,55,.1)}
+.z-layout-goat .back-link:hover{background:rgba(255,255,255,.8)}
+.z-layout-goat .section-alt{background:var(--primary-soft)}
+.z-layout-goat .traits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 22px;max-width:1000px;margin:0 auto}
+.z-layout-goat .trait-card{background:#fff;padding:28px 24px;border-radius:30px;border:1px solid var(--primary-light);box-shadow:0 12px 30px rgba(0,0,0,.06);position:relative;transition:all .35s}
+.z-layout-goat .trait-card::before{content:"";position:absolute;top:-12px;left:24px;width:24px;height:24px;background:#fff;border:1px solid var(--primary-light);border-radius:50%;box-shadow:0 6px 12px rgba(0,0,0,.05)}
+.z-layout-goat .trait-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.08)}
+.z-layout-goat .trait-icon{width:52px;height:52px;background:var(--primary-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px;margin-left:8px;padding:10px}
+.z-layout-goat .trait-icon img{width:32px;height:32px}
+.z-layout-goat .compat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1000px;margin:0 auto}
+.z-layout-goat .compat-card{background:#fff;padding:28px;border-radius:24px;border:1px solid var(--primary-light);box-shadow:0 10px 26px rgba(0,0,0,.05)}
+.z-layout-goat .fortune-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1000px;margin:0 auto}
+.z-layout-goat .fortune-card{background:#fff;padding:22px;border-radius:22px;border:1px solid var(--primary-light);box-shadow:0 8px 22px rgba(0,0,0,.04);text-align:center}
+.z-layout-goat .fortune-icon{width:48px;height:48px;background:var(--primary-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;padding:8px}
+.z-layout-goat .fortune-icon img{width:30px;height:30px}
+@media(max-width:768px){.z-layout-goat .traits-grid,.z-layout-goat .compat-grid,.z-layout-goat .fortune-grid{grid-template-columns:1fr}}
+
+/* === Layout 9: Monkey - Playful Rotated === */
+.z-layout-monkey header{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);padding:60px 0 70px}
+.z-layout-monkey .traits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1050px;margin:0 auto}
+.z-layout-monkey .trait-card{background:var(--bg);padding:24px 22px;border-radius:14px;border:2px dashed var(--primary-light);box-shadow:0 6px 18px rgba(0,0,0,.05);transition:all .3s}
+.z-layout-monkey .trait-card:nth-child(odd){transform:rotate(-.7deg)}
+.z-layout-monkey .trait-card:nth-child(even){transform:rotate(.6deg)}
+.z-layout-monkey .trait-card:hover{transform:rotate(0) translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.1);border-style:solid;border-color:var(--primary)}
+.z-layout-monkey .trait-icon{width:52px;height:52px;background:var(--primary-soft);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;padding:10px}
+.z-layout-monkey .trait-icon img{width:32px;height:32px}
+.z-layout-monkey .compat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1000px;margin:0 auto}
+.z-layout-monkey .compat-card{background:var(--bg);padding:28px;border-radius:14px;border:2px dashed var(--primary-light);box-shadow:0 6px 18px rgba(0,0,0,.05)}
+.z-layout-monkey .compat-card:hover{border-style:solid;border-color:var(--primary)}
+.z-layout-monkey .fortune-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
+.z-layout-monkey .fortune-card{background:var(--bg);padding:22px;border-radius:14px;border:2px dashed var(--primary-light);text-align:center;transition:all .3s}
+.z-layout-monkey .fortune-card:hover{border-style:solid;border-color:var(--primary)}
+.z-layout-monkey .fortune-icon{width:48px;height:48px;background:var(--primary-soft);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;padding:8px}
+.z-layout-monkey .fortune-icon img{width:30px;height:30px}
+@media(max-width:768px){.z-layout-monkey .traits-grid,.z-layout-monkey .compat-grid,.z-layout-monkey .fortune-grid{grid-template-columns:1fr}.z-layout-monkey .trait-card{transform:none!important}}
+
+/* === Layout 10: Rooster - Featured Spotlight === */
+.z-layout-rooster header{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);padding:60px 0 70px}
+.z-layout-rooster .traits-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:1000px;margin:0 auto}
+.z-layout-rooster .trait-card{background:var(--bg);padding:24px;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow)}
+.z-layout-rooster .trait-card.featured{grid-column:span 2;background:linear-gradient(135deg,var(--primary-soft),#fff);border:2px solid var(--primary);padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.z-layout-rooster .trait-icon{width:50px;height:50px;background:var(--primary-soft);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;padding:8px}
+.z-layout-rooster .trait-icon img{width:32px;height:32px}
+.z-layout-rooster .compat-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;max-width:1000px;margin:0 auto}
+.z-layout-rooster .compat-card{background:var(--bg);padding:28px;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow)}
+.z-layout-rooster .compat-card.featured{background:linear-gradient(135deg,#fff,rgba(34,197,94,.06));border:2px solid rgba(34,197,94,.3);padding:32px}
+.z-layout-rooster .fortune-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
+.z-layout-rooster .fortune-card.featured{background:linear-gradient(135deg,var(--primary-soft),#fff);border:2px solid var(--primary-light);grid-column:span 2}
+.z-layout-rooster .fortune-card{background:var(--bg);padding:22px;border-radius:10px;border:1px solid var(--border);box-shadow:var(--shadow);text-align:center}
+.z-layout-rooster .fortune-icon{width:48px;height:48px;background:var(--primary-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;padding:8px}
+.z-layout-rooster .fortune-icon img{width:30px;height:30px}
+@media(max-width:768px){.z-layout-rooster .traits-grid,.z-layout-rooster .compat-grid,.z-layout-rooster .fortune-grid{grid-template-columns:1fr}.z-layout-rooster .trait-card.featured,.z-layout-rooster .fortune-card.featured{grid-column:span 1}.z-layout-rooster .trait-card.featured{grid-template-columns:1fr}}
+
+/* === Layout 11: Dog - Cluster === */
+.z-layout-dog header{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);padding:60px 0 70px}
+.z-layout-dog .traits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1100px;margin:0 auto}
+.z-layout-dog .trait-card{background:var(--bg);padding:22px 20px;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow);transition:all .3s}
+.z-layout-dog .trait-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.08);border-color:var(--primary-light)}
+.z-layout-dog .trait-card:nth-child(1){grid-column:span 2}
+.z-layout-dog .trait-card:nth-child(2){grid-column:span 2;margin-top:24px}
+.z-layout-dog .trait-card:nth-child(3){margin-top:-12px}
+.z-layout-dog .trait-card:nth-child(4){margin-top:12px}
+.z-layout-dog .trait-card:nth-child(5){grid-column:span 2;margin-top:0}
+.z-layout-dog .trait-card:nth-child(6){grid-column:span 2;margin-top:18px}
+.z-layout-dog .trait-icon{width:46px;height:46px;background:var(--primary-soft);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;padding:8px}
+.z-layout-dog .trait-icon img{width:30px;height:30px}
+.z-layout-dog .compat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:1000px;margin:0 auto}
+.z-layout-dog .compat-card{background:var(--bg);padding:26px;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow)}
+.z-layout-dog .fortune-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
+.z-layout-dog .fortune-card{background:var(--bg);padding:22px;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow);text-align:center}
+.z-layout-dog .fortune-icon{width:46px;height:46px;background:var(--primary-soft);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;padding:8px}
+.z-layout-dog .fortune-icon img{width:30px;height:30px}
+@media(max-width:768px){.z-layout-dog .traits-grid,.z-layout-dog .compat-grid,.z-layout-dog .fortune-grid{grid-template-columns:1fr}.z-layout-dog .trait-card{grid-column:span 1!important;margin-top:0!important}}
+
+/* === Layout 12: Pig - Cozy Warm === */
+.z-layout-pig header{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);padding:60px 0 70px}
+.z-layout-pig .traits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1000px;margin:0 auto}
+.z-layout-pig .trait-card{background:linear-gradient(180deg,#fff,var(--primary-soft));padding:28px 24px;border-radius:18px;border:1px solid var(--primary-light);box-shadow:0 6px 20px rgba(0,0,0,.05);transition:all .3s}
+.z-layout-pig .trait-card:hover{box-shadow:0 12px 30px rgba(var(--primary-rgb),.15);transform:translateY(-3px)}
+.z-layout-pig .trait-icon{width:52px;height:52px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px;padding:10px;box-shadow:0 4px 12px rgba(0,0,0,.05)}
+.z-layout-pig .trait-icon img{width:32px;height:32px}
+.z-layout-pig .compat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:1000px;margin:0 auto}
+.z-layout-pig .compat-card{background:linear-gradient(180deg,#fff,var(--primary-soft));padding:28px;border-radius:18px;border:1px solid var(--primary-light);box-shadow:0 6px 20px rgba(0,0,0,.05)}
+.z-layout-pig .fortune-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
+.z-layout-pig .fortune-card{background:linear-gradient(180deg,#fff,var(--primary-soft));padding:22px;border-radius:16px;border:1px solid var(--primary-light);box-shadow:0 4px 16px rgba(0,0,0,.04);text-align:center}
+.z-layout-pig .fortune-icon{width:48px;height:48px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;padding:8px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+.z-layout-pig .fortune-icon img{width:30px;height:30px}
+@media(max-width:768px){.z-layout-pig .traits-grid,.z-layout-pig .compat-grid,.z-layout-pig .fortune-grid{grid-template-columns:1fr}}
