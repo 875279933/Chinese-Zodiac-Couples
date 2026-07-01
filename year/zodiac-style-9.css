@@ -1,0 +1,1163 @@
+/* ==========================================================================
+   Zodiac Year Pages - Group 9 (Crimson Ledger Theme)
+   Color palette: deep burgundy + aged brass + warm cream + dark brown
+   Structural distinction from Group 8 (Indigo Cartouche):
+     - Asymmetric side-rail header with vertical filing tab (not split banner)
+     - 6-card index grid in 3x2 (not 5-node lead ribbon)
+     - 3-column newspaper body (not 3-col spread with side cards)
+     - Offset stacked profile cards (not vertical timeline)
+     - 2x2 quadrant scatter compatibility (not ranked ladder)
+     - 3x2 index card grid (not 2-col chip grid)
+     - Annotated marginalia story (not 2-col story with pullquote)
+     - Tabbed FAQ (not 2-col visible FAQ)
+     - Full circular zodiac wheel (not 12-segment arc)
+   ========================================================================== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary: #7A1F2C;
+  --primary-dark: #4A0E1A;
+  --primary-mid: #9B3A47;
+  --primary-soft: #E8D5D0;
+  --accent: #B88746;
+  --accent-dark: #7A5523;
+  --accent-soft: #F0E0BC;
+  --paper: #F4EEDC;
+  --paper-warm: #FAF6E8;
+  --paper-deep: #E8DEC4;
+  --ink: #1C1A18;
+  --text: #2A2724;
+  --text-light: #5A5247;
+  --rule: #B8A88C;
+  --rule-soft: #D8C8AC;
+  --shadow: 0 4px 16px rgba(74, 14, 26, 0.10);
+  --shadow-hover: 0 8px 24px rgba(74, 14, 26, 0.18);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  color: var(--text);
+  line-height: 1.75;
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   Header - asymmetric side-rail with vertical filing tab
+   ========================================================================== */
+header.ledger9 {
+  background: var(--primary-dark);
+  color: var(--paper-warm);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ledger9-rail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 70px;
+  background: var(--primary);
+  border-left: 2px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  z-index: 2;
+}
+
+.ledger9-rail-tab {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.0rem;
+  font-weight: 700;
+  color: var(--accent);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+.ledger9-rail-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--paper-warm);
+}
+
+.ledger9-rail-year {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-soft);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.25em;
+}
+
+.ledger9-banner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 110px 56px 24px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+}
+
+.ledger9-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  padding: 4px 14px;
+  border: 1px solid var(--accent);
+}
+
+.ledger9-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: var(--paper-warm);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.ledger9-title em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.ledger9-subtitle {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.08rem;
+  font-style: italic;
+  color: var(--paper-warm);
+  opacity: 0.86;
+  max-width: 540px;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.ledger9-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  border-top: 1px solid rgba(184, 135, 70, 0.35);
+  padding-top: 22px;
+}
+
+.ledger9-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ledger9-meta-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-size: 0.66rem;
+}
+
+.ledger9-meta-value {
+  color: var(--paper-warm);
+  font-weight: 500;
+  font-size: 0.92rem;
+  font-family: 'Source Serif Pro', Georgia, serif;
+}
+
+.ledger9-stamp {
+  background: var(--accent);
+  color: var(--primary-dark);
+  padding: 24px 22px;
+  text-align: center;
+  position: relative;
+  font-family: 'Source Serif Pro', Georgia, serif;
+}
+
+.ledger9-stamp::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--primary-dark);
+  pointer-events: none;
+}
+
+.ledger9-stamp-emoji {
+  font-size: 3.4rem;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.ledger9-stamp-el {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  margin-bottom: 4px;
+}
+
+.ledger9-stamp-year {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.ledger9-stamp-note {
+  font-size: 0.68rem;
+  font-style: italic;
+  color: var(--primary-dark);
+  opacity: 0.8;
+}
+
+.ledger9-back {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--accent-soft);
+  text-decoration: none;
+  margin-bottom: 18px;
+  transition: color 0.2s ease;
+}
+
+.ledger9-back:hover { color: var(--paper-warm); }
+
+/* ==========================================================================
+   Section base
+   ========================================================================== */
+.section9 {
+  padding: 64px 0;
+}
+
+.section9.alt {
+  background: var(--paper-deep);
+}
+
+.section9-head {
+  margin-bottom: 44px;
+  max-width: 880px;
+}
+
+.section9-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.section9-eyebrow::before {
+  content: "§ ";
+  color: var(--accent);
+}
+
+.section9-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.section9-lede {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.0rem;
+  font-style: italic;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.section9-folio {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  letter-spacing: 0.3em;
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   1) Index grid - 3x2 of small reference cards
+   ========================================================================== */
+.index9-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.index9-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-bottom: 3px solid var(--accent);
+  padding: 22px 22px 20px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.index9-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.index9-card-folio {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  letter-spacing: 0.18em;
+}
+
+.index9-card-key {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.index9-card-val {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.index9-card-sub {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   2) Year at a glance - 3-column newspaper body
+   ========================================================================== */
+.glance9-paper {
+  max-width: 1080px;
+  margin: 0 auto;
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  padding: 44px 48px;
+  position: relative;
+}
+
+.glance9-paper::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 50%;
+  width: 1px;
+  background: var(--rule);
+  opacity: 0.55;
+}
+
+.glance9-paper-head {
+  text-align: center;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 18px;
+  margin-bottom: 30px;
+}
+
+.glance9-paper-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+.glance9-paper-byline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
+.glance9-cols {
+  column-count: 3;
+  column-gap: 38px;
+  column-rule: 1px solid var(--rule-soft);
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.98rem;
+  line-height: 1.72;
+  color: var(--text);
+  text-align: justify;
+  hyphens: auto;
+}
+
+.glance9-cols p {
+  margin-bottom: 14px;
+}
+
+.glance9-cols p:first-child::first-letter {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  float: left;
+  line-height: 0.92;
+  margin: 4px 8px 0 0;
+  padding-top: 4px;
+}
+
+/* ==========================================================================
+   3) Profile - offset stacked cards
+   ========================================================================== */
+.profile9-stack {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.profile9-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  padding: 30px 32px;
+  position: relative;
+  max-width: 88%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile9-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background: var(--primary);
+}
+
+.profile9-card:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow);
+}
+
+.profile9-card.offset-right {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.profile9-card.offset-right::before {
+  left: auto;
+  right: 0;
+}
+
+.profile9-card.offset-right .profile9-card-head {
+  flex-direction: row-reverse;
+}
+
+.profile9-card.offset-right .profile9-card-stage {
+  text-align: right;
+}
+
+.profile9-card-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.profile9-card-folio {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  font-style: italic;
+}
+
+.profile9-card-stage {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.profile9-card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.profile9-card.offset-right .profile9-card-title {
+  text-align: right;
+}
+
+.profile9-card-body {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.98rem;
+  color: var(--text);
+  line-height: 1.72;
+}
+
+.profile9-card.offset-right .profile9-card-body {
+  text-align: left;
+}
+
+/* ==========================================================================
+   4) Compatibility - 2x2 quadrant scatter
+   ========================================================================== */
+.compat9-board {
+  max-width: 1080px;
+  margin: 0 auto;
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  padding: 32px 28px 28px;
+  position: relative;
+}
+
+.compat9-board-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.compat9-board-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.compat9-board-key {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.compat9-quad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--rule);
+  min-height: 420px;
+  position: relative;
+}
+
+.compat9-quad::before,
+.compat9-quad::after {
+  content: "";
+  position: absolute;
+  background: var(--rule);
+  z-index: 0;
+}
+
+.compat9-quad::before {
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-0.5px);
+}
+
+.compat9-quad::after {
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  transform: translateY(-0.5px);
+}
+
+.compat9-cell {
+  padding: 22px 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.compat9-cell-q {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.compat9-cell-q span {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--paper-warm);
+  padding: 2px 8px;
+  margin-right: 6px;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.compat9-pair {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px dotted var(--rule-soft);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.86rem;
+}
+
+.compat9-pair:last-child { border-bottom: 0; }
+
+.compat9-pair-rank {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  width: 22px;
+  font-style: italic;
+}
+
+.compat9-pair-emoji {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.compat9-pair-name {
+  font-weight: 600;
+  color: var(--primary-dark);
+  flex: 1;
+}
+
+.compat9-pair-score {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-light);
+  background: var(--paper);
+  padding: 2px 8px;
+  border: 1px solid var(--rule-soft);
+}
+
+/* ==========================================================================
+   5) Associations - 3x2 index card grid
+   ========================================================================== */
+.assoc9-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.assoc9-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  padding: 22px 20px;
+  position: relative;
+  min-height: 130px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.assoc9-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.assoc9-card-rule {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  right: 18px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.45;
+}
+
+.assoc9-card-key {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 14px 0 8px;
+}
+
+.assoc9-card-val {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.assoc9-card-note {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   6) Story - annotated marginalia
+   ========================================================================== */
+.story9-spread {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 48px;
+  align-items: start;
+}
+
+.story9-body {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.02rem;
+  color: var(--text);
+  line-height: 1.78;
+}
+
+.story9-body p {
+  margin-bottom: 18px;
+}
+
+.story9-body p:first-child::first-letter {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  float: left;
+  line-height: 0.92;
+  margin: 4px 10px 0 0;
+  padding-top: 4px;
+}
+
+.story9-byline {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.story9-byline-avatar {
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: var(--paper-warm);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.story9-byline-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.2;
+}
+
+.story9-byline-job {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.story9-margin {
+  border-left: 1px solid var(--rule);
+  padding-left: 22px;
+  position: sticky;
+  top: 20px;
+}
+
+.story9-margin-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.story9-margin-note {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.86rem;
+  color: var(--text);
+  line-height: 1.65;
+  padding: 12px 0;
+  border-bottom: 1px dotted var(--rule-soft);
+  position: relative;
+}
+
+.story9-margin-note:last-child { border-bottom: 0; }
+
+.story9-margin-note::before {
+  content: attr(data-num);
+  position: absolute;
+  left: -32px;
+  top: 14px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  font-style: italic;
+  background: var(--paper);
+  padding: 0 4px;
+}
+
+/* ==========================================================================
+   7) FAQ - tabbed
+   ========================================================================== */
+.faq9-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+}
+
+.faq9-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--primary);
+  background: var(--paper-deep);
+}
+
+.faq9-tab {
+  flex: 1;
+  padding: 16px 12px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  border-right: 1px solid var(--rule-soft);
+  letter-spacing: 0.04em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.faq9-tab:last-child { border-right: 0; }
+
+.faq9-tab.active {
+  background: var(--paper-warm);
+  color: var(--primary-dark);
+  font-weight: 700;
+  position: relative;
+}
+
+.faq9-tab.active::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+}
+
+.faq9-tab-num {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  font-style: italic;
+  margin-bottom: 2px;
+}
+
+.faq9-content {
+  padding: 32px 36px;
+}
+
+.faq9-item {
+  display: none;
+}
+
+.faq9-item.active {
+  display: block;
+}
+
+.faq9-item-q {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.4;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.faq9-item-q::before {
+  content: "Q. ";
+  color: var(--accent-dark);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.faq9-item-a {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.0rem;
+  color: var(--text);
+  line-height: 1.75;
+}
+
+.faq9-item-a::before {
+  content: "A. ";
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   8) Related years - circular wheel
+   ========================================================================== */
+.related9-wheel-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.related9-wheel {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.related9-wheel-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.related9-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.related9-list-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.related9-row {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.related9-row:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent);
+}
+
+.related9-row.is-current {
+  background: var(--primary);
+  color: var(--paper-warm);
+  border-color: var(--primary);
+}
+
+.related9-row-year {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--primary-dark);
+}
+
+.related9-row.is-current .related9-row-year {
+  color: var(--accent-soft);
+}
+
+.related9-row-el {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.related9-row.is-current .related9-row-el {
+  color: var(--paper-warm);
+}
+
+.related9-row-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  white-space: nowrap;
+}
+
+.related9-row.is-current .related9-row-note {
+  color: var(--accent-soft);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.ledger9-foot {
+  background: var(--primary-dark);
+  color: var(--paper-warm);
+  padding: 36px 0 28px;
+  text-align: center;
+}
+
+.ledger9-foot-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.ledger9-foot-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-soft);
+  letter-spacing: 0.08em;
+}
+
+.ledger9-foot-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--paper-warm);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.ledger9-foot-link:hover { color: var(--accent); }
+
+.ledger9-foot-copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  color: var(--paper-warm);
+  opacity: 0.6;
+  letter-spacing: 0.04em;
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 980px) {
+  .ledger9-banner { grid-template-columns: 1fr; gap: 28px; padding: 48px 100px 48px 24px; }
+  .ledger9-rail { width: 60px; }
+  .ledger9-title { font-size: 2.6rem; }
+  .index9-grid { grid-template-columns: repeat(2, 1fr); }
+  .glance9-paper { padding: 30px 24px; }
+  .glance9-cols { column-count: 2; }
+  .assoc9-grid { grid-template-columns: repeat(2, 1fr); }
+  .story9-spread { grid-template-columns: 1fr; }
+  .story9-margin { border-left: 0; border-top: 1px solid var(--rule); padding-left: 0; padding-top: 18px; position: static; }
+  .compat9-quad { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .compat9-quad::before, .compat9-quad::after { display: none; }
+  .related9-wheel-wrap { grid-template-columns: 1fr; }
+  .faq9-tabs { flex-wrap: wrap; }
+  .faq9-tab { flex: 0 0 33.333%; border-bottom: 1px solid var(--rule-soft); }
+  .profile9-card { max-width: 100%; }
+  .profile9-card.offset-right { text-align: left; }
+  .profile9-card.offset-right .profile9-card-head { flex-direction: row; }
+  .profile9-card.offset-right .profile9-card-stage { text-align: left; }
+  .profile9-card.offset-right .profile9-card-title { text-align: left; }
+}
+
+@media (max-width: 620px) {
+  .ledger9-banner { padding: 36px 24px 36px 24px; }
+  .ledger9-rail { display: none; }
+  .ledger9-title { font-size: 2.0rem; }
+  .ledger9-meta { grid-template-columns: 1fr 1fr; }
+  .index9-grid { grid-template-columns: 1fr; }
+  .glance9-cols { column-count: 1; }
+  .assoc9-grid { grid-template-columns: 1fr; }
+  .section9-title { font-size: 1.6rem; }
+  .glance9-paper { padding: 24px 18px; }
+}

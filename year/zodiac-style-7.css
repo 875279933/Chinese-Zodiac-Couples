@@ -1,0 +1,808 @@
+/* ==========================================================================
+   Zodiac Year Pages - Group 7 (Field Atlas Theme)
+   Color palette: deep teal + forest green + clay + paper cream
+   Structural distinction from Group 6 (Editorial Brief):
+     - Centered title header with double rules (not asymmetric)
+     - 4 small stat cards in lead band (not 3 wide slabs)
+     - 2-col with image placeholder + body text (not sticky year sidebar)
+     - 3-column grid for profile frames (not newspaper column)
+     - Tiered compatibility cards with badges (not bar chart)
+     - Stacked definition list for associations (not dense table)
+     - Magazine pull-out with side notes for story (not pull quote)
+     - Accordion FAQ (not 2-column grid)
+     - Horizontal card strip for related years (not vertical timeline)
+   ========================================================================== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary: #1A4A4A;
+  --primary-dark: #0E2D2D;
+  --primary-mid: #2D5F4E;
+  --primary-soft: #DCE7E2;
+  --accent: #B85C38;
+  --accent-dark: #8E3F22;
+  --accent-soft: #F0D9CD;
+  --paper: #F5F0E5;
+  --paper-warm: #FAF6EC;
+  --paper-deep: #EAE3D0;
+  --ink: #1F2421;
+  --text: #2A2F2C;
+  --text-light: #5A605C;
+  --rule: #C8BFA8;
+  --shadow: 0 4px 16px rgba(26, 74, 74, 0.08);
+  --shadow-hover: 0 8px 24px rgba(26, 74, 74, 0.14);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  color: var(--text);
+  line-height: 1.75;
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   Header - centered with double rules
+   ========================================================================== */
+header.atlas7 {
+  background: var(--paper-warm);
+  color: var(--ink);
+  padding: 56px 0 48px;
+  text-align: center;
+  position: relative;
+  border-top: 6px double var(--primary);
+  border-bottom: 6px double var(--primary);
+}
+
+.atlas7-kicker {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+  padding: 0 20px;
+}
+
+.atlas7-emoji {
+  font-size: 3.5rem;
+  display: block;
+  margin: 0 auto 14px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
+}
+
+.atlas7-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.atlas7-subtitle {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-light);
+  max-width: 720px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+.atlas7-divider {
+  width: 80px;
+  height: 1px;
+  background: var(--accent);
+  margin: 0 auto 18px;
+}
+
+.atlas7-meta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+}
+
+.atlas7-meta-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.atlas7-meta-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+  font-size: 0.7rem;
+}
+
+.atlas7-meta-value {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.atlas7-back {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--primary);
+  text-decoration: none;
+  margin-bottom: 18px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.atlas7-back:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* ==========================================================================
+   Section base
+   ========================================================================== */
+.section7 {
+  padding: 64px 0;
+}
+
+.section7.alt {
+  background: var(--paper-deep);
+}
+
+.section7-head {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.section7-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--accent);
+}
+
+.section7-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.section7-lede {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.0rem;
+  font-style: italic;
+  color: var(--text-light);
+  max-width: 740px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Lead band - 4 small stat cards
+   ========================================================================== */
+.lead7-band {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.lead7-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--primary);
+  padding: 22px 18px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.lead7-card-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.lead7-card-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
+.lead7-card-sub {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Year at a glance - 2-col with image placeholder + body
+   ========================================================================== */
+.glance7-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: start;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.glance7-art {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  padding: 32px 28px;
+  text-align: center;
+  position: relative;
+}
+
+.glance7-art::before,
+.glance7-art::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background: var(--rule);
+}
+
+.glance7-art::before { top: 14px; }
+.glance7-art::after { bottom: 14px; }
+
+.glance7-art-emoji {
+  font-size: 5.5rem;
+  line-height: 1;
+  margin: 14px 0 18px;
+}
+
+.glance7-art-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.glance7-art-el {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.glance7-art-dl {
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 18px;
+  margin-top: 12px;
+}
+
+.glance7-art-dl > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.glance7-art-dl > div:last-child { border-bottom: 0; }
+
+.glance7-art-dl dt {
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+}
+
+.glance7-art-dl dd {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.glance7-text p {
+  margin-bottom: 18px;
+  font-size: 1.02rem;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.glance7-text p:last-child { margin-bottom: 0; }
+
+/* ==========================================================================
+   Profile - 3-column grid
+   ========================================================================== */
+.profile7-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.profile7-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--primary);
+  padding: 28px 24px;
+}
+
+.profile7-card-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.profile7-card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+
+.profile7-card-body {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.profile7-intro {
+  max-width: 820px;
+  margin: 0 auto 36px;
+  font-size: 1.0rem;
+  color: var(--text);
+  line-height: 1.8;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Compatibility - tiered cards with badges
+   ========================================================================== */
+.compat7-tier {
+  margin-bottom: 28px;
+}
+
+.compat7-tier-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.compat7-tier-badge {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--paper-warm);
+  background: var(--primary);
+  padding: 6px 14px;
+}
+
+.compat7-tier.tier-best .compat7-tier-badge { background: var(--accent); }
+.compat7-tier.tier-strong .compat7-tier-badge { background: var(--primary-mid); }
+.compat7-tier.tier-think .compat7-tier-badge { background: var(--text-light); }
+
+.compat7-tier-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.compat7-tier-desc {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 18px;
+  max-width: 820px;
+  line-height: 1.6;
+}
+
+.compat7-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.compat7-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  padding: 18px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.compat7-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.compat7-card-emoji {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.compat7-card-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.compat7-card-pct {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-left: auto;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   Associations - stacked definition list
+   ========================================================================== */
+.lucky7-list {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.lucky7-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
+}
+
+.lucky7-item:last-child { border-bottom: 0; }
+
+.lucky7-item-key {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary);
+  padding-top: 4px;
+}
+
+.lucky7-item-val {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.lucky7-item-note {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   Story - magazine pull-out with side notes
+   ========================================================================== */
+.story7-wrap {
+  display: grid;
+  grid-template-columns: 200px 1fr 220px;
+  gap: 36px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.story7-byline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--text-light);
+  border-top: 1px solid var(--accent);
+  padding-top: 14px;
+  text-align: right;
+}
+
+.story7-byline-name {
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  margin-bottom: 8px;
+}
+
+.story7-byline-meta {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.55;
+}
+
+.story7-body {
+  font-size: 1.02rem;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.story7-body p {
+  margin-bottom: 18px;
+}
+
+.story7-body p:last-child { margin-bottom: 0; }
+
+.story7-lede {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.story7-sidenote {
+  font-family: 'Inter', sans-serif;
+  background: var(--primary-soft);
+  border-left: 3px solid var(--primary);
+  padding: 16px 18px;
+  font-size: 0.85rem;
+  color: var(--primary-dark);
+  line-height: 1.6;
+}
+
+.story7-sidenote-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   FAQ - accordion style
+   ========================================================================== */
+.faq7-list {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.faq7-item {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  margin-bottom: 12px;
+  transition: box-shadow 0.2s ease;
+}
+
+.faq7-item:hover { box-shadow: var(--shadow); }
+
+.faq7-item-q {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 18px 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.faq7-item.open .faq7-item-q {
+  border-bottom-color: var(--rule);
+}
+
+.faq7-item-q::after {
+  content: "+";
+  font-size: 1.4rem;
+  color: var(--accent);
+  font-weight: 400;
+  margin-left: 14px;
+  line-height: 1;
+}
+
+.faq7-item.open .faq7-item-q::after {
+  content: "\2212";
+}
+
+.faq7-item-a {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.75;
+  padding: 0 22px 18px;
+  display: none;
+}
+
+.faq7-item.open .faq7-item-a {
+  display: block;
+}
+
+.faq7-item-num {
+  display: inline-block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-right: 10px;
+  min-width: 30px;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   Related years - horizontal cards strip
+   ========================================================================== */
+.related7-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.related7-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-bottom: 3px solid var(--primary);
+  padding: 22px 18px;
+  text-decoration: none;
+  color: var(--ink);
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+
+.related7-card:hover {
+  transform: translateY(-3px);
+  border-bottom-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.related7-card-year {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.related7-card-el {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.related7-card-note {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer.atlas7 {
+  background: var(--primary);
+  color: var(--paper-warm);
+  padding: 44px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+}
+
+footer.atlas7 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+footer.atlas7 p {
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
+footer.atlas7 p:last-child { margin-bottom: 0; }
+
+footer.atlas7 a {
+  color: var(--paper-warm);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(245, 240, 229, 0.4);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+footer.atlas7 a:hover {
+  color: var(--accent-soft);
+  border-bottom-color: var(--accent-soft);
+}
+
+footer.atlas7 .atlas7-links {
+  text-align: right;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 920px) {
+  .lead7-band { grid-template-columns: repeat(2, 1fr); }
+  .profile7-grid { grid-template-columns: 1fr; gap: 18px; }
+  .compat7-grid { grid-template-columns: 1fr; }
+  .related7-strip { grid-template-columns: repeat(2, 1fr); }
+  .glance7-wrap { grid-template-columns: 1fr; gap: 32px; }
+  .story7-wrap { grid-template-columns: 1fr; gap: 24px; }
+  .story7-byline { text-align: left; }
+  .lucky7-item { grid-template-columns: 1fr; gap: 6px; }
+}
+
+@media (max-width: 560px) {
+  .atlas7-title { font-size: 2.4rem; }
+  .atlas7-subtitle { font-size: 1rem; }
+  .section7 { padding: 48px 0; }
+  .section7-title { font-size: 1.7rem; }
+  .lead7-band { grid-template-columns: 1fr 1fr; }
+  .related7-strip { grid-template-columns: 1fr; }
+  footer.atlas7 .container { flex-direction: column; text-align: center; }
+  footer.atlas7 .atlas7-links { text-align: center; }
+}

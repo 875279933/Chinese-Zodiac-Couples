@@ -1,0 +1,1125 @@
+/* ==========================================================================
+   Zodiac Year Pages - Group 8 (Indigo Cartouche Theme)
+   Color palette: midnight indigo + antique gold + parchment
+   Structural distinction from Group 7 (Field Atlas):
+     - Split banner header with compass medallion (not centered with double rules)
+     - Lead ribbon: 5 chips on a gold dotted line (not 4 separate cards)
+     - 3-col "spread" Year at a Glance (not 2-col with image placeholder)
+     - Vertical timeline with side cards (not 3-col grid)
+     - Compatibility: ranked ladder with progress bars (not tiered card groups)
+     - Associations: 2-col chip grid (not stacked definition list)
+     - Story: 2-col spread with pullquote (not magazine 3-col with sidenote)
+     - FAQ: 2-col visible grid (not accordion)
+     - Related years: 12-segment cycle arc with 4 highlighted (not horizontal card strip)
+   ========================================================================== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary: #2B2A6B;
+  --primary-dark: #16164A;
+  --primary-mid: #3D3C82;
+  --primary-soft: #DDDDF0;
+  --accent: #C9A24A;
+  --accent-dark: #8C6F26;
+  --accent-soft: #F2E5C7;
+  --paper: #F5F0E2;
+  --paper-warm: #FAF6E8;
+  --paper-deep: #E6DFC8;
+  --ink: #1A1A33;
+  --text: #2D2D45;
+  --text-light: #5A5A75;
+  --rule: #B8B4A0;
+  --rule-soft: #D4CFB8;
+  --shadow: 0 4px 18px rgba(22, 22, 74, 0.10);
+  --shadow-hover: 0 8px 28px rgba(22, 22, 74, 0.16);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  color: var(--text);
+  line-height: 1.75;
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   Header - split banner with compass medallion
+   ========================================================================== */
+header.cartouche8 {
+  background:
+    linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: var(--paper-warm);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+header.cartouche8::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 30%, rgba(201, 162, 74, 0.10) 0%, transparent 35%),
+    radial-gradient(circle at 88% 70%, rgba(201, 162, 74, 0.08) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.cartouche8-top {
+  border-bottom: 1px solid rgba(201, 162, 74, 0.25);
+}
+
+.cartouche8-top-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 24px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--paper-deep);
+}
+
+.cartouche8-back {
+  color: var(--paper-deep);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.cartouche8-back:hover {
+  color: var(--accent-soft);
+  border-bottom-color: var(--accent);
+}
+
+.cartouche8-stamp {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--accent-soft);
+  letter-spacing: 0.05em;
+}
+
+.cartouche8-banner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 24px 64px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+}
+
+.cartouche8-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+  padding: 4px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+}
+
+.cartouche8-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: var(--paper-warm);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.cartouche8-title em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.cartouche8-subtitle {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--paper-deep);
+  line-height: 1.65;
+  max-width: 540px;
+  margin-bottom: 26px;
+}
+
+.cartouche8-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--paper-deep);
+}
+
+.cartouche8-meta-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding-left: 12px;
+  border-left: 2px solid var(--accent);
+}
+
+.cartouche8-meta-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-soft);
+  font-size: 0.68rem;
+}
+
+.cartouche8-meta-value {
+  color: var(--paper-warm);
+  font-weight: 500;
+}
+
+/* Compass medallion on the right */
+.cartouche8-medallion {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.cartouche8-medallion-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow:
+    inset 0 0 0 12px rgba(201, 162, 74, 0.10),
+    inset 0 0 0 14px var(--accent),
+    inset 0 0 0 64px rgba(22, 22, 74, 0.5),
+    inset 0 0 0 66px var(--accent),
+    0 0 0 6px rgba(22, 22, 74, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartouche8-medallion-center {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, var(--primary-mid) 0%, var(--primary-dark) 100%);
+  border: 1px solid var(--accent-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.cartouche8-medallion-emoji {
+  font-size: 4.6rem;
+  line-height: 1;
+  margin-bottom: 6px;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+.cartouche8-medallion-el {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  margin-bottom: 4px;
+}
+
+.cartouche8-medallion-year {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--paper-warm);
+  letter-spacing: 0.05em;
+}
+
+.cartouche8-medallion-ticks {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cartouche8-medallion-tick {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 14px;
+  background: var(--accent-soft);
+  transform-origin: 0 0;
+  opacity: 0.6;
+}
+
+.cartouche8-medallion-label {
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  background: var(--primary-dark);
+  padding: 2px 6px;
+  border: 1px solid var(--accent);
+}
+
+/* ==========================================================================
+   Section base
+   ========================================================================== */
+.section8 {
+  padding: 68px 0;
+}
+
+.section8.alt {
+  background: var(--paper-deep);
+}
+
+.section8-head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section8-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-bottom: 12px;
+  position: relative;
+  padding: 0 30px;
+}
+
+.section8-eyebrow::before,
+.section8-eyebrow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.section8-eyebrow::before { left: 0; }
+.section8-eyebrow::after { right: 0; }
+
+.section8-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.section8-lede {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.0rem;
+  font-style: italic;
+  color: var(--text-light);
+  max-width: 740px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Lead ribbon - 5 chips on dotted gold line
+   ========================================================================== */
+.lead8-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  padding: 28px 0 12px;
+}
+
+.lead8-ribbon {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+  gap: 0;
+}
+
+.lead8-ribbon::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background-image: linear-gradient(90deg, var(--accent) 0%, var(--accent) 50%, transparent 50%, transparent 100%);
+  background-size: 8px 1px;
+  z-index: 0;
+}
+
+.lead8-chip {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  padding: 0 8px;
+}
+
+.lead8-chip-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--paper-warm);
+  border: 2px solid var(--accent);
+  margin: 0 auto 14px;
+  box-shadow: 0 0 0 4px var(--paper);
+  position: relative;
+}
+
+.lead8-chip-dot::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.lead8-chip-key {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-bottom: 6px;
+}
+
+.lead8-chip-val {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.lead8-chip-sub {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.82rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Year at a glance - 3-col spread
+   ========================================================================== */
+.glance8-spread {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 40px;
+  max-width: 1080px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.glance8-side {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent);
+  padding: 26px 22px;
+}
+
+.glance8-side-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.glance8-side-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px dotted var(--rule);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+}
+
+.glance8-side-item:last-child { border-bottom: 0; }
+
+.glance8-side-item dt {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.glance8-side-item dd {
+  color: var(--ink);
+  font-weight: 600;
+  text-align: right;
+}
+
+.glance8-side-foot {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-light);
+  text-align: center;
+  line-height: 1.55;
+}
+
+.glance8-body p {
+  font-size: 1.02rem;
+  color: var(--text);
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+.glance8-body p:last-child { margin-bottom: 0; }
+
+.glance8-body p:first-child::first-letter {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  float: left;
+  line-height: 0.95;
+  margin: 6px 8px 0 0;
+  color: var(--primary);
+}
+
+/* ==========================================================================
+   Profile - vertical timeline with side cards
+   ========================================================================== */
+.profile8-timeline {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px 0 20px;
+}
+
+.profile8-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: var(--accent);
+  transform: translateX(-50%);
+}
+
+.profile8-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 0;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.profile8-step:last-child { margin-bottom: 0; }
+
+.profile8-step-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--primary);
+  padding: 24px 22px;
+}
+
+.profile8-step:nth-child(odd) .profile8-step-card { grid-column: 1; }
+.profile8-step:nth-child(odd) .profile8-step-card.right { display: none; }
+.profile8-step:nth-child(even) .profile8-step-card.left { display: none; }
+.profile8-step:nth-child(even) .profile8-step-card { grid-column: 3; }
+
+.profile8-step-marker {
+  grid-column: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--accent);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-soft);
+  box-shadow: 0 0 0 4px var(--paper);
+}
+
+.profile8-step-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-bottom: 8px;
+}
+
+.profile8-step-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.profile8-step-body {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.96rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.profile8-intro {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 1.02rem;
+  font-style: italic;
+  color: var(--text-light);
+  max-width: 720px;
+  margin: 0 auto 44px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Compatibility - ranked ladder with progress bars
+   ========================================================================== */
+.compat8-ladder {
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.compat8-row {
+  display: grid;
+  grid-template-columns: 60px 110px 1fr 70px;
+  align-items: center;
+  gap: 18px;
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-left: 5px solid var(--rule);
+  padding: 16px 22px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.compat8-row:hover {
+  transform: translateX(2px);
+  box-shadow: var(--shadow);
+}
+
+.compat8-row.tier-best { border-left-color: var(--accent-dark); }
+.compat8-row.tier-strong { border-left-color: var(--primary-mid); }
+.compat8-row.tier-think { border-left-color: var(--rule); }
+
+.compat8-rank {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  text-align: center;
+}
+
+.compat8-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.compat8-emoji {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.compat8-bar-wrap {
+  position: relative;
+  height: 12px;
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.compat8-bar {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  transform-origin: left;
+}
+
+.compat8-pct {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-align: right;
+}
+
+.compat8-tier-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  display: block;
+  margin-top: 2px;
+}
+
+.compat8-legend {
+  max-width: 880px;
+  margin: 32px auto 0;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+
+.compat8-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.compat8-legend-swatch {
+  width: 18px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.compat8-legend-swatch.tier-best { background: var(--accent-dark); }
+.compat8-legend-swatch.tier-strong { background: var(--primary-mid); }
+.compat8-legend-swatch.tier-think { background: var(--rule); }
+
+/* ==========================================================================
+   Associations - 2-col chip grid
+   ========================================================================== */
+.assoc8-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.assoc8-chip {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 22px 24px;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 18px;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.assoc8-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.assoc8-chip-glyph {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 3px var(--paper-warm);
+}
+
+.assoc8-chip-key {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-bottom: 4px;
+}
+
+.assoc8-chip-val {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+
+.assoc8-chip-note {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Story - 2-col spread with pullquote
+   ========================================================================== */
+.story8-spread {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 48px;
+  max-width: 1080px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.story8-body p {
+  font-size: 1.02rem;
+  color: var(--text);
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+.story8-body p:last-child { margin-bottom: 0; }
+
+.story8-byline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.story8-byline-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 4px;
+}
+
+.story8-byline-job {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-light);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.story8-pullquote {
+  position: relative;
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--primary);
+  padding: 32px 28px;
+  margin-top: 24px;
+}
+
+.story8-pullquote::before {
+  content: "\201C";
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.5rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.story8-pullquote-text {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--primary);
+  line-height: 1.5;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+  padding-left: 8px;
+}
+
+.story8-pullquote-cite {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  padding-left: 8px;
+}
+
+/* ==========================================================================
+   FAQ - 2-col visible grid
+   ========================================================================== */
+.faq8-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.faq8-item {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  padding: 24px 22px;
+  position: relative;
+}
+
+.faq8-item-q {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.3;
+  margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.faq8-item-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent-dark);
+  background: var(--paper);
+  border: 1px solid var(--accent);
+  padding: 3px 6px;
+  text-align: center;
+  display: inline-block;
+  line-height: 1.1;
+}
+
+.faq8-item-a {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.7;
+  padding-left: 48px;
+}
+
+/* ==========================================================================
+   Related years - 12-segment cycle arc with 4 highlighted
+   ========================================================================== */
+.related8-arc-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.related8-arc {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 44px;
+  aspect-ratio: 2 / 1;
+}
+
+.related8-arc-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.related8-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.related8-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-bottom: 4px solid var(--accent);
+  padding: 20px 18px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.related8-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.related8-card-rank {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-bottom: 8px;
+}
+
+.related8-card-year {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.related8-card-el {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-bottom: 8px;
+}
+
+.related8-card-note {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer.cartouche8 {
+  background: var(--primary-dark);
+  color: var(--paper-deep);
+  padding: 44px 0 36px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+}
+
+footer.cartouche8 .container {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+footer.cartouche8 p {
+  color: var(--paper-deep);
+  line-height: 1.65;
+  margin-bottom: 6px;
+}
+
+footer.cartouche8 p:last-child { margin-bottom: 0; }
+
+footer.cartouche8 a {
+  color: var(--accent-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+footer.cartouche8 a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.cartouche8-links {
+  text-align: right;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 980px) {
+  .cartouche8-banner { grid-template-columns: 1fr; gap: 40px; }
+  .cartouche8-medallion { max-width: 260px; }
+  .cartouche8-title { font-size: 2.6rem; }
+  .glance8-spread { grid-template-columns: 1fr; }
+  .glance8-body p:first-child::first-letter { font-size: 2.6rem; }
+  .profile8-timeline::before { left: 22px; }
+  .profile8-step { grid-template-columns: 60px 1fr; gap: 16px; }
+  .profile8-step-card.left,
+  .profile8-step-card.right { display: block !important; grid-column: 2; }
+  .profile8-step-marker { grid-column: 1; }
+  .story8-spread { grid-template-columns: 1fr; }
+  .faq8-cols { grid-template-columns: 1fr; }
+  .assoc8-grid { grid-template-columns: 1fr; }
+  .related8-cards { grid-template-columns: repeat(2, 1fr); }
+  .lead8-ribbon { grid-template-columns: repeat(2, 1fr); gap: 28px 0; }
+  .lead8-ribbon::before { display: none; }
+  footer.cartouche8 .container { grid-template-columns: 1fr; text-align: center; }
+  .cartouche8-links { text-align: center; }
+  .compat8-row { grid-template-columns: 50px 100px 1fr 60px; gap: 12px; }
+}
+
+@media (max-width: 640px) {
+  .section8 { padding: 48px 0; }
+  .cartouche8-title { font-size: 2.0rem; }
+  .section8-title { font-size: 1.6rem; }
+  .compat8-row {
+    grid-template-columns: 1fr 70px;
+    grid-template-areas: "name pct" "bar bar";
+    gap: 8px;
+  }
+  .compat8-rank { display: none; }
+  .compat8-name { grid-area: name; }
+  .compat8-pct { grid-area: pct; }
+  .compat8-bar-wrap { grid-area: bar; }
+  .related8-cards { grid-template-columns: 1fr; }
+  .lead8-ribbon { grid-template-columns: 1fr; }
+  .assoc8-chip { grid-template-columns: 50px 1fr; gap: 14px; padding: 16px 18px; }
+  .assoc8-chip-glyph { width: 48px; height: 48px; font-size: 1rem; }
+}

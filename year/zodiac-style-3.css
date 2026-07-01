@@ -1,0 +1,981 @@
+/* ==========================================================================
+   Zodiac Year Pages - Group 3 Stylesheet (Plum/Burgundy + Gold)
+   Distinct structure from groups 1 (sage) and 2 (terracotta).
+   Layout innovations:
+     - 3-card horizontal stat row
+     - Two-column personality (what shows up + why it shows up)
+     - Radial compat wheel with score arcs
+     - 6-cell lucky grid (2x3)
+     - Magazine two-column story with marginalia
+     - Numbered accordion FAQ
+     - 3-column thumbnail related cards
+   ========================================================================== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary: #8B3A62;
+  --primary-dark: #5C2143;
+  --primary-light: #C58AAB;
+  --primary-soft: #F0DCE5;
+  --accent: #C9A55C;
+  --accent-light: #E5C988;
+  --accent-soft: #F5EAD0;
+  --dark: #2D1A22;
+  --text: #3D2A33;
+  --text-light: #7A6571;
+  --text-lighter: #A89B92;
+  --bg: #FAF6F8;
+  --bg-secondary: #F2E8EE;
+  --bg-card: #FFFFFF;
+  --border: #E2D2DA;
+  --border-soft: #EFE5EB;
+  --best: #6B8A5C;
+  --best-soft: #E3EDE0;
+  --challenge: #A14D3A;
+  --challenge-soft: #F0D6CC;
+  --shadow-sm: 0 2px 10px rgba(45, 26, 34, 0.06);
+  --shadow: 0 8px 30px rgba(92, 33, 67, 0.08);
+  --shadow-hover: 0 16px 44px rgba(92, 33, 67, 0.14);
+  --shadow-primary: 0 12px 36px rgba(139, 58, 98, 0.22);
+  --radius: 18px;
+  --radius-lg: 26px;
+  --radius-sm: 12px;
+  --transition: 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  line-height: 1.78;
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   Header - smooth curved bottom (different from ellipse G1 and polygon G2)
+   ========================================================================== */
+header {
+  background:
+    radial-gradient(circle at 20% 30%, rgba(229, 201, 136, 0.3), transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(197, 138, 171, 0.4), transparent 55%),
+    linear-gradient(160deg, #5C2143 0%, #2D1A22 100%);
+  color: #fff;
+  padding: 72px 0 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1px 0;
+  height: 80px;
+  background: var(--bg);
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 80' preserveAspectRatio='none'><path d='M0,80 C200,20 400,60 600,40 C800,20 1000,60 1200,30 L1200,80 L0,80 Z' fill='black'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 80' preserveAspectRatio='none'><path d='M0,80 C200,20 400,60 600,40 C800,20 1000,60 1200,30 L1200,80 L0,80 Z' fill='black'/></svg>");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+  backdrop-filter: blur(6px);
+}
+
+.back-link:hover {
+  background: rgba(255, 255, 255, 0.26);
+  transform: translateX(-2px);
+}
+
+.zodiac-emoji {
+  font-size: 5rem;
+  display: inline-block;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.22));
+  transition: transform var(--transition);
+}
+
+.zodiac-emoji:hover { transform: scale(1.08) rotate(-3deg); }
+
+h1 {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 2.9rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  opacity: 0.92;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   Section
+   ========================================================================== */
+.section {
+  padding: 80px 0;
+}
+
+.section-alt {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-title h2 {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 2.2rem;
+  color: var(--dark);
+  margin-bottom: 12px;
+  letter-spacing: -0.015em;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-right: 14px;
+  border-left: 11px solid var(--primary);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  vertical-align: middle;
+  transform: translateY(-2px);
+}
+
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  margin: 16px auto 0;
+  background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+}
+
+.section-title p {
+  font-size: 1.02rem;
+  color: var(--text-light);
+  max-width: 820px;
+  margin: 20px auto 0;
+  line-height: 1.85;
+  text-align: left;
+}
+
+.section-title p + p { margin-top: 14px; }
+
+/* ==========================================================================
+   STAT TRIPLE - 3 large horizontal stat cards (different from sidebar G2)
+   ========================================================================== */
+.stat-triple {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.stat-block {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-soft);
+  text-align: center;
+  position: relative;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.stat-block:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.stat-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  border-radius: 0 0 4px 4px;
+}
+
+.stat-block-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-lighter);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stat-block-value {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 1.4rem;
+  color: var(--dark);
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.stat-block-sub {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   INTRO block - two columns: year-text + side intro
+   ========================================================================== */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.intro-main p {
+  font-size: 1.02rem;
+  color: var(--text-light);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.intro-side {
+  background: linear-gradient(135deg, var(--primary-soft) 0%, var(--accent-soft) 100%);
+  border-radius: var(--radius-lg);
+  padding: 28px 26px;
+  border: 1px solid var(--border-soft);
+  position: relative;
+}
+
+.intro-side h3 {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 1rem;
+  color: var(--dark);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.intro-side .key-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(139, 58, 98, 0.2);
+  font-size: 0.92rem;
+}
+
+.intro-side .key-line:last-child { border-bottom: none; }
+.intro-side .key-line span:first-child { color: var(--text-light); font-weight: 500; }
+.intro-side .key-line span:last-child { color: var(--dark); font-weight: 600; }
+
+/* ==========================================================================
+   PERSONALITY - Two-column "What shows up" + "Why it shows up"
+   Different from 4-stage timeline G2 and 3-card grid G1
+   ========================================================================== */
+.persona-split {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 36px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.persona-block {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 32px 30px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-soft);
+}
+
+.persona-block h3 {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 1.3rem;
+  color: var(--dark);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.persona-block h3 .tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.persona-block .lead {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 22px;
+  font-style: italic;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.trait-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.trait-mini {
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  padding: 18px 18px 16px;
+  border: 1px solid var(--border-soft);
+  position: relative;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.trait-mini:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-light);
+}
+
+.trait-mini-num {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.trait-mini h4 {
+  font-size: 0.98rem;
+  color: var(--dark);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.trait-mini p {
+  font-size: 0.86rem;
+  color: var(--text-light);
+  line-height: 1.55;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+}
+
+.why-list li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-soft);
+  align-items: start;
+}
+
+.why-list li:last-child { border-bottom: none; }
+
+.why-list .wn {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--accent);
+  font-weight: 700;
+  background: var(--accent-soft);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.why-list h4 {
+  font-size: 0.96rem;
+  color: var(--dark);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.why-list p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   COMPATIBILITY - radial score wheel
+   Different from 4-tier bars G2 and best/challenge grid G1
+   ========================================================================== */
+.compat-wheel {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.score-ring {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+}
+
+.score-ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.score-ring .ring-bg {
+  fill: none;
+  stroke: var(--border-soft);
+  stroke-width: 14;
+}
+
+.score-ring .ring-fill {
+  fill: none;
+  stroke: url(#g3Grad);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease;
+}
+
+.score-ring .ring-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.score-ring .ring-pct {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1;
+}
+
+.score-ring .ring-cap {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.score-ring .ring-sub {
+  font-size: 0.82rem;
+  color: var(--text-lighter);
+  margin-top: 8px;
+}
+
+.score-side h3 {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 1.4rem;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.score-side .lead {
+  font-size: 0.98rem;
+  color: var(--text-light);
+  line-height: 1.78;
+  margin-bottom: 22px;
+}
+
+.score-side .pick-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border-soft);
+  font-size: 0.95rem;
+}
+
+.score-side .pick-row:last-child { border-bottom: none; }
+
+.score-side .pick-row .sign {
+  font-weight: 600;
+  color: var(--dark);
+  min-width: 110px;
+}
+
+.score-side .pick-row .bar {
+  flex: 1;
+  height: 6px;
+  background: var(--border-soft);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.score-side .pick-row .bar-fill {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  border-radius: 3px;
+}
+
+.score-side .pick-row .pct {
+  font-weight: 600;
+  color: var(--primary-dark);
+  min-width: 42px;
+  text-align: right;
+  font-size: 0.88rem;
+}
+
+.score-side .pick-row.challenge .sign { color: var(--challenge); }
+.score-side .pick-row.challenge .bar-fill { background: linear-gradient(90deg, var(--challenge) 0%, #C9826C 100%); }
+.score-side .pick-row.challenge .pct { color: var(--challenge); }
+
+/* ==========================================================================
+   LUCKY GRID - 6-cell (2x3) with large circular icons
+   Different from tabbed G2 and table G1
+   ========================================================================== */
+.lucky-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.lucky-tile {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px 26px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-soft);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.lucky-tile::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 60px;
+  background: linear-gradient(180deg, var(--primary-soft) 0%, transparent 100%);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.lucky-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--primary-light);
+}
+
+.lucky-tile-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 6px 16px rgba(139, 58, 98, 0.25);
+}
+
+.lucky-tile h3 {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 1.02rem;
+  color: var(--dark);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.lucky-tile p {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  line-height: 1.45;
+  margin-bottom: 6px;
+}
+
+.lucky-tile .sub {
+  font-size: 0.78rem;
+  color: var(--text-lighter);
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   STORY - magazine 2-column with marginalia
+   Different from single card G1 and 3-card snapshot G2
+   ========================================================================== */
+.story-mag {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 40px;
+  max-width: 1080px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 44px 40px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-soft);
+  position: relative;
+}
+
+.story-main {
+  position: relative;
+}
+
+.story-main .quote-mark {
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  line-height: 0.5;
+  color: var(--primary-light);
+  position: absolute;
+  top: 8px;
+  left: -4px;
+  opacity: 0.55;
+}
+
+.story-main .pullquote {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--primary-dark);
+  line-height: 1.45;
+  padding: 0 0 18px 30px;
+  border-bottom: 1px solid var(--border-soft);
+  margin-bottom: 22px;
+}
+
+.story-main p.body {
+  font-size: 0.99rem;
+  color: var(--text-light);
+  line-height: 1.88;
+  padding-left: 30px;
+}
+
+.story-side {
+  border-left: 1px solid var(--border-soft);
+  padding-left: 28px;
+  position: relative;
+}
+
+.story-side h4 {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 0.85rem;
+  color: var(--dark);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.story-side .ms-item {
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--border-soft);
+}
+
+.story-side .ms-item:last-child { border-bottom: none; }
+
+.story-side .ms-item .k {
+  font-size: 0.74rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.story-side .ms-item .v {
+  font-size: 0.92rem;
+  color: var(--dark);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   FAQ - numbered accordion (single column)
+   Different from 2-col cards G2
+   ========================================================================== */
+.faq-stack {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-soft);
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+
+.faq-item:hover { box-shadow: var(--shadow); }
+
+.faq-num {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 24px;
+  cursor: pointer;
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  user-select: none;
+  color: var(--dark);
+}
+
+.faq-num .num {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  min-width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.faq-num .q {
+  flex: 1;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.faq-num .toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 400;
+  flex-shrink: 0;
+  transition: transform var(--transition), background var(--transition);
+}
+
+.faq-item.open .faq-num .toggle {
+  transform: rotate(45deg);
+  background: var(--primary);
+  color: #fff;
+}
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 24px 0 78px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.78;
+}
+
+.faq-item.open .faq-body {
+  max-height: 600px;
+  padding: 0 24px 22px 78px;
+}
+
+/* ==========================================================================
+   RELATED - 3-column thumbnail cards
+   Different from numbered list G2 and grid G1
+   ========================================================================== */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.related-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 28px 22px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-soft);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.related-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary-soft) 0%, var(--accent-soft) 100%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  z-index: 0;
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-light);
+}
+
+.related-card:hover::before { opacity: 0.5; }
+
+.related-card > * { position: relative; z-index: 1; }
+
+.related-card .rc-year {
+  font-family: 'Noto Serif SC', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.related-card .rc-el {
+  font-size: 0.92rem;
+  color: var(--dark);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.related-card .rc-emoji {
+  font-size: 1.8rem;
+  margin: 8px 0;
+  display: block;
+}
+
+.related-card .rc-arc {
+  font-size: 0.74rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  text-align: center;
+  padding: 44px 24px;
+  background: var(--dark);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.92rem;
+}
+
+footer p { margin-bottom: 8px; }
+
+footer a {
+  color: var(--accent-light);
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+footer a:hover { color: #fff; }
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 1000px) {
+  .compat-wheel { grid-template-columns: 1fr; gap: 32px; }
+  .intro-grid { grid-template-columns: 1fr; }
+  .persona-split { grid-template-columns: 1fr; }
+  .story-mag { grid-template-columns: 1fr; }
+  .story-side { border-left: none; border-top: 1px solid var(--border-soft); padding-left: 0; padding-top: 24px; }
+  .related-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .stat-triple { grid-template-columns: 1fr; gap: 14px; }
+  .lucky-grid-6 { grid-template-columns: repeat(2, 1fr); }
+  .persona-block { padding: 26px 22px; }
+  .trait-2x2 { grid-template-columns: 1fr; }
+  header { padding: 56px 0 80px; }
+  h1 { font-size: 2.2rem; }
+  .section { padding: 60px 0; }
+  .section-title h2 { font-size: 1.7rem; }
+  .faq-body, .faq-item.open .faq-body { padding-left: 24px; }
+  .faq-num { gap: 12px; padding: 16px 20px; }
+}
+
+@media (max-width: 480px) {
+  .lucky-grid-6 { grid-template-columns: 1fr; }
+  .related-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 1.85rem; }
+  .story-mag { padding: 28px 22px; }
+  .story-main .pullquote { font-size: 1.15rem; padding-left: 18px; }
+  .story-main p.body { padding-left: 18px; }
+}
