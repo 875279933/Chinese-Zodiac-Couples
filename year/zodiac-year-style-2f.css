@@ -1,0 +1,487 @@
+/* zodiac-year-style-2f.css - Group 6 (1996-2007) Artisan Theme */
+
+/* === 1996: Fire Rat - Canvas Stage (artistic canvas + sketch cards) === */
+.canvas-stage{position:relative;max-width:1080px;margin:0 auto;background:linear-gradient(180deg,var(--primary-soft) 0%,#fff 100%);border-radius:var(--r);padding:36px 40px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.canvas-stage::before{content:'';position:absolute;top:18px;right:18px;width:60px;height:60px;border:2px solid var(--accent);border-radius:50%;opacity:.4}
+.canvas-stage::after{content:'Artisan Studio';position:absolute;top:24px;right:34px;font-family:'Noto Serif SC',serif;font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:.18em;font-weight:600;transform:rotate(8deg);transform-origin:right top}
+.canvas-stage .cs-tag{display:inline-block;background:var(--accent);color:#fff;font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;padding:4px 14px;border-radius:16px;font-weight:600;margin-bottom:14px}
+.canvas-stage .cs-h{font-family:'Noto Serif SC',serif;font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.3}
+.canvas-stage .cs-h strong{color:var(--primary-dark)}
+.canvas-stage .cs-p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:12px}
+.canvas-stage .cs-p strong{color:var(--primary-dark)}
+.canvas-stage .cs-palette{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px;padding-top:18px;border-top:1px dashed var(--border)}
+.canvas-stage .cs-palette .csp{background:#fff;border-radius:8px;padding:12px 8px;text-align:center;border:1px solid var(--border);transition:all .3s}
+.canvas-stage .cs-palette .csp:hover{background:var(--primary-soft);transform:translateY(-2px)}
+.canvas-stage .cs-palette .csp img{width:1.7rem;height:1.7rem;object-fit:contain;display:block;margin:0 auto 4px}
+.canvas-stage .cs-palette .csp .csp-l{font-size:.62rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.06em;font-weight:500;margin-bottom:2px}
+.canvas-stage .cs-palette .csp .csp-v{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:600;color:var(--dark);line-height:1.3}
+.sketch-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1040px;margin:0 auto}
+.sketch-cards .sk{position:relative;background:#fff;border-radius:var(--r);padding:24px 28px;box-shadow:var(--shadow);border:1px solid var(--border);border-left:4px solid var(--accent);transition:all .3s}
+.sketch-cards .sk:hover{transform:translateX(3px);box-shadow:var(--shadow-h)}
+.sketch-cards .sk-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.3;display:flex;align-items:center;gap:10px}
+.sketch-cards .sk-h img{width:1.5rem;height:1.5rem;object-fit:contain}
+.sketch-cards .sk-h strong{color:var(--primary-dark)}
+.sketch-cards .sk-p{font-size:.92rem;color:var(--text);line-height:1.7;margin:0}
+.brush-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1040px;margin:0 auto;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.brush-strip .bs{padding:18px 14px;text-align:center;position:relative;transition:all .3s;border-right:1px solid var(--border)}
+.brush-strip .bs:last-child{border-right:none}
+.brush-strip .bs:hover{background:var(--primary-soft)}
+.brush-strip .bs .bs-i{margin-bottom:8px}
+.brush-strip .bs .bs-i img{width:1.6rem;height:1.6rem;object-fit:contain;display:inline-block}
+.brush-strip .bs .bs-h{font-family:'Noto Serif SC',serif;font-size:.9rem;font-weight:700;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.brush-strip .bs .bs-p{font-size:.8rem;color:var(--text);line-height:1.5;margin:0}
+.easel-list{max-width:920px;margin:0 auto;display:grid;gap:12px}
+.easel-list .el{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;background:#fff;border-radius:12px;padding:18px 24px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s}
+.easel-list .el:hover{box-shadow:var(--shadow-h);border-color:var(--primary-light)}
+.easel-list .el .el-i{width:2.6rem;height:2.6rem;background:var(--accent);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif SC',serif;font-weight:700;font-size:.95rem;flex-shrink:0}
+.easel-list .el .el-b .el-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:3px;line-height:1.3}
+.easel-list .el .el-b .el-p{font-size:.88rem;color:var(--text);line-height:1.6;margin:0}
+
+/* === 1997: Fire Ox - Forge Block (anvil-style + ember cards) === */
+.forge-block{position:relative;max-width:1040px;margin:0 auto;background:#fff;border-radius:var(--r);padding:34px 38px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.forge-block::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--accent) 0%,var(--primary) 50%,var(--accent) 100%)}
+.forge-block::after{content:'Forge';position:absolute;top:18px;right:26px;font-family:'Noto Serif SC',serif;font-size:.7rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.2em;font-weight:600;border:1px solid var(--border);padding:3px 10px;border-radius:14px}
+.forge-block .fb-tag{display:inline-block;background:var(--primary-soft);color:var(--primary-dark);font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;padding:4px 12px;border-radius:14px;font-weight:600;margin-bottom:12px}
+.forge-block .fb-h{font-family:'Noto Serif SC',serif;font-size:1.4rem;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.3}
+.forge-block .fb-h strong{color:var(--primary-dark)}
+.forge-block .fb-p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:12px}
+.forge-block .fb-p strong{color:var(--primary-dark)}
+.forge-block .fb-embers{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px;padding-top:18px;border-top:1px solid var(--border)}
+.forge-block .fb-embers .fbe{background:linear-gradient(135deg,var(--primary-soft) 0%,#fff 100%);border-radius:8px;padding:12px 6px;text-align:center;border:1px solid var(--border)}
+.forge-block .fb-embers .fbe .fbe-l{font-size:.62rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;font-weight:500;margin-bottom:2px}
+.forge-block .fb-embers .fbe .fbe-v{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);line-height:1.2}
+.ember-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:1040px;margin:0 auto}
+.ember-grid .eg{position:relative;background:#fff;border-radius:var(--r);padding:22px 26px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s}
+.ember-grid .eg::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent) 0%,var(--primary) 100%);border-radius:0 0 var(--r) var(--r);opacity:0;transition:opacity .3s}
+.ember-grid .eg:hover::after{opacity:1}
+.ember-grid .eg:hover{transform:translateY(-2px);box-shadow:var(--shadow-h)}
+.ember-grid .eg-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.3;display:flex;align-items:center;gap:10px}
+.ember-grid .eg-h img{width:1.5rem;height:1.5rem;object-fit:contain}
+.ember-grid .eg-h strong{color:var(--primary-dark)}
+.ember-grid .eg-p{font-size:.92rem;color:var(--text);line-height:1.7;margin:0}
+.anvil-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1040px;margin:0 auto;background:var(--primary-soft);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.anvil-strip .as{padding:18px 14px;text-align:center;background:#fff;margin:8px;border-radius:8px;transition:all .3s}
+.anvil-strip .as:hover{background:var(--primary-soft);transform:translateY(-2px)}
+.anvil-strip .as .as-h{font-family:'Noto Serif SC',serif;font-size:.9rem;font-weight:700;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.anvil-strip .as .as-i{margin-bottom:6px}
+.anvil-strip .as .as-i img{width:1.5rem;height:1.5rem;object-fit:contain;display:inline-block}
+.anvil-strip .as .as-p{font-size:.78rem;color:var(--text);line-height:1.5;margin:0}
+.spark-list{max-width:920px;margin:0 auto;display:grid;gap:10px}
+.spark-list .sl{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:#fff;border-radius:30px;padding:12px 22px 12px 12px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s}
+.spark-list .sl:hover{transform:translateX(3px);box-shadow:var(--shadow-h);border-color:var(--accent)}
+.spark-list .sl .sl-n{width:2.4rem;height:2.4rem;background:linear-gradient(135deg,var(--accent) 0%,var(--primary) 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif SC',serif;font-weight:700;font-size:.85rem;flex-shrink:0}
+.spark-list .sl .sl-b .sl-h{font-family:'Noto Serif SC',serif;font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:2px;line-height:1.3}
+.spark-list .sl .sl-b .sl-p{font-size:.85rem;color:var(--text);line-height:1.5;margin:0}
+.spark-list .sl .sl-tail{font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;font-weight:600;white-space:nowrap}
+
+/* === 1998: Earth Tiger - Canyon Cliff (rocky cliff + ridge cards) === */
+.canyon-cliff{position:relative;max-width:1080px;margin:0 auto;background:#fff;border-radius:var(--r);padding:34px 38px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.canyon-cliff::before{content:'';position:absolute;top:0;left:0;width:5px;bottom:0;background:linear-gradient(180deg,var(--primary) 0%,var(--accent) 100%)}
+.canyon-cliff .cc-tag{display:inline-block;background:var(--accent);color:#fff;font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;padding:4px 14px;border-radius:16px;font-weight:600;margin-bottom:12px}
+.canyon-cliff .cc-h{font-family:'Noto Serif SC',serif;font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.3;max-width:780px}
+.canyon-cliff .cc-h strong{color:var(--primary-dark)}
+.canyon-cliff .cc-p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:12px;max-width:820px}
+.canyon-cliff .cc-p strong{color:var(--primary-dark)}
+.canyon-cliff .cc-ridges{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px;padding-top:20px;border-top:2px solid var(--border)}
+.canyon-cliff .cc-ridges .ccr{background:linear-gradient(180deg,var(--primary-soft) 0%,#fff 100%);border-radius:8px;padding:14px 8px;text-align:center;border:1px solid var(--border);position:relative}
+.canyon-cliff .cc-ridges .ccr::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:30px;height:3px;background:var(--accent);border-radius:0 0 3px 3px}
+.canyon-cliff .cc-ridges .ccr .ccr-l{font-size:.62rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;font-weight:500;margin-bottom:2px}
+.canyon-cliff .cc-ridges .ccr .ccr-v{font-family:'Noto Serif SC',serif;font-size:.9rem;font-weight:700;color:var(--primary);line-height:1.2}
+.ridge-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1040px;margin:0 auto}
+.ridge-cards .rc{position:relative;background:#fff;border-radius:var(--r);padding:24px 28px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s;overflow:hidden}
+.ridge-cards .rc::before{content:'';position:absolute;top:0;right:0;width:40px;height:40px;background:linear-gradient(135deg,transparent 50%,var(--primary-soft) 50%);border-radius:0 var(--r) 0 100%}
+.ridge-cards .rc:hover{transform:translateY(-2px);box-shadow:var(--shadow-h)}
+.ridge-cards .rc-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.3;display:flex;align-items:center;gap:10px}
+.ridge-cards .rc-h img{width:1.5rem;height:1.5rem;object-fit:contain}
+.ridge-cards .rc-h strong{color:var(--primary-dark)}
+.ridge-cards .rc-p{font-size:.92rem;color:var(--text);line-height:1.7;margin:0}
+.peak-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1040px;margin:0 auto;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border);position:relative}
+.peak-strip::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:repeating-linear-gradient(90deg,var(--primary) 0 12px,var(--accent) 12px 24px)}
+.peak-strip .pk{padding:22px 14px 18px;text-align:center;position:relative;transition:all .3s;border-right:1px solid var(--border)}
+.peak-strip .pk:last-child{border-right:none}
+.peak-strip .pk:hover{background:var(--primary-soft)}
+.peak-strip .pk .pk-i{margin-bottom:8px}
+.peak-strip .pk .pk-i img{width:1.6rem;height:1.6rem;object-fit:contain;display:inline-block}
+.peak-strip .pk .pk-h{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.peak-strip .pk .pk-p{font-size:.78rem;color:var(--text);line-height:1.5;margin:0}
+.cliff-list{max-width:920px;margin:0 auto;display:grid;gap:10px}
+.cliff-list .cl{display:grid;grid-template-columns:3rem 1fr;gap:18px;align-items:start;background:#fff;border-radius:8px;padding:18px 24px;box-shadow:var(--shadow);border-left:4px solid var(--accent);transition:all .3s}
+.cliff-list .cl:hover{transform:translateX(3px);box-shadow:var(--shadow-h)}
+.cliff-list .cl .cl-i{width:3rem;height:3rem;background:var(--primary-soft);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cliff-list .cl .cl-i img{width:1.6rem;height:1.6rem;object-fit:contain}
+.cliff-list .cl .cl-b .cl-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:3px;line-height:1.3}
+.cliff-list .cl .cl-b .cl-p{font-size:.88rem;color:var(--text);line-height:1.6;margin:0}
+
+/* === 1999: Earth Rabbit - Meadow Field (wildflower meadow + petal cards) === */
+.meadow-field{position:relative;max-width:1080px;margin:0 auto;background:linear-gradient(180deg,var(--primary-soft) 0%,#fff 60%);border-radius:var(--r);padding:36px 40px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.meadow-field::before{content:'';position:absolute;top:24px;left:24px;width:50px;height:50px;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);opacity:.3}
+.meadow-field::after{content:'';position:absolute;bottom:24px;right:24px;width:60px;height:60px;background:radial-gradient(circle,var(--primary-light) 0%,transparent 70%);opacity:.4}
+.meadow-field .mf-tag{display:inline-block;background:var(--accent);color:#fff;font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;padding:4px 14px;border-radius:20px;font-weight:600;margin-bottom:12px;position:relative;z-index:1}
+.meadow-field .mf-h{font-family:'Noto Serif SC',serif;font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.3;position:relative;z-index:1}
+.meadow-field .mf-h strong{color:var(--primary-dark)}
+.meadow-field .mf-p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:12px;position:relative;z-index:1}
+.meadow-field .mf-p strong{color:var(--primary-dark)}
+.meadow-field .mf-petals{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px;padding-top:20px;border-top:1px dashed var(--border);position:relative;z-index:1}
+.meadow-field .mf-petals .mfp{background:#fff;border-radius:30px;padding:14px 10px;text-align:center;border:1px solid var(--border);transition:all .3s}
+.meadow-field .mf-petals .mfp:hover{background:var(--primary-soft);transform:scale(1.03);box-shadow:var(--shadow)}
+.meadow-field .mf-petals .mfp img{width:1.7rem;height:1.7rem;object-fit:contain;display:block;margin:0 auto 4px}
+.meadow-field .mf-petals .mfp .mfp-l{font-size:.62rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;font-weight:500;margin-bottom:2px}
+.meadow-field .mf-petals .mfp .mfp-v{font-family:'Noto Serif SC',serif;font-size:.85rem;font-weight:600;color:var(--dark);line-height:1.2}
+.petal-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1040px;margin:0 auto}
+.petal-cards .pc-petal{position:relative;background:#fff;border-radius:var(--r);padding:24px 28px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s;overflow:hidden}
+.petal-cards .pc-petal::before{content:'';position:absolute;top:0;right:0;width:60px;height:60px;background:radial-gradient(circle at top right,var(--primary-soft) 0%,transparent 70%);border-radius:0 var(--r) 0 0}
+.petal-cards .pc-petal:hover{transform:translateY(-2px);box-shadow:var(--shadow-h)}
+.petal-cards .pc-petal-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.3;display:flex;align-items:center;gap:10px;position:relative;z-index:1}
+.petal-cards .pc-petal-h img{width:1.5rem;height:1.5rem;object-fit:contain}
+.petal-cards .pc-petal-h strong{color:var(--primary-dark)}
+.petal-cards .pc-petal-p{font-size:.92rem;color:var(--text);line-height:1.7;margin:0;position:relative;z-index:1}
+.bloom-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1040px;margin:0 auto;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.bloom-strip .bl{padding:18px 12px;text-align:center;background:#fff;margin:6px;border-radius:20px;border:1px solid var(--border);transition:all .3s}
+.bloom-strip .bl:hover{background:var(--primary-soft);transform:translateY(-2px)}
+.bloom-strip .bl .bl-h{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.bloom-strip .bl .bl-i{margin-bottom:6px}
+.bloom-strip .bl .bl-i img{width:1.5rem;height:1.5rem;object-fit:contain;display:inline-block}
+.bloom-strip .bl .bl-p{font-size:.78rem;color:var(--text);line-height:1.5;margin:0}
+.floret-list{max-width:920px;margin:0 auto;display:grid;gap:10px}
+.floret-list .fl-floret{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;background:#fff;border-radius:24px;padding:16px 26px 16px 16px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s}
+.floret-list .fl-floret:hover{box-shadow:var(--shadow-h);border-color:var(--primary-light);transform:translateX(2px)}
+.floret-list .fl-floret .flf-i{width:2.6rem;height:2.6rem;background:radial-gradient(circle,var(--accent) 0%,var(--primary) 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.floret-list .fl-floret .flf-i img{width:1.4rem;height:1.4rem;object-fit:contain;filter:brightness(0) invert(1)}
+.floret-list .fl-floret .flf-b .flf-h{font-family:'Noto Serif SC',serif;font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:2px;line-height:1.3}
+.floret-list .fl-floret .flf-b .flf-p{font-size:.86rem;color:var(--text);line-height:1.55;margin:0}
+
+/* === 2000: Metal Dragon - Throne Hall (royal throne + crown cards) === */
+.throne-hall{position:relative;max-width:1080px;margin:0 auto;background:linear-gradient(180deg,var(--primary-soft) 0%,#fff 100%);border-radius:var(--r);padding:40px 44px 36px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;text-align:center}
+.throne-hall::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--primary) 0%,var(--accent) 50%,var(--primary) 100%)}
+.throne-hall::after{content:'EST. 2000';position:absolute;top:18px;right:24px;font-size:.66rem;color:var(--accent);text-transform:uppercase;letter-spacing:.18em;font-weight:700;border:1px solid var(--accent);padding:3px 10px;border-radius:14px}
+.throne-hall .th-tag{display:inline-block;background:var(--accent);color:#fff;font-size:.66rem;text-transform:uppercase;letter-spacing:.18em;padding:5px 16px;border-radius:18px;font-weight:700;margin-bottom:14px}
+.throne-hall .th-h{font-family:'Noto Serif SC',serif;font-size:1.6rem;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.3}
+.throne-hall .th-h strong{color:var(--primary-dark)}
+.throne-hall .th-p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:12px;max-width:780px;margin-left:auto;margin-right:auto}
+.throne-hall .th-p strong{color:var(--primary-dark)}
+.throne-hall .th-crowns{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px;padding-top:22px;border-top:1px solid var(--border);text-align:left}
+.throne-hall .th-crowns .thc{background:#fff;border-radius:8px;padding:14px 10px;text-align:center;border:1px solid var(--border);position:relative;transition:all .3s}
+.throne-hall .th-crowns .thc::before{content:'★';position:absolute;top:-8px;left:50%;transform:translateX(-50%);color:var(--accent);font-size:1.1rem;background:#fff;padding:0 4px}
+.throne-hall .th-crowns .thc:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.throne-hall .th-crowns .thc .thc-l{font-size:.62rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.06em;font-weight:500;margin-bottom:2px}
+.throne-hall .th-crowns .thc .thc-v{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);line-height:1.2}
+.crown-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1040px;margin:0 auto}
+.crown-cards .cr-crown{position:relative;background:#fff;border-radius:var(--r);padding:24px 28px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s}
+.crown-cards .cr-crown::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary) 0%,var(--accent) 50%,var(--primary) 100%);border-radius:var(--r) var(--r) 0 0}
+.crown-cards .cr-crown:hover{box-shadow:var(--shadow-h);transform:translateY(-2px)}
+.crown-cards .cr-crown-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.3;display:flex;align-items:center;gap:10px}
+.crown-cards .cr-crown-h img{width:1.5rem;height:1.5rem;object-fit:contain}
+.crown-cards .cr-crown-h strong{color:var(--primary-dark)}
+.crown-cards .cr-crown-p{font-size:.92rem;color:var(--text);line-height:1.7;margin:0}
+.scepter-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1040px;margin:0 auto;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.scepter-strip .ss{padding:18px 12px;text-align:center;background:#fff;border-right:1px solid var(--border);transition:all .3s}
+.scepter-strip .ss:last-child{border-right:none}
+.scepter-strip .ss:hover{background:var(--primary-soft)}
+.scepter-strip .ss .ss-h{font-family:'Noto Serif SC',serif;font-size:.9rem;font-weight:700;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.scepter-strip .ss .ss-i{margin-bottom:6px}
+.scepter-strip .ss .ss-i img{width:1.6rem;height:1.6rem;object-fit:contain;display:inline-block}
+.scepter-strip .ss .ss-p{font-size:.78rem;color:var(--text);line-height:1.5;margin:0}
+.regal-list{max-width:920px;margin:0 auto;display:grid;gap:10px}
+.regal-list .rl{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:#fff;border-radius:10px;padding:18px 24px;box-shadow:var(--shadow);border:1px solid var(--border);border-left:4px solid var(--primary);transition:all .3s}
+.regal-list .rl:hover{box-shadow:var(--shadow-h);transform:translateX(3px)}
+.regal-list .rl .rl-n{width:2.8rem;height:2.8rem;background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif SC',serif;font-weight:700;font-size:.95rem;flex-shrink:0}
+.regal-list .rl .rl-b .rl-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:3px;line-height:1.3}
+.regal-list .rl .rl-b .rl-p{font-size:.88rem;color:var(--text);line-height:1.6;margin:0}
+
+/* === 2001: Metal Snake - Labyrinth (maze pattern + coil cards) === */
+.labyrinth{position:relative;max-width:1080px;margin:0 auto;background:#fff;border-radius:var(--r);padding:34px 38px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.labyrinth::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(45deg,transparent 0 20px,var(--primary-soft) 20px 22px);opacity:.15;pointer-events:none}
+.labyrinth>*{position:relative;z-index:1}
+.labyrinth .lb-tag{display:inline-block;background:var(--dark);color:#fff;font-size:.66rem;text-transform:uppercase;letter-spacing:.18em;padding:4px 14px;border-radius:18px;font-weight:600;margin-bottom:12px}
+.labyrinth .lb-h{font-family:'Noto Serif SC',serif;font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.3}
+.labyrinth .lb-h strong{color:var(--primary-dark)}
+.labyrinth .lb-p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:12px}
+.labyrinth .lb-p strong{color:var(--primary-dark)}
+.labyrinth .lb-coils{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px;padding-top:20px;border-top:1px solid var(--border)}
+.labyrinth .lb-coils .lbc{background:linear-gradient(135deg,var(--primary-soft) 0%,#fff 100%);border-radius:50%;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px solid var(--border);padding:8px;transition:all .3s}
+.labyrinth .lb-coils .lbc:hover{transform:scale(1.05);box-shadow:var(--shadow)}
+.labyrinth .lb-coils .lbc .lbc-l{font-size:.6rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;font-weight:500;margin-bottom:2px}
+.labyrinth .lb-coils .lbc .lbc-v{font-family:'Noto Serif SC',serif;font-size:.85rem;font-weight:700;color:var(--primary);line-height:1.2}
+.coil-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1040px;margin:0 auto}
+.coil-cards .cc-coil{position:relative;background:#fff;border-radius:var(--r);padding:24px 28px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s}
+.coil-cards .cc-coil::before{content:'';position:absolute;top:14px;right:14px;width:24px;height:24px;border:2px solid var(--accent);border-radius:50%;border-top-color:transparent;border-right-color:transparent;transform:rotate(45deg)}
+.coil-cards .cc-coil:hover{transform:translateX(2px);box-shadow:var(--shadow-h);border-color:var(--accent)}
+.coil-cards .cc-coil-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.3;display:flex;align-items:center;gap:10px}
+.coil-cards .cc-coil-h img{width:1.5rem;height:1.5rem;object-fit:contain}
+.coil-cards .cc-coil-h strong{color:var(--primary-dark)}
+.coil-cards .cc-coil-p{font-size:.92rem;color:var(--text);line-height:1.7;margin:0}
+.spiral-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1040px;margin:0 auto;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.spiral-strip .sp{padding:18px 12px;text-align:center;background:#fff;margin:6px;border-radius:8px;border:1px solid var(--border);transition:all .3s}
+.spiral-strip .sp:hover{background:var(--primary-soft);transform:translateY(-2px)}
+.spiral-strip .sp .sp-h{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.spiral-strip .sp .sp-i{margin-bottom:6px}
+.spiral-strip .sp .sp-i img{width:1.5rem;height:1.5rem;object-fit:contain;display:inline-block}
+.spiral-strip .sp .sp-p{font-size:.78rem;color:var(--text);line-height:1.5;margin:0}
+.serpent-list{max-width:920px;margin:0 auto;display:grid;gap:10px}
+.serpent-list .sl-serpent{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:#fff;border-radius:50px;padding:14px 28px 14px 14px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s}
+.serpent-list .sl-serpent:hover{box-shadow:var(--shadow-h);border-color:var(--accent);transform:translateX(2px)}
+.serpent-list .sl-serpent .sls-i{width:2.8rem;height:2.8rem;background:linear-gradient(135deg,var(--accent) 0%,var(--primary) 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.serpent-list .sl-serpent .sls-i img{width:1.4rem;height:1.4rem;object-fit:contain;filter:brightness(0) invert(1)}
+.serpent-list .sl-serpent .sls-b .sls-h{font-family:'Noto Serif SC',serif;font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:2px;line-height:1.3}
+.serpent-list .sl-serpent .sls-b .sls-p{font-size:.86rem;color:var(--text);line-height:1.55;margin:0}
+
+/* === 2002: Water Horse - Prairie Field (open prairie + wind cards) === */
+.prairie-field{position:relative;max-width:1080px;margin:0 auto;background:linear-gradient(180deg,#fff 0%,var(--primary-soft) 100%);border-radius:var(--r);padding:36px 40px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.prairie-field::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:repeating-linear-gradient(90deg,var(--primary) 0 30px,transparent 30px 60px)}
+.prairie-field::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:repeating-linear-gradient(90deg,var(--primary) 0 30px,transparent 30px 60px)}
+.prairie-field .pf-tag{display:inline-block;background:var(--primary);color:#fff;font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;padding:4px 14px;border-radius:18px;font-weight:600;margin-bottom:12px}
+.prairie-field .pf-h{font-family:'Noto Serif SC',serif;font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.3}
+.prairie-field .pf-h strong{color:var(--primary-dark)}
+.prairie-field .pf-p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:12px}
+.prairie-field .pf-p strong{color:var(--primary-dark)}
+.prairie-field .pf-grass{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px;padding-top:22px;border-top:1px dashed var(--border)}
+.prairie-field .pf-grass .pfg{background:#fff;border-radius:8px;padding:14px 8px;text-align:center;border:1px solid var(--border);position:relative;transition:all .3s}
+.prairie-field .pf-grass .pfg::after{content:'~';position:absolute;top:4px;right:8px;color:var(--primary);font-size:1.1rem;opacity:.4}
+.prairie-field .pf-grass .pfg:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.prairie-field .pf-grass .pfg .pfg-l{font-size:.62rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;font-weight:500;margin-bottom:2px}
+.prairie-field .pf-grass .pfg .pfg-v{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);line-height:1.2}
+.wind-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1040px;margin:0 auto}
+.wind-cards .wc{position:relative;background:#fff;border-radius:var(--r);padding:24px 28px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s;overflow:hidden}
+.wind-cards .wc::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--primary) 0%,var(--accent) 100%)}
+.wind-cards .wc:hover{transform:translateX(2px);box-shadow:var(--shadow-h)}
+.wind-cards .wc-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.3;display:flex;align-items:center;gap:10px}
+.wind-cards .wc-h img{width:1.5rem;height:1.5rem;object-fit:contain}
+.wind-cards .wc-h strong{color:var(--primary-dark)}
+.wind-cards .wc-p{font-size:.92rem;color:var(--text);line-height:1.7;margin:0}
+.gallop-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1040px;margin:0 auto;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.gallop-strip .gs{padding:18px 12px;text-align:center;background:#fff;border-right:1px dashed var(--border);transition:all .3s}
+.gallop-strip .gs:last-child{border-right:none}
+.gallop-strip .gs:hover{background:var(--primary-soft)}
+.gallop-strip .gs .gs-h{font-family:'Noto Serif SC',serif;font-size:.9rem;font-weight:700;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.gallop-strip .gs .gs-i{margin-bottom:6px}
+.gallop-strip .gs .gs-i img{width:1.6rem;height:1.6rem;object-fit:contain;display:inline-block}
+.gallop-strip .gs .gs-p{font-size:.78rem;color:var(--text);line-height:1.5;margin:0}
+.mane-list{max-width:920px;margin:0 auto;display:grid;gap:10px}
+.mane-list .ml{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:#fff;border-radius:8px;padding:18px 24px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s;border-left:4px solid var(--primary)}
+.mane-list .ml:hover{box-shadow:var(--shadow-h);transform:translateX(3px)}
+.mane-list .ml .ml-i{width:2.8rem;height:2.8rem;background:var(--primary-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mane-list .ml .ml-i img{width:1.5rem;height:1.5rem;object-fit:contain}
+.mane-list .ml .ml-b .ml-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:3px;line-height:1.3}
+.mane-list .ml .ml-b .ml-p{font-size:.88rem;color:var(--text);line-height:1.6;margin:0}
+
+/* === 2003: Water Goat - Cloudrest (highland clouds + fleece cards) === */
+.cloudrest{position:relative;max-width:1080px;margin:0 auto;background:#fff;border-radius:var(--r);padding:36px 40px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.cloudrest::before{content:'';position:absolute;top:24px;right:30px;width:80px;height:30px;background:radial-gradient(ellipse,var(--primary-soft) 0%,transparent 70%);border-radius:50%}
+.cloudrest::after{content:'';position:absolute;top:60px;right:60px;width:60px;height:20px;background:radial-gradient(ellipse,var(--accent) 0%,transparent 70%);border-radius:50%;opacity:.5}
+.cloudrest .cr-tag{display:inline-block;background:var(--primary-soft);color:var(--primary-dark);font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;padding:4px 14px;border-radius:18px;font-weight:600;margin-bottom:12px}
+.cloudrest .cr-h{font-family:'Noto Serif SC',serif;font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.3}
+.cloudrest .cr-h strong{color:var(--primary-dark)}
+.cloudrest .cr-p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:12px}
+.cloudrest .cr-p strong{color:var(--primary-dark)}
+.cloudrest .cr-fleeces{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px;padding-top:22px;border-top:1px dashed var(--border)}
+.cloudrest .cr-fleeces .crf{background:linear-gradient(180deg,var(--primary-soft) 0%,#fff 100%);border-radius:30px;padding:14px 8px;text-align:center;border:1px solid var(--border);transition:all .3s}
+.cloudrest .cr-fleeces .crf:hover{background:#fff;box-shadow:var(--shadow);transform:translateY(-2px)}
+.cloudrest .cr-fleeces .crf .crf-l{font-size:.62rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;font-weight:500;margin-bottom:2px}
+.cloudrest .cr-fleeces .crf .crf-v{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);line-height:1.2}
+.fleece-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1040px;margin:0 auto}
+.fleece-cards .fc{position:relative;background:#fff;border-radius:var(--r);padding:24px 28px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s;overflow:hidden}
+.fleece-cards .fc::before{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(circle at top right,var(--primary-soft) 0%,transparent 70%);border-radius:0 var(--r) 0 0}
+.fleece-cards .fc:hover{transform:translateY(-2px);box-shadow:var(--shadow-h)}
+.fleece-cards .fc-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.3;display:flex;align-items:center;gap:10px;position:relative;z-index:1}
+.fleece-cards .fc-h img{width:1.5rem;height:1.5rem;object-fit:contain}
+.fleece-cards .fc-h strong{color:var(--primary-dark)}
+.fleece-cards .fc-p{font-size:.92rem;color:var(--text);line-height:1.7;margin:0;position:relative;z-index:1}
+.grazing-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1040px;margin:0 auto;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.grazing-strip .gz{padding:18px 12px;text-align:center;background:#fff;margin:6px;border-radius:18px;border:1px solid var(--border);transition:all .3s}
+.grazing-strip .gz:hover{background:var(--primary-soft);transform:translateY(-2px)}
+.grazing-strip .gz .gz-h{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.grazing-strip .gz .gz-i{margin-bottom:6px}
+.grazing-strip .gz .gz-i img{width:1.5rem;height:1.5rem;object-fit:contain;display:inline-block}
+.grazing-strip .gz .gz-p{font-size:.78rem;color:var(--text);line-height:1.5;margin:0}
+.wool-list{max-width:920px;margin:0 auto;display:grid;gap:10px}
+.wool-list .wl{display:grid;grid-template-columns:3rem 1fr;gap:18px;align-items:start;background:#fff;border-radius:30px;padding:14px 24px 14px 14px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s}
+.wool-list .wl:hover{box-shadow:var(--shadow-h);border-color:var(--primary-light);transform:translateX(2px)}
+.wool-list .wl .wl-i{width:3rem;height:3rem;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wool-list .wl .wl-i img{width:1.5rem;height:1.5rem;object-fit:contain;filter:brightness(0) invert(1)}
+.wool-list .wl .wl-b .wl-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:3px;line-height:1.3}
+.wool-list .wl .wl-b .wl-p{font-size:.88rem;color:var(--text);line-height:1.6;margin:0}
+
+/* === 2004: Wood Monkey - Workshop Bench (clever workshop + gear cards) === */
+.workshop-bench{position:relative;max-width:1080px;margin:0 auto;background:#fff;border-radius:var(--r);padding:34px 38px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.workshop-bench::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:repeating-linear-gradient(90deg,var(--accent) 0 8px,var(--primary) 8px 16px)}
+.workshop-bench::after{content:'Workshop';position:absolute;top:18px;right:24px;font-size:.66rem;text-transform:uppercase;letter-spacing:.2em;color:var(--accent);font-weight:700;border:1px dashed var(--accent);padding:3px 10px;border-radius:14px}
+.workshop-bench .wb-tag{display:inline-block;background:var(--primary-soft);color:var(--primary-dark);font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;padding:4px 14px;border-radius:16px;font-weight:600;margin-bottom:12px}
+.workshop-bench .wb-h{font-family:'Noto Serif SC',serif;font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.3}
+.workshop-bench .wb-h strong{color:var(--primary-dark)}
+.workshop-bench .wb-p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:12px}
+.workshop-bench .wb-p strong{color:var(--primary-dark)}
+.workshop-bench .wb-gears{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px;padding-top:20px;border-top:1px solid var(--border)}
+.workshop-bench .wb-gears .wbg{background:var(--bg);border-radius:8px;padding:14px 8px;text-align:center;border:1px solid var(--border);position:relative;transition:all .3s}
+.workshop-bench .wb-gears .wbg::before{content:'⚙';position:absolute;top:4px;right:6px;color:var(--accent);font-size:.9rem;opacity:.5}
+.workshop-bench .wb-gears .wbg:hover{background:#fff;box-shadow:var(--shadow);transform:translateY(-2px)}
+.workshop-bench .wb-gears .wbg .wbg-l{font-size:.62rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;font-weight:500;margin-bottom:2px}
+.workshop-bench .wb-gears .wbg .wbg-v{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);line-height:1.2}
+.gear-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1040px;margin:0 auto}
+.gear-cards .gc{position:relative;background:#fff;border-radius:var(--r);padding:24px 28px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s;overflow:hidden}
+.gear-cards .gc::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:4px;height:60%;background:var(--accent);border-radius:0 2px 2px 0}
+.gear-cards .gc:hover{transform:translateX(2px);box-shadow:var(--shadow-h)}
+.gear-cards .gc-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.3;display:flex;align-items:center;gap:10px}
+.gear-cards .gc-h img{width:1.5rem;height:1.5rem;object-fit:contain}
+.gear-cards .gc-h strong{color:var(--primary-dark)}
+.gear-cards .gc-p{font-size:.92rem;color:var(--text);line-height:1.7;margin:0}
+.cog-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1040px;margin:0 auto;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.cog-strip .cg{padding:18px 12px;text-align:center;background:var(--bg);margin:6px;border-radius:8px;border:1px solid var(--border);transition:all .3s}
+.cog-strip .cg:hover{background:#fff;box-shadow:var(--shadow);transform:translateY(-2px)}
+.cog-strip .cg .cg-h{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.cog-strip .cg .cg-i{margin-bottom:6px}
+.cog-strip .cg .cg-i img{width:1.5rem;height:1.5rem;object-fit:contain;display:inline-block}
+.cog-strip .cg .cg-p{font-size:.78rem;color:var(--text);line-height:1.5;margin:0}
+.trick-list{max-width:920px;margin:0 auto;display:grid;gap:10px}
+.trick-list .tk{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:#fff;border-radius:8px;padding:18px 24px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s;border-left:4px solid var(--accent)}
+.trick-list .tk:hover{box-shadow:var(--shadow-h);transform:translateX(3px)}
+.trick-list .tk .tk-n{width:2.8rem;height:2.8rem;background:var(--primary);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif SC',serif;font-weight:700;font-size:.95rem;flex-shrink:0}
+.trick-list .tk .tk-b .tk-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:3px;line-height:1.3}
+.trick-list .tk .tk-b .tk-p{font-size:.88rem;color:var(--text);line-height:1.6;margin:0}
+
+/* === 2005: Wood Rooster - Dawn Field (sunrise dawn + ray cards) === */
+.dawn-field{position:relative;max-width:1080px;margin:0 auto;background:linear-gradient(180deg,var(--primary-soft) 0%,#fff 60%);border-radius:var(--r);padding:36px 40px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.dawn-field::before{content:'';position:absolute;top:-30px;right:40px;width:120px;height:120px;background:radial-gradient(circle,var(--accent) 0%,var(--primary-light) 50%,transparent 80%);opacity:.5}
+.dawn-field::after{content:'Dawn';position:absolute;top:24px;right:24px;font-family:'Noto Serif SC',serif;font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:.2em;font-weight:700}
+.dawn-field .df-tag{display:inline-block;background:var(--accent);color:#fff;font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;padding:4px 14px;border-radius:18px;font-weight:600;margin-bottom:12px;position:relative;z-index:1}
+.dawn-field .df-h{font-family:'Noto Serif SC',serif;font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.3;position:relative;z-index:1}
+.dawn-field .df-h strong{color:var(--primary-dark)}
+.dawn-field .df-p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:12px;position:relative;z-index:1}
+.dawn-field .df-p strong{color:var(--primary-dark)}
+.dawn-field .df-rays{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px;padding-top:22px;border-top:1px dashed var(--border);position:relative;z-index:1}
+.dawn-field .df-rays .dfr{background:#fff;border-radius:8px;padding:14px 8px;text-align:center;border:1px solid var(--border);transition:all .3s;position:relative;overflow:hidden}
+.dawn-field .df-rays .dfr::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 0%,var(--accent) 50%,transparent 100%)}
+.dawn-field .df-rays .dfr:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.dawn-field .df-rays .dfr .dfr-l{font-size:.62rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;font-weight:500;margin-bottom:2px}
+.dawn-field .df-rays .dfr .dfr-v{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);line-height:1.2}
+.ray-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1040px;margin:0 auto}
+.ray-cards .rc-ray{position:relative;background:#fff;border-radius:var(--r);padding:24px 28px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s;overflow:hidden}
+.ray-cards .rc-ray::before{content:'';position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 50px 50px 0;border-color:transparent var(--primary-soft) transparent transparent;border-radius:0 var(--r) 0 0}
+.ray-cards .rc-ray:hover{transform:translateY(-2px);box-shadow:var(--shadow-h)}
+.ray-cards .rc-ray-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.3;display:flex;align-items:center;gap:10px;position:relative;z-index:1}
+.ray-cards .rc-ray-h img{width:1.5rem;height:1.5rem;object-fit:contain}
+.ray-cards .rc-ray-h strong{color:var(--primary-dark)}
+.ray-cards .rc-ray-p{font-size:.92rem;color:var(--text);line-height:1.7;margin:0;position:relative;z-index:1}
+.sunrise-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1040px;margin:0 auto;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.sunrise-strip .sr{padding:18px 12px;text-align:center;background:#fff;border-right:1px solid var(--border);transition:all .3s}
+.sunrise-strip .sr:last-child{border-right:none}
+.sunrise-strip .sr:hover{background:var(--primary-soft)}
+.sunrise-strip .sr .sr-h{font-family:'Noto Serif SC',serif;font-size:.9rem;font-weight:700;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.sunrise-strip .sr .sr-i{margin-bottom:6px}
+.sunrise-strip .sr .sr-i img{width:1.6rem;height:1.6rem;object-fit:contain;display:inline-block}
+.sunrise-strip .sr .sr-p{font-size:.78rem;color:var(--text);line-height:1.5;margin:0}
+.feather-list{max-width:920px;margin:0 auto;display:grid;gap:10px}
+.feather-list .fl-feather{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:#fff;border-radius:8px;padding:18px 24px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s}
+.feather-list .fl-feather:hover{box-shadow:var(--shadow-h);border-color:var(--accent);transform:translateX(2px)}
+.feather-list .fl-feather .flf-i{width:2.8rem;height:2.8rem;background:var(--accent);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.feather-list .fl-feather .flf-i img{width:1.4rem;height:1.4rem;object-fit:contain;filter:brightness(0) invert(1)}
+.feather-list .fl-feather .flf-b .flf-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:3px;line-height:1.3}
+.feather-list .fl-feather .flf-b .flf-p{font-size:.88rem;color:var(--text);line-height:1.6;margin:0}
+
+/* === 2006: Fire Dog - Hearth Stone (home hearth + flame cards) === */
+.hearth-stone{position:relative;max-width:1080px;margin:0 auto;background:#fff;border-radius:var(--r);padding:36px 40px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.hearth-stone::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(180deg,var(--accent) 0%,var(--primary) 100%)}
+.hearth-stone::after{content:'Home Hearth';position:absolute;top:18px;right:24px;font-size:.66rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.2em;font-weight:600;border:1px solid var(--border);padding:3px 10px;border-radius:14px}
+.hearth-stone .hs-tag{display:inline-block;background:var(--accent);color:#fff;font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;padding:4px 14px;border-radius:18px;font-weight:600;margin-bottom:12px}
+.hearth-stone .hs-h{font-family:'Noto Serif SC',serif;font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.3}
+.hearth-stone .hs-h strong{color:var(--primary-dark)}
+.hearth-stone .hs-p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:12px}
+.hearth-stone .hs-p strong{color:var(--primary-dark)}
+.hearth-stone .hs-stones{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px;padding-top:20px;border-top:1px solid var(--border)}
+.hearth-stone .hs-stones .hss{background:linear-gradient(180deg,var(--primary-soft) 0%,#fff 100%);border-radius:8px 8px 30px 30px;padding:14px 8px;text-align:center;border:1px solid var(--border);transition:all .3s}
+.hearth-stone .hs-stones .hss:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.hearth-stone .hs-stones .hss .hss-l{font-size:.62rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;font-weight:500;margin-bottom:2px}
+.hearth-stone .hs-stones .hss .hss-v{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);line-height:1.2}
+.flame-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1040px;margin:0 auto}
+.flame-cards .fc-flame{position:relative;background:#fff;border-radius:var(--r);padding:24px 28px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s;overflow:hidden}
+.flame-cards .fc-flame::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent) 0%,var(--primary) 50%,var(--accent) 100%);border-radius:0 0 var(--r) var(--r);transform:scaleX(0);transition:transform .3s}
+.flame-cards .fc-flame:hover::after{transform:scaleX(1)}
+.flame-cards .fc-flame:hover{transform:translateY(-2px);box-shadow:var(--shadow-h)}
+.flame-cards .fc-flame-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.3;display:flex;align-items:center;gap:10px}
+.flame-cards .fc-flame-h img{width:1.5rem;height:1.5rem;object-fit:contain}
+.flame-cards .fc-flame-h strong{color:var(--primary-dark)}
+.flame-cards .fc-flame-p{font-size:.92rem;color:var(--text);line-height:1.7;margin:0}
+.ember-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1040px;margin:0 auto;background:var(--primary-soft);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.ember-strip .es{padding:18px 12px;text-align:center;background:#fff;margin:6px;border-radius:8px;border:1px solid var(--border);transition:all .3s}
+.ember-strip .es:hover{background:var(--primary-soft);transform:translateY(-2px)}
+.ember-strip .es .es-h{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.ember-strip .es .es-i{margin-bottom:6px}
+.ember-strip .es .es-i img{width:1.5rem;height:1.5rem;object-fit:contain;display:inline-block}
+.ember-strip .es .es-p{font-size:.78rem;color:var(--text);line-height:1.5;margin:0}
+.loyal-list{max-width:920px;margin:0 auto;display:grid;gap:10px}
+.loyal-list .ll{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:#fff;border-radius:8px;padding:18px 24px;box-shadow:var(--shadow);border:1px solid var(--border);border-left:4px solid var(--accent);transition:all .3s}
+.loyal-list .ll:hover{box-shadow:var(--shadow-h);transform:translateX(3px)}
+.loyal-list .ll .ll-i{width:2.8rem;height:2.8rem;background:linear-gradient(135deg,var(--accent) 0%,var(--primary) 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.loyal-list .ll .ll-i img{width:1.4rem;height:1.4rem;object-fit:contain;filter:brightness(0) invert(1)}
+.loyal-list .ll .ll-b .ll-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:3px;line-height:1.3}
+.loyal-list .ll .ll-b .ll-p{font-size:.88rem;color:var(--text);line-height:1.6;margin:0}
+
+/* === 2007: Fire Pig - Harvest Barn (harvest barn + grain cards) === */
+.harvest-barn{position:relative;max-width:1080px;margin:0 auto;background:linear-gradient(180deg,var(--primary-soft) 0%,#fff 100%);border-radius:var(--r);padding:36px 40px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.harvest-barn::before{content:'';position:absolute;top:24px;left:24px;width:30px;height:30px;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);border-radius:50%}
+.harvest-barn::after{content:'';position:absolute;bottom:24px;right:30px;width:40px;height:40px;background:radial-gradient(circle,var(--primary) 0%,transparent 70%);border-radius:50%;opacity:.5}
+.harvest-barn .hb-tag{display:inline-block;background:var(--accent);color:#fff;font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;padding:4px 14px;border-radius:18px;font-weight:600;margin-bottom:12px;position:relative;z-index:1}
+.harvest-barn .hb-h{font-family:'Noto Serif SC',serif;font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.3;position:relative;z-index:1}
+.harvest-barn .hb-h strong{color:var(--primary-dark)}
+.harvest-barn .hb-p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:12px;position:relative;z-index:1}
+.harvest-barn .hb-p strong{color:var(--primary-dark)}
+.harvest-barn .hb-grains{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px;padding-top:22px;border-top:1px dashed var(--border);position:relative;z-index:1}
+.harvest-barn .hb-grains .hbg{background:#fff;border-radius:8px;padding:14px 8px;text-align:center;border:1px solid var(--border);transition:all .3s;position:relative}
+.harvest-barn .hb-grains .hbg::after{content:'✦';position:absolute;top:4px;right:6px;color:var(--accent);font-size:.8rem;opacity:.6}
+.harvest-barn .hb-grains .hbg:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.harvest-barn .hb-grains .hbg .hbg-l{font-size:.62rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;font-weight:500;margin-bottom:2px}
+.harvest-barn .hb-grains .hbg .hbg-v{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);line-height:1.2}
+.grain-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1040px;margin:0 auto}
+.grain-cards .gc-grain{position:relative;background:#fff;border-radius:var(--r);padding:24px 28px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s}
+.grain-cards .gc-grain::before{content:'';position:absolute;top:0;left:0;width:4px;bottom:0;background:linear-gradient(180deg,var(--accent) 0%,var(--primary) 100%);border-radius:var(--r) 0 0 var(--r)}
+.grain-cards .gc-grain:hover{transform:translateX(2px);box-shadow:var(--shadow-h)}
+.grain-cards .gc-grain-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:8px;line-height:1.3;display:flex;align-items:center;gap:10px}
+.grain-cards .gc-grain-h img{width:1.5rem;height:1.5rem;object-fit:contain}
+.grain-cards .gc-grain-h strong{color:var(--primary-dark)}
+.grain-cards .gc-grain-p{font-size:.92rem;color:var(--text);line-height:1.7;margin:0}
+.bounty-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1040px;margin:0 auto;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.bounty-strip .bn{padding:18px 12px;text-align:center;background:#fff;margin:6px;border-radius:8px;border:1px solid var(--border);transition:all .3s}
+.bounty-strip .bn:hover{background:var(--primary-soft);transform:translateY(-2px)}
+.bounty-strip .bn .bn-h{font-family:'Noto Serif SC',serif;font-size:.88rem;font-weight:700;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.bounty-strip .bn .bn-i{margin-bottom:6px}
+.bounty-strip .bn .bn-i img{width:1.5rem;height:1.5rem;object-fit:contain;display:inline-block}
+.bounty-strip .bn .bn-p{font-size:.78rem;color:var(--text);line-height:1.5;margin:0}
+.acorn-list{max-width:920px;margin:0 auto;display:grid;gap:10px}
+.acorn-list .al{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:#fff;border-radius:8px;padding:18px 24px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .3s}
+.acorn-list .al:hover{box-shadow:var(--shadow-h);border-color:var(--accent);transform:translateX(3px)}
+.acorn-list .al .al-n{width:2.8rem;height:2.8rem;background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif SC',serif;font-weight:700;font-size:.95rem;flex-shrink:0}
+.acorn-list .al .al-b .al-h{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:3px;line-height:1.3}
+.acorn-list .al .al-b .al-p{font-size:.88rem;color:var(--text);line-height:1.6;margin:0}
+
+/* === 2007 variants: pig-barn / mudbrick / rich-soil / abbrut for last file === */
+.pig-barn{position:relative;max-width:1040px;margin:0 auto;background:#fff;border-radius:var(--r);padding:32px 36px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
+.pig-barn::before{content:'2007 Zodiac Profile';position:absolute;top:14px;right:24px;font-size:.62rem;text-transform:uppercase;letter-spacing:.18em;color:var(--accent);font-weight:700;background:var(--primary-soft);padding:3px 10px;border-radius:14px}
+.pig-barn .pb-tag{display:inline-block;background:var(--accent);color:#fff;font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;padding:4px 12px;border-radius:14px;font-weight:600;margin-bottom:12px}
+.pig-barn .pb-h{font-family:'Noto Serif SC',serif;font-size:1.4rem;font-weight:700;color:var(--dark);line-height:1.3;margin-bottom:12px}
+.pig-barn .pb-h strong{color:var(--primary-dark)}
+.pig-barn .pb-p{font-size:.95rem;color:var(--text);line-height:1.7;margin-bottom:10px}
+.pig-barn .pb-p strong{color:var(--primary-dark)}
+.pig-barn .pb-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px;padding-top:16px;border-top:1px dashed var(--border)}
+.pig-barn .pb-stats .pbs{text-align:center;background:var(--bg);border-radius:8px;padding:10px 4px}
+.pig-barn .pb-stats .pbs .pbs-l{font-size:.6rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;font-weight:500;margin-bottom:2px}
+.pig-barn .pb-stats .pbs .pbs-v{font-family:'Noto Serif SC',serif;font-size:.85rem;font-weight:700;color:var(--primary);line-height:1.2}
+
+/* Responsive */
+@media (max-width:768px){
+.canvas-stage,.forge-block,.canyon-cliff,.meadow-field,.throne-hall,.labyrinth,.prairie-field,.cloudrest,.workshop-bench,.dawn-field,.hearth-stone,.harvest-barn,.pig-barn{padding:24px 20px}
+.canvas-stage .cs-palette,.forge-block .fb-embers,.canyon-cliff .cc-ridges,.meadow-field .mf-petals,.throne-hall .th-crowns,.labyrinth .lb-coils,.prairie-field .pf-grass,.cloudrest .cr-fleeces,.workshop-bench .wb-gears,.dawn-field .df-rays,.hearth-stone .hs-stones,.harvest-barn .hb-grains,.pig-barn .pb-stats{grid-template-columns:repeat(2,1fr)}
+.sketch-cards,.ember-grid,.ridge-cards,.petal-cards,.crown-cards,.coil-cards,.wind-cards,.fleece-cards,.gear-cards,.ray-cards,.flame-cards,.grain-cards{grid-template-columns:1fr}
+.brush-strip,.anvil-strip,.peak-strip,.bloom-strip,.scepter-strip,.spiral-strip,.gallop-strip,.grazing-strip,.cog-strip,.sunrise-strip,.ember-strip,.bounty-strip{grid-template-columns:repeat(2,1fr)}
+.easel-list .el,.spark-list .sl,.cliff-list .cl,.floret-list .fl-floret,.regal-list .rl,.serpent-list .sl-serpent,.mane-list .ml,.wool-list .wl,.trick-list .tk,.feather-list .fl-feather,.loyal-list .ll,.acorn-list .al{grid-template-columns:1fr;padding:14px 18px}
+}
+@media (max-width:480px){
+.canvas-stage,.forge-block,.canyon-cliff,.meadow-field,.throne-hall,.labyrinth,.prairie-field,.cloudrest,.workshop-bench,.dawn-field,.hearth-stone,.harvest-barn,.pig-barn{padding:18px 14px;border-radius:14px}
+.canvas-stage::after,.forge-block::after,.canyon-cliff::after,.meadow-field::after,.throne-hall::after,.labyrinth::after,.prairie-field::after,.cloudrest::after,.workshop-bench::after,.dawn-field::after,.hearth-stone::after,.harvest-barn::after,.pig-barn::after{display:none}
+.canvas-stage .cs-palette,.forge-block .fb-embers,.canyon-cliff .cc-ridges,.meadow-field .mf-petals,.throne-hall .th-crowns,.labyrinth .lb-coils,.prairie-field .pf-grass,.cloudrest .cr-fleeces,.workshop-bench .wb-gears,.dawn-field .df-rays,.hearth-stone .hs-stones,.harvest-barn .hb-grains,.pig-barn .pb-stats{grid-template-columns:1fr 1fr;gap:6px}
+.canvas-stage .cs-h,.forge-block .fb-h,.canyon-cliff .cc-h,.meadow-field .mf-h,.throne-hall .th-h,.labyrinth .lb-h,.prairie-field .pf-h,.cloudrest .cr-h,.workshop-bench .wb-h,.dawn-field .df-h,.hearth-stone .hs-h,.harvest-barn .hb-h,.pig-barn .pb-h{font-size:1.2rem}
+.sketch-cards,.ember-grid,.ridge-cards,.petal-cards,.crown-cards,.coil-cards,.wind-cards,.fleece-cards,.gear-cards,.ray-cards,.flame-cards,.grain-cards{grid-template-columns:1fr;gap:12px}
+.brush-strip,.anvil-strip,.peak-strip,.bloom-strip,.scepter-strip,.spiral-strip,.gallop-strip,.grazing-strip,.cog-strip,.sunrise-strip,.ember-strip,.bounty-strip{grid-template-columns:1fr}
+.easel-list,.spark-list,.cliff-list,.floret-list,.regal-list,.serpent-list,.mane-list,.wool-list,.trick-list,.feather-list,.loyal-list,.acorn-list{gap:8px}
+.easel-list .el,.spark-list .sl,.cliff-list .cl,.floret-list .fl-floret,.regal-list .rl,.serpent-list .sl-serpent,.mane-list .ml,.wool-list .wl,.trick-list .tk,.feather-list .fl-feather,.loyal-list .ll,.acorn-list .al{padding:10px 14px;border-radius:18px}
+.easel-list .el .el-h,.spark-list .sl .sl-h,.cliff-list .cl .cl-h,.floret-list .fl-floret .fl-h,.regal-list .rl .rl-h,.serpent-list .sl-serpent .sl-h,.mane-list .ml .ml-h,.wool-list .wl .wl-h,.trick-list .tk .tk-h,.feather-list .fl-feather .fl-h,.loyal-list .ll .ll-h,.acorn-list .al .al-h{font-size:.95rem}
+.easel-list .el .el-p,.spark-list .sl .sl-p,.cliff-list .cl .cl-p,.floret-list .fl-floret .fl-p,.regal-list .rl .rl-p,.serpent-list .sl-serpent .sl-p,.mane-list .ml .ml-p,.wool-list .wl .wl-p,.trick-list .tk .tk-p,.feather-list .fl-feather .fl-p,.loyal-list .ll .ll-p,.acorn-list .al .al-p{font-size:.8rem}
+}
