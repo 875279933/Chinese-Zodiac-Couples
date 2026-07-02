@@ -386,17 +386,6 @@ header.ledger9 {
   position: relative;
 }
 
-.glance9-paper::before {
-  content: "";
-  position: absolute;
-  top: 18px;
-  bottom: 18px;
-  left: 50%;
-  width: 1px;
-  background: var(--rule);
-  opacity: 0.55;
-}
-
 .glance9-paper-head {
   text-align: center;
   border-bottom: 2px solid var(--primary);
@@ -425,7 +414,6 @@ header.ledger9 {
 .glance9-cols {
   column-count: 3;
   column-gap: 38px;
-  column-rule: 1px solid var(--rule-soft);
   font-family: 'Source Serif Pro', Georgia, serif;
   font-size: 0.98rem;
   line-height: 1.72;
