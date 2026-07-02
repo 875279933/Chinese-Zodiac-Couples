@@ -1,0 +1,128 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#5B4FE8;
+  --primary-dark:#3A2EB5;
+  --primary-light:#EDEAFE;
+  --accent:#0EA5A4;
+  --accent-light:#DEF6F5;
+  --gold:#F59E0B;
+  --gold-dark:#C2780A;
+  --dark:#0E1330;
+  --text:#1F2547;
+  --text-light:#5C6485;
+  --bg:#F4F5FB;
+  --bg-alt:#E8EAF5;
+  --bg-card:rgba(255,255,255,.7);
+  --bg-glass:rgba(255,255,255,.55);
+  --border:rgba(91,79,232,.18);
+  --shadow:0 8px 32px rgba(14,19,48,.08);
+  --shadow-hover:0 16px 40px rgba(91,79,232,.18);
+  --r:20px;
+}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.75;background:linear-gradient(180deg,var(--bg) 0%,#ECEEF8 100%);-webkit-font-smoothing:antialiased;min-height:100vh}
+.ctn{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:var(--primary-dark);text-decoration:none;transition:color .2s}
+a:hover{color:var(--primary)}
+img{max-width:100%;height:auto;display:block}
+header{position:relative;padding:80px 0 90px;background:linear-gradient(135deg,var(--dark) 0%,#2A2E5E 50%,var(--primary-dark) 100%);color:#fff;overflow:hidden}
+header::before{content:'';position:absolute;top:-50%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(91,79,232,.4) 0%,transparent 70%);border-radius:50%;filter:blur(40px)}
+header::after{content:'';position:absolute;bottom:-30%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(14,165,164,.3) 0%,transparent 70%);border-radius:50%;filter:blur(40px)}
+header .ctn{position:relative;z-index:2;text-align:center}
+.back{display:inline-block;margin-bottom:24px;padding:10px 24px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:50px;color:#fff;text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.04em;backdrop-filter:blur(12px);transition:all .25s}
+.back:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.5)}
+h1{font-size:2.6rem;font-weight:700;margin-bottom:16px;letter-spacing:-.025em;line-height:1.15;background:linear-gradient(90deg,#fff 0%,#C7C0FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:1.05rem;opacity:.88;max-width:680px;margin:0 auto;line-height:1.65;font-weight:300}
+.sec{padding:64px 0;position:relative}
+.sec-alt{padding:64px 0;position:relative}
+.sec-t{text-align:center;margin-bottom:48px;max-width:680px;margin-left:auto;margin-right:auto}
+.sec-t h2{font-size:1.85rem;color:var(--dark);margin-bottom:14px;font-weight:700;letter-spacing:-.02em;display:inline-block;padding:6px 18px;background:linear-gradient(135deg,var(--primary-light) 0%,var(--accent-light) 100%);border-radius:var(--r)}
+.sec-t p{font-size:1.02rem;color:var(--text-light);line-height:1.7;margin-top:14px}
+.card{background:var(--bg-glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:var(--r);padding:32px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.6)}
+.card p{margin-bottom:14px;font-size:.96rem;color:var(--text-light);line-height:1.85}
+.card p:last-child{margin-bottom:0}
+.card p strong{color:var(--dark);font-weight:600}
+
+/* Section 1: Floating glass profile with overlapping circle */
+.glass-hero{position:relative;background:var(--bg-glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:var(--r);padding:50px 40px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.6);overflow:hidden}
+.glass-hero::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);border-radius:50%;opacity:.12;filter:blur(20px)}
+.glass-hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:200px;height:200px;background:linear-gradient(135deg,var(--gold) 0%,var(--primary) 100%);border-radius:50%;opacity:.1;filter:blur(20px)}
+.hero-flex{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.hero-circle{position:relative;width:100%;max-width:280px;aspect-ratio:1;margin:0 auto;background:linear-gradient(135deg,var(--primary-light) 0%,#fff 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 48px rgba(91,79,232,.18);border:6px solid #fff;overflow:hidden}
+.hero-circle::before{content:'';position:absolute;inset:-12px;border:2px dashed var(--primary);border-radius:50%;opacity:.4;animation:spin 60s linear infinite}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.hero-circle .zodiac-img{width:65%;height:65%;object-fit:contain;position:relative;z-index:1}
+.hero-content h2{font-size:1.7rem;color:var(--dark);margin-bottom:14px;font-weight:700;letter-spacing:-.015em;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hero-content h2 .badge{display:inline-block;background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);color:#fff;font-size:.7rem;padding:5px 12px;border-radius:50px;font-weight:600;letter-spacing:.06em}
+.hero-content .lead{font-size:1.02rem;color:var(--text);line-height:1.75;margin-bottom:18px}
+
+/* Floating info chips */
+.chip-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,255,255,.7);border:1px solid var(--border);border-radius:50px;font-size:.82rem;color:var(--text);font-weight:500;backdrop-filter:blur(8px)}
+.chip .cl{color:var(--primary);font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em}
+.chip .cv{color:var(--dark);font-weight:600}
+.chip.gold{background:linear-gradient(135deg,rgba(245,158,11,.15) 0%,rgba(245,158,11,.05) 100%);border-color:rgba(245,158,11,.3)}
+.chip.gold .cl{color:var(--gold-dark)}
+
+/* Section 2: 6 small floating cards in hex-like grid */
+.hex-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.hex-card{position:relative;background:var(--bg-glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:26px 22px;border-radius:var(--r);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.6);transition:all .3s;overflow:hidden}
+.hex-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--primary) 0%,var(--accent) 100%)}
+.hex-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.hex-card .hc-icon{width:46px;height:46px;background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 18px rgba(91,79,232,.25)}
+.hex-card .hc-icon img{width:24px;height:24px;filter:brightness(0) invert(1)}
+.hex-card h3{font-size:1.08rem;color:var(--dark);margin-bottom:8px;font-weight:700;letter-spacing:-.01em}
+.hex-card p{font-size:.9rem;color:var(--text-light);line-height:1.7}
+
+/* Section 3: 4 overlapping mosaic cards */
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.mosaic-card{position:relative;background:var(--bg-glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:28px 24px;border-radius:var(--r);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.6);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;transition:all .3s}
+.mosaic-card:hover{transform:scale(1.02);box-shadow:var(--shadow-hover)}
+.mosaic-card::after{content:'';position:absolute;bottom:-30px;right:-30px;width:120px;height:120px;background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);border-radius:50%;opacity:.08;filter:blur(10px)}
+.mosaic-card .mc-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;position:relative;z-index:1}
+.mosaic-card .mc-icon img{width:22px;height:22px;filter:brightness(0) invert(1)}
+.mosaic-card h3{font-size:1.1rem;color:var(--dark);font-weight:700;margin-bottom:10px;letter-spacing:-.01em;position:relative;z-index:1}
+.mosaic-card p{font-size:.9rem;color:var(--text-light);line-height:1.65;position:relative;z-index:1}
+.mosaic-card .mc-tag{display:inline-block;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);color:#fff;padding:4px 10px;border-radius:50px;font-weight:600;margin-bottom:10px;align-self:flex-start}
+
+/* Section 4 (Note box): Gradient floating panel */
+.float-panel{position:relative;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 50%,var(--accent) 100%);color:#fff;padding:40px 44px;border-radius:var(--r);box-shadow:0 20px 50px rgba(91,79,232,.25);overflow:hidden}
+.float-panel::before{content:'';position:absolute;top:-50%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 70%);border-radius:50%}
+.float-panel::after{content:'';position:absolute;bottom:-30%;left:-10%;width:300px;height:300px;background:radial-gradient(circle,rgba(245,158,11,.15) 0%,transparent 70%);border-radius:50%}
+.float-panel .fp-body{position:relative;z-index:1}
+.float-panel h3{color:#fff;font-size:1.3rem;margin-bottom:14px;font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;gap:12px}
+.float-panel h3::before{content:'';display:inline-block;width:30px;height:3px;background:var(--gold)}
+.float-panel p{color:rgba(255,255,255,.88);font-size:.95rem;line-height:1.85;margin-bottom:12px}
+.float-panel p:last-child{margin-bottom:0}
+.float-panel strong{color:var(--gold);font-weight:600}
+
+/* Section 5: Events grid with image cards */
+.event-mosaic{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.em-card{position:relative;background:var(--bg-glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:var(--r);padding:20px 18px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.6);overflow:hidden;transition:all .3s;min-height:200px;display:flex;flex-direction:column;justify-content:space-between}
+.em-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.em-card::before{content:'';position:absolute;top:0;left:0;right:0;height:60px;background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);opacity:.85}
+.em-card .em-date{position:relative;z-index:1;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding-top:6px}
+.em-card .em-title{font-size:1rem;color:var(--dark);font-weight:700;margin:10px 0 6px;letter-spacing:-.01em;line-height:1.25}
+.em-card .em-desc{font-size:.84rem;color:var(--text-light);line-height:1.55}
+
+/* Section 6 (closing): glass outro */
+.glass-outro{background:var(--bg-glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:var(--r);padding:32px 40px;text-align:center;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.6);position:relative;overflow:hidden}
+.glass-outro::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary) 0%,var(--accent) 50%,var(--gold) 100%)}
+.glass-outro p{font-size:.95rem;color:var(--text);line-height:1.75;max-width:680px;margin:0 auto}
+.glass-outro a{color:var(--primary-dark);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px;font-weight:500}
+
+footer{background:var(--dark);color:rgba(255,255,255,.7);padding:32px 0;text-align:center;margin-top:0}
+footer p{font-size:.86rem;margin-bottom:6px}
+footer a{color:var(--accent);text-decoration:none;margin:0 8px}
+footer a:hover{color:#fff}
+
+@media (max-width:880px){
+  h1{font-size:2.05rem}
+  .hero-flex{grid-template-columns:1fr;gap:30px}
+  .hex-grid{grid-template-columns:1fr}
+  .mosaic{grid-template-columns:repeat(2,1fr);grid-template-rows:auto;gap:14px}
+  .mosaic-card{padding:22px 18px}
+  .event-mosaic{grid-template-columns:repeat(2,1fr)}
+  .glass-hero{padding:32px 24px}
+  .float-panel{padding:28px 24px}
+  .hero-circle{max-width:200px}
+}

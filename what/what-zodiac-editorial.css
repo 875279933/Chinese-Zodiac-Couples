@@ -1,0 +1,239 @@
+/* === Group 8 (2020-2031): Editorial Magazine === */
+:root{
+  --ink:#0F1419;
+  --ink-soft:#2C2A28;
+  --paper:#F8F4ED;
+  --paper-warm:#EFE9DC;
+  --paper-cool:#F2EDE2;
+  --rule:#0F1419;
+  --rule-soft:rgba(15,20,25,.12);
+  --muted:#5C5751;
+  --muted-light:#8A857E;
+  --accent:#8B2C2C;
+  --accent-soft:rgba(139,44,44,.10);
+  --accent-deep:#5C1A1A;
+  --accent-2:#B8860B;
+  --accent-2-soft:rgba(184,134,11,.14);
+  --accent-3:#2D4A3E;
+  --accent-3-soft:rgba(45,74,62,.10);
+  --dark:#0F1419;
+  --text:#0F1419;
+  --text-light:#3D3A35;
+  --bg:#F8F4ED;
+  --bg-alt:#EFE9DC;
+  --bg-card:#FFFCF5;
+  --border:rgba(15,20,25,.14);
+  --primary:#8B2C2C;
+  --primary-dark:#5C1A1A;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --display:'Playfair Display',Georgia,'Times New Roman',serif;
+  --r-card:0;
+  --r-pill:0;
+  --shadow-soft:0 2px 12px rgba(15,20,25,.06);
+  --shadow-glow:0 8px 24px rgba(139,44,44,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);line-height:1.7;background:var(--bg);-webkit-font-smoothing:antialiased;font-size:16px;font-weight:400}
+.ctn{max-width:1240px;margin:0 auto;padding:0 40px}
+a{color:inherit;text-decoration:none;transition:color .2s,opacity .2s}
+a:hover{color:var(--accent)}
+
+/* === HEADER: Editorial masthead === */
+header{background:var(--bg);border-top:6px solid var(--ink);border-bottom:2px solid var(--ink);padding:0;position:relative}
+header::before{content:'VOLUME 08  ·  ESTABLISHED 2020  ·  THE CHINESE ZODIAC EDITION';display:block;font-family:var(--sans);font-size:.66rem;letter-spacing:.30em;color:var(--muted);text-align:center;padding:16px 40px;background:var(--bg);border-bottom:1px solid var(--rule-soft);font-weight:600;text-transform:uppercase}
+header::after{content:'';position:absolute;top:6px;left:0;right:0;height:1px;background:var(--ink);opacity:.3}
+header .ctn{position:relative;padding:42px 40px 60px;text-align:center}
+.back{display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;padding:0;color:var(--muted);text-decoration:none;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;transition:color .2s;position:absolute;top:24px;left:40px}
+.back::before{content:'\2190';font-size:.9rem}
+.back:hover{color:var(--ink)}
+h1{font-family:var(--serif);font-size:clamp(2.6rem,5.4vw,4.4rem);font-weight:400;line-height:1.02;letter-spacing:-.022em;text-align:center;color:var(--ink);margin:0;padding:0;max-width:980px;margin:0 auto}
+h1 em{font-style:italic;font-weight:400;color:var(--accent)}
+h1::before{content:'';display:block;width:60px;height:1px;background:var(--ink);margin:0 auto 22px}
+.sub{font-family:var(--serif);font-style:italic;font-size:1.2rem;line-height:1.55;color:var(--text-light);text-align:center;max-width:680px;margin:24px auto 0;padding:0;font-weight:400}
+.sub strong{color:var(--ink);font-style:normal;font-weight:500;background:linear-gradient(180deg,transparent 62%,var(--accent-2-soft) 62% 100%);padding:0 4px}
+
+/* === SECTION === */
+.sec{padding:96px 0;background:var(--bg);position:relative}
+.sec-alt{padding:96px 0;background:var(--bg-alt);position:relative}
+.sec-t{margin:0 0 56px;padding-bottom:24px;border-bottom:1px solid var(--ink);position:relative;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:end;counter-increment:section}
+body{counter-reset:section}
+.sec-t::before{content:counter(section, decimal-leading-zero);font-family:var(--serif);font-size:5rem;font-weight:400;font-style:italic;color:var(--accent);line-height:.9;letter-spacing:-.04em;display:block}
+.sec-t h2{font-family:var(--serif);font-size:clamp(2rem,3.6vw,2.9rem);font-weight:400;line-height:1.1;letter-spacing:-.018em;color:var(--ink);margin:0;padding:0 0 6px}
+.sec-t h2 em{font-style:italic;color:var(--accent);font-weight:400}
+.sec-t p{font-family:var(--serif);font-style:italic;font-size:1.05rem;line-height:1.6;color:var(--text-light);max-width:580px;margin:8px 0 0;grid-column:2;grid-row:2;padding-left:0}
+.sec-t::after{content:'SECTION';position:absolute;left:0;bottom:-1px;width:60px;height:2px;background:var(--ink)}
+
+/* === SECTION 1: Profile (sec) === */
+.sec .card{background:var(--bg-card);border:none;padding:0;max-width:1140px;margin:0 auto;box-shadow:none;border-radius:0;position:relative;display:grid;grid-template-columns:1.1fr 1fr;align-items:stretch;overflow:hidden}
+.sec .card::before{content:'';position:absolute;top:0;left:0;width:6px;height:100%;background:var(--accent);z-index:1}
+.sec .card .zodiac-img{width:100%;height:100%;min-height:440px;object-fit:contain;padding:60px;background:var(--bg-alt);display:block;margin:0;border-right:1px solid var(--rule-soft);position:relative}
+.sec .card .zodiac-img::before{content:'';position:absolute;inset:30px;border:1px solid var(--ink);pointer-events:none}
+.sec .card h2{font-family:var(--serif);font-size:1.85rem;color:var(--ink);font-weight:400;text-align:left;line-height:1.2;letter-spacing:-.018em;margin:0;padding:48px 52px 16px;position:relative}
+.sec .card h2::before{content:'PROFILE';display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.30em;color:var(--accent);font-weight:700;margin-bottom:14px;text-transform:uppercase}
+.sec .card h2::after{content:'';display:block;width:50px;height:1px;background:var(--ink);margin-top:18px}
+.sec .card p{font-family:var(--sans);font-size:1rem;line-height:1.85;color:var(--text);margin:0;padding:0 52px 16px;text-align:left;position:relative}
+.sec .card p:first-of-type::first-letter{font-family:var(--serif);font-size:4.2rem;float:left;line-height:.85;padding:8px 14px 0 0;color:var(--accent);font-weight:400;font-style:italic}
+.sec .card p strong{color:var(--ink);font-weight:600;background:linear-gradient(180deg,transparent 60%,var(--accent-2-soft) 60% 100%);padding:0 4px}
+.sec .card .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:32px 0 0;border-top:1px solid var(--ink);background:transparent}
+.sec .card .info{padding:20px 22px;text-align:left;border-right:1px solid var(--rule-soft);background:transparent;position:relative}
+.sec .card .info:nth-child(3n){border-right:none}
+.sec .card .info .lbl{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:block;font-weight:600}
+.sec .card .info .val{font-family:var(--serif);font-size:1.1rem;color:var(--ink);font-weight:400;letter-spacing:-.01em;line-height:1.2}
+
+/* === SECTION 2: True Nature (sec-alt) === */
+.sec-alt .card{background:transparent;border:none;padding:0;max-width:960px;margin:0 auto 64px;box-shadow:none;border-radius:0;display:block}
+.sec-alt .card p{font-family:var(--sans);font-size:1.05rem;line-height:1.9;color:var(--text);margin-bottom:20px;text-align:left;padding:0}
+.sec-alt .card p:first-of-type::first-letter{font-family:var(--serif);font-size:3.8rem;float:left;line-height:.85;padding:6px 14px 0 0;color:var(--accent);font-weight:400;font-style:italic}
+.sec-alt .card p strong{color:var(--ink);font-weight:600;border-bottom:1px solid var(--accent-2);padding-bottom:1px}
+.sec-alt .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:0;max-width:1140px;margin:0 auto;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.sec-alt .grid2 .crd{background:var(--bg-card);border:none;padding:32px 30px;position:relative;box-shadow:none;border-radius:0;border-right:1px solid var(--rule-soft);border-bottom:1px solid var(--rule-soft);display:grid;grid-template-columns:56px 1fr;gap:18px;align-items:start;transition:background .2s ease}
+.sec-alt .grid2 .crd:nth-child(2n){border-right:none}
+.sec-alt .grid2 .crd:nth-last-child(-n+2){border-bottom:none}
+.sec-alt .grid2 .crd:hover{background:var(--bg-warm,var(--paper-warm))}
+.sec-alt .grid2 .crd::before{content:counter(t8);counter-increment:t8;font-family:var(--serif);font-size:1.8rem;font-weight:400;color:var(--accent);font-style:italic;line-height:1;display:block;grid-column:1;grid-row:1/span 2;letter-spacing:-.02em}
+.sec-alt .grid2{counter-reset:t8}
+.sec-alt .grid2 .crd .crd-icon{width:44px;height:44px;object-fit:contain;display:block;margin:0;filter:contrast(1.1) brightness(0.85);grid-column:1;grid-row:2;align-self:start}
+.sec-alt .grid2 .crd h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--ink);margin:0 0 6px;line-height:1.3;letter-spacing:-.01em;grid-column:2;grid-row:1}
+.sec-alt .grid2 .crd p{font-family:var(--sans);font-size:.92rem;line-height:1.7;color:var(--text-light);margin:0;padding:0;grid-column:2;grid-row:2}
+
+/* === SECTION 3: Love Work Money (sec) === */
+.sec > .ctn > .card[style*="margin-bottom:24px"]{background:transparent;border:none;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:32px 0;max-width:960px;margin:0 auto 48px;box-shadow:none;border-radius:0;position:relative;display:block;overflow:hidden}
+.sec > .ctn > .card[style*="margin-bottom:24px"]::before{content:'CHAPTER 03  /  LIFE AREAS';position:absolute;top:0;right:0;font-family:var(--sans);font-size:.62rem;letter-spacing:.24em;color:var(--accent);font-weight:700;background:var(--bg);padding:5px 12px;border:1px solid var(--ink)}
+.sec > .ctn > .card[style*="margin-bottom:24px"] p{font-family:var(--sans);font-size:1.1rem;line-height:1.75;color:var(--text);margin:0;padding:0;text-align:left;font-weight:400}
+.sec > .ctn > .card[style*="margin-bottom:24px"] p strong{color:var(--ink);font-weight:600;background:linear-gradient(180deg,transparent 60%,var(--accent-2-soft) 60% 100%);padding:0 4px}
+.sec .grid2{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:1240px;margin:0 auto;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.sec .grid2 .crd{background:var(--bg-card);border:none;padding:30px 24px;box-shadow:none;border-radius:0;border-right:1px solid var(--rule-soft);position:relative;display:flex;flex-direction:column;transition:background .2s ease;overflow:hidden}
+.sec .grid2 .crd:nth-child(4n){border-right:none}
+.sec .grid2 .crd::before{content:counter(c8);counter-increment:c8;font-family:var(--sans);font-size:.62rem;letter-spacing:.24em;color:var(--accent);font-weight:700;display:block;margin-bottom:14px;text-transform:uppercase}
+.sec .grid2{counter-reset:c8}
+.sec .grid2 .crd:hover{background:var(--paper-warm)}
+.sec .grid2 .crd .crd-icon{width:42px;height:42px;object-fit:contain;display:block;margin:0 0 16px;filter:contrast(1.1) brightness(0.85)}
+.sec .grid2 .crd h3{font-family:var(--serif);font-size:1.12rem;font-weight:500;color:var(--ink);margin:0 0 10px;line-height:1.3;letter-spacing:-.01em}
+.sec .grid2 .crd p{font-family:var(--sans);font-size:.88rem;line-height:1.65;color:var(--text-light);margin:0;padding:0}
+
+/* === SECTION 4: Wait (sec) === */
+.sec > .ctn > .card:has(h3){background:var(--ink);color:#fff;border:none;border-radius:0;padding:42px 52px 36px;max-width:1140px;margin:0 auto;box-shadow:none;position:relative;display:block;overflow:hidden}
+.sec > .ctn > .card:has(h3)::before{content:'DISCLAIMER';position:absolute;top:18px;right:24px;font-family:var(--sans);font-size:.62rem;letter-spacing:.30em;color:var(--accent-2);font-weight:700;z-index:1}
+.sec > .ctn > .card:has(h3)::after{content:'';position:absolute;top:0;left:0;width:6px;height:100%;background:var(--accent-2)}
+.sec > .ctn > .card:has(h3) h3{font-family:var(--serif);font-size:1.7rem;color:#fff;font-weight:400;text-align:left;line-height:1.2;letter-spacing:-.015em;margin:0 0 16px;padding:0;position:relative}
+.sec > .ctn > .card:has(h3) h3::after{content:'';display:block;width:40px;height:1px;background:var(--accent-2);margin-top:14px}
+.sec > .ctn > .card:has(h3) p{font-family:var(--sans);font-size:1rem;line-height:1.75;color:rgba(255,255,255,.88);margin:0 0 12px;padding:0;text-align:left}
+.sec > .ctn > .card:has(h3) p strong{color:var(--accent-2);font-weight:600;background:rgba(184,134,11,.15);padding:1px 6px}
+
+/* === SECTION 5: Timeline (sec-alt) === */
+.sec-alt .timeline{position:relative;max-width:1080px;margin:0 auto;padding:0;background:transparent}
+.sec-alt .timeline::before{content:'';position:absolute;left:118px;top:0;bottom:0;width:1px;background:var(--ink);opacity:.3}
+.sec-alt .tl-item{padding:0;margin-bottom:0;display:grid;grid-template-columns:100px 1fr;gap:24px;align-items:stretch;background:transparent;border:none;box-shadow:none;position:relative;border-bottom:1px solid var(--rule-soft)}
+.sec-alt .tl-item:last-child{border-bottom:none}
+.sec-alt .tl-content{background:transparent;border:none;border-radius:0;padding:24px 0;box-shadow:none;position:relative;transition:transform .3s ease}
+.sec-alt .tl-item:hover .tl-content{transform:translateX(4px)}
+.sec-alt .tl-content::before{content:'';position:absolute;left:-32px;top:32px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid var(--bg-alt);box-shadow:0 0 0 3px var(--accent-soft)}
+.sec-alt .tl-date{font-family:var(--serif);font-size:.82rem;letter-spacing:.04em;color:var(--accent);font-weight:500;padding:0;display:flex;align-items:flex-start;justify-content:flex-end;text-align:right;text-transform:none;background:transparent;line-height:1.4;font-style:italic}
+.sec-alt .tl-title{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--ink);line-height:1.25;letter-spacing:-.012em;margin:0 0 8px;padding:0}
+.sec-alt .tl-title::after{content:'';display:inline-block;width:24px;height:1px;background:var(--accent-2);margin-left:10px;vertical-align:middle}
+.sec-alt .tl-desc{font-family:var(--sans);font-size:.95rem;line-height:1.75;color:var(--text-light);margin:0;padding:0;max-width:680px}
+
+/* === FOOTER === */
+footer{background:var(--ink);color:#fff;padding:48px 0 32px;position:relative;border-top:4px solid var(--accent)}
+footer .ctn{text-align:center;display:block;padding:0 40px}
+footer::before{content:'THE CHINESE ZODIAC EDITION  ·  2020 – 2031';font-family:var(--sans);font-size:.62rem;letter-spacing:.30em;color:rgba(255,255,255,.5);font-weight:600;display:block;margin-bottom:24px;text-transform:uppercase}
+footer p{font-family:var(--sans);font-size:.78rem;line-height:1.7;color:rgba(255,255,255,.6);margin:0 0 8px;letter-spacing:.02em}
+footer p:first-child{font-family:var(--serif);font-size:1rem;color:#fff;font-weight:400;margin:0 0 14px;letter-spacing:.01em;font-style:italic}
+footer a{color:#fff;text-decoration:none;display:inline-block;font-size:.78rem;padding:0 14px;font-weight:500;letter-spacing:.04em;opacity:.6;border-right:1px solid rgba(255,255,255,.2)}
+footer a:last-child{border-right:none}
+footer a:hover{color:var(--accent-2);opacity:1}
+
+/* === RESPONSIVE === */
+@media (max-width:1024px){
+  .ctn{padding:0 32px}
+  header .ctn{padding:36px 32px 50px}
+  .back{left:32px;top:20px}
+  h1{font-size:clamp(2.2rem,4.4vw,3.2rem)}
+  h1::before{margin-bottom:18px}
+  .sub{font-size:1.1rem;margin-top:20px}
+  .sec,.sec-alt{padding:72px 0}
+  .sec-t{margin-bottom:44px;padding-bottom:20px;gap:24px}
+  .sec-t::before{font-size:4rem}
+  .sec-t h2{font-size:clamp(1.7rem,2.8vw,2.3rem)}
+  .sec .card{grid-template-columns:1fr 1fr;max-width:880px}
+  .sec .card .zodiac-img{min-height:380px;padding:48px}
+  .sec .card h2{padding:36px 40px 14px;font-size:1.6rem}
+  .sec .card h2::before{margin-bottom:12px}
+  .sec .card p{padding:0 40px 14px}
+  .sec .card .info-grid{grid-template-columns:repeat(3,1fr)}
+  .sec-alt .grid2{grid-template-columns:1fr}
+  .sec-alt .grid2 .crd{border-right:none!important}
+  .sec .grid2{grid-template-columns:repeat(2,1fr)}
+  .sec .grid2 .crd:nth-child(2n){border-right:none}
+  .sec .grid2 .crd:nth-child(4n){border-right:none}
+  .sec .grid2 .crd:nth-child(odd){border-right:1px solid var(--rule-soft)}
+  .sec > .ctn > .card[style*="margin-bottom:24px"]{padding:28px 0}
+  .sec > .ctn > .card[style*="margin-bottom:24px"]::before{font-size:.58rem;padding:4px 10px}
+  .sec > .ctn > .card:has(h3){padding:36px 40px 30px}
+  .sec > .ctn > .card:has(h3) h3{font-size:1.45rem}
+  .sec-alt .timeline::before{left:90px}
+  .sec-alt .tl-item{grid-template-columns:72px 1fr;gap:18px}
+  .sec-alt .tl-content::before{left:-22px;width:9px;height:9px;top:28px}
+  .sec-alt .tl-date{font-size:.74rem}
+  .sec-alt .tl-title{font-size:1.2rem}
+  .sec-alt .tl-desc{font-size:.92rem}
+  footer .ctn{padding:0 32px}
+}
+@media (max-width:640px){
+  .ctn{padding:0 20px}
+  header::before{font-size:.58rem;letter-spacing:.20em;padding:12px 20px}
+  header .ctn{padding:30px 20px 40px}
+  .back{position:relative;top:auto;left:auto;display:inline-flex;margin:0 0 20px;font-size:.66rem}
+  h1{font-size:2rem;letter-spacing:-.018em}
+  h1::before{margin-bottom:14px;width:40px}
+  .sub{font-size:1rem;margin-top:16px}
+  .sec,.sec-alt{padding:56px 0}
+  .sec-t{margin-bottom:36px;padding-bottom:16px;gap:14px;grid-template-columns:1fr}
+  .sec-t::before{font-size:3rem}
+  .sec-t h2{font-size:1.5rem;padding-bottom:0}
+  .sec-t p{font-size:.95rem;margin-top:6px;grid-column:1;grid-row:auto}
+  .sec .card{grid-template-columns:1fr;max-width:560px}
+  .sec .card::before{width:4px}
+  .sec .card .zodiac-img{min-height:260px;max-height:300px;padding:36px;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .sec .card h2{padding:28px 24px 12px;font-size:1.4rem}
+  .sec .card h2::before{margin-bottom:10px;font-size:.58rem}
+  .sec .card h2::after{margin-top:12px}
+  .sec .card p{padding:0 24px 12px;font-size:.95rem}
+  .sec .card .info-grid{grid-template-columns:repeat(2,1fr);margin:18px 0 0}
+  .sec .card .info{padding:14px 16px}
+  .sec .card .info:nth-child(3n){border-right:1px solid var(--rule-soft)}
+  .sec .card .info:nth-child(2n){border-right:none}
+  .sec .card .info:nth-last-child(-n+3){border-bottom:1px solid var(--rule-soft)}
+  .sec .card .info:nth-last-child(-n+2){border-bottom:none}
+  .sec-alt .card p{font-size:1rem}
+  .sec-alt .card p:first-of-type::first-letter{font-size:3rem;padding:4px 10px 0 0}
+  .sec-alt .grid2{gap:0}
+  .sec-alt .grid2 .crd{padding:24px 20px;grid-template-columns:44px 1fr;gap:14px}
+  .sec-alt .grid2 .crd::before{font-size:1.4rem}
+  .sec-alt .grid2 .crd .crd-icon{width:36px;height:36px;grid-column:1;grid-row:2}
+  .sec .grid2{grid-template-columns:1fr;gap:0}
+  .sec .grid2 .crd{padding:24px 20px;border-right:none!important}
+  .sec .grid2 .crd::before{font-size:.58rem;margin-bottom:10px}
+  .sec .grid2 .crd .crd-icon{width:36px;height:36px;margin-bottom:12px}
+  .sec > .ctn > .card[style*="margin-bottom:24px"]{padding:24px 0}
+  .sec > .ctn > .card[style*="margin-bottom:24px"]::before{position:relative;top:auto;right:auto;display:inline-block;margin-bottom:14px;font-size:.58rem}
+  .sec > .ctn > .card[style*="margin-bottom:24px"] p{font-size:1rem}
+  .sec > .ctn > .card:has(h3){padding:32px 24px 26px}
+  .sec > .ctn > .card:has(h3)::before{position:relative;top:auto;right:auto;display:block;margin-bottom:12px;font-size:.58rem}
+  .sec > .ctn > .card:has(h3)::after{width:4px}
+  .sec > .ctn > .card:has(h3) h3{font-size:1.3rem}
+  .sec > .ctn > .card:has(h3) h3::after{width:30px;margin-top:10px}
+  .sec-alt .timeline::before{left:0;top:0}
+  .sec-alt .tl-item{grid-template-columns:1fr;gap:0;padding:0 0 0 22px;border-bottom:1px solid var(--rule-soft)}
+  .sec-alt .tl-content::before{left:-6px;top:24px;width:8px;height:8px;box-shadow:0 0 0 2px var(--bg-alt),0 0 0 3px var(--accent-soft)}
+  .sec-alt .tl-date{justify-content:flex-start;text-align:left;padding-top:18px;padding-bottom:0;font-size:.72rem}
+  .sec-alt .tl-title{font-size:1.1rem;margin-bottom:6px}
+  .sec-alt .tl-title::after{display:none}
+  .sec-alt .tl-desc{font-size:.88rem}
+  footer{padding:36px 0 24px;border-top-width:3px}
+  footer::before{font-size:.58rem;letter-spacing:.18em;margin-bottom:18px}
+  footer .ctn{padding:0 20px}
+  footer a{padding:0 10px;font-size:.74rem}
+}
