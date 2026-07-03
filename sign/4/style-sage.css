@@ -1,0 +1,86 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FBF7F0;--bg-2:#F4EEE2;--surface:#fff;--surface-2:#F9F3E8;--border:#D8D0BC;--border-2:#A89E84;--primary:#2D3D2D;--primary-2:#1A2A1A;--accent:#8A9A82;--accent-2:#6B7F6E;--leaf:#4A6B4A;--text:#2A2D24;--text-2:#5C5F4F;--text-3:#8B8D7A;--shadow:0 2px 16px -4px rgba(45,61,45,.08);--shadow-2:0 12px 28px -10px rgba(45,61,45,.18);--radius:6px}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text);line-height:1.75;background:var(--bg);background-image:radial-gradient(circle at 5% 10%,rgba(138,154,130,.08) 0%,transparent 30%),radial-gradient(circle at 95% 90%,rgba(74,107,74,.06) 0%,transparent 30%);min-height:100vh}
+.container{max-width:820px;margin:0 auto;padding:0 22px}
+header{padding:50px 28px;border:1px solid var(--border);background:var(--surface);margin-top:30px;position:relative;border-radius:var(--radius);box-shadow:var(--shadow)}
+header::before{content:"";position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:1px dashed var(--border-2);pointer-events:none;border-radius:4px}
+header::after{content:"";position:absolute;top:8px;right:8px;width:60px;height:60px;background:radial-gradient(circle,var(--accent) 30%,transparent 31%),radial-gradient(circle,var(--accent) 30%,transparent 31%);background-size:12px 12px;background-position:0 0,6px 6px;opacity:.2;border-radius:50%}
+.leaf-cluster{position:absolute;bottom:18px;right:24px;font-family:'Fraunces',serif;font-size:.7rem;color:var(--accent);letter-spacing:3px;text-transform:uppercase;font-weight:500}
+.back-link{display:inline-block;margin-bottom:18px;padding:8px 18px;background:transparent;border:1px solid var(--border-2);border-radius:30px;color:var(--text-2);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:all .25s;position:relative;z-index:1}
+.back-link:hover{background:var(--primary);color:var(--surface);border-color:var(--primary);transform:translateX(-2px)}
+header h1{font-family:'Fraunces',Georgia,serif;font-size:2.8rem;font-weight:400;color:var(--primary);line-height:1.1;margin-bottom:14px;letter-spacing:-.5px;position:relative;z-index:1}
+header h1 .h1-flower{display:inline-block;width:14px;height:14px;background:radial-gradient(circle,var(--accent) 0%,var(--accent) 30%,transparent 31%);background-size:6px 6px;background-position:0 0,4px 4px;margin-right:10px;vertical-align:middle;border-radius:50%}
+.subtitle{font-size:1.05rem;color:var(--text-2);max-width:600px;line-height:1.7;position:relative;z-index:1}
+.subtitle strong{color:var(--primary);font-weight:600}
+section{padding:42px 0}
+.organic-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 30px;box-shadow:var(--shadow);position:relative;transition:all .3s}
+.organic-card:hover{box-shadow:var(--shadow-2);border-color:var(--accent)}
+.organic-card::before{content:"";position:absolute;top:-1px;left:30px;right:30px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.section-head{margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.section-head .sh-tag{font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:3px;font-weight:600;padding:4px 12px;background:var(--bg-2);border-radius:30px}
+.section-head h2{font-family:'Fraunces',serif;font-size:1.85rem;font-weight:400;color:var(--primary);line-height:1.2;letter-spacing:-.5px;flex:1}
+.section-head .sh-sub{font-size:.88rem;color:var(--text-3);width:100%;margin-top:4px}
+/* Section 1: Sign */
+.sign-frame{text-align:center;padding:40px 30px;background:linear-gradient(180deg,var(--surface-2) 0%,var(--surface) 100%);border:1px solid var(--border);border-radius:var(--radius);position:relative;overflow:hidden}
+.sign-frame::before,.sign-frame::after{content:"";position:absolute;width:30px;height:30px;border:1px solid var(--accent);border-radius:50%}
+.sign-frame::before{top:15px;left:15px;border-right:none;border-bottom:none}
+.sign-frame::after{bottom:15px;right:15px;border-left:none;border-top:none}
+.sign-frame .sf-intro{font-size:.75rem;color:var(--accent);text-transform:uppercase;letter-spacing:4px;font-weight:600;margin-bottom:18px}
+.sign-frame .sf-glyph{font-size:4.5rem;color:var(--primary);margin:10px 0;line-height:1}
+.sign-frame .sf-name{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:400;color:var(--primary);margin-bottom:6px;letter-spacing:-.5px}
+.sign-frame .sf-dates{font-size:.85rem;color:var(--text-2);letter-spacing:3px;text-transform:uppercase}
+.sign-frame .sf-blurb{margin-top:24px;padding-top:22px;border-top:1px dashed var(--border);font-size:.96rem;line-height:1.85;color:var(--text-2);text-align:left}
+/* Section 2: Famous */
+.famous-vine{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.famous-leaf{padding:18px 20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);transition:all .3s;position:relative}
+.famous-leaf:hover{background:var(--surface-2);border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.famous-leaf .fl-stem{position:absolute;top:0;left:18px;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--accent),transparent);opacity:.5}
+.famous-leaf .fl-num{display:inline-block;font-family:'Fraunces',serif;font-size:.7rem;color:var(--accent);letter-spacing:2px;font-weight:500;background:var(--bg-2);padding:3px 9px;border-radius:30px;margin-bottom:8px}
+.famous-leaf .fl-name{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:500;color:var(--primary);margin-bottom:3px;display:block}
+.famous-leaf .fl-desc{font-size:.82rem;color:var(--text-2);line-height:1.55}
+/* Section 3: History */
+.history-scroll{display:flex;flex-direction:column;gap:12px}
+.history-leaf{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;padding:16px 20px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);transition:all .25s}
+.history-leaf:hover{background:var(--surface);border-color:var(--accent)}
+.history-leaf .hl-pod{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--surface);background:var(--primary);padding:6px 14px;border-radius:30px;font-weight:500;letter-spacing:1px;align-self:start}
+.history-leaf .hl-event{font-size:.92rem;color:var(--text-2);line-height:1.7}
+/* Section 4: Compatibility */
+.compat-patch{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.compat-petal{background:var(--surface);border:1px solid var(--border);padding:18px 20px;border-radius:var(--radius);position:relative;transition:all .3s;display:grid;grid-template-columns:1fr auto;gap:10px 14px;align-items:center}
+.compat-petal:hover{background:var(--surface-2);border-color:var(--accent);box-shadow:var(--shadow-2)}
+.compat-petal .cp-tier{grid-column:1/-1;font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:2px;font-weight:600;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.compat-petal .cp-name{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--primary);font-weight:500}
+.compat-petal .cp-pct{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:500;color:var(--leaf);letter-spacing:-.5px}
+.compat-petal .cp-bar{grid-column:1/-1;height:3px;background:var(--bg-2);border-radius:2px;overflow:hidden;position:relative}
+.compat-petal .cp-bar::after{content:"";position:absolute;left:0;top:0;height:100%;background:linear-gradient(90deg,var(--leaf),var(--accent));width:var(--w,0%);border-radius:2px}
+.compat-petal .cp-note{grid-column:1/-1;font-size:.76rem;color:var(--text-3);font-style:italic;line-height:1.5;margin-top:2px}
+.compat-petal.tier-tough .cp-pct{color:#9C5A4F}
+.compat-petal.tier-tough .cp-bar::after{background:linear-gradient(90deg,#9C5A4F,var(--accent))}
+/* Section 5: Lucky */
+.lucky-fern{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.lucky-bud{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:20px 14px;text-align:center;transition:all .3s;position:relative;overflow:hidden}
+.lucky-bud::before{content:"";position:absolute;top:-20px;right:-20px;width:50px;height:50px;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);opacity:.2}
+.lucky-bud:hover{background:var(--surface);border-color:var(--leaf);transform:translateY(-3px);box-shadow:var(--shadow-2)}
+.lucky-bud .lb-type{font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:2px;font-weight:600;display:block;margin-bottom:8px}
+.lucky-bud .lb-val{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--primary);font-weight:500;display:block}
+/* Section 6: Story */
+.story-canvas{padding:30px 28px;background:linear-gradient(135deg,var(--surface) 0%,var(--surface-2) 100%);border:1px solid var(--border);border-radius:var(--radius);position:relative;overflow:hidden}
+.story-canvas::before{content:"";position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(circle,rgba(138,154,130,.1) 0%,transparent 70%);border-radius:50%}
+.story-canvas-head{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px dashed var(--border)}
+.story-canvas-head .sch-seed{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--leaf));display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.1rem;font-weight:500;color:#fff}
+.story-canvas-head .sch-info h3{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--primary);font-weight:500;line-height:1.2}
+.story-canvas-head .sch-info .sch-meta{font-size:.8rem;color:var(--text-3);margin-top:3px;letter-spacing:1px;text-transform:uppercase}
+.story-canvas p{font-size:.96rem;line-height:1.9;color:var(--text);margin-bottom:16px;position:relative;z-index:1}
+.story-canvas p:last-child{margin-bottom:0}
+.story-canvas p:first-of-type::first-letter{font-family:'Fraunces',serif;font-size:2.5em;float:left;line-height:.9;color:var(--primary);padding:6px 8px 0 0;font-weight:500}
+/* Section 7: Dates nav */
+.dates-grove{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin-top:14px}
+.dates-grove a{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:var(--surface);border:1px solid var(--border);border-radius:50%;color:var(--text-2);text-decoration:none;font-size:.78rem;font-weight:500;transition:all .25s;font-family:'Fraunces',serif}
+.dates-grove a:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:scale(1.1)}
+.dates-grove a.active{background:var(--primary);color:#fff;border-color:var(--primary);box-shadow:0 4px 12px rgba(45,61,45,.3);font-weight:700}
+footer{background:var(--primary);color:var(--surface);padding:30px 20px;text-align:center;margin-top:30px;border-radius:var(--radius) var(--radius) 0 0}
+footer p{opacity:.8;font-size:.85rem;margin-bottom:8px;color:var(--surface)}
+footer a{color:var(--bg);text-decoration:none;opacity:.75;transition:opacity .2s;letter-spacing:1.5px;text-transform:uppercase;font-size:.78rem;font-weight:500}
+footer a:hover{opacity:1;text-decoration:underline}
+@media(max-width:768px){header{padding:36px 22px;margin-top:18px}header h1{font-size:2rem}.famous-vine,.lucky-fern{grid-template-columns:1fr 1fr}.compat-patch{grid-template-columns:1fr}.dates-grove{grid-template-columns:repeat(7,1fr)}}
+@media(max-width:480px){.famous-vine{grid-template-columns:1fr}.lucky-fern{grid-template-columns:1fr 1fr}}

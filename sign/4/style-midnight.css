@@ -1,0 +1,90 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0A0A0A;--bg-2:#141414;--surface:#161616;--surface-2:#1C1C1C;--border:#262626;--border-2:#3D3D3D;--primary:#D4AF37;--primary-2:#B8941F;--accent:#E8D49A;--ivory:#F5F0E6;--ivory-2:#D9D1C2;--text:#F5F0E6;--text-2:#A8A095;--text-3:#6B6457;--danger:#C44545;--shadow:0 8px 32px -8px rgba(0,0,0,.5);--shadow-2:0 16px 40px -10px rgba(212,175,55,.18);--radius:2px}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text);line-height:1.75;background:var(--bg);min-height:100vh;position:relative}
+body::after{content:"";position:fixed;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent 0%,var(--primary) 50%,transparent 100%);opacity:.15;z-index:0;pointer-events:none}
+.container{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+header{padding:50px 0 60px;border-bottom:2px solid var(--primary);position:relative}
+header::after{content:"";position:absolute;bottom:-2px;left:0;width:80px;height:2px;background:var(--accent);box-shadow:0 0 12px var(--primary)}
+.top-meta{display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--border)}
+.top-meta .tm-issue{font-size:.72rem;color:var(--primary);text-transform:uppercase;letter-spacing:3.5px;font-weight:700;padding:4px 10px;border:1px solid var(--primary);border-radius:2px}
+.top-meta .tm-date{font-size:.78rem;color:var(--text-2);letter-spacing:2px;text-transform:uppercase;font-weight:500;flex:1}
+.back-link{font-size:.78rem;color:var(--text-2);text-decoration:none;letter-spacing:2.5px;text-transform:uppercase;font-weight:500;transition:color .2s}
+.back-link:hover{color:var(--primary)}
+header h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:3.4rem;font-weight:500;color:var(--ivory);line-height:1.05;letter-spacing:-1px;margin-bottom:14px;font-style:italic}
+header h1 .h1-num{display:block;font-size:1rem;font-style:normal;color:var(--primary);letter-spacing:4px;margin-bottom:8px;font-family:'Inter',sans-serif;font-weight:600;text-transform:uppercase}
+.subtitle{font-size:1.05rem;color:var(--text-2);max-width:660px;line-height:1.7;font-weight:400;border-left:2px solid var(--primary);padding-left:18px}
+.subtitle strong{color:var(--primary);font-weight:600}
+section{padding:50px 0;position:relative}
+.divider{display:flex;align-items:center;gap:14px;margin-bottom:30px}
+.divider .d-line{flex:1;height:1px;background:var(--border)}
+.divider .d-mark{font-size:.7rem;color:var(--primary);text-transform:uppercase;letter-spacing:4px;font-weight:600;padding:0 8px}
+.divider .d-line:last-child{background:linear-gradient(90deg,var(--border),transparent)}
+.section-title h2{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:500;color:var(--ivory);font-style:italic;letter-spacing:-.5px}
+.section-title .st-num{font-size:.72rem;color:var(--primary);text-transform:uppercase;letter-spacing:3px;font-weight:600;display:block;margin-bottom:6px;font-style:normal;font-family:'Inter',sans-serif}
+.section-title .st-sub{font-size:.88rem;color:var(--text-3);margin-top:4px;font-style:normal;font-family:'Inter',sans-serif}
+/* Section 1: Sign */
+.sign-shrine{display:grid;grid-template-columns:140px 1fr;gap:32px;align-items:center;padding:36px 32px;background:var(--surface);border:1px solid var(--border);position:relative;overflow:hidden}
+.sign-shrine::before{content:"";position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--primary),var(--accent))}
+.sign-shrine .ss-emblem{width:120px;height:120px;border:1px solid var(--primary);display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,rgba(212,175,55,.1),transparent);position:relative}
+.sign-shrine .ss-emblem::before,.sign-shrine .ss-emblem::after{content:"";position:absolute;width:8px;height:8px;background:var(--primary)}
+.sign-shrine .ss-emblem::before{top:0;left:0}
+.sign-shrine .ss-emblem::after{bottom:0;right:0}
+.sign-shrine .ss-glyph{font-size:3.8rem;color:var(--primary);text-shadow:0 0 20px rgba(212,175,55,.4)}
+.sign-shrine .ss-name{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-style:italic;font-weight:500;color:var(--ivory);letter-spacing:-.5px;margin-bottom:4px}
+.sign-shrine .ss-dates{font-size:.82rem;color:var(--text-2);letter-spacing:3px;text-transform:uppercase;margin-bottom:18px}
+.sign-shrine .ss-blurb{font-size:.95rem;line-height:1.8;color:var(--text-2);padding-top:16px;border-top:1px solid var(--border)}
+/* Section 2: Famous */
+.famous-stack{display:flex;flex-direction:column;gap:8px}
+.famous-card{display:grid;grid-template-columns:60px 1fr;gap:20px;align-items:center;padding:18px 22px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--border-2);transition:all .3s}
+.famous-card:hover{border-left-color:var(--primary);background:var(--surface-2);box-shadow:var(--shadow-2)}
+.famous-card .fc-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--primary);font-style:italic;font-weight:500;line-height:1;text-align:center}
+.famous-card .fc-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--ivory);font-style:italic;font-weight:500;margin-bottom:3px}
+.famous-card .fc-desc{font-size:.84rem;color:var(--text-2);line-height:1.55}
+/* Section 3: History */
+.history-ledger{display:flex;flex-direction:column;gap:0}
+.history-row{display:grid;grid-template-columns:80px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--border);transition:all .3s;align-items:start}
+.history-row:last-child{border-bottom:none}
+.history-row:hover{padding-left:8px}
+.history-row .hr-year{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--primary);font-style:italic;font-weight:500;line-height:1}
+.history-row .hr-event{font-size:.94rem;color:var(--text);line-height:1.7;padding-top:6px}
+/* Section 4: Compatibility */
+.compat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.compat-tile{background:var(--surface);border:1px solid var(--border);padding:18px 18px;position:relative;transition:all .3s}
+.compat-tile:hover{border-color:var(--primary);background:var(--surface-2);box-shadow:var(--shadow-2)}
+.compat-tile .ct-tier{font-size:.7rem;color:var(--primary);text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-bottom:6px;display:block}
+.compat-tile .ct-sign{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--ivory);font-weight:500;margin-bottom:8px}
+.compat-tile .ct-pct{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:500;color:var(--primary);letter-spacing:-.5px;display:block;margin-bottom:6px}
+.compat-tile .ct-bar{height:3px;background:var(--border);margin-bottom:8px;position:relative;overflow:hidden}
+.compat-tile .ct-bar::after{content:"";position:absolute;left:0;top:0;height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));width:var(--w,0%)}
+.compat-tile .ct-note{font-size:.78rem;color:var(--text-2);font-style:italic;line-height:1.5}
+.compat-tile.tier-tough .ct-tier,.compat-tile.tier-tough .ct-pct{color:var(--danger)}
+.compat-tile.tier-tough .ct-bar::after{background:linear-gradient(90deg,var(--danger),var(--primary))}
+/* Section 5: Lucky */
+.lucky-display{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.lucky-cell{background:var(--surface);padding:22px 18px;text-align:center;transition:all .25s;position:relative}
+.lucky-cell:hover{background:var(--surface-2)}
+.lucky-cell:hover .lc-val{color:var(--primary)}
+.lucky-cell .lc-type{font-size:.7rem;color:var(--primary);text-transform:uppercase;letter-spacing:2.5px;font-weight:600;display:block;margin-bottom:8px}
+.lucky-cell .lc-val{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--ivory);font-weight:500;font-style:italic;display:block;transition:color .25s}
+/* Section 6: Story */
+.story-feature{padding:36px 30px;background:var(--surface);border:1px solid var(--border);position:relative}
+.story-feature::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--primary),transparent)}
+.story-feature-head{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.story-feature-head .sfh-quote{font-family:'Cormorant Garamond',serif;font-size:4rem;color:var(--primary);line-height:.7;opacity:.6}
+.story-feature-head .sfh-info .sfh-cat{font-size:.7rem;color:var(--primary);text-transform:uppercase;letter-spacing:3px;font-weight:600;display:block;margin-bottom:6px}
+.story-feature-head .sfh-info h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--ivory);font-style:italic;font-weight:500;line-height:1.2}
+.story-feature-head .sfh-info .sfh-meta{font-size:.82rem;color:var(--text-2);margin-top:4px;font-style:normal}
+.story-feature p{font-size:.96rem;line-height:1.9;color:var(--text);margin-bottom:18px;font-family:'Cormorant Garamond',serif;font-size:1.02rem}
+.story-feature p:last-child{margin-bottom:0}
+.story-feature p:first-of-type{font-style:italic}
+/* Section 7: Dates nav */
+.dates-line{display:grid;grid-template-columns:repeat(15,1fr);gap:4px;margin-top:10px}
+.dates-line a{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:var(--surface);border:1px solid var(--border);color:var(--text-2);text-decoration:none;font-size:.75rem;font-weight:500;transition:all .2s;font-family:'Cormorant Garamond',serif;font-style:italic}
+.dates-line a:hover{background:var(--primary);color:#0A0A0A;border-color:var(--primary)}
+.dates-line a.active{background:var(--primary);color:#0A0A0A;border-color:var(--primary);font-weight:700;box-shadow:0 0 12px rgba(212,175,55,.5)}
+footer{background:var(--bg-2);border-top:1px solid var(--border);color:var(--text-2);padding:34px 20px;text-align:center;position:relative;z-index:1}
+footer p{opacity:.75;font-size:.85rem;margin-bottom:10px}
+footer a{color:var(--primary);text-decoration:none;transition:color .2s;letter-spacing:1.5px;text-transform:uppercase;font-size:.78rem;font-weight:500}
+footer a:hover{color:var(--accent);text-decoration:underline}
+@media(max-width:768px){header h1{font-size:2.4rem}.sign-shrine{grid-template-columns:1fr;gap:18px;padding:24px 20px}.sign-shrine .ss-emblem{margin:0 auto}.compat-grid{grid-template-columns:1fr}.lucky-display{grid-template-columns:repeat(2,1fr)}.dates-line{grid-template-columns:repeat(10,1fr)}}
+@media(max-width:480px){.famous-card{grid-template-columns:50px 1fr;padding:14px 16px}.history-row{grid-template-columns:60px 1fr;gap:14px}.dates-line{grid-template-columns:repeat(6,1fr)}}
