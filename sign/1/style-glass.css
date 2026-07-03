@@ -1,0 +1,82 @@
+/* Group 2 (Days 11-20) - Glass Modern Theme */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0F1B2D;--bg-soft:#172539;--card:rgba(255,255,255,.04);--card-border:rgba(255,255,255,.08);--card-border-hover:rgba(126,232,199,.3);--ink:#E8EEF5;--ink-soft:#A8B6C8;--text:#C8D0DC;--text-light:#7A8A9C;--primary:#5B7FBF;--accent:#7EE8C7;--accent-soft:rgba(126,232,199,.12);--warn:#E8A87C;--line:rgba(255,255,255,.06);--glow:0 8px 32px rgba(91,127,191,.18);--serif:'DM Serif Display',Georgia,serif;--sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif}
+body{font-family:var(--sans);color:var(--text);line-height:1.75;background:var(--bg);-webkit-font-smoothing:antialiased;min-height:100vh;position:relative;overflow-x:hidden}
+body::before{content:"";position:fixed;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(91,127,191,.18) 0%,transparent 60%);pointer-events:none;z-index:0}
+body::after{content:"";position:fixed;bottom:-200px;left:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(126,232,199,.12) 0%,transparent 60%);pointer-events:none;z-index:0}
+.container{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+header{background:linear-gradient(160deg,#0A1424 0%,#172539 100%);padding:64px 0 84px;text-align:center;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+header::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--primary),transparent);opacity:.6}
+header::after{content:"";position:absolute;top:20%;right:5%;width:200px;height:200px;border:1px solid rgba(126,232,199,.15);border-radius:50%;pointer-events:none}
+.back-link{display:inline-block;margin-bottom:22px;padding:10px 24px;background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--card-border);border-radius:50px;color:var(--ink);text-decoration:none;font-size:.88rem;font-weight:500;position:relative;z-index:1;transition:all .3s}
+.back-link:hover{background:rgba(126,232,199,.1);border-color:var(--card-border-hover);transform:translateY(-1px)}
+h1{font-family:var(--serif);font-size:2.4rem;font-weight:400;color:var(--ink);margin-bottom:14px;letter-spacing:-.4px;position:relative;z-index:1;line-height:1.2}
+h1 strong{color:var(--accent);font-weight:400}
+.subtitle{font-size:1.02rem;color:var(--ink-soft);max-width:640px;margin:0 auto;line-height:1.65;position:relative;z-index:1;font-weight:400}
+.glass-section{padding:64px 0;position:relative;z-index:1}
+.glass-section-alt{background:linear-gradient(180deg,transparent,rgba(91,127,191,.04),transparent)}
+.glass-title{text-align:center;margin-bottom:36px;position:relative;z-index:1}
+.glass-title h2{font-family:var(--serif);font-size:1.85rem;font-weight:400;color:var(--ink);margin-bottom:10px;letter-spacing:-.2px}
+.glass-title h2::after{content:"";display:block;width:40px;height:2px;background:linear-gradient(90deg,var(--accent),var(--primary));margin:14px auto 0;border-radius:1px}
+.glass-title p{font-size:.95rem;color:var(--text-light);max-width:620px;margin:0 auto;line-height:1.7}
+.glass-intro-wrap{background:var(--card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--card-border);border-radius:24px;padding:48px 40px;text-align:center;position:relative;overflow:hidden;box-shadow:var(--glow)}
+.glass-intro-wrap::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at center,rgba(126,232,199,.08) 0%,transparent 40%);pointer-events:none}
+.glass-intro-wrap::after{content:"";position:absolute;inset:0;border-radius:24px;padding:1px;background:linear-gradient(135deg,rgba(126,232,199,.3),transparent 50%,rgba(91,127,191,.3));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.glass-intro-eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);font-weight:500;margin-bottom:14px;position:relative;z-index:1}
+.glass-intro-display{position:relative;z-index:1;display:inline-flex;flex-direction:column;align-items:center;gap:10px;padding:24px 40px;background:rgba(126,232,199,.06);border:1px solid rgba(126,232,199,.2);border-radius:20px;margin-bottom:20px}
+.glass-symbol{font-size:3.4rem;line-height:1;color:var(--accent);font-family:var(--serif)}
+.glass-sign-name{font-family:var(--serif);font-size:1.7rem;font-weight:400;color:var(--ink);letter-spacing:-.2px}
+.glass-sign-range{font-size:.78rem;color:var(--text-light);letter-spacing:1.2px;text-transform:uppercase}
+.glass-intro-body{font-size:.98rem;color:var(--text);line-height:1.75;max-width:640px;margin:20px auto 0;position:relative;z-index:1}
+.glass-fam-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.glass-fam-card{background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--card-border);border-radius:18px;padding:24px 22px;transition:all .35s;position:relative;overflow:hidden}
+.glass-fam-card::before{content:"";position:absolute;top:0;left:0;width:0;height:100%;background:linear-gradient(90deg,rgba(126,232,199,.1),transparent);transition:width .4s}
+.glass-fam-card:hover{border-color:var(--card-border-hover);transform:translateY(-2px);box-shadow:var(--glow)}
+.glass-fam-card:hover::before{width:100%}
+.glass-fam-top{display:flex;align-items:baseline;gap:12px;margin-bottom:10px;position:relative;z-index:1}
+.glass-fam-year{font-size:.82rem;color:var(--accent);font-weight:600;letter-spacing:.5px;padding:4px 10px;background:rgba(126,232,199,.1);border-radius:20px}
+.glass-fam-name{font-family:var(--serif);font-size:1.15rem;font-weight:400;color:var(--ink);line-height:1.2}
+.glass-fam-desc{font-size:.85rem;color:var(--text-light);line-height:1.55;position:relative;z-index:1}
+.glass-timeline{position:relative;padding-left:30px}
+.glass-timeline::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--accent),var(--primary),transparent)}
+.glass-hist-item{position:relative;padding:18px 22px;background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--card-border);border-radius:14px;margin-bottom:14px;transition:all .3s}
+.glass-hist-item::before{content:"";position:absolute;left:-26px;top:24px;width:14px;height:14px;background:var(--bg);border:2px solid var(--accent);border-radius:50%;box-shadow:0 0 0 4px rgba(126,232,199,.15)}
+.glass-hist-item:hover{border-color:var(--card-border-hover);transform:translateX(4px)}
+.glass-hist-year{font-family:var(--serif);font-size:1.1rem;color:var(--accent);font-weight:400;margin-bottom:4px}
+.glass-hist-desc{font-size:.9rem;color:var(--text);line-height:1.6}
+.glass-compat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.glass-compat-card{background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--card-border);border-radius:16px;padding:20px 16px;transition:all .3s;position:relative;overflow:hidden}
+.glass-compat-card:hover{transform:translateY(-3px);border-color:var(--card-border-hover);box-shadow:var(--glow)}
+.glass-compat-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.glass-compat-label{font-size:.65rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-light);font-weight:600}
+.glass-compat-pct{font-family:var(--serif);font-size:1.35rem;color:var(--accent);font-weight:400;letter-spacing:-.3px}
+.glass-compat-card.glass-worst .glass-compat-pct{color:var(--text-light)}
+.glass-compat-card.glass-worst{border-color:rgba(232,168,124,.2)}
+.glass-compat-card.glass-worst .glass-compat-label{color:var(--warn)}
+.glass-compat-sign{font-family:var(--serif);font-size:1.05rem;color:var(--ink);margin-bottom:8px;font-weight:400}
+.glass-compat-bar{height:3px;background:rgba(255,255,255,.06);border-radius:2px;margin-bottom:10px;overflow:hidden}
+.glass-compat-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--primary));border-radius:2px;transition:width .8s}
+.glass-compat-card.glass-worst .glass-compat-bar-fill{background:linear-gradient(90deg,var(--text-light),rgba(232,168,124,.5))}
+.glass-compat-desc{font-size:.78rem;color:var(--text-light);line-height:1.5}
+.glass-lucky-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.glass-lucky-card{background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--card-border);border-radius:14px;padding:22px 18px;text-align:center;transition:all .3s}
+.glass-lucky-card:hover{border-color:var(--card-border-hover);background:rgba(126,232,199,.06);transform:translateY(-2px)}
+.glass-lucky-icon{width:36px;height:36px;margin:0 auto 12px;background:linear-gradient(135deg,rgba(126,232,199,.2),rgba(91,127,191,.2));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--accent)}
+.glass-lucky-label{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-light);font-weight:600;margin-bottom:6px}
+.glass-lucky-value{font-family:var(--serif);font-size:1.1rem;color:var(--ink);font-weight:400}
+.glass-story-wrap{background:var(--card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--card-border);border-radius:24px;padding:40px 44px;box-shadow:var(--glow)}
+.glass-story-eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);font-weight:500;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.glass-story-eyebrow::before{content:"";width:24px;height:1px;background:var(--accent)}
+.glass-story-para{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:18px;column-count:1}
+.glass-story-para:last-child{margin-bottom:0}
+.glass-dates-card{background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--card-border);border-radius:18px;padding:24px}
+.glass-dates-nav{display:grid;grid-template-columns:repeat(8,1fr);gap:8px}
+.glass-date{display:flex;align-items:center;justify-content:center;height:40px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px;color:var(--ink-soft);text-decoration:none;font-size:.88rem;font-weight:500;transition:all .25s;position:relative}
+.glass-date:hover{background:rgba(126,232,199,.1);border-color:var(--card-border-hover);color:var(--accent);transform:translateY(-1px)}
+.glass-date.active{background:linear-gradient(135deg,var(--accent),var(--primary));color:var(--bg);border-color:transparent;font-weight:600;box-shadow:0 4px 14px rgba(126,232,199,.3)}
+footer{background:#0A1424;color:var(--ink-soft);padding:40px 20px;text-align:center;border-top:1px solid var(--line);position:relative;z-index:1}
+footer p{opacity:.7;font-size:.88rem;margin-bottom:8px}
+footer a{color:var(--accent);text-decoration:none;transition:opacity .2s}
+footer a:hover{opacity:.7;text-decoration:underline}
+@media(min-width:769px){.glass-story-para{column-count:2;column-gap:30px}}
+@media(max-width:768px){h1{font-size:1.85rem}.glass-section{padding:48px 0}.glass-fam-grid{grid-template-columns:1fr}.glass-compat-grid{grid-template-columns:repeat(2,1fr)}.glass-lucky-grid{grid-template-columns:repeat(2,1fr)}.glass-dates-nav{grid-template-columns:repeat(5,1fr)}.glass-intro-wrap{padding:32px 24px}.glass-story-wrap{padding:28px 24px}}

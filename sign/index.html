@@ -26,6 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sign-style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","name":"Zodiac Sign by Month & Date","description":"Complete guide to finding your zodiac sign by birth month and date. All 12 zodiac signs with exact date ranges and personality traits.","url":"https://chinesezodiaccouples.com/sign/","publisher":{"@type":"Organization","name":"ChineseZodiacCouples.com","url":"https://chinesezodiaccouples.com"},"mainEntity":{"@type":"Article","headline":"Zodiac Sign by Month and Date","author":{"@type":"Organization","name":"ChineseZodiacCouples.com"}}}
 </script>
@@ -33,73 +34,8 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://chinesezodiaccouples.com/"},{"@type":"ListItem","position":2,"name":"Zodiac Sign","item":"https://chinesezodiaccouples.com/sign/"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I find my zodiac sign by date?","acceptedAnswer":{"@type":"Answer","text":"Your zodiac sign is determined by your birth date. Each month covers two signs, with the transition typically occurring between the 19th and 23rd. Check the month sections on this page to find your exact sign based on your birthday."}},{"@type":"Question","name":"What are the 12 zodiac signs and their dates?","acceptedAnswer":{"@type":"Answer","text":"The 12 zodiac signs are: Aries (Mar 21 - Apr 19), Taurus (Apr 20 - May 20), Gemini (May 21 - Jun 20), Cancer (Jun 21 - Jul 22), Leo (Jul 23 - Aug 22), Virgo (Aug 23 - Sep 22), Libra (Sep 23 - Oct 22), Scorpio (Oct 23 - Nov 21), Sagittarius (Nov 22 - Dec 21), Capricorn (Dec 22 - Jan 19), Aquarius (Jan 20 - Feb 18), Pisces (Feb 19 - Mar 20)."}},{"@type":"Question","name":"What if my birthday falls on a zodiac cusp?","acceptedAnswer":{"@type":"Answer","text":"If your birthday falls on a transition date between two signs, you may exhibit traits from both signs. The exact transition can vary slightly by year, so check your specific birth date against the ranges provided on this page."}},{"@type":"Question","name":"Can my zodiac sign change?","acceptedAnswer":{"@type":"Answer","text":"No, your zodiac sign is fixed based on your birth date and doesn't change. However, if you were born near a cusp date, you might relate to qualities of both neighboring signs throughout your life."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I find my zodiac sign by date?","acceptedAnswer":{"@type":"Answer","text":"Your zodiac sign is set by the sun's position on your birth date. Each month covers two signs, with the transition landing between the 19th and 23rd. Use the month sections on this page to match your birthday to its zodiac sign."}},{"@type":"Question","name":"What are the 12 zodiac signs and their dates?","acceptedAnswer":{"@type":"Answer","text":"The 12 zodiac signs are: Aries (Mar 21 - Apr 19), Taurus (Apr 20 - May 20), Gemini (May 21 - Jun 20), Cancer (Jun 21 - Jul 22), Leo (Jul 23 - Aug 22), Virgo (Aug 23 - Sep 22), Libra (Sep 23 - Oct 22), Scorpio (Oct 23 - Nov 21), Sagittarius (Nov 22 - Dec 21), Capricorn (Dec 22 - Jan 19), Aquarius (Jan 20 - Feb 18), Pisces (Feb 19 - Mar 20)."}},{"@type":"Question","name":"What if my birthday falls on a zodiac cusp?","acceptedAnswer":{"@type":"Answer","text":"If your birthday lands on a transition date between two signs, you may show traits from both. The exact cutoff shifts slightly by year, so cross-check your specific birth date against the ranges listed on this page."}},{"@type":"Question","name":"Can my zodiac sign change?","acceptedAnswer":{"@type":"Answer","text":"No. Your zodiac sign is fixed by your birth date. People born on a cusp often relate to qualities of the adjacent sign, but the official sign assignment does not change."}}]}
 </script>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--primary:#3B82F6;--primary-dark:#2563EB;--dark:#1F2937;--text:#374151;--text-light:#6B7280;--bg:#fff;--bg-alt:#F9FAFB;--border:#E5E7EB;--shadow:0 4px 20px rgba(0,0,0,.08);--shadow-hover:0 10px 40px rgba(0,0,0,.12);--radius:12px}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text);line-height:1.7;background:var(--bg)}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
-header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:50px 0 70px;text-align:center}
-.back-link{display:inline-block;margin-bottom:16px;padding:8px 20px;background:rgba(255,255,255,.15);border-radius:50px;color:#fff;text-decoration:none;font-size:.9rem;transition:background .3s}
-.back-link:hover{background:rgba(255,255,255,.25)}
-h1{font-family:'Noto Serif SC',serif;font-size:2.2rem;font-weight:700;margin-bottom:10px}
-.subtitle{font-size:1.05rem;opacity:.95;max-width:600px;margin:0 auto;line-height:1.6}
-.section{padding:50px 0}
-.section-alt{background:var(--bg-alt)}
-.section-title{text-align:center;margin-bottom:32px}
-.section-title h2{font-family:'Noto Serif SC',serif;font-size:1.8rem;color:var(--dark);margin-bottom:10px}
-.section-title p{font-size:.95rem;color:var(--text-light);max-width:650px;margin:0 auto;line-height:1.7}
-.intro-text{max-width:800px;margin:0 auto}
-.intro-text p{color:var(--text-light);line-height:1.8;margin-bottom:10px}
-.months-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:20px}
-.month-item{padding:10px 14px;background:var(--bg-alt);border-radius:8px;border-left:3px solid var(--primary);font-size:.9rem}
-.month-item strong{color:var(--dark)}
-.month-accordion{max-width:800px;margin:0 auto}
-.month-section{background:var(--bg);border-radius:var(--radius);margin-bottom:12px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden}
-.month-header{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:1.05rem;color:var(--dark);transition:background .3s;user-select:none}
-.month-header:hover{background:var(--bg-alt)}
-.month-header .arrow{transition:transform .3s;font-size:.85rem;color:var(--text-light)}
-.month-header.active .arrow{transform:rotate(90deg)}
-.month-content{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.month-content.open{max-height:800px}
-.month-inner{padding:8px 20px 20px}
-.sign-block{margin-bottom:16px;padding:14px;background:var(--bg-alt);border-radius:8px}
-.sign-block:last-child{margin-bottom:0}
-.sign-name{font-family:'Noto Serif SC',serif;font-size:1.1rem;color:var(--dark);font-weight:700;margin-bottom:4px}
-.sign-dates{color:var(--text-light);font-size:.9rem;margin-bottom:8px}
-.sign-desc{font-size:.93rem;color:var(--text);line-height:1.7}
-.date-list{display:flex;flex-wrap:wrap;gap:4px 6px;margin-top:8px}
-.date-list span{background:var(--bg);padding:3px 9px;border-radius:4px;font-size:.85rem;color:var(--text-light);border:1px solid var(--border)}
-.date-list a{background:var(--bg);padding:3px 9px;border-radius:4px;font-size:.85rem;color:var(--primary);border:1px solid var(--border);text-decoration:none;transition:all .2s}
-.date-list a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
-.main-nav{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:14px;min-height:60px;flex-wrap:wrap}
-.nav-brand{font-size:1.05rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:10px;text-decoration:none}
-.nav-brand img.nav-logo{width:30px;height:30px;object-fit:contain;display:block}
-.main-nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:2px;margin-left:auto;padding:0}
-.main-nav li{position:relative}
-.main-nav a.nav-link{display:inline-block;padding:10px 14px;color:#fff;font-size:.94rem;font-weight:500;border-radius:6px;text-decoration:none;transition:background .2s,color .2s}
-.main-nav a.nav-link:hover{background:rgba(255,255,255,.18);color:#fff}
-.nav-toggle{display:none;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:6px;padding:6px 12px;font-size:1.2rem;cursor:pointer;margin-left:auto}
-.zodiac-overview{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;max-width:960px;margin:30px auto 0}
-.zodiac-overview-card{background:var(--bg);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);border:1px solid var(--border);text-align:center}
-.zodiac-overview-card .sign-icon{font-size:2.2rem;margin-bottom:10px;display:block}
-.zodiac-overview-card h3{font-family:'Noto Serif SC',serif;font-size:1.05rem;color:var(--dark);margin-bottom:4px}
-.zodiac-overview-card p{font-size:.85rem;color:var(--text-light);line-height:1.5}
-.faq-section{max-width:800px;margin:0 auto}
-.faq-item{background:var(--bg);border-radius:var(--radius);padding:20px;margin-bottom:12px;box-shadow:var(--shadow);border:1px solid var(--border)}
-.faq-item h3{font-size:1rem;color:var(--dark);margin-bottom:6px}
-.faq-item p{color:var(--text-light);line-height:1.7;font-size:.95rem}
-.related-links{max-width:800px;margin:20px auto 0;text-align:center}
-.related-links a{display:inline-block;margin:4px 8px;padding:6px 16px;background:var(--bg-alt);border-radius:6px;color:var(--primary);text-decoration:none;font-size:.9rem;border:1px solid var(--border);transition:background .3s}
-.related-links a:hover{background:var(--primary);color:#fff}
-footer{background:var(--dark);color:#fff;padding:30px 20px;text-align:center}
-footer p{opacity:.7;font-size:.85rem;margin-bottom:6px}
-footer a{color:#fff;text-decoration:none}
-footer a:hover{text-decoration:underline}
-@media(max-width:768px){h1{font-size:1.8rem}.section{padding:40px 0}.month-header{padding:14px 16px;font-size:1rem}.month-inner{padding:8px 16px 16px}.months-list{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}.zodiac-overview{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.nav-toggle{display:inline-block}.main-nav ul{display:none;width:100%;flex-direction:column;gap:2px;padding:8px 0;margin-left:0}.main-nav ul.open{display:flex}.nav-inner{padding:0 16px}}
-</style>
 </head>
 <body>
 <nav class="main-nav" aria-label="Main navigation">
@@ -110,115 +46,77 @@ footer a:hover{text-decoration:underline}
    <li><a href="../zodiac/" class="nav-link">Zodiac</a></li>
    <li><a href="../personality/" class="nav-link">Personality</a></li>
    <li><a href="../year/" class="nav-link">Year</a></li>
+   <li><a href="../sign/" class="nav-link is-current">Sign</a></li>
    <li><a href="../2026/chinese-zodiac-fortune-2026.html" class="nav-link">2026 Fortune</a></li>
    <li><a href="../about-us.html" class="nav-link">About</a></li>
    <li><a href="../contact-us.html" class="nav-link">Contact</a></li>
   </ul>
  </div>
 </nav>
-<header>
-<div class="container">
+<header class="hero">
+<div class="container hero-inner">
 <a href="../" class="back-link">&#8592; Back to Home</a>
+<span class="hero-eyebrow">Western Zodiac Reference</span>
 <h1>Zodiac Sign by Month &amp; Date</h1>
-<p class="subtitle">Not sure what your zodiac sign is? Pick your birth month below and find your exact sign based on the date.</p>
+<p class="subtitle">A practical lookup for all 12 Western zodiac signs. Pick your birth month to find your exact sign, date range, and core traits.</p>
+<div class="hero-stats">
+ <div class="hero-stat"><span class="num">12</span><span class="lbl">Zodiac Signs</span></div>
+ <div class="hero-stat"><span class="num">365</span><span class="lbl">Days Covered</span></div>
+ <div class="hero-stat"><span class="num">4</span><span class="lbl">Elements</span></div>
+ <div class="hero-stat"><span class="num">3</span><span class="lbl">Modalities</span></div>
+</div>
 </div>
 </header>
 
 <section class="section">
 <div class="container">
 <div class="section-title">
+<span class="eyebrow-tag">Section 1</span>
 <h2>What Is a Zodiac Sign?</h2>
-<p>A quick guide to understanding how your birth date determines your zodiac sign and what it says about you.</p>
+<p>How the sun's position on your birth date sets your zodiac sign, and why two signs share a single month.</p>
 </div>
-<div class="intro-text">
-<p>Your zodiac sign comes down to where the sun was sitting on the day you were born. The zodiac calendar breaks the year into twelve chunks, each ruled by a different sign. People have been using this system for centuries to get a handle on personality, relationships, and life patterns.</p>
-<p>Here's the thing though — each month actually covers two zodiac signs. The switch usually happens somewhere between the 19th and 23rd. If your birthday lands right around that transition, you might feel like you've got a bit of both signs in you. Astrologers call that being "on the cusp."</p>
-<p>Some people swear by zodiac sign readings for self-discovery and figuring out relationship compatibility. Others just enjoy it as a fun way to reflect on wh. They are. Either way, there's something oddly satisfying about reading a description and thinking, "yeah, that's pretty much me."</p>
-<div class="months-list">
-<div class="month-item"><strong>January</strong> — Capricorn &amp; Aquarius</div>
-<div class="month-item"><strong>February</strong> — Aquarius &amp; Pisces</div>
-<div class="month-item"><strong>March</strong> — Pisces &amp; Aries</div>
-<div class="month-item"><strong>April</strong> — Aries &amp; Taurus</div>
-<div class="month-item"><strong>May</strong> — Taurus &amp; Gemini</div>
-<div class="month-item"><strong>June</strong> — Gemini &amp; Cancer</div>
-<div class="month-item"><strong>July</strong> — Cancer &amp; Leo</div>
-<div class="month-item"><strong>August</strong> — Leo &amp; Virgo</div>
-<div class="month-item"><strong>September</strong> — Virgo &amp; Libra</div>
-<div class="month-item"><strong>October</strong> — Libra &amp; Scorpio</div>
-<div class="month-item"><strong>November</strong> — Scorpio &amp; Sagittarius</div>
-<div class="month-item"><strong>December</strong> — Sagittarius &amp; Capricorn</div>
+<div class="intro-wrap">
+<p>Your <strong>zodiac sign</strong> is set by where the sun sat in the sky on the day you were born. The year is divided into twelve equal segments, and each one is named after a constellation. People have tracked these segments for thousands of years to look for patterns in personality, behavior, and relationships.</p>
+<p>Each month actually spans two zodiac signs. The transition usually lands between the 19th and 23rd of the month. If you were born in that window, you may notice you carry traits from both adjacent signs. The standard ranges on this page cover the vast majority of birth dates, and the zodiac sign you find here will match the standard Western reference.</p>
+<p>Use the month-by-month list below to identify your zodiac sign, then move on to a full <a href="../personality/">zodiac sign personality</a> profile or check your <a href="../compatibility/">compatibility with other zodiac signs</a> for a deeper read. The sign is the starting label. The trait, relationship, and life-pattern reads are where the zodiac sign system gets useful.</p>
+<div class="months-grid">
+<div class="month-pill"><strong>January</strong><span class="dots"><i></i><i></i></span></div>
+<div class="month-pill"><strong>February</strong><span class="dots"><i></i><i></i></span></div>
+<div class="month-pill"><strong>March</strong><span class="dots"><i></i><i></i></span></div>
+<div class="month-pill"><strong>April</strong><span class="dots"><i></i><i></i></span></div>
+<div class="month-pill"><strong>May</strong><span class="dots"><i></i><i></i></span></div>
+<div class="month-pill"><strong>June</strong><span class="dots"><i></i><i></i></span></div>
+<div class="month-pill"><strong>July</strong><span class="dots"><i></i><i></i></span></div>
+<div class="month-pill"><strong>August</strong><span class="dots"><i></i><i></i></span></div>
+<div class="month-pill"><strong>September</strong><span class="dots"><i></i><i></i></span></div>
+<div class="month-pill"><strong>October</strong><span class="dots"><i></i><i></i></span></div>
+<div class="month-pill"><strong>November</strong><span class="dots"><i></i><i></i></span></div>
+<div class="month-pill"><strong>December</strong><span class="dots"><i></i><i></i></span></div>
 </div>
 </div>
 </div>
 </section>
 
-<section class="section-alt">
+<section class="section section-soft">
 <div class="container">
 <div class="section-title">
+<span class="eyebrow-tag">Section 2</span>
 <h2>All 12 Zodiac Signs at a Glance</h2>
-<p>Here's a quick look at every zodiac sign before you dive into the month-by-month breakdown.</p>
+<p>A quick scan of every zodiac sign in the Western calendar, with the standard date range and symbol, before you dive into the month-by-month breakdown below. The card view works as a fast zodiac sign reference. The accordion below it walks through each sign by birth month with a short read on the day-level pages.</p>
 </div>
-<div class="zodiac-overview">
-<div class="zodiac-overview-card">
-<span class="sign-icon" role="img" aria-label="Aries">&#9800;</span>
-<h3>Aries</h3>
-<p>Mar 21 – Apr 19</p>
-</div>
-<div class="zodiac-overview-card">
-<span class="sign-icon" role="img" aria-label="Taurus">&#9801;</span>
-<h3>Taurus</h3>
-<p>Apr 20 – May 20</p>
-</div>
-<div class="zodiac-overview-card">
-<span class="sign-icon" role="img" aria-label="Gemini">&#9802;</span>
-<h3>Gemini</h3>
-<p>May 21 – Jun 20</p>
-</div>
-<div class="zodiac-overview-card">
-<span class="sign-icon" role="img" aria-label="Cancer">&#9803;</span>
-<h3>Cancer</h3>
-<p>Jun 21 – Jul 22</p>
-</div>
-<div class="zodiac-overview-card">
-<span class="sign-icon" role="img" aria-label="Leo">&#9804;</span>
-<h3>Leo</h3>
-<p>Jul 23 – Aug 22</p>
-</div>
-<div class="zodiac-overview-card">
-<span class="sign-icon" role="img" aria-label="Virgo">&#9805;</span>
-<h3>Virgo</h3>
-<p>Aug 23 – Sep 22</p>
-</div>
-<div class="zodiac-overview-card">
-<span class="sign-icon" role="img" aria-label="Libra">&#9806;</span>
-<h3>Libra</h3>
-<p>Sep 23 – Oct 22</p>
-</div>
-<div class="zodiac-overview-card">
-<span class="sign-icon" role="img" aria-label="Scorpio">&#9807;</span>
-<h3>Scorpio</h3>
-<p>Oct 23 – Nov 21</p>
-</div>
-<div class="zodiac-overview-card">
-<span class="sign-icon" role="img" aria-label="Sagittarius">&#9808;</span>
-<h3>Sagittarius</h3>
-<p>Nov 22 – Dec 21</p>
-</div>
-<div class="zodiac-overview-card">
-<span class="sign-icon" role="img" aria-label="Capricorn">&#9809;</span>
-<h3>Capricorn</h3>
-<p>Dec 22 – Jan 19</p>
-</div>
-<div class="zodiac-overview-card">
-<span class="sign-icon" role="img" aria-label="Aquarius">&#9810;</span>
-<h3>Aquarius</h3>
-<p>Jan 20 – Feb 18</p>
-</div>
-<div class="zodiac-overview-card">
-<span class="sign-icon" role="img" aria-label="Pisces">&#9811;</span>
-<h3>Pisces</h3>
-<p>Feb 19 – Mar 20</p>
-</div>
+<div class="signs-grid">
+<div class="sign-card"><span class="glyph" role="img" aria-label="Aries">&#9800;</span><h3>Aries</h3><div class="sign-dates">Mar 21 – Apr 19</div></div>
+<div class="sign-card"><span class="glyph" role="img" aria-label="Taurus">&#9801;</span><h3>Taurus</h3><div class="sign-dates">Apr 20 – May 20</div></div>
+<div class="sign-card"><span class="glyph" role="img" aria-label="Gemini">&#9802;</span><h3>Gemini</h3><div class="sign-dates">May 21 – Jun 20</div></div>
+<div class="sign-card"><span class="glyph" role="img" aria-label="Cancer">&#9803;</span><h3>Cancer</h3><div class="sign-dates">Jun 21 – Jul 22</div></div>
+<div class="sign-card"><span class="glyph" role="img" aria-label="Leo">&#9804;</span><h3>Leo</h3><div class="sign-dates">Jul 23 – Aug 22</div></div>
+<div class="sign-card"><span class="glyph" role="img" aria-label="Virgo">&#9805;</span><h3>Virgo</h3><div class="sign-dates">Aug 23 – Sep 22</div></div>
+<div class="sign-card"><span class="glyph" role="img" aria-label="Libra">&#9806;</span><h3>Libra</h3><div class="sign-dates">Sep 23 – Oct 22</div></div>
+<div class="sign-card"><span class="glyph" role="img" aria-label="Scorpio">&#9807;</span><h3>Scorpio</h3><div class="sign-dates">Oct 23 – Nov 21</div></div>
+<div class="sign-card"><span class="glyph" role="img" aria-label="Sagittarius">&#9808;</span><h3>Sagittarius</h3><div class="sign-dates">Nov 22 – Dec 21</div></div>
+<div class="sign-card"><span class="glyph" role="img" aria-label="Capricorn">&#9809;</span><h3>Capricorn</h3><div class="sign-dates">Dec 22 – Jan 19</div></div>
+<div class="sign-card"><span class="glyph" role="img" aria-label="Aquarius">&#9810;</span><h3>Aquarius</h3><div class="sign-dates">Jan 20 – Feb 18</div></div>
+<div class="sign-card"><span class="glyph" role="img" aria-label="Pisces">&#9811;</span><h3>Pisces</h3><div class="sign-dates">Feb 19 – Mar 20</div></div>
 </div>
 </div>
 </section>
@@ -226,221 +124,239 @@ footer a:hover{text-decoration:underline}
 <section class="section">
 <div class="container">
 <div class="section-title">
+<span class="eyebrow-tag">Section 3</span>
 <h2>Find Your Zodiac Sign by Birth Month</h2>
-<p>Tap a month to see the exact date ranges and what each zodiac sign is like for people born in that period.</p>
+<p>Tap a month to see the two zodiac sign options it covers, the exact date ranges, and a short read on what each one tends to be like. Every sign has its own entry, and each one points to a deeper zodiac sign profile when you want the full read on a specific date range.</p>
 </div>
 <div class="month-accordion">
 
-<div class="month-section">
-<div class="month-header" onclick="toggleMonth(this)">January <span class="arrow">&#9654;</span></div>
-<div class="month-content"><div class="month-inner">
+<div class="month-block">
+<div class="month-head" onclick="toggleMonth(this)"><span class="left"><span class="num">01</span>January</span><span class="arrow">&#9654;</span></div>
+<div class="month-content"><div class="month-content-inner">
 <div class="sign-block">
-<h3 class="sign-name">Capricorn (January 1 – 19)</h3>
+<h3 class="sign-name"><span class="glyph">&#9809;</span>Capricorn (January 1 – 19)</h3>
+<p>January Capricorns set a clear goal and stick with it until the work is done. They are disciplined, practical, and rarely knocked off course by a setback. The friend who always has a five-year plan is usually a Capricorn.</p>
 <div class="date-list"><a href="1/zodiac-sign-for-january-1.html">1</a><a href="1/zodiac-sign-for-january-2.html">2</a><a href="1/zodiac-sign-for-january-3.html">3</a><a href="1/zodiac-sign-for-january-4.html">4</a><a href="1/zodiac-sign-for-january-5.html">5</a><a href="1/zodiac-sign-for-january-6.html">6</a><a href="1/zodiac-sign-for-january-7.html">7</a><a href="1/zodiac-sign-for-january-8.html">8</a><a href="1/zodiac-sign-for-january-9.html">9</a><a href="1/zodiac-sign-for-january-10.html">10</a><a href="1/zodiac-sign-for-january-11.html">11</a><a href="1/zodiac-sign-for-january-12.html">12</a><a href="1/zodiac-sign-for-january-13.html">13</a><a href="1/zodiac-sign-for-january-14.html">14</a><a href="1/zodiac-sign-for-january-15.html">15</a><a href="1/zodiac-sign-for-january-16.html">16</a><a href="1/zodiac-sign-for-january-17.html">17</a><a href="1/zodiac-sign-for-january-18.html">18</a><a href="1/zodiac-sign-for-january-19.html">19</a></div>
-<p class="sign-desc">January Capricorns are the type who set a goal and just keep going unti. They get there. They're disciplined, practical, and not easily thrown off course. If you know someone who always seems to have their life together, there's a good chance they're a Capricorn.</p>
 </div>
 <div class="sign-block">
-<h3 class="sign-name">Aquarius (January 20 – 31)</h3>
+<h3 class="sign-name"><span class="glyph">&#9810;</span>Aquarius (January 20 – 31)</h3>
+<p>January Aquarians work at their own pace and follow their own logic. They are independent thinkers, slow to follow a crowd, and often drawn to ideas the rest of the room has not heard yet.</p>
 <div class="date-list"><a href="1/zodiac-sign-for-january-20.html">20</a><a href="1/zodiac-sign-for-january-21.html">21</a><a href="1/zodiac-sign-for-january-22.html">22</a><a href="1/zodiac-sign-for-january-23.html">23</a><a href="1/zodiac-sign-for-january-24.html">24</a><a href="1/zodiac-sign-for-january-25.html">25</a><a href="1/zodiac-sign-for-january-26.html">26</a><a href="1/zodiac-sign-for-january-27.html">27</a><a href="1/zodiac-sign-for-january-28.html">28</a><a href="1/zodiac-sign-for-january-29.html">29</a><a href="1/zodiac-sign-for-january-30.html">30</a><a href="1/zodiac-sign-for-january-31.html">31</a></div>
-<p class="sign-desc">Aquarians born in January are the ones who march to their own beat. They're independent thinkers who don't really care about fitting in. You'll often find them championing unconventional ideas or working on something that most people haven't even heard of yet.</p>
 </div>
 </div></div>
 </div>
 
-<div class="month-section">
-<div class="month-header" onclick="toggleMonth(this)">February <span class="arrow">&#9654;</span></div>
-<div class="month-content"><div class="month-inner">
+<div class="month-block">
+<div class="month-head" onclick="toggleMonth(this)"><span class="left"><span class="num">02</span>February</span><span class="arrow">&#9654;</span></div>
+<div class="month-content"><div class="month-content-inner">
 <div class="sign-block">
-<h3 class="sign-name">Aquarius (February 1 – 18)</h3>
+<h3 class="sign-name"><span class="glyph">&#9810;</span>Aquarius (February 1 – 18)</h3>
+<p>February Aquarians think in systems. They get fired up about causes, frameworks, and long-term ideas, and they tend to push back on any rule that does not hold up to scrutiny.</p>
 <div class="date-list"><a href="2/zodiac-sign-for-february-1.html">1</a><a href="2/zodiac-sign-for-february-2.html">2</a><a href="2/zodiac-sign-for-february-3.html">3</a><a href="2/zodiac-sign-for-february-4.html">4</a><a href="2/zodiac-sign-for-february-5.html">5</a><a href="2/zodiac-sign-for-february-6.html">6</a><a href="2/zodiac-sign-for-february-7.html">7</a><a href="2/zodiac-sign-for-february-8.html">8</a><a href="2/zodiac-sign-for-february-9.html">9</a><a href="2/zodiac-sign-for-february-10.html">10</a><a href="2/zodiac-sign-for-february-11.html">11</a><a href="2/zodiac-sign-for-february-12.html">12</a><a href="2/zodiac-sign-for-february-13.html">13</a><a href="2/zodiac-sign-for-february-14.html">14</a><a href="2/zodiac-sign-for-february-15.html">15</a><a href="2/zodiac-sign-for-february-16.html">16</a><a href="2/zodiac-sign-for-february-17.html">17</a><a href="2/zodiac-sign-for-february-18.html">18</a></div>
-<p class="sign-desc">February Aquarians are big-picture thinkers. They're the type who get fired up about causes and ideas that could change the world. Not exactly the stay-in-your-lane kind of people — and that's what makes them interesting.</p>
 </div>
 <div class="sign-block">
-<h3 class="sign-name">Pisces (February 19 – 29)</h3>
+<h3 class="sign-name"><span class="glyph">&#9811;</span>Pisces (February 19 – 29)</h3>
+<p>February Pisces pick up on what people around them are feeling without being told. They are creative, empathetic, and comfortable spending long stretches inside their own head.</p>
 <div class="date-list"><a href="2/zodiac-sign-for-february-19.html">19</a><a href="2/zodiac-sign-for-february-20.html">20</a><a href="2/zodiac-sign-for-february-21.html">21</a><a href="2/zodiac-sign-for-february-22.html">22</a><a href="2/zodiac-sign-for-february-23.html">23</a><a href="2/zodiac-sign-for-february-24.html">24</a><a href="2/zodiac-sign-for-february-25.html">25</a><a href="2/zodiac-sign-for-february-26.html">26</a><a href="2/zodiac-sign-for-february-27.html">27</a><a href="2/zodiac-sign-for-february-28.html">28</a><a href="2/zodiac-sign-for-february-29.html">29</a></div>
-<p class="sign-desc">Pisces born in February are deeply intuitive and tend to pick up on what other people are feeling without anyone saying a word. They're creative, compassionate, and sometimes get lost in their own imagination — in the best way possible.</p>
 </div>
 </div></div>
 </div>
 
-<div class="month-section">
-<div class="month-header" onclick="toggleMonth(this)">March <span class="arrow">&#9654;</span></div>
-<div class="month-content"><div class="month-inner">
+<div class="month-block">
+<div class="month-head" onclick="toggleMonth(this)"><span class="left"><span class="num">03</span>March</span><span class="arrow">&#9654;</span></div>
+<div class="month-content"><div class="month-content-inner">
 <div class="sign-block">
-<h3 class="sign-name">Pisces (March 1 – 20)</h3>
+<h3 class="sign-name"><span class="glyph">&#9811;</span>Pisces (March 1 – 20)</h3>
+<p>March Pisces lean into the arts, music, and writing. Their sensitivity shows up in how they listen and how they create, and it tends to be one of their stronger social tools.</p>
 <div class="date-list"><a href="3/zodiac-sign-for-march-1.html">1</a><a href="3/zodiac-sign-for-march-2.html">2</a><a href="3/zodiac-sign-for-march-3.html">3</a><a href="3/zodiac-sign-for-march-4.html">4</a><a href="3/zodiac-sign-for-march-5.html">5</a><a href="3/zodiac-sign-for-march-6.html">6</a><a href="3/zodiac-sign-for-march-7.html">7</a><a href="3/zodiac-sign-for-march-8.html">8</a><a href="3/zodiac-sign-for-march-9.html">9</a><a href="3/zodiac-sign-for-march-10.html">10</a><a href="3/zodiac-sign-for-march-11.html">11</a><a href="3/zodiac-sign-for-march-12.html">12</a><a href="3/zodiac-sign-for-march-13.html">13</a><a href="3/zodiac-sign-for-march-14.html">14</a><a href="3/zodiac-sign-for-march-15.html">15</a><a href="3/zodiac-sign-for-march-16.html">16</a><a href="3/zodiac-sign-for-march-17.html">17</a><a href="3/zodiac-sign-for-march-18.html">18</a><a href="3/zodiac-sign-for-march-19.html">19</a><a href="3/zodiac-sign-for-march-20.html">20</a></div>
-<p class="sign-desc">March Pisces are the dreamy, artistic type. They're often drawn to music, writing, or anything that lets them express what's going on inside. Their sensitivity isn't a weakness — it's actually what makes them so good at connecting with people.</p>
 </div>
 <div class="sign-block">
-<h3 class="sign-name">Aries (March 21 – 31)</h3>
+<h3 class="sign-name"><span class="glyph">&#9800;</span>Aries (March 21 – 31)</h3>
+<p>March Aries move first and adjust on the way. They have a high energy level, speak directly, and are usually the one to take on a task nobody else has picked up.</p>
 <div class="date-list"><a href="3/zodiac-sign-for-march-21.html">21</a><a href="3/zodiac-sign-for-march-22.html">22</a><a href="3/zodiac-sign-for-march-23.html">23</a><a href="3/zodiac-sign-for-march-24.html">24</a><a href="3/zodiac-sign-for-march-25.html">25</a><a href="3/zodiac-sign-for-march-26.html">26</a><a href="3/zodiac-sign-for-march-27.html">27</a><a href="3/zodiac-sign-for-march-28.html">28</a><a href="3/zodiac-sign-for-march-29.html">29</a><a href="3/zodiac-sign-for-march-30.html">30</a><a href="3/zodiac-sign-for-march-31.html">31</a></div>
-<p class="sign-desc">Aries born in March are the ones who jump in first and figure it out as they go. They're energetic, direct, and not afraid of a challenge. When something needs doing, they're usually the ones who just get on with it.</p>
 </div>
 </div></div>
 </div>
 
-<div class="month-section">
-<div class="month-header" onclick="toggleMonth(this)">April <span class="arrow">&#9654;</span></div>
-<div class="month-content"><div class="month-inner">
+<div class="month-block">
+<div class="month-head" onclick="toggleMonth(this)"><span class="left"><span class="num">04</span>April</span><span class="arrow">&#9654;</span></div>
+<div class="month-content"><div class="month-content-inner">
 <div class="sign-block">
-<h3 class="sign-name">Aries (April 1 – 19)</h3>
+<h3 class="sign-name"><span class="glyph">&#9800;</span>Aries (April 1 – 19)</h3>
+<p>April Aries value their independence and keep a busy calendar. They pick up new projects quickly and pull other people into them with their pace.</p>
 <div class="date-list"><a href="4/zodiac-sign-for-april-1.html">1</a><a href="4/zodiac-sign-for-april-2.html">2</a><a href="4/zodiac-sign-for-april-3.html">3</a><a href="4/zodiac-sign-for-april-4.html">4</a><a href="4/zodiac-sign-for-april-5.html">5</a><a href="4/zodiac-sign-for-april-6.html">6</a><a href="4/zodiac-sign-for-april-7.html">7</a><a href="4/zodiac-sign-for-april-8.html">8</a><a href="4/zodiac-sign-for-april-9.html">9</a><a href="4/zodiac-sign-for-april-10.html">10</a><a href="4/zodiac-sign-for-april-11.html">11</a><a href="4/zodiac-sign-for-april-12.html">12</a><a href="4/zodiac-sign-for-april-13.html">13</a><a href="4/zodiac-sign-for-april-14.html">14</a><a href="4/zodiac-sign-for-april-15.html">15</a><a href="4/zodiac-sign-for-april-16.html">16</a><a href="4/zodiac-sign-for-april-17.html">17</a><a href="4/zodiac-sign-for-april-18.html">18</a><a href="4/zodiac-sign-for-april-19.html">19</a></div>
-<p class="sign-desc">April Aries are fiercely independent and full of drive. They've got this contagious energy that pulls people in, and they're always up for trying something new. Boring is not really in their vocabulary.</p>
 </div>
 <div class="sign-block">
-<h3 class="sign-name">Taurus (April 20 – 30)</h3>
+<h3 class="sign-name"><span class="glyph">&#9801;</span>Taurus (April 20 – 30)</h3>
+<p>April Taureans are steady and grounded. They like good food, a calm routine, and a small circle of close people. Once they commit to a person, project, or routine, they stay with it for years.</p>
 <div class="date-list"><a href="4/zodiac-sign-for-april-20.html">20</a><a href="4/zodiac-sign-for-april-21.html">21</a><a href="4/zodiac-sign-for-april-22.html">22</a><a href="4/zodiac-sign-for-april-23.html">23</a><a href="4/zodiac-sign-for-april-24.html">24</a><a href="4/zodiac-sign-for-april-25.html">25</a><a href="4/zodiac-sign-for-april-26.html">26</a><a href="4/zodiac-sign-for-april-27.html">27</a><a href="4/zodiac-sign-for-april-28.html">28</a><a href="4/zodiac-sign-for-april-29.html">29</a><a href="4/zodiac-sign-for-april-30.html">30</a></div>
-<p class="sign-desc">Taurus born in April are the steady, reliable types. They appreciate good food, comfort, and the simple pleasures in life. Onc. They commit to something — a person, a project, a goal — they're all in, for the long haul.</p>
 </div>
 </div></div>
 </div>
 
-<div class="month-section">
-<div class="month-header" onclick="toggleMonth(this)">May <span class="arrow">&#9654;</span></div>
-<div class="month-content"><div class="month-inner">
+<div class="month-block">
+<div class="month-head" onclick="toggleMonth(this)"><span class="left"><span class="num">05</span>May</span><span class="arrow">&#9654;</span></div>
+<div class="month-content"><div class="month-content-inner">
 <div class="sign-block">
-<h3 class="sign-name">Taurus (May 1 – 20)</h3>
+<h3 class="sign-name"><span class="glyph">&#9801;</span>Taurus (May 1 – 20)</h3>
+<p>May Taureans work patiently toward long-term goals. They have a strong eye for design and comfort, and they prefer to build things that last rather than chase quick wins.</p>
 <div class="date-list"><a href="5/zodiac-sign-for-may-1.html">1</a><a href="5/zodiac-sign-for-may-2.html">2</a><a href="5/zodiac-sign-for-may-3.html">3</a><a href="5/zodiac-sign-for-may-4.html">4</a><a href="5/zodiac-sign-for-may-5.html">5</a><a href="5/zodiac-sign-for-may-6.html">6</a><a href="5/zodiac-sign-for-may-7.html">7</a><a href="5/zodiac-sign-for-may-8.html">8</a><a href="5/zodiac-sign-for-may-9.html">9</a><a href="5/zodiac-sign-for-may-10.html">10</a><a href="5/zodiac-sign-for-may-11.html">11</a><a href="5/zodiac-sign-for-may-12.html">12</a><a href="5/zodiac-sign-for-may-13.html">13</a><a href="5/zodiac-sign-for-may-14.html">14</a><a href="5/zodiac-sign-for-may-15.html">15</a><a href="5/zodiac-sign-for-may-16.html">16</a><a href="5/zodiac-sign-for-may-17.html">17</a><a href="5/zodiac-sign-for-may-18.html">18</a><a href="5/zodiac-sign-for-may-19.html">19</a><a href="5/zodiac-sign-for-may-20.html">20</a></div>
-<p class="sign-desc">May Taureans are determined and have a real appreciation for beauty and comfort. They're the kind of people who build things to last — relationships, careers, homes. Patience is definitely one of their strong suits.</p>
 </div>
 <div class="sign-block">
-<h3 class="sign-name">Gemini (May 21 – 31)</h3>
+<h3 class="sign-name"><span class="glyph">&#9802;</span>Gemini (May 21 – 31)</h3>
+<p>May Geminis are quick conversationalists with a wide range of interests. They learn a little about a lot of subjects, and they tend to be the person in the room who can move the chat forward.</p>
 <div class="date-list"><a href="5/zodiac-sign-for-may-21.html">21</a><a href="5/zodiac-sign-for-may-22.html">22</a><a href="5/zodiac-sign-for-may-23.html">23</a><a href="5/zodiac-sign-for-may-24.html">24</a><a href="5/zodiac-sign-for-may-25.html">25</a><a href="5/zodiac-sign-for-may-26.html">26</a><a href="5/zodiac-sign-for-may-27.html">27</a><a href="5/zodiac-sign-for-may-28.html">28</a><a href="5/zodiac-sign-for-may-29.html">29</a><a href="5/zodiac-sign-for-may-30.html">30</a><a href="5/zodiac-sign-for-may-31.html">31</a></div>
-<p class="sign-desc">Geminis born in May are quick on their feet and always up for a good conversation. They're curious about pretty much everything and usually have a little bit of knowledge about a lot of different things. Never a dull moment with a Gemini around.</p>
 </div>
 </div></div>
 </div>
 
-<div class="month-section">
-<div class="month-header active" onclick="toggleMonth(this)">June <span class="arrow">&#9654;</span></div>
-<div class="month-content open"><div class="month-inner">
+<div class="month-block">
+<div class="month-head" onclick="toggleMonth(this)"><span class="left"><span class="num">06</span>June</span><span class="arrow">&#9654;</span></div>
+<div class="month-content"><div class="month-content-inner">
 <div class="sign-block">
-<h3 class="sign-name">Gemini (June 1 – 20)</h3>
+<h3 class="sign-name"><span class="glyph">&#9802;</span>Gemini (June 1 – 20)</h3>
+<p>June Geminis read a room fast and adjust to whoever they are talking to. Their flexibility makes them a useful colleague and a low-friction friend across different social groups.</p>
 <div class="date-list"><a href="6/zodiac-sign-for-june-1.html">1</a><a href="6/zodiac-sign-for-june-2.html">2</a><a href="6/zodiac-sign-for-june-3.html">3</a><a href="6/zodiac-sign-for-june-4.html">4</a><a href="6/zodiac-sign-for-june-5.html">5</a><a href="6/zodiac-sign-for-june-6.html">6</a><a href="6/zodiac-sign-for-june-7.html">7</a><a href="6/zodiac-sign-for-june-8.html">8</a><a href="6/zodiac-sign-for-june-9.html">9</a><a href="6/zodiac-sign-for-june-10.html">10</a><a href="6/zodiac-sign-for-june-11.html">11</a><a href="6/zodiac-sign-for-june-12.html">12</a><a href="6/zodiac-sign-for-june-13.html">13</a><a href="6/zodiac-sign-for-june-14.html">14</a><a href="6/zodiac-sign-for-june-15.html">15</a><a href="6/zodiac-sign-for-june-16.html">16</a><a href="6/zodiac-sign-for-june-17.html">17</a><a href="6/zodiac-sign-for-june-18.html">18</a><a href="6/zodiac-sign-for-june-19.html">19</a><a href="6/zodiac-sign-for-june-20.html">20</a></div>
-<p class="sign-desc">June Geminis are socially adaptable and can chat with just about anyone. Their ability to see things from multiple angles makes them great at reading a room and adjusting their approach accordingly.</p>
 </div>
 <div class="sign-block">
-<h3 class="sign-name">Cancer (June 21 – 30)</h3>
+<h3 class="sign-name"><span class="glyph">&#9803;</span>Cancer (June 21 – 30)</h3>
+<p>June Cancers are loyal and emotionally aware. They pay close attention to the people around them, and they tend to be the one who notices when someone is having a hard week.</p>
 <div class="date-list"><a href="6/zodiac-sign-for-june-21.html">21</a><a href="6/zodiac-sign-for-june-22.html">22</a><a href="6/zodiac-sign-for-june-23.html">23</a><a href="6/zodiac-sign-for-june-24.html">24</a><a href="6/zodiac-sign-for-june-25.html">25</a><a href="6/zodiac-sign-for-june-26.html">26</a><a href="6/zodiac-sign-for-june-27.html">27</a><a href="6/zodiac-sign-for-june-28.html">28</a><a href="6/zodiac-sign-for-june-29.html">29</a><a href="6/zodiac-sign-for-june-30.html">30</a></div>
-<p class="sign-desc">Cancers born in June are the nurturing type. They're loyal, emotionally aware, and really good at making people feel at home. If you need someone who'll actually listen and care, a Cancer is usually a safe bet.</p>
 </div>
 </div></div>
 </div>
 
-<div class="month-section">
-<div class="month-header" onclick="toggleMonth(this)">July <span class="arrow">&#9654;</span></div>
-<div class="month-content"><div class="month-inner">
+<div class="month-block open">
+<div class="month-head active" onclick="toggleMonth(this)"><span class="left"><span class="num">07</span>July</span><span class="arrow">&#9654;</span></div>
+<div class="month-content"><div class="month-content-inner">
 <div class="sign-block">
-<h3 class="sign-name">Cancer (July 1 – 22)</h3>
+<h3 class="sign-name"><span class="glyph">&#9803;</span>Cancer (July 1 – 22)</h3>
+<p>July Cancers prioritize family and home. They remember how people felt during a conversation, not only what was said, and they act on that memory in small, consistent ways.</p>
 <div class="date-list"><a href="7/zodiac-sign-for-july-1.html">1</a><a href="7/zodiac-sign-for-july-2.html">2</a><a href="7/zodiac-sign-for-july-3.html">3</a><a href="7/zodiac-sign-for-july-4.html">4</a><a href="7/zodiac-sign-for-july-5.html">5</a><a href="7/zodiac-sign-for-july-6.html">6</a><a href="7/zodiac-sign-for-july-7.html">7</a><a href="7/zodiac-sign-for-july-8.html">8</a><a href="7/zodiac-sign-for-july-9.html">9</a><a href="7/zodiac-sign-for-july-10.html">10</a><a href="7/zodiac-sign-for-july-11.html">11</a><a href="7/zodiac-sign-for-july-12.html">12</a><a href="7/zodiac-sign-for-july-13.html">13</a><a href="7/zodiac-sign-for-july-14.html">14</a><a href="7/zodiac-sign-for-july-15.html">15</a><a href="7/zodiac-sign-for-july-16.html">16</a><a href="7/zodiac-sign-for-july-17.html">17</a><a href="7/zodiac-sign-for-july-18.html">18</a><a href="7/zodiac-sign-for-july-19.html">19</a><a href="7/zodiac-sign-for-july-20.html">20</a><a href="7/zodiac-sign-for-july-21.html">21</a><a href="7/zodiac-sign-for-july-22.html">22</a></div>
-<p class="sign-desc">July Cancers are protective and deeply intuitive. Family and home tend to be really important to them, and they've got this emotional depth that runs surprisingly far. They remember how you felt, not just what you said.</p>
 </div>
 <div class="sign-block">
-<h3 class="sign-name">Leo (July 23 – 31)</h3>
+<h3 class="sign-name"><span class="glyph">&#9804;</span>Leo (July 23 – 31)</h3>
+<p>July Leos are confident and warm. They lead by example and they put real effort into the people and projects they care about, which is usually most of what is on their desk.</p>
 <div class="date-list"><a href="7/zodiac-sign-for-july-23.html">23</a><a href="7/zodiac-sign-for-july-24.html">24</a><a href="7/zodiac-sign-for-july-25.html">25</a><a href="7/zodiac-sign-for-july-26.html">26</a><a href="7/zodiac-sign-for-july-27.html">27</a><a href="7/zodiac-sign-for-july-28.html">28</a><a href="7/zodiac-sign-for-july-29.html">29</a><a href="7/zodiac-sign-for-july-30.html">30</a><a href="7/zodiac-sign-for-july-31.html">31</a></div>
-<p class="sign-desc">Leos born in July are charismatic and naturally draw attention without even trying. They're generous, confident, and tend to lead with warmth rather than authority. People just want to be around them.</p>
 </div>
 </div></div>
 </div>
 
-<div class="month-section">
-<div class="month-header" onclick="toggleMonth(this)">August <span class="arrow">&#9654;</span></div>
-<div class="month-content"><div class="month-inner">
+<div class="month-block">
+<div class="month-head" onclick="toggleMonth(this)"><span class="left"><span class="num">08</span>August</span><span class="arrow">&#9654;</span></div>
+<div class="month-content"><div class="month-content-inner">
 <div class="sign-block">
-<h3 class="sign-name">Leo (August 1 – 22)</h3>
+<h3 class="sign-name"><span class="glyph">&#9804;</span>Leo (August 1 – 22)</h3>
+<p>August Leos channel their energy into work they care about. Creative projects, leadership roles, and high-visibility tasks are where they tend to do their best work.</p>
 <div class="date-list"><a href="8/zodiac-sign-for-august-1.html">1</a><a href="8/zodiac-sign-for-august-2.html">2</a><a href="8/zodiac-sign-for-august-3.html">3</a><a href="8/zodiac-sign-for-august-4.html">4</a><a href="8/zodiac-sign-for-august-5.html">5</a><a href="8/zodiac-sign-for-august-6.html">6</a><a href="8/zodiac-sign-for-august-7.html">7</a><a href="8/zodiac-sign-for-august-8.html">8</a><a href="8/zodiac-sign-for-august-9.html">9</a><a href="8/zodiac-sign-for-august-10.html">10</a><a href="8/zodiac-sign-for-august-11.html">11</a><a href="8/zodiac-sign-for-august-12.html">12</a><a href="8/zodiac-sign-for-august-13.html">13</a><a href="8/zodiac-sign-for-august-14.html">14</a><a href="8/zodiac-sign-for-august-15.html">15</a><a href="8/zodiac-sign-for-august-16.html">16</a><a href="8/zodiac-sign-for-august-17.html">17</a><a href="8/zodiac-sign-for-august-18.html">18</a><a href="8/zodiac-sign-for-august-19.html">19</a><a href="8/zodiac-sign-for-august-20.html">20</a><a href="8/zodiac-sign-for-august-21.html">21</a><a href="8/zodiac-sign-for-august-22.html">22</a></div>
-<p class="sign-desc">August Leos are bold and passionate, with a natural talent for self-expression. They do their best work when they're pursuing somethin. They genuinely care about. Creativity isn't just a hobby for them — it's a way of life.</p>
 </div>
 <div class="sign-block">
-<h3 class="sign-name">Virgo (August 23 – 31)</h3>
+<h3 class="sign-name"><span class="glyph">&#9805;</span>Virgo (August 23 – 31)</h3>
+<p>August Virgos are detail-oriented and reliable. They catch the small issues that slip past other people, and they take the time to fix them rather than flagging them and moving on.</p>
 <div class="date-list"><a href="8/zodiac-sign-for-august-23.html">23</a><a href="8/zodiac-sign-for-august-24.html">24</a><a href="8/zodiac-sign-for-august-25.html">25</a><a href="8/zodiac-sign-for-august-26.html">26</a><a href="8/zodiac-sign-for-august-27.html">27</a><a href="8/zodiac-sign-for-august-28.html">28</a><a href="8/zodiac-sign-for-august-29.html">29</a><a href="8/zodiac-sign-for-august-30.html">30</a><a href="8/zodiac-sign-for-august-31.html">31</a></div>
-<p class="sign-desc">Virgos born in August are analytical and detail-oriented. They're the ones who notice what everyone else misses and actually do something about it. Helpful to a fault. They find real satisfaction in making things better for the people around them.</p>
 </div>
 </div></div>
 </div>
 
-<div class="month-section">
-<div class="month-header" onclick="toggleMonth(this)">September <span class="arrow">&#9654;</span></div>
-<div class="month-content"><div class="month-inner">
+<div class="month-block">
+<div class="month-head" onclick="toggleMonth(this)"><span class="left"><span class="num">09</span>September</span><span class="arrow">&#9654;</span></div>
+<div class="month-content"><div class="month-content-inner">
 <div class="sign-block">
-<h3 class="sign-name">Virgo (September 1 – 22)</h3>
+<h3 class="sign-name"><span class="glyph">&#9805;</span>Virgo (September 1 – 22)</h3>
+<p>September Virgos look at a messy situation and immediately see a structure for fixing it. They apply the same care to small tasks that other people reserve for big ones.</p>
 <div class="date-list"><a href="9/zodiac-sign-for-september-1.html">1</a><a href="9/zodiac-sign-for-september-2.html">2</a><a href="9/zodiac-sign-for-september-3.html">3</a><a href="9/zodiac-sign-for-september-4.html">4</a><a href="9/zodiac-sign-for-september-5.html">5</a><a href="9/zodiac-sign-for-september-6.html">6</a><a href="9/zodiac-sign-for-september-7.html">7</a><a href="9/zodiac-sign-for-september-8.html">8</a><a href="9/zodiac-sign-for-september-9.html">9</a><a href="9/zodiac-sign-for-september-10.html">10</a><a href="9/zodiac-sign-for-september-11.html">11</a><a href="9/zodiac-sign-for-september-12.html">12</a><a href="9/zodiac-sign-for-september-13.html">13</a><a href="9/zodiac-sign-for-september-14.html">14</a><a href="9/zodiac-sign-for-september-15.html">15</a><a href="9/zodiac-sign-for-september-16.html">16</a><a href="9/zodiac-sign-for-september-17.html">17</a><a href="9/zodiac-sign-for-september-18.html">18</a><a href="9/zodiac-sign-for-september-19.html">19</a><a href="9/zodiac-sign-for-september-20.html">20</a><a href="9/zodiac-sign-for-september-21.html">21</a><a href="9/zodiac-sign-for-september-22.html">22</a></div>
-<p class="sign-desc">September Virgos are meticulous and practical. They've got a sharp eye for detail and a knack for solving problems that seem impossible to everyone else. Where others see chaos. They see a system waiting to be organized.</p>
 </div>
 <div class="sign-block">
-<h3 class="sign-name">Libra (September 23 – 30)</h3>
+<h3 class="sign-name"><span class="glyph">&#9806;</span>Libra (September 23 – 30)</h3>
+<p>September Libras are steady negotiators. They listen to all sides, weigh the trade-offs, and usually find a compromise that the room can accept.</p>
 <div class="date-list"><a href="9/zodiac-sign-for-september-23.html">23</a><a href="9/zodiac-sign-for-september-24.html">24</a><a href="9/zodiac-sign-for-september-25.html">25</a><a href="9/zodiac-sign-for-september-26.html">26</a><a href="9/zodiac-sign-for-september-27.html">27</a><a href="9/zodiac-sign-for-september-28.html">28</a><a href="9/zodiac-sign-for-september-29.html">29</a><a href="9/zodiac-sign-for-september-30.html">30</a></div>
-<p class="sign-desc">Libras born in September are diplomatic and have a real talent for keeping the peace. They value fairness and have pretty refined taste. If there's a disagreement in the room, the Libra is usually the one who finds common ground.</p>
 </div>
 </div></div>
 </div>
 
-<div class="month-section">
-<div class="month-header" onclick="toggleMonth(this)">October <span class="arrow">&#9654;</span></div>
-<div class="month-content"><div class="month-inner">
+<div class="month-block">
+<div class="month-head" onclick="toggleMonth(this)"><span class="left"><span class="num">10</span>October</span><span class="arrow">&#9654;</span></div>
+<div class="month-content"><div class="month-content-inner">
 <div class="sign-block">
-<h3 class="sign-name">Libra (October 1 – 22)</h3>
+<h3 class="sign-name"><span class="glyph">&#9806;</span>Libra (October 1 – 22)</h3>
+<p>October Libras work well in partnerships. They handle the social side of any project, from client calls to internal alignment, and they keep the team moving at a calm pace.</p>
 <div class="date-list"><a href="10/zodiac-sign-for-october-1.html">1</a><a href="10/zodiac-sign-for-october-2.html">2</a><a href="10/zodiac-sign-for-october-3.html">3</a><a href="10/zodiac-sign-for-october-4.html">4</a><a href="10/zodiac-sign-for-october-5.html">5</a><a href="10/zodiac-sign-for-october-6.html">6</a><a href="10/zodiac-sign-for-october-7.html">7</a><a href="10/zodiac-sign-for-october-8.html">8</a><a href="10/zodiac-sign-for-october-9.html">9</a><a href="10/zodiac-sign-for-october-10.html">10</a><a href="10/zodiac-sign-for-october-11.html">11</a><a href="10/zodiac-sign-for-october-12.html">12</a><a href="10/zodiac-sign-for-october-13.html">13</a><a href="10/zodiac-sign-for-october-14.html">14</a><a href="10/zodiac-sign-for-october-15.html">15</a><a href="10/zodiac-sign-for-october-16.html">16</a><a href="10/zodiac-sign-for-october-17.html">17</a><a href="10/zodiac-sign-for-october-18.html">18</a><a href="10/zodiac-sign-for-october-19.html">19</a><a href="10/zodiac-sign-for-october-20.html">20</a><a href="10/zodiac-sign-for-october-21.html">21</a><a href="10/zodiac-sign-for-october-22.html">22</a></div>
-<p class="sign-desc">October Libras are graceful and genuinely value partnership. Their social intelligence is off the charts . They know how to make people feel heard and appreciated. It's no surpris. They tend to be well-liked in every circl. They move in.</p>
 </div>
 <div class="sign-block">
-<h3 class="sign-name">Scorpio (October 23 – 31)</h3>
+<h3 class="sign-name"><span class="glyph">&#9807;</span>Scorpio (October 23 – 31)</h3>
+<p>October Scorpios are direct and observant. They ask the questions that cut to the core of an issue, and they expect the people around them to do the same.</p>
 <div class="date-list"><a href="10/zodiac-sign-for-october-23.html">23</a><a href="10/zodiac-sign-for-october-24.html">24</a><a href="10/zodiac-sign-for-october-25.html">25</a><a href="10/zodiac-sign-for-october-26.html">26</a><a href="10/zodiac-sign-for-october-27.html">27</a><a href="10/zodiac-sign-for-october-28.html">28</a><a href="10/zodiac-sign-for-october-29.html">29</a><a href="10/zodiac-sign-for-october-30.html">30</a><a href="10/zodiac-sign-for-october-31.html">31</a></div>
-<p class="sign-desc">Scorpios born in October are intense and perceptive. They don't do small talk . They want to know what really matters. Onc. They form a bond with someone, it's deep and usually unbreakable.</p>
 </div>
 </div></div>
 </div>
 
-<div class="month-section">
-<div class="month-header" onclick="toggleMonth(this)">November <span class="arrow">&#9654;</span></div>
-<div class="month-content"><div class="month-inner">
+<div class="month-block">
+<div class="month-head" onclick="toggleMonth(this)"><span class="left"><span class="num">11</span>November</span><span class="arrow">&#9654;</span></div>
+<div class="month-content"><div class="month-content-inner">
 <div class="sign-block">
-<h3 class="sign-name">Scorpio (November 1 – 21)</h3>
+<h3 class="sign-name"><span class="glyph">&#9807;</span>Scorpio (November 1 – 21)</h3>
+<p>November Scorpios are resourceful under pressure. They hold steady in difficult situations and put in the work that gets a project across the line when others have moved on.</p>
 <div class="date-list"><a href="11/zodiac-sign-for-november-1.html">1</a><a href="11/zodiac-sign-for-november-2.html">2</a><a href="11/zodiac-sign-for-november-3.html">3</a><a href="11/zodiac-sign-for-november-4.html">4</a><a href="11/zodiac-sign-for-november-5.html">5</a><a href="11/zodiac-sign-for-november-6.html">6</a><a href="11/zodiac-sign-for-november-7.html">7</a><a href="11/zodiac-sign-for-november-8.html">8</a><a href="11/zodiac-sign-for-november-9.html">9</a><a href="11/zodiac-sign-for-november-10.html">10</a><a href="11/zodiac-sign-for-november-11.html">11</a><a href="11/zodiac-sign-for-november-12.html">12</a><a href="11/zodiac-sign-for-november-13.html">13</a><a href="11/zodiac-sign-for-november-14.html">14</a><a href="11/zodiac-sign-for-november-15.html">15</a><a href="11/zodiac-sign-for-november-16.html">16</a><a href="11/zodiac-sign-for-november-17.html">17</a><a href="11/zodiac-sign-for-november-18.html">18</a><a href="11/zodiac-sign-for-november-19.html">19</a><a href="11/zodiac-sign-for-november-20.html">20</a><a href="11/zodiac-sign-for-november-21.html">21</a></div>
-<p class="sign-desc">November Scorpios are resourceful and determined. They've got this magnetic presence that pulls people in, and their emotional resilience is pretty remarkable. Whatever life throws at them. They find a way through.</p>
 </div>
 <div class="sign-block">
-<h3 class="sign-name">Sagittarius (November 22 – 30)</h3>
+<h3 class="sign-name"><span class="glyph">&#9808;</span>Sagittarius (November 22 – 30)</h3>
+<p>November Sagittarians keep an open calendar and an open mind. Travel, new fields of study, and projects that take them somewhere unfamiliar tend to bring out their best work.</p>
 <div class="date-list"><a href="11/zodiac-sign-for-november-22.html">22</a><a href="11/zodiac-sign-for-november-23.html">23</a><a href="11/zodiac-sign-for-november-24.html">24</a><a href="11/zodiac-sign-for-november-25.html">25</a><a href="11/zodiac-sign-for-november-26.html">26</a><a href="11/zodiac-sign-for-november-27.html">27</a><a href="11/zodiac-sign-for-november-28.html">28</a><a href="11/zodiac-sign-for-november-29.html">29</a><a href="11/zodiac-sign-for-november-30.html">30</a></div>
-<p class="sign-desc">Sagittarians born in November are adventurous and optimistic by nature. They're always looking for the next thing — a new place, a new idea, a new perspective. Being tied down isn't really their thing.</p>
 </div>
 </div></div>
 </div>
 
-<div class="month-section">
-<div class="month-header" onclick="toggleMonth(this)">December <span class="arrow">&#9654;</span></div>
-<div class="month-content"><div class="month-inner">
+<div class="month-block">
+<div class="month-head" onclick="toggleMonth(this)"><span class="left"><span class="num">12</span>December</span><span class="arrow">&#9654;</span></div>
+<div class="month-content"><div class="month-content-inner">
 <div class="sign-block">
-<h3 class="sign-name">Sagittarius (December 1 – 21)</h3>
+<h3 class="sign-name"><span class="glyph">&#9808;</span>Sagittarius (December 1 – 21)</h3>
+<p>December Sagittarians are quick to engage with new ideas. They bring a curiosity to most conversations, and they tend to follow through on the ones worth pursuing.</p>
 <div class="date-list"><a href="12/zodiac-sign-for-december-1.html">1</a><a href="12/zodiac-sign-for-december-2.html">2</a><a href="12/zodiac-sign-for-december-3.html">3</a><a href="12/zodiac-sign-for-december-4.html">4</a><a href="12/zodiac-sign-for-december-5.html">5</a><a href="12/zodiac-sign-for-december-6.html">6</a><a href="12/zodiac-sign-for-december-7.html">7</a><a href="12/zodiac-sign-for-december-8.html">8</a><a href="12/zodiac-sign-for-december-9.html">9</a><a href="12/zodiac-sign-for-december-10.html">10</a><a href="12/zodiac-sign-for-december-11.html">11</a><a href="12/zodiac-sign-for-december-12.html">12</a><a href="12/zodiac-sign-for-december-13.html">13</a><a href="12/zodiac-sign-for-december-14.html">14</a><a href="12/zodiac-sign-for-december-15.html">15</a><a href="12/zodiac-sign-for-december-16.html">16</a><a href="12/zodiac-sign-for-december-17.html">17</a><a href="12/zodiac-sign-for-december-18.html">18</a><a href="12/zodiac-sign-for-december-19.html">19</a><a href="12/zodiac-sign-for-december-20.html">20</a><a href="12/zodiac-sign-for-december-21.html">21</a></div>
-<p class="sign-desc">December Sagittarians are enthusiastic and open-minded. They're the kind of people who'll try anything at least once and usually come back with a great story. Travel, philosophy, learning — they're always expanding their horizons.</p>
 </div>
 <div class="sign-block">
-<h3 class="sign-name">Capricorn (December 22 – 31)</h3>
+<h3 class="sign-name"><span class="glyph">&#9809;</span>Capricorn (December 22 – 31)</h3>
+<p>December Capricorns plan in years, not weeks. They are patient with progress, careful with their resources, and consistent about the habits that keep their work on track.</p>
 <div class="date-list"><a href="12/zodiac-sign-for-december-22.html">22</a><a href="12/zodiac-sign-for-december-23.html">23</a><a href="12/zodiac-sign-for-december-24.html">24</a><a href="12/zodiac-sign-for-december-25.html">25</a><a href="12/zodiac-sign-for-december-26.html">26</a><a href="12/zodiac-sign-for-december-27.html">27</a><a href="12/zodiac-sign-for-december-28.html">28</a><a href="12/zodiac-sign-for-december-29.html">29</a><a href="12/zodiac-sign-for-december-30.html">30</a><a href="12/zodiac-sign-for-december-31.html">31</a></div>
-<p class="sign-desc">Capricorns born in December are ambitious and deeply disciplined. They're the long-game players — strategic, patient, and focused on building something that lasts. Success for them isn't about luck; it's about persistence.</p>
 </div>
 </div></div>
 </div>
 
 </div>
-<div class="related-links">
-<a href="../personality/">Explore Zodiac Personality Traits</a>
-<a href="../compatibility/">Check Zodiac Compatibility</a>
+
+<div class="related-wrap">
+<h3>Continue With Your Zodiac Sign</h3>
+<div class="related-grid">
+<a href="../personality/" class="related-card"><span class="ico">P</span><span class="body"><strong>Zodiac Sign Personality</strong><span>Read a deeper profile of your sign</span></span></a>
+<a href="../compatibility/" class="related-card"><span class="ico">C</span><span class="body"><strong>Sign Compatibility</strong><span>Check how your sign pairs with others</span></span></a>
+<a href="../year/" class="related-card"><span class="ico">Y</span><span class="body"><strong>Zodiac Year Lookup</strong><span>Find the zodiac sign for any birth year</span></span></a>
+<a href="../zodiac/" class="related-card"><span class="ico">Z</span><span class="body"><strong>Chinese Zodiac Animals</strong><span>Switch to the 12-animal zodiac system</span></span></a>
+</div>
 </div>
 </div>
 </section>
 
-<section class="section-alt">
+<section class="section section-tint">
 <div class="container">
 <div class="section-title">
+<span class="eyebrow-tag">Section 4</span>
 <h2>How the Zodiac Sign Calendar Works</h2>
-<p>Understanding the zodiac date ranges and why your sign matters.</p>
+<p>Why the zodiac sign date ranges exist, where the 12 signs come from, and what to do with your sign once you have it. A short reference on the Western calendar and the next steps for a deeper read.</p>
 </div>
-<div class="intro-text">
-<p>The zodiac calendar is based on the sun's position throughout the year. As Earth orbits the sun, it passes through twelve different constellations — and whichever constellation the sun was in when you were born becomes your zodiac sign.</p>
-<p>Each sign covers roughly a month, but the exact dates shift slightly from year to year. That's why if you were born right on the edge of two signs, it's worth checking a specific zodiac calendar for your birth year to be sure.</p>
-<p>Knowing your zodiac sign is a starting point. A lot of people go on to explore their <a href="../personality/">full zodiac personality profile</a> or check their <a href="../compatibility/">compatibility with other signs</a> to get a deeper understanding of themselves and their relationships.</p>
+<div class="intro-wrap">
+<p>The Western zodiac calendar is built on a 12-month cycle. As Earth orbits the sun, the sun appears to pass in front of twelve constellations in sequence. The constellation behind the sun on your birth date is your zodiac sign.</p>
+<p>The date ranges shift slightly from year to year because the constellations are fixed but the calendar is not. If you were born within a day or two of a boundary, the sign technically depends on the exact time, year, and your location. For most purposes, the standard ranges on this page give the right answer.</p>
+<p>Once you know your sign, the next step is usually a full zodiac sign personality profile or a compatibility read against another sign. Both are quick ways to turn a birth date into a working picture of how a person tends to operate in relationships, work, and daily life. The zodiac sign lookup here is the entry point. The personality and compatibility pages are where the read gets specific.</p>
+</div>
+<div class="info-grid">
+<div class="info-card"><div class="ico">&#9788;</div><h4>12 Constellations</h4><p>The zodiac covers the twelve constellations the sun passes through during the year. Each one takes its name from a fixed star pattern.</p></div>
+<div class="info-card"><div class="ico">&#9851;</div><h4>4 Elements</h4><p>Fire, earth, air, and water group the 12 signs into four sets of three. Element is one of the first layers in any sign reading.</p></div>
+<div class="info-card"><div class="ico">&#8636;</div><h4>3 Modalities</h4><p>Cardinal, fixed, and mutable group the signs by how they approach change. Each sign belongs to exactly one of the three.</p></div>
+</div>
+<div class="how-to-use">
+<h3>How to Use This Zodiac Sign Page</h3>
+<p>Start with the <strong>zodiac sign</strong> section that lists all 12 signs for a quick visual scan, or jump straight to the month-by-month breakdown below if you already know your birth month. Each sign block includes a short read on the traits and a row of day-level links for the deeper daily page.</p>
+<p>Once you have your zodiac sign, use the related cards at the bottom of the month list to move into personality, compatibility, or year-based reads. The sign is the starting label. The personality and compatibility pages turn it into a working picture you can actually use.</p>
 </div>
 </div>
 </section>
@@ -448,12 +364,28 @@ footer a:hover{text-decoration:underline}
 <section class="section">
 <div class="container">
 <div class="section-title">
-<h2>Frequently Asked Questions</h2>
+<span class="eyebrow-tag">Section 5</span>
+<h2>Bottom Line</h2>
 </div>
-<div class="faq-section">
+<div class="bottom-line">
+<h2>Bottom Line</h2>
+<p>Your zodiac sign is the most direct label the Western system puts on a birth date. It is fixed, easy to look up, and a useful starting point for any personality or compatibility read. The zodiac sign is also the gateway to every other page on this site, from the daily profiles to the year-based reads.</p>
+<p>Use this page to lock in your zodiac sign, then move into the personality, compatibility, or year-based pages to get a fuller picture. The sign alone is the entry point. The traits, relationships, and patterns around it are where the zodiac sign read gets useful in everyday life, and the related cards below are the fastest way to keep going.</p>
+</div>
+</div>
+</section>
+
+<section class="section section-soft">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow-tag">Section 6</span>
+<h2>Zodiac Sign Lookup — Frequently Asked Questions</h2>
+<p>Zodiac sign lookup covers the standard Western 12-sign system. The date ranges used here match the most common reference, and the sign each date points to is the one used across the personality and compatibility pages on this site. For readers working with a different zodiac sign system, the same birth date may map to a different label.</p>
+</div>
+<div class="faq-wrap">
 <div class="faq-item">
 <h3>How do I find my zodiac sign by date?</h3>
-<p>Your zodiac sign is determined by your birth date. Each month covers two signs, with the transition typically occurring between the 19th and 23rd. Check the month sections on this page to find your exact sign based on your birthday.</p>
+<p>Your zodiac sign is set by the sun's position on your birth date. Each month covers two signs, with the transition landing between the 19th and 23rd. Use the month sections on this page to match your birthday to its zodiac sign.</p>
 </div>
 <div class="faq-item">
 <h3>What are the 12 zodiac signs and their dates?</h3>
@@ -461,11 +393,11 @@ footer a:hover{text-decoration:underline}
 </div>
 <div class="faq-item">
 <h3>What if my birthday falls on a zodiac cusp?</h3>
-<p>If your birthday falls on a transition date between two signs, you may exhibit traits from both signs. The exact transition can vary slightly by year, so check your specific birth date against the ranges provided on this page.</p>
+<p>If your birthday lands on a transition date between two signs, you may show traits from both. The exact cutoff shifts slightly by year, so cross-check your specific birth date against the ranges listed on this page.</p>
 </div>
 <div class="faq-item">
 <h3>Can my zodiac sign change?</h3>
-<p>No, your zodiac sign is fixed based on your birth date and doesn't change. However, if you were born near a cusp date, you might relate to qualities of both neighboring signs throughout your life.</p>
+<p>No. Your zodiac sign is fixed by your birth date. People born on a cusp often relate to qualities of the adjacent sign, but the official sign assignment does not change.</p>
 </div>
 </div>
 </div>
@@ -473,12 +405,12 @@ footer a:hover{text-decoration:underline}
 
 <footer>
 <p>&copy; 2026 ChineseZodiacCouples.com. All rights reserved.</p>
-<p><a href="../">Home</a> | <a href="../personality/">Zodiac Personality</a> | <a href="../compatibility/">Zodiac Compatibility</a></p>
+<p><a href="../">Home</a> | <a href="../personality/">Zodiac Personality</a> | <a href="../compatibility/">Compatibility</a> | <a href="../year/">Year Lookup</a> | <a href="../zodiac/">Chinese Zodiac</a></p>
 </footer>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0DNGRCVM2"></script>
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B0DNGRCVM2');
-function toggleMonth(e){var t=e.nextElementSibling,n=t.classList.contains("open");document.querySelectorAll(".month-content").forEach(function(e){e.classList.remove("open")});document.querySelectorAll(".month-header").forEach(function(e){e.classList.remove("active")});n||(t.classList.add("open"),e.classList.add("active"))}
+function toggleMonth(e){var t=e.nextElementSibling,n=t.classList.contains("open");document.querySelectorAll(".month-content").forEach(function(e){e.classList.remove("open")});document.querySelectorAll(".month-block").forEach(function(e){e.classList.remove("open")});document.querySelectorAll(".month-head").forEach(function(e){e.classList.remove("active")});n||(t.classList.add("open"),e.classList.add("active"),e.parentElement.classList.add("open"))}
 </script>
 </body>
 </html>
