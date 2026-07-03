@@ -1,0 +1,88 @@
+/* Sunset theme for sign/8/ - Aug 13-18 (Leo) */
+*{margin:0;padding:0;box-sizing:border-box}
+.se-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#3D2A1E;line-height:1.7;background:#FFF8F1}
+.se-body .container{max-width:830px;margin:0 auto;padding:0 22px}
+.se-hd{background:linear-gradient(135deg,#FFB37A 0%,#E07A4F 60%,#A04530 100%);color:#fff;padding:60px 0 80px;text-align:center;position:relative;overflow:hidden}
+.se-hd::before{content:"";position:absolute;top:-30%;right:-12%;width:360px;height:360px;background:radial-gradient(circle,rgba(255,255,255,.18) 0%,transparent 70%);pointer-events:none}
+.se-hd::after{content:"";position:absolute;bottom:-30%;left:-10%;width:280px;height:280px;background:radial-gradient(circle,rgba(255,200,150,.22) 0%,transparent 70%);pointer-events:none}
+.se-eyebrow{display:inline-block;font-size:.75rem;background:rgba(255,255,255,.20);padding:5px 14px;border-radius:50px;margin-bottom:14px;letter-spacing:1.5px;text-transform:uppercase;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);position:relative;z-index:1}
+.se-hd h1{font-family:'Fraunces',Georgia,serif;font-size:2.5rem;font-weight:700;margin-bottom:14px;letter-spacing:-.5px;position:relative;z-index:1;color:#FFF8F1}
+.se-sub{font-size:1.05rem;opacity:.96;max-width:640px;margin:0 auto;line-height:1.65;position:relative;z-index:1;font-weight:400}
+.se-sec{padding:60px 0}
+.se-sec-alt{background:#FFEEDD;position:relative}
+.se-sec-alt::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#E07A4F,transparent)}
+.se-title{text-align:center;margin-bottom:34px}
+.se-title h2{font-family:'Fraunces',Georgia,serif;font-size:1.9rem;color:#3D2A1E;margin-bottom:8px;font-weight:700;letter-spacing:-.3px}
+.se-title p{font-size:.95rem;color:#8B6E5C;max-width:620px;margin:0 auto;line-height:1.7}
+.se-mag{display:grid;grid-template-columns:1.3fr 1fr;gap:0;background:#fff;border:1px solid #FFD7B5;border-radius:18px;overflow:hidden;box-shadow:0 6px 24px rgba(224,122,79,.08)}
+.se-mag-text{padding:38px 32px}
+.se-mag-text .se-eyebrow{background:#FFEEDD;color:#A04530;margin-bottom:14px}
+.se-mag-text h2{font-family:'Fraunces',Georgia,serif;font-size:1.75rem;color:#3D2A1E;margin-bottom:16px;font-weight:700;line-height:1.25;letter-spacing:-.3px}
+.se-mag-body{font-size:.98rem;color:#5C4434;line-height:1.85;margin-bottom:12px}
+.se-mag-img{background:linear-gradient(165deg,#FFB37A 0%,#E07A4F 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;color:#fff;padding:32px 24px;position:relative}
+.se-mag-img::after{content:"";position:absolute;top:20%;right:-30%;width:160px;height:160px;background:radial-gradient(circle,rgba(255,255,255,.18),transparent);border-radius:50%;pointer-events:none}
+.se-mag-symbol{font-size:3.6rem;color:#fff;text-shadow:0 4px 16px rgba(160,69,48,.30);position:relative;z-index:1}
+.se-mag-sign{font-family:'Fraunces',Georgia,serif;font-size:1.55rem;font-weight:700;letter-spacing:1.5px;position:relative;z-index:1}
+.se-mag-range{font-size:.78rem;opacity:.92;letter-spacing:1px;text-transform:uppercase;position:relative;z-index:1}
+.se-fam-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.se-fam{background:#fff;padding:18px 20px;border:1px solid #FFD7B5;border-radius:12px;transition:all .25s}
+.se-fam:hover{background:#FFEEDD;border-color:#E07A4F;transform:translateY(-2px);box-shadow:0 6px 18px rgba(224,122,79,.10)}
+.se-fam-yr{font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:700;color:#E07A4F;letter-spacing:1px;margin-bottom:4px}
+.se-fam-name{color:#3D2A1E;font-weight:600;font-size:.96rem;margin-bottom:3px}
+.se-fam-desc{color:#8B6E5C;font-size:.83rem;line-height:1.5}
+.se-h-list{display:grid;grid-template-columns:1fr;gap:0;background:#fff;border:1px solid #FFD7B5;border-radius:14px;overflow:hidden}
+.se-h{display:grid;grid-template-columns:90px 1fr;gap:20px;align-items:center;padding:18px 24px;border-bottom:1px solid #FFEEDD;transition:background .2s}
+.se-h:last-child{border-bottom:0}
+.se-h:hover{background:#FFF4E8}
+.se-h-yr{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:700;color:#A04530;line-height:1.2}
+.se-h-desc{color:#3D2A1E;font-size:.94rem;line-height:1.65}
+.se-c-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.se-c-card{background:#fff;padding:18px 20px;border:1px solid #FFD7B5;border-radius:12px;transition:all .25s;position:relative;overflow:hidden}
+.se-c-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#E07A4F;opacity:0;transition:opacity .25s}
+.se-c-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(224,122,79,.10);border-color:#E07A4F}
+.se-c-card:hover::before{opacity:1}
+.se-c-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.se-c-pct{font-family:'Fraunces',Georgia,serif;font-size:1.6rem;font-weight:700;color:#E07A4F;line-height:1}
+.se-c-pct.se-hi{color:#5A8B6E}
+.se-c-pct.se-lo{color:#B5635A}
+.se-c-name{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#3D2A1E}
+.se-c-bar{height:6px;background:#FFEEDD;border-radius:4px;margin-bottom:10px;overflow:hidden}
+.se-c-fill{height:100%;background:linear-gradient(90deg,#FFB37A,#E07A4F);border-radius:4px;transition:width .5s}
+.se-c-fill.se-hi{background:linear-gradient(90deg,#7AA88C,#5A8B6E)}
+.se-c-fill.se-lo{background:linear-gradient(90deg,#C57970,#B5635A)}
+.se-c-row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.85rem}
+.se-c-label{color:#A04530;font-weight:600;text-transform:uppercase;letter-spacing:.5px;font-size:.74rem}
+.se-c-note{color:#8B6E5C;text-align:right;flex:1}
+.se-lk-list{display:flex;flex-wrap:wrap;gap:10px}
+.se-lk{display:flex;align-items:center;gap:10px;padding:10px 16px;background:#fff;border:1px solid #FFD7B5;border-radius:50px;transition:all .2s}
+.se-lk:hover{background:#FFEEDD;border-color:#E07A4F;transform:translateY(-1px)}
+.se-lk-l{font-size:.74rem;color:#8B6E5C;text-transform:uppercase;letter-spacing:.4px;font-weight:600}
+.se-lk-v{font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:700;color:#E07A4F}
+.se-story{background:#fff;padding:34px 36px;border:1px solid #FFD7B5;border-radius:14px;box-shadow:0 4px 18px rgba(224,122,79,.06)}
+.se-story-eyebrow{font-size:.74rem;color:#E07A4F;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;font-weight:600}
+.se-story-title{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:700;color:#3D2A1E;margin-bottom:14px;letter-spacing:-.3px}
+.se-story-p{color:#5C4434;font-size:1rem;line-height:1.85}
+.se-d-wrap{background:#fff;padding:28px 30px;border:1px solid #FFD7B5;border-radius:14px}
+.se-d-row{display:flex;align-items:center;gap:14px;margin-top:14px;margin-bottom:10px}
+.se-d-row:first-child{margin-top:0}
+.se-d-tag{font-family:'Fraunces',Georgia,serif;font-size:1.05rem;font-weight:700;color:#fff;background:linear-gradient(135deg,#FFB37A,#E07A4F);padding:5px 16px;border-radius:50px;letter-spacing:.5px}
+.se-d-range{font-size:.85rem;color:#8B6E5C;letter-spacing:.4px}
+.se-d-grid{display:grid;grid-template-columns:repeat(11,1fr);gap:6px}
+.se-d{display:flex;align-items:center;justify-content:center;padding:9px 6px;background:#FFEEDD;border-radius:8px;color:#3D2A1E;text-decoration:none;font-size:.86rem;font-weight:600;transition:all .2s}
+.se-d:hover{background:linear-gradient(135deg,#FFB37A,#E07A4F);color:#fff;transform:translateY(-1px)}
+.se-d.is-active{background:linear-gradient(135deg,#FFB37A,#E07A4F);color:#fff;box-shadow:0 4px 12px rgba(224,122,79,.25)}
+footer{background:#3D2A1E;color:#fff;padding:34px 20px;text-align:center}
+footer p{opacity:.7;font-size:.85rem;margin-bottom:6px}
+footer a{color:#fff;text-decoration:none;transition:opacity .2s}
+footer a:hover{text-decoration:underline;opacity:.85}
+@media(max-width:768px){
+.se-hd h1{font-size:1.75rem}
+.se-mag{grid-template-columns:1fr}
+.se-fam-grid{grid-template-columns:1fr 1fr}
+.se-c-grid{grid-template-columns:1fr 1fr}
+.se-d-grid{grid-template-columns:repeat(6,1fr)}
+}
+@media(max-width:480px){
+.se-fam-grid,.se-c-grid{grid-template-columns:1fr}
+.se-d-grid{grid-template-columns:repeat(4,1fr)}
+}

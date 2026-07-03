@@ -1,0 +1,78 @@
+/* Group 3 (June 13-18) - Sunset Editorial */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FFF5EC;--bg-alt:#FFEFE0;--ink:#2D1B2E;--ink-soft:#523447;--text:#4A3548;--text-light:#8A7388;--accent:#E8866E;--accent-2:#C44E2C;--gold:#D4A574;--plum:#5C2A4E;--line:#EAD5C0;--shadow:0 4px 20px rgba(45,27,46,.08);--shadow-h:0 12px 32px rgba(45,27,46,.18);--r:4px;--r-md:8px;--serif:'Fraunces',Georgia,serif;--sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif}
+body{font-family:var(--sans);color:var(--text);line-height:1.75;background:var(--bg);-webkit-font-smoothing:antialiased}
+.container{max-width:860px;margin:0 auto;padding:0 24px}
+header{background:var(--bg);color:var(--ink);padding:64px 0 56px;position:relative;overflow:hidden;border-bottom:2px solid var(--ink)}
+header::before{content:"";position:absolute;top:20px;right:24px;width:100px;height:100px;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);border-radius:50%;opacity:.5;pointer-events:none}
+.se-eyebrow{display:inline-block;padding:6px 14px;background:var(--accent);color:#fff;font-size:.7rem;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;margin-bottom:18px;position:relative;z-index:1}
+h1{font-family:var(--serif);font-size:3.2rem;font-weight:600;margin-bottom:16px;letter-spacing:-1px;position:relative;z-index:1;line-height:1.05;font-style:italic}
+.se-sub{font-size:1.05rem;max-width:620px;line-height:1.65;font-weight:400;color:var(--ink-soft);position:relative;z-index:1}
+.se-sec{padding:64px 0}
+.se-sec-alt{background:var(--bg-alt)}
+.se-title{margin-bottom:40px;border-bottom:1px solid var(--ink);padding-bottom:18px}
+.se-title h2{font-family:var(--serif);font-size:2rem;color:var(--ink);margin-bottom:8px;font-weight:600;font-style:italic;letter-spacing:-.4px}
+.se-title p{font-size:.92rem;color:var(--text-light);font-style:italic;line-height:1.6}
+.se-mag{background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:1.2fr 1fr;min-height:280px}
+.se-mag-text{padding:38px 32px;display:flex;flex-direction:column;justify-content:center}
+.se-mag-text h2{font-family:var(--serif);font-size:1.9rem;color:var(--ink);margin-bottom:14px;font-weight:600;line-height:1.2;font-style:italic}
+.se-mag-drop{font-family:var(--serif);font-size:4.5rem;color:var(--accent);line-height:.8;float:left;margin:6px 12px 0 0;font-weight:700}
+.se-mag-body{font-size:.96rem;color:var(--text);line-height:1.8}
+.se-mag-img{background:linear-gradient(135deg,var(--accent) 0%,var(--gold) 50%,var(--plum) 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;padding:40px;position:relative;overflow:hidden}
+.se-mag-img::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.18),transparent 60%)}
+.se-mag-symbol{font-family:var(--serif);font-size:5rem;line-height:1;position:relative;z-index:1;font-style:italic}
+.se-mag-sign{font-family:var(--serif);font-size:1.6rem;font-weight:600;margin-top:14px;position:relative;z-index:1;letter-spacing:-.2px}
+.se-mag-range{font-size:.78rem;letter-spacing:2px;text-transform:uppercase;margin-top:8px;opacity:.92;position:relative;z-index:1;font-weight:500}
+.se-fam{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);background:#fff}
+.se-fam-card{padding:24px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:all .3s;position:relative}
+.se-fam-card:nth-child(even){border-right:none}
+.se-fam-card:nth-last-child(-n+2){border-bottom:none}
+.se-fam-card:hover{background:var(--bg-alt)}
+.se-fam-yr{font-family:var(--serif);font-size:.78rem;font-weight:600;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;font-style:italic}
+.se-fam-name{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:6px}
+.se-fam-desc{font-size:.85rem;color:var(--text-light);line-height:1.6}
+.se-hist{display:flex;flex-direction:column;border-top:1px solid var(--ink)}
+.se-hist-row{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline;transition:padding-left .3s}
+.se-hist-row:hover{padding-left:12px;background:linear-gradient(90deg,var(--bg-alt),transparent)}
+.se-hist-yr{font-family:var(--serif);font-size:1.8rem;font-weight:600;color:var(--accent);font-style:italic;letter-spacing:-.4px}
+.se-hist-desc{font-size:.95rem;color:var(--text);line-height:1.7}
+.se-compat{display:flex;flex-direction:column;gap:0;background:#fff;border:1px solid var(--line)}
+.se-comp-row{display:grid;grid-template-columns:120px 1fr 80px;gap:20px;padding:18px 24px;align-items:center;border-bottom:1px solid var(--line);transition:all .3s}
+.se-comp-row:last-child{border-bottom:none}
+.se-comp-row:hover{background:var(--bg-alt);padding-left:30px}
+.se-comp-name{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--ink);font-style:italic}
+.se-comp-bar{height:8px;background:var(--line);border-radius:0;overflow:hidden;position:relative}
+.se-comp-fill{height:100%;background:var(--accent);transition:width .6s}
+.se-comp-fill.is-low{background:var(--text-light)}
+.se-comp-pct{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--ink);text-align:right;letter-spacing:-.3px}
+.se-comp-pct.is-low{color:var(--text-light)}
+.se-comp-tag{font-size:.7rem;color:var(--text-light);text-transform:uppercase;letter-spacing:1px;display:block;margin-top:2px;font-weight:500}
+.se-lucky{display:flex;flex-wrap:wrap;gap:8px;padding:20px 0}
+.se-lucky-tag{background:#fff;border:1px solid var(--line);padding:10px 18px;display:flex;align-items:center;gap:8px;transition:all .3s;cursor:default}
+.se-lucky-tag:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-2px)}
+.se-lucky-tag:hover .se-tag-value{color:var(--accent)}
+.se-tag-label{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-light);font-weight:600}
+.se-tag-value{font-family:var(--serif);font-size:.95rem;font-weight:600;color:var(--ink);font-style:italic}
+.se-story{background:#fff;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:50px 40px;text-align:center;position:relative}
+.se-story-eyebrow{font-family:var(--serif);font-size:.85rem;font-style:italic;color:var(--accent);letter-spacing:1.5px;margin-bottom:8px}
+.se-story-title{font-family:var(--serif);font-size:1.6rem;font-style:italic;color:var(--ink);margin-bottom:24px;font-weight:600}
+.se-story-p{font-size:1.02rem;color:var(--text);line-height:1.95;max-width:620px;margin:0 auto 18px;font-style:italic}
+.se-story-p:last-child{margin-bottom:0}
+.se-dates-wrap{background:#fff;border:1px solid var(--ink);padding:22px}
+.se-dates{display:grid;grid-template-columns:repeat(10,1fr);gap:4px}
+.se-date{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--ink);text-decoration:none;font-family:var(--serif);font-size:.95rem;font-weight:600;font-style:italic;transition:all .3s;border:1px solid transparent}
+.se-date:hover{background:var(--accent);color:#fff;transform:scale(1.05)}
+.se-date.is-active{background:var(--ink);color:#fff;font-weight:700}
+footer{background:var(--ink);color:var(--bg);padding:36px 20px;text-align:center}
+footer p{opacity:.7;font-size:.86rem;margin-bottom:6px;font-style:italic}
+footer a{color:var(--bg);text-decoration:none;transition:opacity .2s;opacity:.85}
+footer a:hover{opacity:1;color:var(--accent);text-decoration:underline}
+@media(max-width:768px){h1{font-size:2rem}.se-sec{padding:46px 0}.se-mag{grid-template-columns:1fr;min-height:auto}.se-mag-img{padding:30px}.se-fam{grid-template-columns:1fr}.se-fam-card{border-right:none;border-bottom:1px solid var(--line)}.se-fam-card:last-child{border-bottom:none}.se-hist-row{grid-template-columns:80px 1fr;gap:14px}.se-comp-row{grid-template-columns:80px 1fr 60px;gap:12px;padding:14px 16px}.se-dates{grid-template-columns:repeat(5,1fr)}.se-story{padding:36px 22px}}
+
+
+
+.se-dates-label{display:flex;align-items:baseline;gap:12px;margin-bottom:14px;padding-bottom:8px;border-bottom:1px dashed var(--line)}
+.se-dates-tag{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--ink);font-style:italic}
+.se-dates-range{font-size:.7rem;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
+.se-dates-group{margin-bottom:18px}
+.se-dates-sep{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:8px 0 18px}
