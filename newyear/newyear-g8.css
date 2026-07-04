@@ -1,0 +1,2 @@
+:root{--accent:#b88bb0;--accent-dark:#946c8e;--ink:#4a4458;--ink-soft:#857f8f;--bg:#fdf6fb;--bg-alt:#f7eef5;--card:#ffffff;--line:#e8d8e4;--header-bg:linear-gradient(135deg,#b88bb0,#f7c6a3);--font-head:Newsreader,serif;--font-body:Inter,sans-serif;--radius:12px;--shadow:0 4px 20px rgba(0,0,0,.08);--shadow-h:0 10px 40px rgba(0,0,0,.12)}
+body{background:var(--bg)}

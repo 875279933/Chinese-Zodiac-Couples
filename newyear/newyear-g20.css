@@ -1,0 +1,2 @@
+:root{--accent:#c75b4a;--accent-dark:#a04537;--ink:#3d2230;--ink-soft:#7a5a64;--bg:#fdf6f0;--bg-alt:#f6ebe2;--card:#ffffff;--line:#ecd9cf;--header-bg:linear-gradient(135deg,#c75b4a,#3d2230);--font-head:'Cormorant Garamond',serif;--font-body:Inter,sans-serif;--radius:12px;--shadow:0 4px 20px rgba(0,0,0,.08);--shadow-h:0 10px 40px rgba(0,0,0,.12)}
+body{background:var(--bg)}
