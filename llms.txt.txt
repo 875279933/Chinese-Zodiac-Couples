@@ -1,0 +1,29 @@
+# Chinese Zodiac Couples - Love Compatibility Guide
+
+> Chinese Zodiac Couples is a specialized guide that explores love compatibility through the lens of the Chinese zodiac, providing a free interactive tool and in-depth articles on the underlying philosophy.
+
+This website offers a practical resource for understanding relationship dynamics from a traditional Chinese zodiac perspective. The core philosophy is based on Yin and Yang pairing, Animal Sign Chemistry, the Five Elements, the Three Harmony Triads, and the Six Harmony Pairs.
+
+The main interactive feature is a compatibility checker that generates a score and detailed analysis across dimensions like Emotional, Communication, Values, and Intimacy when users input birth dates or select signs.
+
+For deeper reading, detailed sign profiles and year-by-year perspectives are available. A comprehensive FAQ section answers common questions about the system and its interpretation.
+
+## 📄 Detailed Sign Profiles (Markdown Versions)
+- [Rat Profile](/zodiac/rat/)
+- [Ox Profile](/zodiac/ox/)
+- [Tiger Profile](/zodiac/tiger/)
+- [Rabbit Profile](/zodiac/rabbit/)
+- [Dragon Profile](/zodiac/dragon/)
+- [Snake Profile](/zodiac/snake/)
+- [Horse Profile](/zodiac/horse/)
+- [Goat Profile](/zodiac/goat/)
+- [Monkey Profile](/zodiac/monkey/)
+- [Rooster Profile](/zodiac/rooster/)
+- [Dog Profile](/zodiac/dog/)
+- [Pig Profile](/zodiac/pig/)
+
+## 📚 Key Information and Guides
+- [Compatibility Checker Tool](/)
+- [Zodiac Year Index](/zodiac-year/)
+- [Frequently Asked Questions](/faq/)
+- [Full Context File (llms-full.txt)](/llms-full.txt)

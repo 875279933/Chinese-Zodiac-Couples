@@ -1,0 +1,115 @@
+# Chinese Zodiac Couples - Full Context Summary
+
+## 1. Website Overview
+**Chinese Zodiac Couples** is a specialized guide that explores love compatibility through the lens of the Chinese zodiac. It provides a free, interactive tool for couples to check their compatibility based on their Chinese zodiac signs, supplemented by in-depth articles on the underlying philosophy, detailed sign profiles, and a comprehensive FAQ. The website serves as a practical resource for understanding relationship dynamics, strengths, and potential friction points from a traditional Chinese zodiac perspective.
+
+## 2. Core Content & Features
+- **Compatibility Checker:** An interactive tool that generates a compatibility score and detailed dimension analysis (Emotional, Communication, Values, Intimacy) when users input their birth dates or manually select two zodiac signs.
+- **Sign Profiles:** Detailed pages for each of the 12 zodiac animals (Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, Pig), covering personality traits, best matches, and challenging matches.
+- **Guides & Philosophy:** Explanatory content covering the core principles of the system, including Yin and Yang pairing, Animal Sign Chemistry, the Five Elements, the Three Harmony Triads, and the Six Harmony Pairs.
+- **FAQ Section:** Answers to common questions about the system, its accuracy, and how to interpret compatibility results in real-life relationships.
+
+## 3. Main Compatibility Framework
+The website bases its compatibility readings on a combination of:
+1.  **Yin and Yang Pairing:** Smooth pairings often balance receptive (Yin) and active (Yang) energy.
+2.  **Animal Sign Chemistry:** Each sign has natural affinities (e.g., **Three Harmony Triads**: Rat-Dragon-Monkey, Ox-Snake-Rooster, Tiger-Horse-Dog, Rabbit-Goat-Pig) and natural friction points.
+3.  **Five Elements Layer:** Each year's element (Wood, Fire, Earth, Metal, Water) modifies the core animal sign, leading to different temperaments (e.g., a Wood Rat vs. a Fire Rat).
+4.  **Six Harmony Pairs:** A set of particularly compatible pairs: Rat-Ox, Tiger-Pig, Rabbit-Dog, Dragon-Rooster, Snake-Monkey, and Horse-Goat.
+
+## 4. Full Sign Profiles
+
+### Rat (鼠)
+- **Years:** 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020
+- **Personality:** Resourceful, observant, and quick to act. A Rat partner tends to notice the small things first and plan around them, making them excellent at managing household logistics and anticipating needs.
+- **Best Matches:** Monkey, Ox, Dragon
+- **Challenging Matches:** Horse, Goat, Rabbit, Rooster
+
+### Ox (牛)
+- **Years:** 1937, 1949, 1961, 1973, 1985, 1997, 2009, 2021
+- **Personality:** Steady, patient, and grounded. An Ox partner builds on slow, consistent moves rather than quick gestures. They provide stability and are often the quiet backbone of a relationship.
+- **Best Matches:** Snake, Rooster, Rat
+- **Challenging Matches:** Horse, Goat, Dragon, Dog
+
+### Tiger (虎)
+- **Years:** 1938, 1950, 1962, 1974, 1986, 1998, 2010, 2022
+- **Personality:** Direct, protective, and action-first. A Tiger partner gives a clear sense of where the relationship is heading and is not afraid to lead during uncertain times.
+- **Best Matches:** Horse, Dog
+- **Challenging Matches:** Monkey, Snake
+
+### Rabbit (兔)
+- **Years:** 1939, 1951, 1963, 1975, 1987, 1999, 2011, 2023
+- **Personality:** Considerate, even-tempered, and home-oriented. A Rabbit partner usually shares a quiet, well-run household and values harmony, often acting as the emotional anchor.
+- **Best Matches:** Goat, Dog, Pig
+- **Challenging Matches:** Rat, Rooster, Ox, Dragon
+
+### Dragon (龙)
+- **Years:** 1940, 1952, 1964, 1976, 1988, 2000, 2012, 2024
+- **Personality:** Ambitious, expressive, and big-picture. A Dragon partner often builds around long-horizon goals and inspires their partner to think bigger.
+- **Best Matches:** Rat, Rooster, Monkey
+- **Challenging Matches:** Rabbit, Dog, Ox
+
+### Snake (蛇)
+- **Years:** 1941, 1953, 1965, 1977, 1989, 2001, 2013, 2025
+- **Personality:** Analytical, private, and loyal once committed. A Snake partner values a small inner circle and tends to be the strategist in the relationship.
+- **Best Matches:** Ox, Rooster
+- **Challenging Matches:** Monkey, Pig, Tiger
+
+### Horse (马)
+- **Years:** 1942, 1954, 1966, 1978, 1990, 2002, 2014, 2026
+- **Personality:** Active, social, and independence-minded. A Horse partner needs someone who can keep pace without trying to rein them in, thriving on shared adventures.
+- **Best Matches:** Tiger, Goat, Dog
+- **Challenging Matches:** Rat, Ox, Rabbit
+
+### Goat (羊)
+- **Years:** 1943, 1955, 1967, 1979, 1991, 2003, 2015, 2027
+- **Personality:** Reflective, artistic, and people-oriented. A Goat partner runs on empathy and shared creative projects, often setting the emotional tone of the relationship.
+- **Best Matches:** Rabbit, Horse, Pig
+- **Challenging Matches:** Ox, Dog
+
+### Monkey (猴)
+- **Years:** 1944, 1956, 1968, 1980, 1992, 2004, 2016, 2028
+- **Personality:** Curious, witty, and problem-solving. A Monkey partner keeps the conversation moving and brings a playful energy to problem-solving.
+- **Best Matches:** Rat, Dragon, Snake
+- **Challenging Matches:** Tiger, Pig
+
+### Rooster (鸡)
+- **Years:** 1945, 1957, 1969, 1981, 1993, 2005, 2017, 2029
+- **Personality:** Organized, candid, and schedule-aware. A Rooster partner brings the early warnings and follow-through on shared plans, acting as the operational backbone.
+- **Best Matches:** Ox, Dragon, Snake
+- **Challenging Matches:** Rabbit, Dog
+
+### Dog (狗)
+- **Years:** 1946, 1958, 1970, 1982, 1994, 2006, 2018, 2030
+- **Personality:** Loyal, fair, and principled. A Dog partner builds on a clear sense of right and wrong and weathers hard seasons with integrity.
+- **Best Matches:** Tiger, Rabbit, Horse
+- **Challenging Matches:** Goat, Dragon, Rooster, Ox
+
+### Pig (猪)
+- **Years:** 1947, 1959, 1971, 1983, 1995, 2007, 2019, 2031
+- **Personality:** Warm, generous, and steady under pressure. A Pig partner brings goodwill and sincerity, often holding the social fabric of the relationship together.
+- **Best Matches:** Goat, Rabbit, Tiger
+- **Challenging Matches:** Monkey, Snake
+
+## 5. Compatibility Dimensions
+The compatibility checker evaluates relationships across four key dimensions:
+- **Emotional Compatibility (★★★★☆):** Measures emotional resonance and the ability to support each other through ups and downs.
+- **Communication (★★★☆☆):** Assesses the ease of sharing thoughts, resolving conflicts, and understanding each other.
+- **Values Match (★★★★☆):** Evaluates alignment on core life priorities, such as family, money, and personal growth.
+- **Intimacy (★★★☆☆):** Reflects comfort and connection in physical and emotional closeness.
+
+## 6. Frequently Asked Questions (FAQ)
+- **Does the Chinese zodiac couples chart really predict relationship success?**
+    No. It is a personality-and-rhythm reference to start conversations, not a forecast or verdict.
+- **Are some Chinese zodiac couples considered incompatible?**
+    Yes, some pairings are traditionally marked as harder, but these require more explicit expectations and communication, not an inevitable outcome.
+- **How accurate is the compatibility score?**
+    The score blends animal pairing, triads, harmony pairs, and elements. It is useful for ranking but not for fine differences.
+- **Should couples ignore the year they were born in?**
+    No, the year and its element are important modifiers that add nuance to the animal sign.
+- **Can Chinese zodiac couples work if their signs are 'challenging'?**
+    Yes. The 'challenging' label flags friction points to manage, not dealbreakers.
+- **What is the best way to use this reading?**
+    Use it as an orientation and a starting point. Then, refer to the detailed sign profiles and year-by-year pages for a deeper dive.
+
+## 7. Conclusion
+Run the checker above with both birth dates, or pick two signs to see how the chart scores that combination. The result gives you a starting point for the kind of conversations that actually move a relationship forward. The year-by-year and sign-by-sign pages provide deeper reading once the chart has given you a direction.
