@@ -1,0 +1,182 @@
+/* Group 4 (july 16-20) - Swiss Minimalist theme
+   Pure white, black ink, red accent, Inter typography, 12-column bento
+*/
+
+:root{
+  --swi-primary:#111111;
+  --swi-primary-dark:#000000;
+  --swi-accent:#D0451B;
+  --swi-accent-soft:#E8D5A8;
+  --swi-bg:#FFFFFF;
+  --swi-bg-alt:#F7F7F5;
+  --swi-card:#FFFFFF;
+  --swi-text:#111111;
+  --swi-text-light:#5A5A5A;
+  --swi-border:#E5E5E5;
+  --swi-good:#2D6A4F;
+  --swi-warn:#B8741A;
+}
+
+body.swi-cancer{background:var(--swi-bg);color:var(--swi-text);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.65}
+body.swi-leo{background:var(--swi-bg);color:var(--swi-text);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.65}
+
+body.swi-cancer header,body.swi-leo header{
+  background:var(--swi-bg);
+  color:var(--swi-text);
+  padding:60px 0 70px;
+  border-bottom:2px solid var(--swi-text);
+  position:relative;
+}
+body.swi-cancer header::before,body.swi-leo header::before{content:"";position:absolute;top:0;left:0;width:60px;height:8px;background:var(--swi-accent)}
+body.swi-cancer header h1,body.swi-leo header h1{font-family:'Inter',sans-serif;font-size:3.6rem;margin:0 0 18px;font-weight:900;letter-spacing:-.03em;line-height:1;max-width:900px}
+body.swi-cancer header h1::after,body.swi-leo header h1::after{content:"";display:inline-block;width:18px;height:18px;background:var(--swi-accent);margin-left:14px;vertical-align:middle;border-radius:50%}
+body.swi-leo{--swi-accent:#C26B4A;--swi-good:#2D6A4F}
+body.swi-leo header::before{background:var(--swi-accent)}
+
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.back-link{display:inline-flex;align-items:center;gap:6px;margin-bottom:14px;padding:8px 16px;background:transparent;border:1px solid var(--swi-text);color:var(--swi-text);text-decoration:none;font-size:.8rem;letter-spacing:.06em;font-weight:600;transition:all .2s}
+.back-link:hover{background:var(--swi-text);color:#fff}
+.subtitle{font-size:1.05rem;color:var(--swi-text-light);max-width:680px;line-height:1.55}
+.section{padding:64px 0;background:var(--swi-bg);border-bottom:1px solid var(--swi-border)}
+.section-alt{padding:64px 0;background:var(--swi-bg-alt);border-bottom:1px solid var(--swi-border)}
+.section-title{text-align:center;margin-bottom:36px}
+.section-title .swi-num{font-family:'Inter',sans-serif;font-size:3.5rem;font-weight:900;color:var(--swi-accent);line-height:1;letter-spacing:-.04em}
+.section-title h2{color:var(--swi-text);font-family:'Inter',sans-serif;font-size:2.2rem;margin:0 0 10px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.section-title p{color:var(--swi-text-light);font-size:1rem;line-height:1.55;margin:0}
+
+/* === 6 structural variations for Group 4 === */
+
+/* Var 1: Intro - 3 column with side notes */
+.swi-intro{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;max-width:1100px;margin:0 auto}
+.swi-intro p{color:var(--swi-text);line-height:1.75;margin:0;font-size:1rem;text-align:left}
+.swi-intro p:first-child{font-size:1.15rem;font-weight:500;border-top:2px solid var(--swi-text);padding-top:20px}
+
+/* Var 2: Snapshot - 4 bento boxes with thin borders */
+.swi-snap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:1100px;margin:0 auto;border:1px solid var(--swi-text)}
+.swi-snap-card{padding:28px 24px;border-right:1px solid var(--swi-text);background:var(--swi-card);position:relative}
+.swi-snap-card:last-child{border-right:0}
+.swi-snap-card .swi-snap-no{position:absolute;top:12px;right:16px;font-family:'Inter',sans-serif;font-size:.7rem;font-weight:800;color:var(--swi-accent);letter-spacing:.16em}
+.swi-snap-card .swi-snap-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;color:var(--swi-text-light);font-weight:700;margin-bottom:14px}
+.swi-snap-card .swi-snap-value{font-family:'Inter',sans-serif;font-size:2.2rem;font-weight:900;color:var(--swi-text);line-height:1;letter-spacing:-.03em;margin-bottom:8px}
+.swi-snap-card .swi-snap-meta{font-size:.82rem;color:var(--swi-text-light);margin-top:6px}
+
+/* Var 3: Traits - Numbered horizontal with strong bars */
+.swi-traits{max-width:980px;margin:0 auto;display:grid;gap:0;border-top:1px solid var(--swi-text)}
+.swi-trait{display:grid;grid-template-columns:60px 180px 1fr 70px;align-items:center;gap:20px;padding:18px 0;border-bottom:1px solid var(--swi-border)}
+.swi-trait .swi-trait-num{font-family:'Inter',sans-serif;font-size:1.6rem;font-weight:900;color:var(--swi-accent);text-align:center;letter-spacing:-.04em}
+.swi-trait .swi-trait-name{font-weight:700;color:var(--swi-text);font-size:.95rem;letter-spacing:.04em;text-transform:uppercase}
+.swi-trait .swi-trait-bar{height:6px;background:var(--swi-bg-alt);position:relative}
+.swi-trait .swi-trait-fill{position:absolute;left:0;top:0;height:100%;background:var(--swi-text);transition:width .6s}
+.swi-trait .swi-trait-score{font-family:'Inter',sans-serif;font-weight:900;color:var(--swi-text);text-align:right;font-size:1.1rem;letter-spacing:-.02em}
+
+/* Var 4: Compatibility - Bento 4+3 grid */
+.swi-compat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:1080px;margin:0 auto}
+.swi-ccell{background:var(--swi-card);border:1px solid var(--swi-text);padding:18px 16px;text-align:left;transition:all .25s;position:relative}
+.swi-ccell:hover{background:var(--swi-text);color:#fff}
+.swi-ccell:hover .swi-cc-pct{color:#fff}
+.swi-ccell:hover .swi-cc-bar{background:rgba(255,255,255,.2)}
+.swi-ccell:hover .swi-cc-fill{background:var(--swi-accent)}
+.swi-ccell .swi-cc-name{font-weight:800;color:var(--swi-text);font-size:.95rem;margin-bottom:8px;letter-spacing:.04em;text-transform:uppercase}
+.swi-ccell .swi-cc-bar{height:4px;background:var(--swi-bg-alt);margin-bottom:8px}
+.swi-ccell .swi-cc-fill{height:100%;background:var(--swi-text)}
+.swi-ccell .swi-cc-pct{font-family:'Inter',sans-serif;font-weight:900;font-size:1.4rem;color:var(--swi-text);letter-spacing:-.02em;line-height:1}
+.swi-ccell.swi-tier-best{border-left:4px solid var(--swi-good)}
+.swi-ccell.swi-tier-good{border-left:4px solid var(--swi-accent)}
+.swi-ccell.swi-tier-mix{border-left:4px solid var(--swi-warn)}
+
+/* Var 5: Outlook - 4-card with arrow indicator */
+.swi-horo{display:grid;grid-template-columns:repeat(2,1fr);gap:0;max-width:1000px;margin:0 auto;border:1px solid var(--swi-text)}
+.swi-horo-card{padding:26px 28px;border-right:1px solid var(--swi-text);border-bottom:1px solid var(--swi-text);background:var(--swi-card);display:flex;gap:18px;align-items:flex-start}
+.swi-horo-card:nth-child(2n){border-right:0}
+.swi-horo-card:nth-last-child(-n+2){border-bottom:0}
+.swi-horo-card .swi-horo-grade{font-family:'Inter',sans-serif;font-size:2.8rem;font-weight:900;color:var(--swi-accent);line-height:1;width:60px;flex-shrink:0;letter-spacing:-.04em}
+.swi-horo-card .swi-horo-body .swi-horo-dim{font-weight:800;color:var(--swi-text);font-size:1rem;margin-bottom:6px;letter-spacing:.04em;text-transform:uppercase}
+.swi-horo-card .swi-horo-body .swi-horo-text{font-size:.92rem;color:var(--swi-text-light);line-height:1.6;margin:0}
+
+/* Var 6: Celebrity - 2x2 with bold black card */
+.swi-celeb{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:1000px;margin:0 auto}
+.swi-celeb-card{background:var(--swi-card);border:1px solid var(--swi-text);padding:24px;display:flex;gap:18px;align-items:center;transition:all .25s}
+.swi-celeb-card:hover{background:var(--swi-text);color:#fff}
+.swi-celeb-card:hover h4{color:#fff}
+.swi-celeb-card:hover p{color:rgba(255,255,255,.7)}
+.swi-celeb-card:hover .swi-celeb-initial{background:var(--swi-accent);color:#fff;border-color:var(--swi-accent)}
+.swi-celeb-card .swi-celeb-initial{width:60px;height:60px;background:var(--swi-text);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-size:1.3rem;font-weight:900;flex-shrink:0;letter-spacing:-.02em}
+.swi-celeb-card h4{font-family:'Inter',sans-serif;font-size:1.1rem;color:var(--swi-text);margin:0 0 4px;font-weight:800;letter-spacing:-.01em}
+.swi-celeb-card p{font-size:.86rem;color:var(--swi-text-light);margin:0;line-height:1.5}
+
+/* Compat lines */
+.swi-compat-lines{max-width:880px;margin:0 auto 24px;padding:0;list-style:none;display:grid;gap:10px}
+.swi-compat-lines li{color:var(--swi-text-light);line-height:1.7;font-size:.95rem;padding-left:22px;position:relative}
+.swi-compat-lines li::before{content:"→";position:absolute;left:0;color:var(--swi-accent);font-weight:700}
+
+/* Insight */
+.swi-insight{max-width:960px;margin:0 auto;background:var(--swi-text);color:#fff;padding:32px 36px;position:relative;border-left:6px solid var(--swi-accent)}
+.swi-insight h3{font-family:'Inter',sans-serif;font-size:1.4rem;margin:0 0 18px;color:#fff;font-weight:800;letter-spacing:-.01em}
+.swi-insight ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.swi-insight li{padding-left:24px;position:relative;font-size:.95rem;line-height:1.65;color:rgba(255,255,255,.9)}
+.swi-insight li::before{content:"—";position:absolute;left:0;color:var(--swi-accent);font-weight:700}
+
+/* FAQ */
+.swi-faq{max-width:900px;margin:0 auto;display:grid;gap:0;border-top:1px solid var(--swi-text)}
+.swi-faq-item{padding:18px 24px;border-bottom:1px solid var(--swi-text);background:var(--swi-card)}
+.swi-faq-item h3{font-family:'Inter',sans-serif;font-size:1rem;color:var(--swi-text);margin:0 0 6px;font-weight:800;letter-spacing:-.01em}
+.swi-faq-item p{font-size:.92rem;color:var(--swi-text-light);line-height:1.65;margin:0}
+
+/* Fact card */
+.swi-fact{max-width:880px;margin:0 auto;background:var(--swi-card);border:1px solid var(--swi-text);padding:28px 32px;display:flex;gap:24px;align-items:flex-start}
+.swi-fact .swi-fact-num{font-family:'Inter',sans-serif;font-size:3.8rem;font-weight:900;color:var(--swi-accent);line-height:1;flex-shrink:0;width:90px;letter-spacing:-.04em}
+.swi-fact .swi-fact-body h4{font-family:'Inter',sans-serif;color:var(--swi-text);margin:0 0 8px;font-size:1.1rem;font-weight:800;letter-spacing:-.01em}
+.swi-fact .swi-fact-body p{font-size:.94rem;color:var(--swi-text-light);line-height:1.65;margin:0}
+
+/* Lifestyle */
+.swi-life{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;max-width:900px;margin:0 auto}
+.swi-life span{background:var(--swi-card);border:1px solid var(--swi-text);padding:14px;text-align:center;font-size:.88rem;color:var(--swi-text);font-weight:600;letter-spacing:.02em}
+
+/* Career */
+.swi-career{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:1000px;margin:0 auto;border:1px solid var(--swi-text)}
+.swi-career-card{padding:26px 24px;border-right:1px solid var(--swi-text);background:var(--swi-card)}
+.swi-career-card:last-child{border-right:0}
+.swi-career-card h4{font-family:'Inter',sans-serif;font-size:1rem;color:var(--swi-text);margin:0 0 10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.swi-career-card p{font-size:.9rem;color:var(--swi-text-light);margin:0;line-height:1.6}
+
+/* Related grid */
+.swi-related{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;max-width:960px;margin:0 auto}
+.swi-related a{display:block;text-align:center;padding:11px 4px;background:var(--swi-card);border:1px solid var(--swi-text);color:var(--swi-text);text-decoration:none;font-size:.88rem;font-weight:700;transition:all .2s}
+.swi-related a:hover{background:var(--swi-text);color:#fff}
+.swi-related a.current{background:var(--swi-accent);color:#fff;border-color:var(--swi-accent)}
+
+footer{background:var(--swi-text);color:#fff;padding:32px 20px;text-align:center}
+footer p{opacity:.6;font-size:.84rem;margin:4px 0;letter-spacing:.06em}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media(max-width:1024px){
+  .swi-intro{grid-template-columns:1fr;gap:18px}
+  .swi-snap{grid-template-columns:repeat(2,1fr)}
+  .swi-snap-card{border-right:1px solid var(--swi-text);border-bottom:1px solid var(--swi-text)}
+  .swi-snap-card:nth-child(2n){border-right:0}
+  .swi-compat{grid-template-columns:repeat(2,1fr)}
+  .swi-career{grid-template-columns:1fr}
+  .swi-career-card{border-right:0;border-bottom:1px solid var(--swi-text)}
+  .swi-life{grid-template-columns:repeat(3,1fr)}
+  .swi-horo-card{border-right:0 !important;border-bottom:1px solid var(--swi-text) !important}
+  .swi-horo-card:nth-last-child(-n+2){border-bottom:0 !important}
+  .swi-celeb{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  h1{font-size:2.4rem}
+  .section,.section-alt{padding:48px 0}
+  
+  .section-title .swi-num{font-size:2.2rem}
+  .swi-trait{grid-template-columns:48px 1fr 60px;gap:12px;padding:14px 0}
+  .swi-trait .swi-trait-name{grid-column:2 / -1;font-size:.85rem}
+  .swi-trait .swi-trait-bar{grid-column:2 / -1}
+  .swi-trait .swi-trait-score{grid-column:3;grid-row:1;align-self:start}
+  .swi-fact{flex-direction:column;gap:14px;padding:24px}
+  .swi-related{grid-template-columns:repeat(7,1fr)}
+}
+@media(max-width:480px){
+  .swi-related{grid-template-columns:repeat(5,1fr)}
+  .swi-snap,.swi-compat,.swi-career,.swi-celeb,.swi-horo{grid-template-columns:1fr}
+  .swi-life{grid-template-columns:repeat(2,1fr)}
+}

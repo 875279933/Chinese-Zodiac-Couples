@@ -1,0 +1,158 @@
+/* Group 2 (july 6-10) - Modern Dark Editorial theme
+   Dark navy, terracotta accent, bold typography, bento layout
+*/
+
+:root{
+  --mod-primary:#0B1B2E;
+  --mod-primary-dark:#040A14;
+  --mod-accent:#E07A5F;
+  --mod-accent-soft:#F2A48F;
+  --mod-bg:#F4F1ED;
+  --mod-bg-alt:#EAE5DC;
+  --mod-card:#FFFFFF;
+  --mod-text:#1A1A1A;
+  --mod-text-light:#5C5854;
+  --mod-border:#DDD6C8;
+  --mod-good:#3F7D58;
+  --mod-warn:#B8741A;
+  --mod-soft:#8A6E6B;
+}
+
+body.mod-cancer{background:var(--mod-bg);color:var(--mod-text);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.7}
+body.mod-leo{background:var(--mod-bg);color:var(--mod-text);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.7}
+
+body.mod-cancer header,body.mod-leo header{
+  background:linear-gradient(180deg,var(--mod-primary) 0%,var(--mod-primary-dark) 100%);
+  color:#fff;padding:70px 0 90px;text-align:left;position:relative;
+}
+body.mod-cancer header .container,body.mod-leo header .container{max-width:1180px;margin:0 auto;padding:0 24px;text-align:left}
+body.mod-cancer header h1,body.mod-leo header h1{font-family:'Inter',sans-serif;font-size:3rem;margin:18px 0 16px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+body.mod-leo{--mod-primary:#1F0F0F;--mod-primary-dark:#0A0505;--mod-accent:#C9A961;--mod-accent-soft:#E8D5A8}
+body.mod-leo header{background:linear-gradient(180deg,#3D1A1A 0%,#1A0808 100%)}
+
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+.back-link{display:inline-block;margin-bottom:18px;padding:9px 20px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:6px;color:#fff;text-decoration:none;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;transition:all .3s}
+.back-link:hover{background:rgba(255,255,255,.2)}
+.subtitle{font-size:1.1rem;opacity:.85;max-width:680px;line-height:1.6;text-align:left}
+.section{padding:64px 0;background:var(--mod-bg)}
+.section-alt{padding:64px 0;background:var(--mod-bg-alt)}
+.section-title{margin-bottom:40px;text-align:left;max-width:680px}
+.section-title h2{color:var(--mod-primary);font-family:'Inter',sans-serif;font-size:2.2rem;margin-bottom:12px;font-weight:800;letter-spacing:-.01em;line-height:1.2}
+.section-title p{color:var(--mod-text-light);font-size:1.02rem;line-height:1.6;margin:0}
+
+/* === 6 structural variations for Group 2 === */
+
+/* Var 1: Intro - Single column with pull quote */
+.mod-intro{max-width:880px;margin:0 auto;display:grid;gap:20px}
+.mod-intro p{color:var(--mod-text-light);line-height:1.85;margin:0;font-size:1.05rem}
+.mod-intro-quote{background:var(--mod-card);border-left:4px solid var(--mod-accent);padding:24px 28px;margin:8px 0;font-family:'Inter',sans-serif;font-size:1.05rem;font-weight:500;color:var(--mod-primary);line-height:1.6;border-radius:0 8px 8px 0}
+
+/* Var 2: Snapshot - 2x2 grid with bold stat */
+.mod-snap{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:900px;margin:0 auto}
+.mod-snap-card{background:var(--mod-card);border-radius:10px;padding:32px 28px;position:relative;overflow:hidden;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 16px rgba(11,27,46,.06)}
+.mod-snap-card .mod-snap-text .mod-snap-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;color:var(--mod-text-light);font-weight:600;margin-bottom:8px}
+.mod-snap-card .mod-snap-text .mod-snap-value{font-family:'Inter',sans-serif;font-size:2.2rem;font-weight:800;color:var(--mod-primary);line-height:1;letter-spacing:-.02em}
+.mod-snap-card .mod-snap-num{font-family:'Inter',sans-serif;font-size:4rem;font-weight:800;color:var(--mod-accent);opacity:.18;line-height:1}
+
+/* Var 3: Traits - Numbered bars (horizontal but bolder) */
+.mod-traits{max-width:880px;margin:0 auto;display:grid;gap:14px}
+.mod-trait{background:var(--mod-card);border-radius:10px;padding:18px 22px;display:grid;grid-template-columns:48px 1fr 80px;align-items:center;gap:18px;box-shadow:0 2px 10px rgba(11,27,46,.04)}
+.mod-trait .mod-trait-num{font-family:'Inter',sans-serif;font-size:1.4rem;font-weight:800;color:var(--mod-accent);text-align:center}
+.mod-trait .mod-trait-body{display:grid;gap:8px}
+.mod-trait .mod-trait-name{font-weight:700;color:var(--mod-primary);font-size:.95rem;letter-spacing:.04em}
+.mod-trait .mod-trait-bar{height:8px;border-radius:4px;background:var(--mod-bg-alt);overflow:hidden}
+.mod-trait .mod-trait-fill{height:100%;background:var(--mod-primary);border-radius:4px;transition:width .6s}
+.mod-trait .mod-trait-score{font-family:'Inter',sans-serif;font-weight:800;color:var(--mod-primary);text-align:right;font-size:1rem;letter-spacing:-.02em}
+
+/* Var 4: Compatibility - Horizontal bar list */
+.mod-compat{max-width:880px;margin:0 auto;display:grid;gap:10px}
+.mod-ccell{display:grid;grid-template-columns:110px 1fr 60px;align-items:center;gap:18px;background:var(--mod-card);border-radius:10px;padding:16px 22px;box-shadow:0 2px 10px rgba(11,27,46,.04)}
+.mod-ccell .mod-cc-name{font-weight:700;color:var(--mod-primary);font-size:.95rem;letter-spacing:.04em}
+.mod-ccell .mod-cc-bar{height:10px;border-radius:5px;background:var(--mod-bg-alt);overflow:hidden}
+.mod-ccell .mod-cc-fill{height:100%;background:linear-gradient(90deg,var(--mod-primary),var(--mod-accent));border-radius:5px}
+.mod-ccell .mod-cc-pct{font-family:'Inter',sans-serif;font-weight:800;color:var(--mod-primary);text-align:right;font-size:1rem}
+.mod-ccell.mod-tier-best .mod-cc-name::before{content:"●";color:var(--mod-good);margin-right:6px}
+.mod-ccell.mod-tier-good .mod-cc-name::before{content:"●";color:var(--mod-accent);margin-right:6px}
+.mod-ccell.mod-tier-mix .mod-cc-name::before{content:"●";color:var(--mod-warn);margin-right:6px}
+
+/* Var 5: Outlook - 4-card with side number */
+.mod-horo{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:900px;margin:0 auto}
+.mod-horo-card{background:var(--mod-card);border-radius:10px;padding:28px;display:flex;gap:20px;align-items:flex-start;box-shadow:0 4px 16px rgba(11,27,46,.06)}
+.mod-horo-card .mod-horo-grade{font-family:'Inter',sans-serif;font-size:3rem;font-weight:800;color:var(--mod-accent);line-height:1;width:64px;flex-shrink:0;letter-spacing:-.04em}
+.mod-horo-card .mod-horo-body .mod-horo-dim{font-weight:800;color:var(--mod-primary);font-size:1.05rem;margin-bottom:6px;letter-spacing:.04em}
+.mod-horo-card .mod-horo-body .mod-horo-text{font-size:.92rem;color:var(--mod-text-light);line-height:1.65;margin:0}
+
+/* Var 6: Celebrity - 2x2 stack with big initial */
+.mod-celeb{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:900px;margin:0 auto}
+.mod-celeb-card{background:var(--mod-card);border-radius:10px;padding:28px;display:flex;gap:18px;align-items:center;transition:transform .25s;box-shadow:0 4px 16px rgba(11,27,46,.05)}
+.mod-celeb-card:hover{transform:translateX(4px)}
+.mod-celeb-card .mod-celeb-initial{width:64px;height:64px;border-radius:8px;background:var(--mod-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-size:1.5rem;font-weight:800;flex-shrink:0}
+.mod-celeb-card h4{font-family:'Inter',sans-serif;font-size:1.1rem;color:var(--mod-primary);margin:0 0 4px;font-weight:700;letter-spacing:-.01em}
+.mod-celeb-card p{font-size:.88rem;color:var(--mod-text-light);margin:0;line-height:1.5}
+
+/* Compat lines */
+.mod-compat-lines{max-width:880px;margin:0 auto 24px;padding:0;list-style:none;display:grid;gap:10px}
+.mod-compat-lines li{color:var(--mod-text-light);line-height:1.7;font-size:.95rem;padding-left:22px;position:relative}
+.mod-compat-lines li::before{content:"→";position:absolute;left:0;color:var(--mod-accent);font-weight:700}
+
+/* Insight */
+.mod-insight{max-width:900px;margin:0 auto;background:var(--mod-primary);color:#fff;border-radius:14px;padding:32px 36px;position:relative;overflow:hidden}
+.mod-insight::after{content:"";position:absolute;right:-50px;bottom:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(224,122,95,.18),transparent 70%);border-radius:50%}
+.mod-insight h3{font-family:'Inter',sans-serif;font-size:1.4rem;margin:0 0 16px;color:#fff;font-weight:800;letter-spacing:-.01em}
+.mod-insight ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.mod-insight li{padding-left:24px;position:relative;font-size:.95rem;line-height:1.65;color:rgba(255,255,255,.92)}
+.mod-insight li::before{content:"▸";position:absolute;left:0;color:var(--mod-accent)}
+
+/* FAQ */
+.mod-faq{max-width:900px;margin:0 auto;display:grid;gap:10px}
+.mod-faq-item{background:var(--mod-card);border-radius:10px;padding:18px 24px;display:flex;gap:16px;align-items:flex-start;box-shadow:0 2px 10px rgba(11,27,46,.04)}
+.mod-faq-item .mod-faq-q{font-family:'Inter',sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--mod-accent);font-weight:700;flex-shrink:0;width:36px;padding-top:2px}
+.mod-faq-item h3{font-family:'Inter',sans-serif;font-size:1.05rem;color:var(--mod-primary);margin:0 0 6px;font-weight:700}
+.mod-faq-item p{font-size:.94rem;color:var(--mod-text-light);line-height:1.7;margin:0}
+
+/* Fact card */
+.mod-fact{max-width:880px;margin:0 auto;background:var(--mod-card);border-radius:10px;padding:32px;display:flex;gap:24px;align-items:flex-start;box-shadow:0 4px 16px rgba(11,27,46,.06)}
+.mod-fact .mod-fact-num{font-family:'Inter',sans-serif;font-size:4rem;font-weight:800;color:var(--mod-accent);line-height:1;flex-shrink:0;width:90px;letter-spacing:-.04em}
+.mod-fact .mod-fact-body h4{font-family:'Inter',sans-serif;color:var(--mod-primary);margin:0 0 8px;font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
+.mod-fact .mod-fact-body p{font-size:.95rem;color:var(--mod-text-light);line-height:1.7;margin:0}
+
+/* Lifestyle */
+.mod-life{display:flex;flex-wrap:wrap;gap:8px;max-width:780px;margin:0 auto}
+.mod-life span{background:var(--mod-card);border:1px solid var(--mod-border);border-radius:4px;padding:10px 18px;font-size:.9rem;color:var(--mod-primary);font-weight:500;letter-spacing:.02em}
+
+/* Career */
+.mod-career{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:900px;margin:0 auto}
+.mod-career-card{background:var(--mod-card);border-radius:10px;padding:26px;box-shadow:0 4px 16px rgba(11,27,46,.05)}
+.mod-career-card .mod-career-tag{font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;color:var(--mod-accent);font-weight:700;margin-bottom:10px}
+.mod-career-card h4{font-family:'Inter',sans-serif;font-size:1.1rem;color:var(--mod-primary);margin:0 0 10px;font-weight:700;letter-spacing:-.01em}
+.mod-career-card p{font-size:.92rem;color:var(--mod-text-light);margin:0;line-height:1.65}
+
+/* Related grid */
+.mod-related{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;max-width:900px;margin:0 auto}
+.mod-related a{display:block;text-align:center;padding:11px 4px;background:var(--mod-card);border:1px solid var(--mod-border);border-radius:6px;color:var(--mod-primary);text-decoration:none;font-size:.88rem;font-weight:700;transition:all .2s}
+.mod-related a:hover{background:var(--mod-primary);color:#fff;border-color:var(--mod-primary)}
+.mod-related a.current{background:var(--mod-accent);color:#fff;border-color:var(--mod-accent)}
+
+footer{background:var(--mod-primary-dark);color:#fff;padding:32px 20px;text-align:center}
+footer p{opacity:.6;font-size:.84rem;margin:4px 0;letter-spacing:.04em}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media(max-width:1024px){
+  .mod-snap,.mod-horo,.mod-career{grid-template-columns:repeat(2,1fr)}
+  .mod-celeb{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  h1{font-size:2.1rem}
+  .section,.section-alt{padding:48px 0}
+  .mod-fact{flex-direction:column;gap:16px;padding:24px}
+  .mod-fact .mod-fact-num{font-size:3rem;width:auto}
+  .mod-celeb-card{flex-direction:column;text-align:center}
+  .mod-related{grid-template-columns:repeat(7,1fr)}
+}
+@media(max-width:480px){
+  .mod-related{grid-template-columns:repeat(5,1fr)}
+  .mod-snap,.mod-horo,.mod-career{grid-template-columns:1fr}
+  .mod-celeb{grid-template-columns:1fr}
+  .mod-trait{grid-template-columns:36px 1fr 60px;gap:12px;padding:14px}
+}

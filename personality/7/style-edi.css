@@ -1,0 +1,178 @@
+/* Group 3 (july 11-15) - Editorial Paper theme
+   Off-white paper, deep navy, gold accent, serif typography, drop-cap intros
+*/
+
+:root{
+  --edi-primary:#1A2E4A;
+  --edi-primary-dark:#0F1B2D;
+  --edi-accent:#C8A85A;
+  --edi-accent-soft:#E5D4A0;
+  --edi-bg:#FAFAF7;
+  --edi-bg-alt:#F2EFE6;
+  --edi-card:#FFFFFF;
+  --edi-text:#1F1F1F;
+  --edi-text-light:#5A5651;
+  --edi-border:#E5DFD0;
+  --edi-good:#3F7D58;
+  --edi-warn:#A86A2C;
+  --edi-rule:#1A2E4A;
+}
+
+body.edi-cancer{background:var(--edi-bg);color:var(--edi-text);font-family:'Lora',Georgia,serif;line-height:1.75}
+body.edi-leo{background:var(--edi-bg);color:var(--edi-text);font-family:'Lora',Georgia,serif;line-height:1.75}
+
+body.edi-cancer header,body.edi-leo header{
+  background:var(--edi-bg);
+  color:var(--edi-primary);
+  padding:50px 0 60px;
+  text-align:center;
+  border-bottom:3px double var(--edi-primary);
+  position:relative;
+}
+body.edi-cancer header::before,body.edi-leo header::before{content:"VOLUME XII · NO. 7 · DAILY EDITION";position:absolute;top:0;left:0;right:0;font-family:'Playfair Display',serif;font-size:.7rem;letter-spacing:.3em;color:var(--edi-text-light);padding:14px 0;border-bottom:1px solid var(--edi-border);background:var(--edi-bg)}
+body.edi-cancer header .container,body.edi-leo header .container{padding-top:24px}
+body.edi-cancer header h1,body.edi-leo header h1{font-family:'Playfair Display',Georgia,serif;font-size:3.2rem;margin:0 0 14px;font-weight:700;letter-spacing:-.01em;line-height:1.1}
+body.edi-leo{--edi-primary:#5C2A1A;--edi-primary-dark:#3A1A0F;--edi-accent:#B8945F}
+body.edi-leo header{border-bottom-color:var(--edi-primary)}
+
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+.back-link{display:inline-block;margin-bottom:14px;padding:7px 18px;background:transparent;border:1px solid var(--edi-primary);border-radius:0;color:var(--edi-primary);text-decoration:none;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-family:'Inter',sans-serif;transition:all .3s}
+.back-link:hover{background:var(--edi-primary);color:#fff}
+.subtitle{font-size:1.1rem;color:var(--edi-text-light);max-width:680px;margin:0 auto;line-height:1.65;font-style:italic}
+.section{padding:64px 0;background:var(--edi-bg)}
+.section-alt{padding:64px 0;background:var(--edi-bg-alt)}
+.section-title{text-align:center;margin-bottom:40px;max-width:780px;margin-left:auto;margin-right:auto}
+.section-title h2{color:var(--edi-primary);font-family:'Playfair Display',Georgia,serif;font-size:2.2rem;margin-bottom:14px;font-weight:700;line-height:1.2;letter-spacing:-.01em}
+.section-title p{color:var(--edi-text-light);font-size:1rem;line-height:1.6;margin:0;font-style:italic}
+
+/* === 6 structural variations for Group 3 === */
+
+/* Var 1: Intro - Two column newspaper style */
+.edi-intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1080px;margin:0 auto;column-count:1}
+.edi-intro p{color:var(--edi-text);line-height:1.9;margin:0 0 14px;font-size:1.05rem;text-align:justify}
+.edi-intro p:first-of-type::first-letter{font-family:'Playfair Display',Georgia,serif;font-size:4.2rem;font-weight:700;float:left;line-height:.9;margin:6px 12px 0 0;color:var(--edi-primary)}
+
+/* Var 2: Snapshot - Numbered serif stat list */
+.edi-snap{max-width:780px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--edi-border);background:var(--edi-card)}
+.edi-snap-card{padding:26px 20px;text-align:center;border-right:1px solid var(--edi-border);position:relative}
+.edi-snap-card:last-child{border-right:0}
+.edi-snap-card::before{content:attr(data-n);font-family:'Playfair Display',Georgia,serif;font-size:.7rem;letter-spacing:.2em;color:var(--edi-accent);font-weight:700;display:block;margin-bottom:8px}
+.edi-snap-card .edi-snap-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.16em;color:var(--edi-text-light);font-weight:600;margin-bottom:10px;font-family:'Inter',sans-serif}
+.edi-snap-card .edi-snap-value{font-family:'Playfair Display',Georgia,serif;font-size:1.7rem;font-weight:700;color:var(--edi-primary);line-height:1.1;margin-bottom:6px}
+.edi-snap-card .edi-snap-meta{font-size:.82rem;color:var(--edi-text-light);font-style:italic}
+
+/* Var 3: Traits - 5 column with rating dots */
+.edi-traits{display:grid;grid-template-columns:repeat(5,1fr);gap:0;max-width:1080px;margin:0 auto;border-top:1px solid var(--edi-border);border-bottom:1px solid var(--edi-border)}
+.edi-trait{padding:24px 16px;text-align:center;border-right:1px solid var(--edi-border)}
+.edi-trait:last-child{border-right:0}
+.edi-trait .edi-trait-name{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;font-weight:700;color:var(--edi-primary);margin-bottom:12px}
+.edi-trait .edi-trait-dots{display:flex;gap:4px;justify-content:center;margin-bottom:10px}
+.edi-trait .edi-trait-dots span{width:10px;height:10px;border-radius:50%;background:var(--edi-bg-alt);border:1px solid var(--edi-border)}
+.edi-trait .edi-trait-dots span.on{background:var(--edi-accent);border-color:var(--edi-accent)}
+.edi-trait .edi-trait-score{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;font-weight:700;color:var(--edi-primary);line-height:1}
+
+/* Var 4: Compatibility - Comparison table style */
+.edi-compat{max-width:880px;margin:0 auto;border-top:2px solid var(--edi-primary);border-bottom:2px solid var(--edi-primary)}
+.edi-ccell{display:grid;grid-template-columns:140px 1fr 80px;align-items:center;gap:20px;padding:14px 18px;border-bottom:1px solid var(--edi-border);transition:background .2s}
+.edi-ccell:last-child{border-bottom:0}
+.edi-ccell:hover{background:var(--edi-bg-alt)}
+.edi-ccell .edi-cc-name{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:var(--edi-primary);font-size:1.05rem;letter-spacing:.01em}
+.edi-ccell .edi-cc-bar{height:8px;background:var(--edi-bg-alt);position:relative;overflow:hidden}
+.edi-ccell .edi-cc-bar::before{content:"";position:absolute;left:0;top:0;height:100%;width:100%;background:repeating-linear-gradient(45deg,transparent 0 6px,var(--edi-border) 6px 7px);opacity:.4}
+.edi-ccell .edi-cc-fill{position:absolute;left:0;top:0;height:100%;background:var(--edi-primary);z-index:1}
+.edi-ccell.edi-tier-best .edi-cc-fill{background:var(--edi-good)}
+.edi-ccell.edi-tier-good .edi-cc-fill{background:var(--edi-accent)}
+.edi-ccell.edi-tier-mix .edi-cc-fill{background:var(--edi-warn)}
+.edi-ccell .edi-cc-pct{font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--edi-primary);text-align:right}
+
+/* Var 5: Outlook - 4 cards with serif typography */
+.edi-horo{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:900px;margin:0 auto}
+.edi-horo-card{background:var(--edi-card);border:1px solid var(--edi-border);padding:26px 28px;position:relative;display:flex;gap:18px;align-items:flex-start}
+.edi-horo-card .edi-horo-grade{font-family:'Playfair Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:var(--edi-accent);line-height:1;width:64px;flex-shrink:0}
+.edi-horo-card .edi-horo-body{flex:1}
+.edi-horo-card .edi-horo-body .edi-horo-dim{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:var(--edi-primary);font-size:1.15rem;margin-bottom:6px}
+.edi-horo-card .edi-horo-body .edi-horo-text{font-size:.95rem;color:var(--edi-text-light);line-height:1.7;margin:0;font-style:italic}
+
+/* Var 6: Celebrity - 2x2 list format with serif name */
+.edi-celeb{display:grid;grid-template-columns:repeat(2,1fr);gap:0;max-width:980px;margin:0 auto;border-top:1px solid var(--edi-border)}
+.edi-celeb-card{padding:22px 24px;display:flex;gap:18px;align-items:center;border-bottom:1px solid var(--edi-border);border-right:1px solid var(--edi-border)}
+.edi-celeb-card:nth-child(2n){border-right:0}
+.edi-celeb-card .edi-celeb-initial{width:52px;height:52px;border-radius:50%;border:2px solid var(--edi-primary);background:transparent;color:var(--edi-primary);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;font-weight:700;flex-shrink:0}
+.edi-celeb-card h4{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;color:var(--edi-primary);margin:0 0 4px;font-weight:700}
+.edi-celeb-card p{font-size:.88rem;color:var(--edi-text-light);margin:0;line-height:1.5;font-style:italic}
+
+/* Compat lines */
+.edi-compat-lines{max-width:780px;margin:0 auto 24px;padding:0;list-style:none;display:grid;gap:10px;font-style:italic}
+.edi-compat-lines li{color:var(--edi-text-light);line-height:1.7;font-size:.96rem;padding-left:24px;position:relative}
+.edi-compat-lines li::before{content:"§";position:absolute;left:0;color:var(--edi-accent);font-weight:700;font-family:'Playfair Display',serif}
+
+/* Insight */
+.edi-insight{max-width:860px;margin:0 auto;background:var(--edi-card);border:1px solid var(--edi-border);padding:32px 36px;position:relative}
+.edi-insight::before{content:"";position:absolute;left:14px;top:0;bottom:0;width:3px;background:var(--edi-primary)}
+.edi-insight h3{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;margin:0 0 16px 14px;color:var(--edi-primary);font-weight:700}
+.edi-insight ul{list-style:none;padding:0 0 0 14px;margin:0;display:grid;gap:10px}
+.edi-insight li{padding-left:20px;position:relative;font-size:.96rem;line-height:1.7;color:var(--edi-text)}
+.edi-insight li::before{content:"❡";position:absolute;left:0;color:var(--edi-accent);font-weight:700}
+
+/* FAQ */
+.edi-faq{max-width:860px;margin:0 auto;display:grid;gap:0;border-top:1px solid var(--edi-border)}
+.edi-faq-item{padding:20px 24px;border-bottom:1px solid var(--edi-border);background:var(--edi-card)}
+.edi-faq-item h3{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;color:var(--edi-primary);margin:0 0 8px;font-weight:700}
+.edi-faq-item p{font-size:.95rem;color:var(--edi-text-light);line-height:1.7;margin:0}
+
+/* Fact card */
+.edi-fact{max-width:860px;margin:0 auto;background:var(--edi-card);border:1px solid var(--edi-border);padding:30px 34px;display:flex;gap:28px;align-items:flex-start}
+.edi-fact .edi-fact-num{font-family:'Playfair Display',Georgia,serif;font-size:3.6rem;font-weight:700;color:var(--edi-accent);line-height:1;flex-shrink:0;width:90px;text-align:center;border-right:1px solid var(--edi-border);padding-right:28px}
+.edi-fact .edi-fact-body h4{font-family:'Playfair Display',Georgia,serif;color:var(--edi-primary);margin:0 0 8px;font-size:1.2rem;font-weight:700}
+.edi-fact .edi-fact-body p{font-size:.95rem;color:var(--edi-text-light);line-height:1.7;margin:0}
+
+/* Lifestyle */
+.edi-life{display:flex;flex-wrap:wrap;gap:8px;max-width:780px;margin:0 auto;justify-content:center}
+.edi-life span{background:transparent;border:1px solid var(--edi-primary);color:var(--edi-primary);padding:8px 18px;font-size:.9rem;font-family:'Playfair Display',serif;font-style:italic}
+
+/* Career */
+.edi-career{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:980px;margin:0 auto;border:1px solid var(--edi-border)}
+.edi-career-card{padding:24px 26px;border-right:1px solid var(--edi-border);background:var(--edi-card)}
+.edi-career-card:last-child{border-right:0}
+.edi-career-card .edi-career-no{font-family:'Playfair Display',Georgia,serif;font-size:.7rem;letter-spacing:.2em;color:var(--edi-accent);font-weight:700;margin-bottom:8px}
+.edi-career-card h4{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;color:var(--edi-primary);margin:0 0 10px;font-weight:700}
+.edi-career-card p{font-size:.92rem;color:var(--edi-text-light);margin:0;line-height:1.65}
+
+/* Related grid */
+.edi-related{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;max-width:900px;margin:0 auto}
+.edi-related a{display:block;text-align:center;padding:11px 4px;background:transparent;border:1px solid var(--edi-border);color:var(--edi-primary);text-decoration:none;font-size:.88rem;font-weight:600;font-family:'Playfair Display',serif;transition:all .2s}
+.edi-related a:hover{background:var(--edi-primary);color:#fff;border-color:var(--edi-primary)}
+.edi-related a.current{background:var(--edi-accent);color:var(--edi-primary);border-color:var(--edi-accent)}
+
+footer{background:var(--edi-primary);color:#fff;padding:32px 20px;text-align:center}
+footer p{opacity:.7;font-size:.86rem;margin:4px 0;letter-spacing:.04em;font-style:italic}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media(max-width:1024px){
+  .edi-intro{grid-template-columns:1fr;gap:20px}
+  .edi-snap{grid-template-columns:repeat(2,1fr)}
+  .edi-snap-card{border-right:1px solid var(--edi-border);border-bottom:1px solid var(--edi-border)}
+  .edi-snap-card:nth-child(2n){border-right:0}
+  .edi-traits{grid-template-columns:repeat(3,1fr)}
+  .edi-trait{border-right:1px solid var(--edi-border);border-bottom:1px solid var(--edi-border)}
+  .edi-trait:nth-child(3n){border-right:0}
+  .edi-celeb{grid-template-columns:1fr}
+  .edi-celeb-card{border-right:0}
+  .edi-career{grid-template-columns:1fr}
+  .edi-career-card{border-right:0;border-bottom:1px solid var(--edi-border)}
+}
+@media(max-width:640px){
+  h1{font-size:2.1rem}
+  .section,.section-alt{padding:48px 0}
+  .edi-horo{grid-template-columns:1fr}
+  .edi-fact{flex-direction:column;gap:18px;padding:24px}
+  .edi-fact .edi-fact-num{border-right:0;border-bottom:1px solid var(--edi-border);padding:0 0 18px;width:100%}
+  .edi-related{grid-template-columns:repeat(7,1fr)}
+}
+@media(max-width:480px){
+  .edi-related{grid-template-columns:repeat(5,1fr)}
+  .edi-snap,.edi-traits{grid-template-columns:repeat(2,1fr)}
+  .edi-ccell{grid-template-columns:1fr 60px;gap:10px;padding:12px}
+  .edi-ccell .edi-cc-bar{grid-column:1 / -1}
+}
