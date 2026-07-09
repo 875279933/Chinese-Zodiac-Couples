@@ -1,4 +1,4 @@
-/* ===== Tiger Edition — distinct from shared sign-shared.css ===== */
+/* ===== Tiger Edition — sign-specific theme overrides ===== */
 :root[data-sign="tiger"]{
   --t-bg:#F4F1EA;
   --t-paper:#FFFFFF;

@@ -1,4 +1,4 @@
-/* ===== Horse Edition — distinct from shared sign-shared.css ===== */
+/* ===== Horse Edition — sign-specific theme overrides ===== */
 :root[data-sign="horse"]{
   --h-bg:#E8EEF3;
   --h-paper:#FFFFFF;

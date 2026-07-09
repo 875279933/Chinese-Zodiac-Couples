@@ -1,4 +1,4 @@
-/* ===== Rabbit Edition — distinct from shared sign-shared.css ===== */
+/* ===== Rabbit Edition — sign-specific theme overrides ===== */
 :root[data-sign="rabbit"]{
   --r-bg:#FBF5F6;
   --r-paper:#FFFFFF;

@@ -1,4 +1,4 @@
-/* ===== Rooster Edition — distinct from shared sign-shared.css ===== */
+/* ===== Rooster Edition — sign-specific theme overrides ===== */
 :root[data-sign="rooster"]{
   --rc-bg:#F4F6F0;
   --rc-paper:#FFFFFF;

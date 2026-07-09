@@ -1,4 +1,4 @@
-/* ===== Snake Edition — distinct from shared sign-shared.css ===== */
+/* ===== Snake Edition — sign-specific theme overrides ===== */
 :root[data-sign="snake"]{
   --sn-bg:#F5E9DE;
   --sn-paper:#FFFFFF;

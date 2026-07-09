@@ -1,4 +1,4 @@
-/* ===== Pig Edition — distinct from shared sign-shared.css ===== */
+/* ===== Pig Edition — sign-specific theme overrides ===== */
 :root[data-sign="pig"]{
   --p-bg:#FAF4F3;
   --p-paper:#FFFFFF;

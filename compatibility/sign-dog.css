@@ -1,4 +1,4 @@
-/* ===== Dog Edition — distinct from shared sign-shared.css ===== */
+/* ===== Dog Edition — sign-specific theme overrides ===== */
 :root[data-sign="dog"]{
   --t-bg:#FBF5F0;
   --t-paper:#FFFFFF;

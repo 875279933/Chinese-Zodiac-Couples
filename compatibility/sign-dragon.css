@@ -1,4 +1,4 @@
-/* ===== Dragon Edition — distinct from shared sign-shared.css ===== */
+/* ===== Dragon Edition — sign-specific theme overrides ===== */
 :root[data-sign="dragon"]{
   --t-bg:#FAF6F9;
   --t-paper:#FFFFFF;

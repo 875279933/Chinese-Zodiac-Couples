@@ -1,4 +1,4 @@
-/* ===== Ox Edition — distinct from shared sign-shared.css ===== */
+/* ===== Ox Edition — sign-specific theme overrides ===== */
 :root[data-sign="ox"]{
   --t-bg:#FCEFE3;
   --t-paper:#FFFFFF;
