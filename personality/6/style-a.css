@@ -1,0 +1,201 @@
+/* ============================================================
+   Group 1 (june 6-10) - "Botanical Soft"
+   Warm sage paper, deep forest ink, copper accent
+   Used by: june-6 through june-10
+   ============================================================ */
+
+:root{
+  --a-primary:#3D5A47;
+  --a-primary-dark:#1F2F26;
+  --a-accent:#B8743D;
+  --a-accent-soft:#DDB892;
+  --a-bg:#F7F4ED;
+  --a-bg-alt:#EBE4D3;
+  --a-card:#FFFEFB;
+  --a-text:#2C352D;
+  --a-text-light:#5C6655;
+  --a-border:#DDD4BD;
+  --a-good:#3F7D58;
+  --a-warn:#A86A2C;
+}
+
+body.a-gemini{
+  background:var(--a-bg);
+  color:var(--a-text);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.7;
+}
+body.a-gemini header{
+  background:linear-gradient(135deg,var(--a-primary) 0%,var(--a-primary-dark) 100%);
+  color:#fff;padding:60px 0 76px;text-align:center;position:relative;
+}
+body.a-gemini header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--a-accent-soft),var(--a-accent),var(--a-accent-soft))}
+body.a-gemini header h1{font-family:'Playfair Display',Georgia,serif;font-size:2.5rem;font-weight:600;margin-bottom:14px;letter-spacing:-.01em}
+body.a-gemini .subtitle{font-size:1.05rem;opacity:.94;max-width:640px;margin:0 auto;line-height:1.65;font-style:italic}
+
+.container{max-width:1180px;margin:0 auto;padding:0 22px}
+.back-link{display:inline-block;margin-bottom:18px;padding:9px 22px;background:rgba(255,255,255,.18);border-radius:50px;color:#fff;text-decoration:none;font-size:.88rem;transition:background .3s}
+.back-link:hover{background:rgba(255,255,255,.32)}
+.section{padding:60px 0;background:var(--a-bg)}
+.section-alt{padding:60px 0;background:var(--a-bg-alt)}
+.section-title{text-align:center;margin-bottom:36px}
+.section-title h2{color:var(--a-primary);font-family:'Playfair Display',Georgia,serif;font-size:1.95rem;font-weight:600;margin-bottom:10px}
+.section-title p{color:var(--a-text-light);max-width:680px;margin:0 auto;font-size:.98rem}
+
+/* Section 1: Intro - 2 column with sidebar */
+.a-intro-wrap{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 280px;gap:32px;align-items:start}
+.a-intro-text p{color:var(--a-text-light);line-height:1.85;margin:0 0 14px;font-size:1.02rem}
+.a-intro-aside{background:var(--a-card);border:1px solid var(--a-border);border-radius:16px;padding:24px;position:sticky;top:20px;box-shadow:0 4px 16px rgba(61,90,71,.06)}
+.a-intro-aside h3{font-family:'Playfair Display',Georgia,serif;font-size:1.05rem;color:var(--a-primary);margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--a-border)}
+.a-intro-aside ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.a-intro-aside li{font-size:.9rem;color:var(--a-text-light);padding-left:18px;position:relative;line-height:1.55}
+.a-intro-aside li::before{content:"\2731";position:absolute;left:0;color:var(--a-accent);font-weight:700}
+
+/* Section 2: Snapshot - 4 vertical cards */
+.a-snap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1080px;margin:0 auto}
+.a-snap-card{background:var(--a-card);border-radius:18px;padding:28px 22px;border:1px solid var(--a-border);text-align:center;box-shadow:0 4px 18px rgba(61,90,71,.06);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.a-snap-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(61,90,71,.12)}
+.a-snap-card::after{content:"";position:absolute;left:0;top:0;width:4px;height:100%;background:var(--a-accent)}
+.a-snap-label{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:var(--a-text-light);font-weight:600;margin-bottom:8px}
+.a-snap-value{font-family:'Playfair Display',Georgia,serif;font-size:1.85rem;font-weight:700;color:var(--a-primary);line-height:1.05;margin-bottom:6px}
+.a-snap-value .a-snap-out{font-size:.9rem;color:var(--a-text-light);font-weight:400}
+.a-snap-meta{font-size:.85rem;color:var(--a-text-light)}
+
+/* Section 3: Personality 2-column with side rail */
+.a-personality-cols{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr;gap:32px;align-items:start}
+.a-personality-text{display:grid;gap:14px}
+.a-personality-text p{color:var(--a-text-light);line-height:1.85;margin:0;font-size:1.02rem}
+.a-personality-rail{background:var(--a-bg-alt);border-radius:16px;padding:24px 22px;border-left:4px solid var(--a-accent);position:sticky;top:20px}
+.a-personality-rail h4{font-family:'Playfair Display',Georgia,serif;font-size:1rem;color:var(--a-primary);margin:0 0 12px}
+.a-personality-rail ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.a-personality-rail li{font-size:.92rem;color:var(--a-text);line-height:1.55;padding-left:20px;position:relative}
+.a-personality-rail li::before{content:"\2731";position:absolute;left:0;top:0;color:var(--a-accent);font-weight:700}
+
+/* Section 4: Traits - circular gauges (5-up) */
+.a-traits{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:1080px;margin:0 auto}
+.a-trait{background:var(--a-card);border:1px solid var(--a-border);border-radius:16px;padding:22px 14px;text-align:center;transition:transform .3s,box-shadow .3s}
+.a-trait:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(61,90,71,.12)}
+.a-trait-ring{position:relative;width:84px;height:84px;margin:0 auto 12px}
+.a-trait-ring svg{transform:rotate(-90deg)}
+.a-trait-ring-bg{stroke:var(--a-bg-alt);stroke-width:8;fill:none}
+.a-trait-ring-fg{stroke:var(--a-accent);stroke-width:8;fill:none;stroke-linecap:round;transition:stroke-dashoffset .8s}
+.a-trait-ring-pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:var(--a-primary)}
+.a-trait-name{font-weight:600;color:var(--a-primary);font-size:.92rem;margin-bottom:4px;font-family:'Playfair Display',Georgia,serif}
+.a-trait-score{font-size:.82rem;color:var(--a-text-light)}
+
+/* Section 5: Compatibility - 7-card grid */
+.a-compat{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;max-width:1080px;margin:0 auto}
+.a-ccell{background:var(--a-card);border:1px solid var(--a-border);border-radius:14px;padding:18px 12px;text-align:center;position:relative;transition:transform .25s,box-shadow .25s}
+.a-ccell:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(61,90,71,.1)}
+.a-ccell .a-cc-name{font-weight:700;color:var(--a-primary);font-size:1rem;margin-bottom:8px;font-family:'Playfair Display',Georgia,serif}
+.a-ccell .a-cc-pct{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-weight:700;color:var(--a-accent);line-height:1;margin-bottom:8px}
+.a-cc-track{height:6px;border-radius:3px;background:var(--a-bg-alt);overflow:hidden}
+.a-cc-fill{height:100%;background:linear-gradient(90deg,var(--a-accent-soft),var(--a-accent));border-radius:3px}
+.a-ccell.a-tier-best{border-top:3px solid var(--a-good)}
+.a-ccell.a-tier-good{border-top:3px solid var(--a-accent)}
+.a-ccell.a-tier-mix{border-top:3px solid var(--a-warn)}
+
+/* Section 6: Horoscope - 4-card grid */
+.a-horo{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1080px;margin:0 auto}
+.a-horo-card{background:var(--a-card);border:1px solid var(--a-border);border-radius:16px;padding:24px 22px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.a-horo-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(61,90,71,.12)}
+.a-horo-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--a-accent),var(--a-accent-soft))}
+.a-horo-dim{font-weight:700;color:var(--a-primary);font-size:1rem;margin-bottom:4px;font-family:'Playfair Display',Georgia,serif}
+.a-horo-grade{position:absolute;top:18px;right:22px;font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-weight:700;color:var(--a-accent)}
+.a-horo-text{font-size:.9rem;color:var(--a-text-light);line-height:1.65;margin:18px 0 0}
+
+/* Section 7: Celebrity - 1 spotlight + 3 mini */
+.a-celeb{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:18px}
+.a-celeb-main{background:var(--a-card);border:1px solid var(--a-border);border-radius:18px;padding:32px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.a-celeb-main:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(61,90,71,.14)}
+.a-celeb-main::after{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--a-accent)}
+.a-celeb-badge{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--a-text-light);font-weight:600;margin-bottom:14px}
+.a-celeb-initial{width:80px;height:80px;border-radius:50%;background:var(--a-accent-soft);color:var(--a-primary);display:inline-flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;font-size:1.7rem;font-weight:700;margin-bottom:14px}
+.a-celeb-main h4{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;color:var(--a-primary);margin:0 0 6px;font-weight:600}
+.a-celeb-main p{font-size:.92rem;color:var(--a-text-light);margin:0;line-height:1.5;max-width:280px}
+.a-celeb-mini{display:grid;gap:12px}
+.a-celeb-mini-item{background:var(--a-card);border:1px solid var(--a-border);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:14px;transition:transform .3s,box-shadow .3s}
+.a-celeb-mini-item:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(61,90,71,.1)}
+.a-celeb-mini-item .a-celeb-initial{width:44px;height:44px;font-size:1rem;margin:0;flex-shrink:0}
+.a-celeb-mini-item h4{font-family:'Playfair Display',Georgia,serif;font-size:.95rem;color:var(--a-primary);margin:0 0 2px;font-weight:600}
+.a-celeb-mini-item p{font-size:.8rem;color:var(--a-text-light);margin:0;line-height:1.4}
+
+/* Section 8: Career - 3-up card grid */
+.a-career{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1080px;margin:0 auto}
+.a-career-card{background:var(--a-card);border:1px solid var(--a-border);border-radius:16px;padding:24px 22px;border-left:4px solid var(--a-accent);transition:transform .3s,box-shadow .3s,border-left-color .3s}
+.a-career-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(61,90,71,.12);border-left-color:var(--a-primary)}
+.a-career-card h4{font-family:'Playfair Display',Georgia,serif;font-size:1.05rem;color:var(--a-primary);margin:0 0 10px;font-weight:600;display:flex;align-items:center;gap:10px}
+.a-career-card h4::before{content:"";width:18px;height:2px;background:var(--a-accent)}
+.a-career-card p{font-size:.92rem;color:var(--a-text-light);line-height:1.65;margin:0}
+
+/* Section 9: Family - pull quote */
+.a-family-quote{max-width:880px;margin:0 auto;background:var(--a-card);border:1px solid var(--a-border);border-radius:18px;padding:36px 40px;position:relative;text-align:center;box-shadow:0 4px 18px rgba(61,90,71,.06);transition:transform .3s,box-shadow .3s}
+.a-family-quote:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(61,90,71,.12)}
+.a-family-quote::before{content:"\201C";position:absolute;left:24px;top:8px;font-family:Georgia,serif;font-size:4.5rem;color:var(--a-accent-soft);line-height:1;opacity:.75}
+.a-family-quote p{font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;color:var(--a-primary);line-height:1.6;margin:0 0 14px;font-style:italic}
+.a-family-quote cite{font-style:normal;font-size:.85rem;color:var(--a-text-light);display:block}
+.a-family-quote cite::before{content:"\2014  "}
+
+/* Section 10: Lifestyle - chip grid */
+.a-lifestyle{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;max-width:920px;margin:0 auto}
+.a-life-item{background:var(--a-card);border:1px solid var(--a-border);border-radius:12px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;transition:transform .3s,box-shadow .3s}
+.a-life-item:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(61,90,71,.1)}
+.a-life-num{width:30px;height:30px;border-radius:50%;background:var(--a-accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;font-size:.85rem;font-weight:700;flex-shrink:0}
+.a-life-body h5{font-family:'Playfair Display',Georgia,serif;font-size:.95rem;color:var(--a-primary);margin:0 0 4px;font-weight:600}
+.a-life-body p{font-size:.82rem;color:var(--a-text-light);line-height:1.5;margin:0}
+
+/* Section 11: Conflict - step timeline */
+.a-conflict{list-style:none;padding:0;margin:0 auto;max-width:780px;position:relative;display:grid;gap:14px;counter-reset:cstep}
+.a-conflict::before{content:"";position:absolute;left:24px;top:24px;bottom:24px;width:2px;background:var(--a-border)}
+.a-conflict li{position:relative;padding:14px 18px 14px 64px;background:var(--a-card);border:1px solid var(--a-border);border-radius:12px;transition:transform .3s,box-shadow .3s}
+.a-conflict li:hover{transform:translateX(4px);box-shadow:0 6px 18px rgba(61,90,71,.1)}
+.a-conflict li::before{content:counter(cstep);counter-increment:cstep;position:absolute;left:-12px;top:14px;width:36px;height:36px;background:var(--a-primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;font-size:.95rem;font-weight:700;border:3px solid var(--a-bg)}
+.a-conflict li p{font-size:.92rem;color:var(--a-text-light);line-height:1.6;margin:0}
+
+/* Section 12: FAQ - 2 column */
+.a-faq{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:1080px;margin:0 auto}
+.a-faq-item{background:var(--a-card);border:1px solid var(--a-border);border-radius:12px;padding:16px 20px;border-left:3px solid var(--a-accent);transition:transform .3s,box-shadow .3s}
+.a-faq-item:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(61,90,71,.1)}
+.a-faq-item h3{font-family:'Playfair Display',Georgia,serif;font-size:1rem;color:var(--a-primary);margin:0 0 6px;font-weight:600}
+.a-faq-item p{font-size:.88rem;color:var(--a-text-light);line-height:1.6;margin:0}
+.a-faq-item.a-faq-wide{grid-column:1 / -1}
+
+/* Related June dates */
+.a-related{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;max-width:960px;margin:0 auto;padding:0}
+.a-related a{display:block;text-align:center;padding:11px 4px;background:var(--a-card);border:1px solid var(--a-border);color:var(--a-primary);border-radius:6px;font-size:.9rem;font-weight:700;text-decoration:none;transition:all .25s}
+.a-related a:hover{background:var(--a-accent);color:#fff;border-color:var(--a-accent);transform:translateY(-2px)}
+.a-related a.a-current{background:var(--a-primary);color:#fff;border-color:var(--a-primary)}
+
+footer{background:var(--a-primary-dark);color:#fff;padding:30px 20px;text-align:center}
+footer p{opacity:.7;font-size:.85rem;margin:4px 0}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+/* Responsive */
+@media(max-width:900px){
+  .a-intro-wrap,.a-personality-cols,.a-celeb{grid-template-columns:1fr;gap:20px}
+  .a-personality-rail{position:static}
+  .a-snap,.a-horo{grid-template-columns:repeat(2,1fr)}
+  .a-traits{grid-template-columns:repeat(3,1fr)}
+  .a-career{grid-template-columns:1fr}
+  .a-faq{grid-template-columns:1fr}
+  .a-related{grid-template-columns:repeat(7,1fr);gap:6px}
+}
+@media(max-width:600px){
+  body.a-gemini header{padding:48px 0 60px}
+  body.a-gemini header h1{font-size:2rem}
+  .section-title h2{font-size:1.55rem}
+  .section,.section-alt{padding:42px 0}
+  .a-snap,.a-horo{grid-template-columns:1fr 1fr;gap:12px}
+  .a-traits{grid-template-columns:repeat(2,1fr)}
+  .a-family-quote{padding:28px 22px}
+  .a-family-quote::before{font-size:3.5rem;left:14px}
+  .a-conflict::before{left:18px}
+  .a-conflict li{padding-left:54px}
+  .a-conflict li::before{left:-10px;width:32px;height:32px;font-size:.85rem}
+  .a-related{grid-template-columns:repeat(5,1fr);gap:5px}
+}
+@media(max-width:400px){
+  .a-related{grid-template-columns:repeat(5,1fr);gap:4px}
+  .a-related a{padding:9px 2px;font-size:.82rem}
+}
