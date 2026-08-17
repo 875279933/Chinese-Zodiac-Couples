@@ -843,7 +843,7 @@ select:hover, select:focus {
 }
 @media (max-width: 768px) {
     .ad-frame {
-        min-height: 330px;
+        min-height: 660px;
     }
 }
 
