@@ -833,6 +833,20 @@ select:hover, select:focus {
     height: 16px;
 }
 
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 100%;
+    min-height: 430px;
+    display: block;
+    max-width: 100%;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 330px;
+    }
+}
+
 /* ===== Social ===== */
 .social-section {
     background: #ffffff;
