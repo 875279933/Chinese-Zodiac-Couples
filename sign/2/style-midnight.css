@@ -80,3 +80,18 @@ footer a{color:var(--accent);text-decoration:none;transition:opacity .2s}
 footer a:hover{opacity:.7;text-decoration:underline}
 @media(min-width:769px){.mg-story-para{column-count:2;column-gap:30px}}
 @media(max-width:768px){h1{font-size:1.85rem}.mg-sec{padding:46px 0}.mg-fam-grid{grid-template-columns:1fr}.mg-hist-row{grid-template-columns:1fr}.mg-compat-grid{grid-template-columns:repeat(2,1fr)}.mg-lucky-grid{grid-template-columns:repeat(2,1fr)}.mg-dates-nav{grid-template-columns:repeat(5,1fr)}.mg-intro-wrap{padding:30px 22px}.mg-story-wrap{padding:26px 22px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

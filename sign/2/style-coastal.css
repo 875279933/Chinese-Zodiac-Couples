@@ -80,3 +80,18 @@ footer p{opacity:.72;font-size:.86rem;margin-bottom:6px}
 footer a{color:#F4F0E6;text-decoration:none;transition:opacity .2s;opacity:.85}
 footer a:hover{opacity:1;text-decoration:underline}
 @media(max-width:768px){h1{font-size:1.9rem}.cd-sec{padding:46px 0}.cd-intro-masthead-body{grid-template-columns:1fr}.cd-intro-text{border-right:none;border-bottom:1px solid var(--line)}.cd-fam-row{grid-template-columns:60px 1fr;gap:14px}.cd-fam-desc{grid-column:1/-1;margin-top:4px}.cd-hist-row{grid-template-columns:1fr}.cd-compat-grid{grid-template-columns:1fr}.cd-lucky-grid{grid-template-columns:repeat(2,1fr)}.cd-dates-nav{grid-template-columns:repeat(5,1fr)}.cd-story-magazine{padding:26px 22px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
