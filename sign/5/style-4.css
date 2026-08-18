@@ -78,3 +78,18 @@ footer p{opacity:.7;font-size:.88rem;margin-bottom:8px}
 footer a{color:var(--accent-soft);text-decoration:none;transition:opacity .2s;opacity:.85}
 footer a:hover{opacity:1;text-decoration:underline}
 @media(max-width:768px){h1{font-size:1.9rem}.sb-section{padding:48px 0}.sb-intro-wrap{grid-template-columns:1fr}.sb-fam-item{grid-template-columns:70px 1fr;gap:14px}.sb-hist-row{grid-template-columns:1fr}.sb-compat-grid{grid-template-columns:repeat(2,1fr)}.sb-lucky-grid{grid-template-columns:repeat(3,1fr)}.sb-story-card{padding:28px 24px}.sb-intro-text{padding:28px 24px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

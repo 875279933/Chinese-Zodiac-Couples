@@ -83,3 +83,18 @@ footer p{opacity:.7;font-size:.88rem;margin-bottom:8px;letter-spacing:.5px}
 footer a{color:var(--gold);text-decoration:none;transition:opacity .2s;opacity:.9;letter-spacing:.5px}
 footer a:hover{opacity:1;text-decoration:underline}
 @media(max-width:768px){h1{font-size:2.2rem}.bm-section{padding:48px 0}.bm-intro-wrap{grid-template-columns:1fr}.bm-intro-left{border-right:none;border-bottom:2px solid var(--ink)}.bm-fam-item{grid-template-columns:60px 1fr;gap:14px}.bm-fam-desc{grid-column:1/-1;padding-left:74px;margin-top:-6px}.bm-hist-row{grid-template-columns:1fr}.bm-hist-card{border-right:none;border-bottom:2px solid var(--ink)}.bm-compat-grid{grid-template-columns:repeat(2,1fr)}.bm-compat-card{border-right:2px solid var(--line-soft);border-bottom:2px solid var(--line-soft)}.bm-lucky-grid{grid-template-columns:repeat(3,1fr)}.bm-lucky-item{border-right:2px solid var(--line-soft);border-bottom:2px solid var(--line-soft)}.bm-story-card{padding:28px 22px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
