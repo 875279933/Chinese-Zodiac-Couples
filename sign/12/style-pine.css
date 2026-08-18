@@ -80,3 +80,18 @@ footer p{opacity:.7;font-size:.86rem;margin-bottom:6px}
 footer a{color:#F8F4EC;text-decoration:none;transition:opacity .2s;opacity:.85}
 footer a:hover{opacity:1;text-decoration:underline}
 @media(max-width:768px){h1{font-size:1.85rem}.wp-sec{padding:46px 0}.wp-intro{padding:26px 22px}.wp-fam{grid-template-columns:1fr}.wp-hist{grid-template-columns:1fr}.wp-intro-stats{grid-template-columns:repeat(3,1fr);gap:8px}.wp-lucky{grid-template-columns:repeat(2,1fr)}.wp-dates{grid-template-columns:1fr}.wp-compat-item{grid-template-columns:1fr 1fr;gap:8px}.wp-compat-pct{text-align:left}.wp-story{padding:28px 22px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
