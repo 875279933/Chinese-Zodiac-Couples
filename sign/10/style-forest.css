@@ -83,3 +83,18 @@ footer p{opacity:.7;font-size:.86rem;margin-bottom:6px}
 footer a{color:#F5F2EB;text-decoration:none;transition:opacity .2s;opacity:.85}
 footer a:hover{opacity:1;text-decoration:underline}
 @media(max-width:768px){h1{font-size:1.75rem}.fo-sec{padding:46px 0}.fo-intro{grid-template-columns:1fr;padding:24px}.fo-intro-text{padding-left:0}.fo-fam{grid-template-columns:1fr}.fo-hist::before{display:none}.fo-hist-card{grid-template-columns:60px 1fr;gap:12px;padding-left:0}.fo-hist-card::before{display:none}.fo-compat{grid-template-columns:repeat(2,1fr)}.fo-lucky{grid-template-columns:1fr 1fr}.fo-dates{grid-template-columns:repeat(5,1fr)}.fo-story{padding:24px 20px}.fo-story-p{grid-template-columns:24px 1fr;gap:10px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

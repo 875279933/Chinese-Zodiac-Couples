@@ -71,3 +71,18 @@ footer p{opacity:.65;font-size:.85rem;margin-bottom:6px}
 footer a{color:#FAFAF8;text-decoration:none;transition:opacity .2s;opacity:.85}
 footer a:hover{opacity:1;text-decoration:underline}
 @media(max-width:768px){h1{font-size:1.6rem}.pr-sec{padding:42px 0}.pr-intro{grid-template-columns:1fr;padding:24px}.pr-fam-card{grid-template-columns:1fr}.pr-fam-avatar{display:none}.pr-fam{grid-template-columns:1fr}.pr-hist-card{grid-template-columns:60px 1fr;gap:12px}.pr-compat{grid-template-columns:repeat(2,1fr)}.pr-lucky{grid-template-columns:1fr}.pr-dates{grid-template-columns:repeat(5,1fr)}.pr-story{padding:24px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
