@@ -840,6 +840,7 @@ select:hover, select:focus {
     min-height: 430px;
     display: block;
     max-width: 90%;
+    margin: 0 auto;
 }
 @media (max-width: 768px) {
     .ad-frame {
