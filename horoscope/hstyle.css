@@ -134,3 +134,18 @@ body.hz-capricorn   { --hz-accent:#374151 }
 body.hz-aquarius    { --hz-accent:#0EA5E9 }
 body.hz-pisces      { --hz-accent:#0891B2 }
 body.hz-hub         { --hz-accent:#374151 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
