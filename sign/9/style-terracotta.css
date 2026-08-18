@@ -70,3 +70,18 @@ footer p{opacity:.7;font-size:.86rem;margin-bottom:6px}
 footer a{color:#F7F1E8;text-decoration:none;transition:opacity .2s;opacity:.85}
 footer a:hover{opacity:1;text-decoration:underline}
 @media(max-width:768px){h1{font-size:1.85rem}.tc-sec{padding:46px 0}.tc-mag{grid-template-columns:1fr;gap:20px;padding:24px}.tc-fam{grid-template-columns:repeat(2,1fr)}.tc-hist-row{grid-template-columns:60px 1fr;gap:12px}.tc-comp-row{grid-template-columns:1fr 1fr 60px;gap:10px}.tc-lucky-tag{padding:10px 16px}.tc-dates{grid-template-columns:repeat(5,1fr)}.tc-story{padding:26px 22px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

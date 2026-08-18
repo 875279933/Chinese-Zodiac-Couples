@@ -77,3 +77,18 @@ footer p{opacity:.75;font-size:.86rem;margin-bottom:6px}
 footer a{color:var(--ink);text-decoration:none;transition:opacity .2s;opacity:.85}
 footer a:hover{opacity:1;text-decoration:underline;color:var(--accent)}
 @media(max-width:768px){h1{font-size:1.85rem}.mi-sec{padding:46px 0}.mi-fam{grid-template-columns:1fr}.mi-lucky{grid-template-columns:repeat(2,1fr)}.mi-dates{grid-template-columns:repeat(6,1fr)}.mi-story{grid-template-columns:1fr;gap:16px}.mi-compat-row{grid-template-columns:1fr 1fr 60px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
