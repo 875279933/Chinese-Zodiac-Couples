@@ -836,10 +836,10 @@ select:hover, select:focus {
 /* ===== Ad Frame ===== */
 .ad-frame {
     border: none;
-    width: 100%;
+    width: 90%;
     min-height: 430px;
     display: block;
-    max-width: 100%;
+    max-width: 90%;
 }
 @media (max-width: 768px) {
     .ad-frame {
