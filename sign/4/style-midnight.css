@@ -88,3 +88,18 @@ footer a{color:var(--primary);text-decoration:none;transition:color .2s;letter-s
 footer a:hover{color:var(--accent);text-decoration:underline}
 @media(max-width:768px){header h1{font-size:2.4rem}.sign-shrine{grid-template-columns:1fr;gap:18px;padding:24px 20px}.sign-shrine .ss-emblem{margin:0 auto}.compat-grid{grid-template-columns:1fr}.lucky-display{grid-template-columns:repeat(2,1fr)}.dates-line{grid-template-columns:repeat(10,1fr)}}
 @media(max-width:480px){.famous-card{grid-template-columns:50px 1fr;padding:14px 16px}.history-row{grid-template-columns:60px 1fr;gap:14px}.dates-line{grid-template-columns:repeat(6,1fr)}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

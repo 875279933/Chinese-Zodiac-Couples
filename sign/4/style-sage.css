@@ -84,3 +84,18 @@ footer a{color:var(--bg);text-decoration:none;opacity:.75;transition:opacity .2s
 footer a:hover{opacity:1;text-decoration:underline}
 @media(max-width:768px){header{padding:36px 22px;margin-top:18px}header h1{font-size:2rem}.famous-vine,.lucky-fern{grid-template-columns:1fr 1fr}.compat-patch{grid-template-columns:1fr}.dates-grove{grid-template-columns:repeat(7,1fr)}}
 @media(max-width:480px){.famous-vine{grid-template-columns:1fr}.lucky-fern{grid-template-columns:1fr 1fr}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
