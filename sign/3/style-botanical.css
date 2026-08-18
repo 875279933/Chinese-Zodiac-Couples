@@ -80,3 +80,18 @@ footer p{opacity:.7;font-size:.85rem;margin-bottom:6px}
 footer a{color:var(--accent-3);text-decoration:none;transition:opacity .2s}
 footer a:hover{text-decoration:underline;opacity:.85}
 @media(max-width:768px){h1{font-size:1.95rem}.bota-compat{grid-template-columns:repeat(2,1fr)}.bota-fam-scroll{grid-auto-columns:minmax(180px,1fr)}.bota-story{grid-template-columns:1fr;gap:24px}.bota-dates{grid-template-columns:repeat(5,1fr)}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

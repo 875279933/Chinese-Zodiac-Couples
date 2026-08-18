@@ -71,3 +71,18 @@ footer p{opacity:.65;font-size:.85rem;margin-bottom:6px;color:var(--ink-soft)}
 footer a{color:var(--accent);text-decoration:none;transition:opacity .2s}
 footer a:hover{text-decoration:underline;opacity:.85}
 @media(max-width:768px){h1{font-size:1.85rem}.noir-intro{grid-template-columns:1fr;gap:24px}.noir-compat-top,.noir-compat-bot{grid-template-columns:repeat(2,1fr)}.noir-hist-row{grid-template-columns:1fr}.noir-hist-item{border-right:none;border-bottom:1px solid var(--line)}.noir-dates{grid-template-columns:repeat(5,1fr)}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

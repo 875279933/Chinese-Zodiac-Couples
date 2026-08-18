@@ -81,3 +81,18 @@ footer p{opacity:.6;font-size:.82rem;margin-bottom:6px;font-family:var(--mono)}
 footer a{color:var(--neon);text-decoration:none;transition:opacity .2s}
 footer a:hover{text-decoration:underline;opacity:.85}
 @media(max-width:768px){h1{font-size:1.85rem}.cyber-fam,.cyber-compat,.cyber-lucky{grid-template-columns:1fr 1fr}.cyber-intro-grid{grid-template-columns:1fr;gap:20px}.cyber-story{grid-template-columns:1fr}.cyber-story-side{border-left:none;border-top:1px solid var(--line)}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
