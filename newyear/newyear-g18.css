@@ -1,2 +1,16 @@
 :root{--accent:#e94560;--accent-dark:#bb3349;--ink:#1a1a2e;--ink-soft:#5a5a72;--bg:#fef9e7;--bg-alt:#fbf2cf;--card:#ffffff;--line:#f0e2a8;--header-bg:linear-gradient(135deg,#e94560,#4a90e2);--font-head:'Playfair Display',serif;--font-body:'Source Sans 3',sans-serif;--radius:12px;--shadow:0 4px 20px rgba(0,0,0,.08);--shadow-h:0 10px 40px rgba(0,0,0,.12)}
 body{background:var(--bg)}
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

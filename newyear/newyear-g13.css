@@ -1,2 +1,16 @@
 :root{--accent:#5c7a4a;--accent-dark:#456037;--ink:#2b3a2b;--ink-soft:#6a7a64;--bg:#f4f1e9;--bg-alt:#eae5d5;--card:#fbf9f2;--line:#d6cfb8;--header-bg:linear-gradient(135deg,#3a5a3a,#2b3a2b);--font-head:'Space Grotesk',sans-serif;--font-body:Inter,sans-serif;--radius:12px;--shadow:0 4px 20px rgba(0,0,0,.08);--shadow-h:0 10px 40px rgba(0,0,0,.12)}
 body{background:var(--bg)}
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
