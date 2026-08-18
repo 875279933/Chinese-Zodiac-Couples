@@ -968,3 +968,18 @@ footer.brief6-links {
   .story6-lede { font-size: 1.2rem; }
   .lucky6-table th, .lucky6-table td { padding: 12px 14px; font-size: 0.88rem; }
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

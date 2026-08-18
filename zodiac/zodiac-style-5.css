@@ -946,3 +946,18 @@ footer a:hover {
   .faq5-item summary { padding: 16px 20px; gap: 12px; }
   .faq5-a { padding: 0 20px 18px 60px; }
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
