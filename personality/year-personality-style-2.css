@@ -101,3 +101,18 @@ footer a{color:#fff;text-decoration:none;margin:0 6px}
 footer a:hover{text-decoration:underline;color:var(--primary-light)}
 @media(max-width:900px){.compat-grid{grid-template-columns:1fr}.celeb-row{grid-template-columns:repeat(2,1fr)}.timeline-v::before{left:60px}.tl-row{grid-template-columns:60px 1fr}.tl-row .tl-marker{left:53px}.tl-row .tl-body{margin-left:18px}.tl-row .tl-date{font-size:.82rem;padding-top:8px}}
 @media(max-width:600px){h1{font-size:1.9rem}.section-title h2{font-size:1.5rem}.stats-grid{grid-template-columns:repeat(2,1fr)}.shape-row{grid-template-columns:48px 1fr;padding:16px 18px}.reason-item{grid-template-columns:38px 1fr;padding:14px 16px}.reason-item .reason-num{width:34px;height:34px;font-size:.9rem}.compat-row{grid-template-columns:100px 1fr 50px;gap:10px;padding:12px 14px}.compat-row .compat-name{font-size:.85rem}.celeb-row{grid-template-columns:repeat(2,1fr)}.callout{margin:20px auto 30px;padding:20px 22px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

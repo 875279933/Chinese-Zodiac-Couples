@@ -90,3 +90,18 @@ body{font-family:'Crimson Pro',Georgia,'Times New Roman',serif;background:var(--
   .sb-compat-row{grid-template-columns:90px 1fr 40px;padding:10px 12px}
   .sb-reason{grid-template-columns:36px 1fr;gap:12px;padding:16px}
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

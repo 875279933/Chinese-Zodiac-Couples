@@ -126,3 +126,18 @@ footer a{color:var(--text);text-decoration:none;margin:0 10px;padding:6px 14px;b
 footer a:hover{border-color:var(--neon);color:var(--neon);background:rgba(94,234,212,.05)}
 @media(max-width:1024px){.hero-bento{grid-template-columns:1fr}.bento-card.title-card{grid-row:auto}.hero-stats{grid-template-columns:repeat(3,1fr)}.impact-stack{grid-template-columns:repeat(3,1fr)}.sign-grid{grid-template-columns:repeat(3,1fr)}.celeb-grid{grid-template-columns:repeat(2,1fr)}.section-head{grid-template-columns:1fr}.section-head .kicker-static{writing-mode:horizontal-tb;transform:none;justify-self:start}.section-head .desc{grid-column:1}}
 @media(max-width:640px){.container{padding:0 18px}h1{font-size:2.3rem}.section-head h2{font-size:1.5rem}.hero-stats{grid-template-columns:repeat(2,1fr)}.quick-bar{grid-template-columns:repeat(2,1fr)}.factor-row{grid-template-columns:1fr}.impact-stack{grid-template-columns:1fr 1fr}.sign-grid{grid-template-columns:repeat(2,1fr)}.celeb-grid{grid-template-columns:1fr}.faq-2col{grid-template-columns:1fr}.top-bar{flex-direction:column;gap:16px;align-items:flex-start}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

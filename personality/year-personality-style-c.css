@@ -106,3 +106,18 @@ footer a:hover{text-decoration:underline;color:var(--primary-light)}
 .hero-stats-strip .hero-stat{padding:18px 10px}
 .hero-stats-strip .hero-stat .h-value{font-size:1.25rem}
 .sign-grid-3col{grid-template-columns:repeat(3,1fr)}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

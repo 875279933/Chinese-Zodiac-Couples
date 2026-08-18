@@ -159,3 +159,18 @@ footer .foot-nav{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,
   .zodiac-grid{grid-template-columns:1fr}
   .hero-stats{grid-template-columns:1fr 1fr}
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

@@ -120,3 +120,18 @@ footer a{color:var(--paper);text-decoration:none;margin:0 10px;border-bottom:1px
 footer a:hover{color:var(--gold-soft)}
 @media(max-width:1024px){.hero-grid{grid-template-columns:1fr;gap:24px}.zodiac-icon-lg{width:100px;height:100px}.section-head{grid-template-columns:1fr;gap:12px}.section-head .desc{grid-column:1}.hero-stats{grid-template-columns:repeat(3,1fr)}.hero-stat{border-bottom:1px solid var(--rule)}.sign-grid{grid-template-columns:1fr}.sign-card{border-right:none !important;border-bottom:1px solid var(--rule) !important}.celeb-grid{grid-template-columns:repeat(2,1fr)}.celeb-card{border-bottom:1px solid var(--rule)}}
 @media(max-width:640px){.container{padding:0 20px}h1{font-size:2.6rem}.section-head h2{font-size:1.7rem}.hero-stats{grid-template-columns:repeat(2,1fr)}.quick-bar{grid-template-columns:repeat(2,1fr)}.factor-row{grid-template-columns:1fr}.factor-card{border-right:none;border-bottom:1px solid var(--rule)}.celeb-grid{grid-template-columns:1fr}.faq-2col{grid-template-columns:1fr}.impact-item .i-head{grid-template-columns:60px 1fr;gap:10px}.impact-item .i-num{display:none}.impact-item .i-text{padding-left:0}.sign-card{grid-template-columns:48px 1fr;gap:14px;padding:16px}.sign-card .sc-circle{grid-column:1/-1;justify-self:start;width:64px;height:64px}.sign-card .sc-head .sc-reason{font-size:.8rem}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

@@ -112,3 +112,18 @@ footer a{color:#fff;text-decoration:none;margin:0 6px}
 footer a:hover{text-decoration:underline;color:var(--primary-light)}
 @media(max-width:900px){.celeb-grid{grid-template-columns:repeat(2,1fr)}.compat-table-wrap{overflow-x:auto}.compat-table{min-width:560px}}
 @media(max-width:600px){h1{font-size:1.95rem}.section-title h2{font-size:1.55rem}.celeb-grid{grid-template-columns:1fr 1fr}.stat-grid{grid-template-columns:repeat(2,1fr)}.data-table{font-size:.88rem}.data-table th,.data-table td{padding:10px 8px}.compat-card-grid{grid-template-columns:1fr}.sub-h{padding:48px 0 0 0;flex-wrap:wrap}.shape-card .shape-num{top:14px;right:14px;font-size:.72rem;padding:4px 9px}.callout{margin:20px auto 50px;padding:20px 22px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
