@@ -97,3 +97,18 @@ footer p{font-size:.88rem;margin-bottom:8px;letter-spacing:.3px}
 footer a{color:var(--gold);text-decoration:none;transition:opacity .2s;font-weight:500}
 footer a:hover{opacity:.7;text-decoration:underline}
 @media(max-width:768px){h1{font-size:2.2rem}.bold-section{padding:48px 0}.bold-intro-wrap{grid-template-columns:1fr}.bold-intro-left{border-right:none;border-bottom:2px solid var(--ink)}.bold-hist-row{grid-template-columns:1fr}.bold-hist-card{border-right:none;border-bottom:2px solid var(--ink)}.bold-hist-card:last-child{border-bottom:none}.bold-fam-item{grid-template-columns:60px 1fr;gap:14px}.bold-fam-desc{grid-column:1/-1;margin-top:6px}.bold-compat-grid{grid-template-columns:1fr}.bold-lucky-grid{grid-template-columns:1fr}.bold-dates-nav{grid-template-columns:repeat(4,1fr)}.bold-story-wrap{padding:28px 24px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
