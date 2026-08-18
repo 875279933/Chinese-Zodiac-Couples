@@ -200,3 +200,18 @@ footer a:hover{text-decoration:underline}
   .b-related{grid-template-columns:repeat(5,1fr);gap:4px}
   .b-related a{padding:9px 2px;font-size:.82rem}
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
