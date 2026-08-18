@@ -744,3 +744,18 @@ footer .footer-links a:hover {
     .related-grid { grid-template-columns: 1fr; }
     .hero .year-meta { font-size: 0.78rem; padding: 6px 14px; }
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
