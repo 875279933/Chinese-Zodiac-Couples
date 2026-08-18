@@ -87,3 +87,18 @@ footer p{opacity:.7;font-size:.86rem;margin-bottom:6px}
 footer a{color:#FBF6F1;text-decoration:none;transition:opacity .2s;opacity:.85}
 footer a:hover{opacity:1;text-decoration:underline}
 @media(max-width:768px){h1{font-size:1.85rem}.st-sec{padding:46px 0}.st-fam{grid-template-columns:1fr}.st-compat{grid-template-columns:repeat(2,1fr)}.st-lucky{grid-template-columns:1fr}.st-cal{grid-template-columns:repeat(4,1fr)}.st-hero{padding:30px 22px}.st-story{padding:26px 22px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

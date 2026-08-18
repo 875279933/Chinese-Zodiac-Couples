@@ -86,3 +86,18 @@ footer p{opacity:.7;font-size:.86rem;margin-bottom:6px}
 footer a{color:#F6F4EE;text-decoration:none;transition:opacity .2s;opacity:.85}
 footer a:hover{opacity:1;text-decoration:underline}
 @media(max-width:768px){h1{font-size:1.85rem}.fs-sec{padding:46px 0}.fs-compat-item{grid-template-columns:1fr;gap:8px;padding:14px 0}.fs-compat-pct{text-align:left}.fs-lucky{grid-template-columns:repeat(2,1fr)}.fs-dates{grid-template-columns:1fr}.fs-intro-head,.fs-intro-body{padding-left:22px;padding-right:22px}.fs-intro-stat{padding:14px 10px}.fs-story-head{padding:20px 22px;flex-direction:column;text-align:center}.fs-story-body{padding:22px 22px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

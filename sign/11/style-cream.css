@@ -92,3 +92,18 @@ footer p{opacity:.65;font-size:.86rem;margin-bottom:6px;font-family:var(--sans)}
 footer a{color:#FAF6F0;text-decoration:none;transition:opacity .2s;opacity:.85}
 footer a:hover{opacity:1;text-decoration:underline}
 @media(max-width:768px){h1{font-size:1.9rem}.cl-sec{padding:46px 0}.cl-editorial{grid-template-columns:1fr;gap:20px;padding:24px}.cl-fam{grid-template-columns:repeat(2,1fr)}.cl-hist{grid-template-columns:1fr}.cl-compat{grid-template-columns:1fr}.cl-lucky{grid-template-columns:1fr}.cl-dates{grid-template-columns:repeat(5,1fr)}.cl-story{padding:30px 24px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
