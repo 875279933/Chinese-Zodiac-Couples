@@ -161,3 +161,18 @@ footer a:hover{text-decoration:underline}
   .bot-related{grid-template-columns:repeat(5,1fr)}
   .bot-snap,.bot-horo,.bot-career,.bot-traits,.bot-celeb{grid-template-columns:1fr 1fr}
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

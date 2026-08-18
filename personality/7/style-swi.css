@@ -180,3 +180,18 @@ footer a:hover{text-decoration:underline}
   .swi-snap,.swi-compat,.swi-career,.swi-celeb,.swi-horo{grid-template-columns:1fr}
   .swi-life{grid-template-columns:repeat(2,1fr)}
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

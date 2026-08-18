@@ -179,3 +179,18 @@ footer a:hover{text-decoration:underline}
   .mnk-ccell{grid-template-columns:1fr 60px;gap:10px;padding:12px 18px}
   .mnk-ccell .mnk-cc-bar{grid-column:1 / -1}
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
