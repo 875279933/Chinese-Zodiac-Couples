@@ -473,3 +473,17 @@
 .loft-list .cll .cll-h,.foundation-list .fnl .fnl-h,.tower-list .twl .twl-h,.transit-list .trl .trl-h,.port-list .ptl .ptl-h,.riverside-list .rsl .rsl-h,.bench-list .bnl .bnl-h,.patio-list .pal .pal-h,.hub-list .hbl .hbl-h,.stall-list .stl .stl-h,.block-list .bkl .bkl-h,.corner-list .cnl .cnl-h{font-size:.95rem}
 .loft-list .cll .cll-p,.foundation-list .fnl .fnl-p,.tower-list .twl .twl-p,.transit-list .trl .trl-p,.port-list .ptl .ptl-p,.riverside-list .rsl .rsl-p,.bench-list .bnl .bnl-p,.patio-list .pal .pal-p,.hub-list .hbl .hbl-p,.stall-list .stl .stl-p,.block-list .bkl .bkl-p,.corner-list .cnl .cnl-p{font-size:.8rem}
 }
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

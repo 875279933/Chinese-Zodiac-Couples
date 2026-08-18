@@ -139,3 +139,18 @@ footer .ctn{display:flex;flex-direction:column;align-items:center;gap:6px}
   .yr{padding:6px 14px;font-size:.85rem}
   .sub{font-size:1rem}
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

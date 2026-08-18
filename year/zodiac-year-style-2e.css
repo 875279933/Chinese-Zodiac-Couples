@@ -522,3 +522,18 @@
   .thunder .th-h,.splash .sp-h{font-size:1.35rem}
   .fortress .ft-h,.bell-block .bb-h,.shore-block .sb-h,.bark-block .bb-h,.mud-block .mb-h,.cloud-block .cb-h,.archive-box .ab-h,.venom-block .vb-h,.armor .ar-h{font-size:1.25rem}
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

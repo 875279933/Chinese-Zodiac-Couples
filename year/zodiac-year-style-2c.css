@@ -374,3 +374,17 @@
 .grid2.gy1971 .crd h3{font-family:'Noto Serif SC',serif;font-size:1.05rem;color:var(--ink);font-weight:600;margin-bottom:8px;padding-top:0;letter-spacing:-.005em}
 .grid2.gy1971 .crd p{font-size:.92rem;color:var(--text-light);line-height:1.75;margin:0}
 @media(max-width:768px){.grid2.ly1971{gap:14px}.grid2.gy1971{grid-template-columns:1fr}}
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

@@ -469,3 +469,17 @@
 .oct-list .ocl .ocl-h,.dpc-list .dcl .dcl-h,.vnt-list .vnl .vnl-h,.frg-list .frgl .frgl-h,.lvf-list .lvfl .lvfl-h,.emc-list .emcl .emcl-h,.cnr-list .cnrl .cnrl-h,.trh-list .trhl .trhl-h,.grm-list .grml .grml-h,.clt-list .cltl .cltl-h,.mss-list .msl2 .msl2-h{font-size:.95rem}
 .oct-list .ocl .ocl-p,.dpc-list .dcl .dcl-p,.vnt-list .vnl .vnl-p,.frg-list .frgl .frgl-p,.lvf-list .lvfl .lvfl-p,.emc-list .emcl .emcl-p,.cnr-list .cnrl .cnrl-p,.trh-list .trhl .trhl-p,.grm-list .grml .grml-p,.clt-list .cltl .cltl-p,.mss-list .msl2 .msl2-p{font-size:.8rem}
 }
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

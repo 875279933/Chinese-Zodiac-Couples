@@ -318,3 +318,18 @@ footer a:hover{color:#fff}
 .greg.gy1939 .crd h3,.greg.gy1939 .feat-card h3,.greg.gy1939 .spane h3,.greg.gy1939 .strip-item h3,.greg.gy1939 .qa h3{font-family:'Noto Serif SC',serif;font-size:1.08rem;color:var(--ink);font-weight:600;margin-bottom:8px}
 .greg.gy1939 .crd p,.greg.gy1939 .feat-card p,.greg.gy1939 .spane p,.greg.gy1939 .strip-item p,.greg.gy1939 .qa p{font-size:.9rem;color:var(--text-light);line-height:1.7;margin:0}
 @media(max-width:768px){.lun.ly1939{padding:18px 16px}.greg.gy1939{grid-template-columns:1fr}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

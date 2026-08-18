@@ -489,3 +489,17 @@
 .sclr-list .scl .scl-h,.mtn-list .mtnl .mtnl-h,.wfl-list .wfll .wfll-h,.mlp-list .mlpl .mlpl-h,.frc-list .frcl .frcl-h,.vna-list .vnal .vnal-h,.snf-list .snfl .snfl-h,.hrf-list .hrfl .hrfl-h,.stc-list .stcl .stcl-h,.dwm-list .dwml .dwml-h,.irg-list .irgl .irgl-h,.cld-list .cll2 .cll2-h{font-size:.95rem}
 .sclr-list .scl .scl-p,.mtn-list .mtnl .mtnl-p,.wfl-list .wfll .wfll-p,.mlp-list .mlpl .mlpl-p,.frc-list .frcl .frcl-p,.vna-list .vnal .vnal-p,.snf-list .snfl .snfl-p,.hrf-list .hrfl .hrfl-p,.stc-list .stcl .stcl-p,.dwm-list .dwml .dwml-p,.irg-list .irgl .irgl-p,.cld-list .cll2 .cll2-p{font-size:.8rem}
 }
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

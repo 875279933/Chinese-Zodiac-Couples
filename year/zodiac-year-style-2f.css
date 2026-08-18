@@ -485,3 +485,18 @@
 .easel-list .el .el-h,.spark-list .sl .sl-h,.cliff-list .cl .cl-h,.floret-list .fl-floret .fl-h,.regal-list .rl .rl-h,.serpent-list .sl-serpent .sl-h,.mane-list .ml .ml-h,.wool-list .wl .wl-h,.trick-list .tk .tk-h,.feather-list .fl-feather .fl-h,.loyal-list .ll .ll-h,.acorn-list .al .al-h{font-size:.95rem}
 .easel-list .el .el-p,.spark-list .sl .sl-p,.cliff-list .cl .cl-p,.floret-list .fl-floret .fl-p,.regal-list .rl .rl-p,.serpent-list .sl-serpent .sl-p,.mane-list .ml .ml-p,.wool-list .wl .wl-p,.trick-list .tk .tk-p,.feather-list .fl-feather .fl-p,.loyal-list .ll .ll-p,.acorn-list .al .al-p{font-size:.8rem}
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
