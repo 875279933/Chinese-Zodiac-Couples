@@ -215,3 +215,18 @@ footer a:hover{color:var(--accent)}
   footer .ctn{padding:0 20px}
   footer p:first-child{font-size:.95rem}
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

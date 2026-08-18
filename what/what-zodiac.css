@@ -61,3 +61,18 @@ footer a:hover{color:#E8C9A8;text-decoration:underline}
 .tl-title{font-size:1.06rem;color:var(--dark);margin-bottom:6px;font-weight:600}
 .tl-desc{font-size:.88rem;color:var(--text-light);line-height:1.65}
 @media(max-width:768px){.grid2{grid-template-columns:1fr}h1{font-size:1.85rem}.sec{padding:40px 0}.sec-alt{padding:40px 0}.timeline{padding-left:32px}.card{padding:24px}.crd{padding:22px}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

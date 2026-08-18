@@ -118,3 +118,18 @@ footer a:hover{color:#fff;text-decoration:underline}
   .sec,.sec-alt{padding:40px 0}
   .profile-split,.card{padding:24px}
 }
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
