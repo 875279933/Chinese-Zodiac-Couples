@@ -202,3 +202,18 @@ footer a:hover{color:#fff;text-decoration:underline}
 .zodiac-strip a{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s}
 .zodiac-strip a:hover{transform:translateY(-3px);background:rgba(255,255,255,.22)}
 .zodiac-strip img{width:1.6em;height:1.6em;object-fit:contain}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}

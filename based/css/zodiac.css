@@ -148,3 +148,18 @@ footer p{margin-bottom:6px}footer a{color:var(--gold);margin:0 8px}footer a:hove
 .element-side .element-info h3{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--navy);margin-bottom:12px}
 .element-side .element-info p{font-size:.96rem;line-height:1.8;margin-bottom:12px;color:var(--text)}
 @media(max-width:680px){.element-side{grid-template-columns:1fr}}
+
+/* ===== Ad Frame ===== */
+.ad-frame {
+    border: none;
+    width: 90%;
+    min-height: 430px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .ad-frame {
+        min-height: 660px;
+    }
+}
